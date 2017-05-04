@@ -1,0 +1,116 @@
+'05': 
+  'arrows': 'true'
+  'autoplaySeconds': '1'
+  'autoplay': 'false'
+  'dots': 'true'
+  'fade': 'false'
+  'id': 'carousel'
+  'slidesToShow': '2'
+  'variableWidth': 'false'
+  jcr:primaryType: 'mgnl:component'
+  jcr:uuid: '6adda0fd-0d6f-4c2f-bc0d-58124d35f3f3'
+  mgnl:activationStatus: true
+  mgnl:created: 2015-10-07T14:12:15.135+02:00
+  mgnl:createdBy: 'superuser'
+  mgnl:lastActivated: 2015-10-27T16:57:48.111+01:00
+  mgnl:lastActivatedBy: 'superuser'
+  mgnl:lastModified: 2015-10-08T14:51:28.236+02:00
+  mgnl:lastModifiedBy: 'superuser'
+  mgnl:template: 'travel-demo:components/carousel'
+  'carouselItems': 
+    jcr:primaryType: 'mgnl:area'
+    jcr:uuid: 'cfe46664-99cb-4166-9976-e98690b01561'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-10-07T14:12:15.435+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-10-27T16:57:48.111+01:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-10-08T12:50:50.058+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    '00': 
+      'constrainAspectRatio': true
+      'headlineLevel': 'small'
+      'headline': 'USA'
+      'imagePosition': 'above'
+      'image': 'jcr:5843f97c-a825-40af-855b-f02483c6f354'
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: 'af4d9a77-ef14-45b5-a6c8-f55253cb4632'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-10-07T14:17:10.645+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T16:57:48.112+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-10-08T12:49:02.561+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'travel-demo:components/textImage'
+    '0': 
+      'Resize': 'height'
+      'constrainAspectRatio': true
+      'headlineLevel': 'small'
+      'headline_de': 'Vereinigte Arabische Emirate'
+      'headline': 'United Arab Emirates'
+      'imagePosition': 'below'
+      'image': 'jcr:7eeb9a4f-72ef-43f4-a392-5c1916b31e3a'
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: 'd0b15b05-d21c-4ba4-88d6-14cb73ed2a50'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-10-07T14:16:06.495+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T16:57:48.112+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-10-08T12:50:50.058+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'travel-demo:components/textImage'
+    '01': 
+      'Resize': 'height'
+      'constrainAspectRatio': true
+      'headlineLevel': 'small'
+      'headline': 'Hong Kong'
+      'imagePosition': 'above'
+      'image': 'jcr:06e63c9d-ef7f-42e6-a0a1-fdecf9b7886d'
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: 'ba23b827-af42-49fc-97d0-c6fe02923874'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-10-07T14:23:31.545+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T16:57:48.112+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-10-08T12:49:14.013+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'travel-demo:components/textImage'
+    '02': 
+      'constrainAspectRatio': true
+      'headlineLevel': 'small'
+      'headline_de': 'Tschechien'
+      'headline': 'Czech Republic'
+      'imagePosition': 'below'
+      'image': 'jcr:c51f88cd-0f4f-4fab-8dd2-84d243450d2c'
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: 'aa3e9744-d376-408e-8a6d-7d7003dfcb80'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-10-07T14:24:56.808+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T16:57:48.112+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-10-08T12:49:34.261+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'travel-demo:components/textImage'
+    '03': 
+      'constrainAspectRatio': true
+      'headlineLevel': 'small'
+      'headline_de': 'Schweiz'
+      'headline': 'Switzerland'
+      'imagePosition': 'below'
+      'image': 'jcr:80d091ae-22ce-4cfc-b302-cb39f25c3d30'
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: 'b0ef4d74-21ab-44f1-b186-89d677dc940f'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-10-07T14:27:28.722+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T16:57:48.112+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-10-08T12:49:58.215+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'travel-demo:components/textImage'
+
+

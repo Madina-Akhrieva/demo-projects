@@ -1,0 +1,311 @@
+'sportstation': 
+  'description': 'Magnolia Travels is a demonstration project for Magnolia CMS. Browse the site to get an overview of Magnolia CMS features, and learn how to edit the content online. Or download the project and dig into the sources to learn the key templating features of Magnolia CMS.'
+  'hideInNav': false
+  'keywords': 'Magnolia CMS, Open Source CMS, Content management, Demonstration project, Demo project, Demo, Online demo, Website builder'
+  'title': 'Sportstation'
+  jcr:primaryType: 'mgnl:page'
+  jcr:uuid: '5f26a93e-9d21-4231-9e60-c8edbb0d339d'
+  mgnl:activationStatus: true
+  mgnl:created: 2015-05-04T15:52:31.972+02:00
+  mgnl:createdBy: 'superuser'
+  mgnl:lastActivated: 2015-07-01T10:47:10.557+02:00
+  mgnl:lastActivatedBy: 'superuser'
+  mgnl:lastModified: 2015-07-01T10:44:00.365+02:00
+  mgnl:lastModifiedBy: 'superuser'
+  mgnl:template: 'travel-demo:pages/home'
+  'main': 
+    jcr:primaryType: 'mgnl:area'
+    jcr:uuid: '027a46c4-dae5-4e3a-b1a3-7e1a09bc784e'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-05-04T18:05:11.043+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-01T10:47:10.557+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-06-05T02:40:15.197+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    '0': 
+      'showTourTypes': false
+      'tours': ['5556af16-66f5-445a-9150-bae8d2adcf3a','4d48dd38-208c-4db3-a033-981735d968fa','d1010f83-fe84-4880-bfa7-3892cc839359']
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: '6fe3ef11-c4e2-45be-b18e-3bfc9206c44a'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-05-04T18:06:00.625+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.557+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-06-05T02:40:15.197+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'tours:components/tourCarousel'
+    '00': 
+      'title': 'Our tours'
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: '4af6a099-e519-44ee-a0e8-bc7a131e005c'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-05-13T13:52:30.644+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.558+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-05-13T13:58:50.149+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'tours:components/tourList'
+  'footer': 
+    jcr:primaryType: 'mgnl:area'
+    jcr:uuid: 'b742ae76-46b0-41d8-9aff-98c25c6d732b'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-05-04T18:05:11.068+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-01T10:47:10.558+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-01T10:44:00.365+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    'footer1': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: 'd4f5fb1d-15c8-44c5-a1a1-d688ba650a47'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-05-04T18:05:11.094+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.558+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-05-04T18:05:11.094+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    'footer2': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '5761a7d3-5414-4ec0-829f-ac5af8061d58'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-05-04T18:05:11.117+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.558+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-05-04T18:05:11.117+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    'footer3': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: 'e49c2d4f-723f-44db-8c97-74173f942826'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-05-04T18:05:11.140+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.558+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-05-04T18:05:11.140+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    'footer4': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: 'af81cea2-bf45-4656-8c4e-641fe589ce35'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-05-04T18:05:11.161+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.559+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-05-04T18:05:11.161+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    'lastLinks': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '94d60b6c-0edb-4c4b-b02e-782607556ed1'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-07-01T10:44:00.367+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.559+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-07-01T10:44:00.367+02:00
+      mgnl:lastModifiedBy: 'superuser'
+  'about': 
+    'title': 'About SportStation'
+    jcr:primaryType: 'mgnl:page'
+    jcr:uuid: '64cc52a3-326f-40b9-b021-c980f2959447'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-05-05T15:13:32.991+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-01T10:47:10.989+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-01T10:44:08.360+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    mgnl:template: 'travel-demo:pages/standard'
+    'main': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '9abfd946-ef04-42c6-b860-4f20425efbe0'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-05-05T15:13:36.786+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.989+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-05-05T15:22:05.549+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      '0': 
+        'headlineLevel': 'big'
+        'headline': 'About SportStation'
+        'imagePosition': 'below'
+        'text': '<p>Get to know the world - through sports!</p>
+
+<p>We&#39;re here to provide you with sport based holidays from around the world. We know how to plan the best active holidays because every employee at SportStation actually goes on sport holidays every year.</p>
+
+<p>Whether you are a beginner or advanced - young or &#39;mature&#39; - our tour packages are designed to match your needs.</p>
+
+<p>So - what are you waiting for? <a href="${link:{uuid:{5f26a93e-9d21-4231-9e60-c8edbb0d339d},repository:{website},path:{/sportstation}}}">Browse our tours</a> to find the one that&#39;s right for you, and get out there!<br />
+&nbsp;</p>
+'
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: '9f8d609b-03e8-489f-9f4a-0725b73ee597'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-05-05T15:22:05.550+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.990+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-05-05T15:22:05.550+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo:components/jumbotron'
+    'footer': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: 'b3bf2be7-a78f-402c-a13e-68eb05561e6b'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-05-05T15:13:36.802+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.990+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-07-01T10:44:08.360+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      'footer1': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: 'e6c7c490-7bb3-47c9-ac2e-26e797ab93b4'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-05-05T15:13:36.823+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.990+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-05-05T15:13:36.823+02:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer2': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: 'b762f4f4-7227-485f-b265-f7a8c2f9e04d'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-05-05T15:13:36.844+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.990+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-05-05T15:13:36.844+02:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer3': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '07ea09eb-3865-4148-8740-a2999757e460'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-05-05T15:13:36.860+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.990+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-05-05T15:13:36.860+02:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer4': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '27cda1c2-3e73-49c1-8cb5-cbcac488c769'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-05-05T15:13:36.879+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.991+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-05-05T15:13:36.879+02:00
+        mgnl:lastModifiedBy: 'superuser'
+      'lastLinks': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '6428a964-f806-4106-bbaf-5ee7cdd56b92'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-07-01T10:44:08.364+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.991+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-07-01T10:44:08.364+02:00
+        mgnl:lastModifiedBy: 'superuser'
+  'tour': 
+    'hideInNav': true
+    'title': 'Tour'
+    jcr:primaryType: 'mgnl:page'
+    jcr:uuid: 'acc832d1-4302-4812-a13d-b7446d302dfe'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-05-13T16:18:46.656+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-01T10:47:10.739+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-01T10:46:35.047+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    mgnl:template: 'travel-demo-multisite:pages/tourSportstation'
+    'main': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '86712d41-4683-4ea7-bdf4-a1e66246cc01'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-05-13T16:18:54.434+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.740+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-05-13T16:19:02.738+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      '0': 
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: 'f71724f9-357e-4f12-bfdf-c87797efc49d'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-05-13T16:19:02.739+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.740+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-05-13T16:19:02.739+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo-multisite:components/tourDetailSportstation'
+    'footer': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '4ff295ba-5445-4470-a9f9-033f469ea6df'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-05-13T16:18:54.444+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-07-01T10:47:10.740+02:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-07-01T10:46:35.047+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      'footer1': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '58174b4a-df78-4cbb-b026-8b48471db58e'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-05-13T16:18:54.455+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.740+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-05-13T16:18:54.455+02:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer2': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '9fb9d73d-75a4-466c-891a-7238a5b56823'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-05-13T16:18:54.465+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.741+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-05-13T16:18:54.465+02:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer3': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: 'bcd3e6a6-fcb8-4e2b-b053-4b8d4630831b'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-05-13T16:18:54.475+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.741+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-05-13T16:18:54.475+02:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer4': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: 'cee0d390-f770-4df4-af02-ef94ef3482b6'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-05-13T16:18:54.485+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.741+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-05-13T16:18:54.485+02:00
+        mgnl:lastModifiedBy: 'superuser'
+      'lastLinks': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '73d7e709-b8db-4d43-823d-fa9cf33b2b83'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-07-01T10:46:35.052+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-07-01T10:47:10.741+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-07-01T10:46:35.052+02:00
+        mgnl:lastModifiedBy: 'superuser'
+
+

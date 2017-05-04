@@ -10,11 +10,11 @@
   <dependencies>
     <dependency>
       <name>core</name>
-      <version>5.5.2/*</version>
+      <version>${magnoliaVersion}/*</version>
     </dependency>
     <dependency>
       <name>rendering</name>
-      <version>5.5.2/*</version>
+      <version>${magnoliaVersion}/*</version>
     </dependency>
     <dependency>
       <name>dam-jcr</name>

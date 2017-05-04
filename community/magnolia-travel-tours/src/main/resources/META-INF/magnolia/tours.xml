@@ -25,7 +25,7 @@
   <dependencies>
     <dependency>
       <name>core</name>
-      <version>5.5.2/*</version>
+      <version>${magnoliaVersion}/*</version>
     </dependency>
     <dependency>
       <name>travel-demo</name>
@@ -33,7 +33,7 @@
     </dependency>
     <dependency>
       <name>ui-admincentral</name>
-      <version>5.5/*</version>
+      <version>${magnoliaUiVersion}/*</version>
     </dependency>
     <dependency>
       <name>dam</name>

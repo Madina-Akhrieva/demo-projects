@@ -31,8 +31,6 @@ import info.magnolia.repository.RepositoryConstants;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.jcr.ImportUUIDBehavior;
-
 /**
  * {@link DefaultModuleVersionHandler} for travel-demo personalization module.
  */
@@ -44,7 +42,7 @@ public class TravelDemoPersonalizationModuleVersionHandler extends DefaultModule
         register(DeltaBuilder.update("1.1.4", "")
                 .addTask(new NodeExistsDelegateTask("Remove variants from home page", "Removes variants from home page. Variants have now moved to contacts page",  RepositoryConstants.WEBSITE, "/travel/variants", new RemoveNodeTask("", "",  RepositoryConstants.WEBSITE, "/travel/variants")))
                 .addTask(new IsInstallSamplesTask("Re-Bootstrap website variants for contact pages", "Re-bootstrap website variants to account for all changes",
-                        new BootstrapSingleResource("Re-Bootstrap variants", "", "/mgnl-bootstrap-samples/travel-demo-personalization/website.travel.contact.variants.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING)))
+                        new BootstrapSingleResource("Re-Bootstrap variants", "", "/mgnl-bootstrap-samples/travel-demo-personalization/website.travel.contact.variants.yaml")))
                 .addTask(new AddPermissionTask("Add permission", "travel-demo-admincentral", "personas", "/*", Permission.READ, true))
                 .addTask(new RemoveMixinTask("/travel", RepositoryConstants.WEBSITE, VariantManager.HAS_VARIANT_MIXIN))
 

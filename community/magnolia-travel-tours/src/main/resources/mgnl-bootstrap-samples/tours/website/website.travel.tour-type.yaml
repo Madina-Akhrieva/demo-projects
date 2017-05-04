@@ -1,0 +1,135 @@
+'tour-type': 
+  'hideInNav': false
+  'navigationTitle': 'Tours'
+  'title': 'Tour Types'
+  jcr:primaryType: 'mgnl:page'
+  jcr:uuid: '05872876-073e-40a3-a3c5-0d0a18c1d43d'
+  mgnl:activationStatus: true
+  mgnl:created: 2015-01-27T13:21:08.859+01:00
+  mgnl:createdBy: 'superuser'
+  mgnl:lastActivated: 2015-10-27T13:40:43.315+01:00
+  mgnl:lastActivatedBy: 'superuser'
+  mgnl:lastModified: 2015-10-27T10:41:44.110+01:00
+  mgnl:lastModifiedBy: 'superuser'
+  mgnl:template: 'tours:pages/categoryOverview'
+  'main': 
+    jcr:primaryType: 'mgnl:area'
+    jcr:uuid: '65f66aac-c0aa-42b4-b6a9-1f749a6429b0'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T13:21:12.019+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-10-27T13:40:43.315+01:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-10-27T10:41:44.110+01:00
+    mgnl:lastModifiedBy: 'superuser'
+    '0': 
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: 'e4519798-0df3-4b79-92b9-5686b2c3c17b'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-01-28T16:47:31.831+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T13:40:43.315+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-01-28T16:47:31.831+01:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'tours:components/tourTypeOverviewHeader'
+    '01': 
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: '3193937f-8216-4dfc-a5db-16e0ef9f9c00'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-01-29T22:24:50.086+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T13:40:43.315+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-01-29T22:24:50.086+01:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'tours:components/tourListFeaturedRow'
+    '02': 
+      'floating': 'true'
+      'rounded': 'false'
+      'services': ['twitter','facebook','google_plus']
+      'size': '32'
+      'vertical': 'true'
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: '98514262-eaf1-45ed-b30d-fdd041d2270b'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-10-27T10:41:07.164+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T13:40:43.315+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-10-27T10:41:44.110+01:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'travel-demo:components/social'
+    '00': 
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: 'a835f66f-6d45-41f6-8e6e-8163a1ef79a8'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-01-29T16:46:43.704+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T13:40:43.317+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-01-29T16:46:43.704+01:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'tours:components/tourList'
+  'footer': 
+    jcr:primaryType: 'mgnl:area'
+    jcr:uuid: '12f26132-0381-465f-8d13-155cc3bb4669'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-02-26T16:14:31.940+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-10-27T13:40:43.318+01:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-06-18T17:22:48.868+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    'footer1': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '7af2d089-e07d-48f3-aa27-12710370a9a1'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-02-26T16:14:31.955+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T13:40:43.318+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-02-26T16:14:31.955+01:00
+      mgnl:lastModifiedBy: 'superuser'
+    'footer2': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: 'bef2cd3e-ac68-4ad7-ae31-8b791e2729e0'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-02-26T16:14:31.990+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T13:40:43.318+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-02-26T16:14:31.990+01:00
+      mgnl:lastModifiedBy: 'superuser'
+    'footer3': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '7bb4b74d-2e42-43c0-948a-3fea95ca4d5e'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-02-26T16:14:32.016+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T13:40:43.318+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-02-26T16:14:32.016+01:00
+      mgnl:lastModifiedBy: 'superuser'
+    'footer4': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '4c1103b5-01eb-4056-b999-6bc67a97b0de'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-02-26T16:14:32.035+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T13:40:43.318+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-02-26T16:14:32.035+01:00
+      mgnl:lastModifiedBy: 'superuser'
+    'lastLinks': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '984b4a74-ea75-4676-88df-3b9e4330826c'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-06-18T17:22:48.872+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-27T13:40:43.318+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-06-18T17:22:48.872+02:00
+      mgnl:lastModifiedBy: 'superuser'
+
+

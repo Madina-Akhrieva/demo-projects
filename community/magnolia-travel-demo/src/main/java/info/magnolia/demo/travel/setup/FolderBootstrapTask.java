@@ -57,7 +57,7 @@ public class FolderBootstrapTask extends BootstrapResourcesTask {
 
     @Override
     protected boolean acceptResource(InstallContext ctx, String resourceName) {
-        return resourceName.startsWith(folderName) && resourceName.endsWith(".xml");
+        return resourceName.startsWith(folderName) && super.acceptResource(ctx, resourceName);
     }
 
 }

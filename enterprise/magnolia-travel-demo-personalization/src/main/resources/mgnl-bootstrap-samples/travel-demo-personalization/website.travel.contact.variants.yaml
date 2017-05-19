@@ -1,0 +1,1022 @@
+'variants': 
+  jcr:primaryType: 'mgnl:variants'
+  jcr:uuid: 'ef65acdb-2e79-492b-9df5-cfe62a3ebdef'
+  mgnl:activationStatus: true
+  mgnl:lastActivated: 2016-08-23T17:04:15.943+02:00
+  mgnl:lastActivatedBy: 'superuser'
+  mgnl:lastModified: 2016-08-23T09:07:20.545+02:00
+  mgnl:lastModifiedBy: 'superuser'
+  'variant-0': 
+    'hideInNav': false
+    'title_de': 'Kontakt'
+    'title': 'Contact'
+    jcr:mixinTypes: ['mgnl:variant']
+    jcr:primaryType: 'mgnl:page'
+    jcr:uuid: 'aed8afe9-d6f1-4422-960a-03491238f92a'
+    mgnl:activationStatus: true
+    mgnl:assignedSegments: ['segments:7c178722-5347-418f-af81-e95e40ca95d3']
+    mgnl:created: 2015-02-02T21:04:23.355+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2016-08-23T17:04:15.943+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2016-08-23T11:02:54.233+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    mgnl:template: 'travel-demo:pages/standard'
+    mgnl:variantTitle: 'Americas'
+    mgnl:variationOf: !weakreference 53b073cc-ea3a-4e44-bdea-8c8a790b55c5
+    'main': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '4d4508a3-88de-438c-8058-0cc28c68165a'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-02-02T21:23:58.043+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2016-08-23T11:02:54.233+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      '0': 
+        'headlineLevel': 'small'
+        'headline_de': 'Kontakt'
+        'headline': 'Contact'
+        'imagePosition': 'below'
+        'text_de': '<p>Setzen Sie sich jederzeit mit uns in Verbindung, um eine schnelle, hilfreiche Antwort zu erhalten.</p>
+          '
+        'text': '<p>Contact us any time to get a fast, helpful response.</p>
+          '
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: 'f5169eed-b4c9-4bc7-a8dc-101ae05f649b'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-02T21:24:42.507+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2016-08-23T11:02:43.202+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo:components/jumbotron'
+      '00': 
+        'headlineLevel': 'big'
+        'imagePosition': 'below'
+        'text_de': '<p>Haben Sie Fragen zu einer unserer Reisen? M&ouml;chten Sie eine der Reisen auf Ihre pers&ouml;nlichen Bed&uuml;rfnisse zuschneiden lassen &ndash; oder sind Sie auf der Suche nach einer Reise, die Sie auf unserer Webseite nicht gefunden haben?</p>
+
+            <p>Haben Sie eine Frage dazu, wie unsere Reisen durchgef&uuml;hrt werden, zu Ihrer Buchung oder den Zahlungsmodalit&auml;ten? Oder befinden Sie sich gerade auf einer der Reisen und haben eine Frage dazu oder ben&ouml;tigen Unterst&uuml;tzung?<br />
+            &nbsp;&nbsp; &nbsp;<br />
+            Oder haben Sie eine Medien- oder Presseanfrage?<br />
+            &nbsp;&nbsp; &nbsp;<br />
+            F&uuml;r all diese Anfragen k&ouml;nnen Sie uns auf die f&uuml;r Sie geeignetste Art, wie Sie sie unten sehen, erreichen. Wir stehen Ihnen rund um die Uhr zur Verf&uuml;gung.<br />
+            &nbsp;&nbsp;&nbsp;<br />
+            <strong>Alle Anfragen</strong><br />
+            <a href="mailto:contact@magnolia-travels-example.com">contact@magnolia-travels-example.com</a><br />
+            <a href="tel:+1 800 123 4567">+1 800 123 4567</a></p>
+          '
+        'text': '<p>Do you have a question about one of our tours? Would you like to customize a tour - or looking for a trip you just can&rsquo;t find on our website?</p>
+
+            <p>Do you have a question about how our tours work, about a booking you&rsquo;ve placed or about payment? Or are you on your trip now and have a question or need support?</p>
+
+            <p>Or do you have a media or press query?</p>
+
+            <p>For any of these concerns please contact us via the most convenient method below. We are available for you 24/7.</p>
+
+            <p><strong>All inquiries</strong><br />
+            <a href="mailto:contact@magnolia-travels-example.com" style="text-decoration:none;">contact@magnolia-travels-example.com</a><br />
+            <a href="tel:+1 800 123 4567">+1 800 123 4567</a></p>
+          '
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: '75416abf-9412-4e93-b3f6-40ee5940ed97'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-02T21:28:45.700+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-06-18T11:41:42.039+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo:components/textImage'
+      '03': 
+        'constrainAspectRatio': false
+        'headlineLevel': 'medium'
+        'headline': 'Americas'
+        'imagePosition': 'below'
+        'position': 'top'
+        'text': '<ul>
+	<li>USA: +1-800-MAGNOLIA (toll free)</li>
+	<li>Argentina (54 11) 1234-5678</li>
+	<li>Brazil +55 (11) 1234-5678</li>
+	<li><a href="mailto:us@magnolia-travels-example.com">us@magnolia-travels-example.com</a></li>
+</ul>
+'
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: 'c369b50b-2cc1-4ed0-b211-00bda222921c'
+        mgnl:activationStatus: false
+        mgnl:created: 2016-08-23T08:39:01.443+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2016-08-23T08:39:01.445+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2016-08-23T11:02:54.233+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo:components/textImage'
+      '01': 
+        'confirmContentType': 'text'
+        'confirmContentTypecode': ''
+        'confirmContentTypetext': 'We have received a message sent from ${email} through our contact form.
+            For your convenience, the message is repeated below.
+
+            Thank you for contacting us!
+            - John
+
+            ---- your message ----
+            ${message}'
+        'confirmMailFrom': 'contact@magnolia-travels-example.com'
+        'confirmMailSubject': 'We have received your message, ${email}'
+        'confirmMailTo': '${email}'
+        'contactMailFrom': '${email}'
+        'contactMailSubject': '${subject}'
+        'contactMailTo': 'contact@magnolia-travels-example.com'
+        'contentType': 'text'
+        'contentTypehtml': ''
+        'contentTypetext': 'Message:
+
+            Email: ${email}
+
+            Subject: ${subject}
+
+            Message: ${message}'
+        'displayStepNavigation': false
+        'formName': 'contact-form'
+        'formTitle_de': 'Kontaktformular'
+        'formTitle': 'Contact Form'
+        'requiredSymbol': '*'
+        'rightText_de': 'erforderlich'
+        'rightText': 'required'
+        'sendConfirmation': false
+        'trackMail': false
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: 'ec7d77b5-335a-4ea1-8db6-90298be1800b'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-09-03T09:36:33.087+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'form:components/form'
+        'fieldsets': 
+          jcr:primaryType: 'mgnl:area'
+          jcr:uuid: 'd95c1f64-4a66-45e6-ac51-43847ccf9ac0'
+          mgnl:activationStatus: true
+          mgnl:created: 2015-09-03T09:36:33.253+02:00
+          mgnl:createdBy: 'superuser'
+          mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+          mgnl:lastActivatedBy: 'superuser'
+          mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+          mgnl:lastModifiedBy: 'superuser'
+          '0': 
+            jcr:primaryType: 'mgnl:component'
+            jcr:uuid: 'f4db28b2-7543-43da-9391-ef4c65e83e5d'
+            mgnl:activationStatus: true
+            mgnl:created: 2015-09-03T09:37:09.255+02:00
+            mgnl:createdBy: 'superuser'
+            mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+            mgnl:lastActivatedBy: 'superuser'
+            mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+            mgnl:lastModifiedBy: 'superuser'
+            mgnl:template: 'form:components/formGroupFields'
+            'fields': 
+              jcr:primaryType: 'mgnl:area'
+              jcr:uuid: '884e4a0d-ac78-4d15-8db6-e957b82f12b8'
+              mgnl:activationStatus: true
+              mgnl:created: 2015-09-03T09:37:09.416+02:00
+              mgnl:createdBy: 'superuser'
+              mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+              mgnl:lastActivatedBy: 'superuser'
+              mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+              mgnl:lastModifiedBy: 'superuser'
+              '0': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'email'
+                'disabled': false
+                'inputType': 'email'
+                'mandatory': true
+                'readonly': false
+                'rows': 1
+                'title_de': 'Ihre E-Mail'
+                'title': 'Your Email'
+                'validation': ['email']
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '915f4c9e-d613-457f-98d3-16686abf2376'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T09:37:47.300+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:42:31.429+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '00': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'subject'
+                'disabled': false
+                'inputType': 'text'
+                'mandatory': false
+                'readonly': false
+                'rows': 1
+                'title_de': 'Betreff'
+                'title': 'Subject'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '39677f3a-eaaa-4f9a-b094-5c07d152aa4f'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T09:39:20.636+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:43:43.193+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '01': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'message'
+                'description_de': 'Ihre Nachricht an uns'
+                'description': 'Your message to our company'
+                'disabled': false
+                'inputType': 'text'
+                'mandatory': true
+                'readonly': false
+                'rows': 4
+                'title_de': 'Nachricht'
+                'title': 'Message'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '2cc9e9e5-4abf-4514-abc7-14d39fd16685'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T09:40:11.327+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:44:40.902+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '02': 
+                'buttonText_de': 'Abschicken'
+                'buttonText': 'Send'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '544763d7-d77d-4ef8-9bfb-dcabb4d9f1dd'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T10:02:32.319+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formSubmit'
+                'conditionList': 
+                  jcr:primaryType: 'mgnl:area'
+                  jcr:uuid: '5eae1680-15f2-46e6-bee7-9667fd001af3'
+                  mgnl:activationStatus: true
+                  mgnl:created: 2015-09-03T10:02:32.456+02:00
+                  mgnl:createdBy: 'superuser'
+                  mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                  mgnl:lastActivatedBy: 'superuser'
+                  mgnl:lastModified: 2015-09-03T10:02:32.456+02:00
+                  mgnl:lastModifiedBy: 'superuser'
+    'footer': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: 'ee020e49-85a5-4de4-bc16-6c71b009ac99'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-02-02T21:23:58.056+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-07-01T10:41:43.498+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      'footer1': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: 'd61e02d7-b465-4023-9810-20327e8b06c6'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.864+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.864+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer2': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '98714598-556e-44bd-9a1c-ec5a393cd545'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.886+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.886+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer3': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '85520a9a-f494-42e5-ae3a-4456cf0063e1'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.906+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.334+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.906+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer4': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '6c3e42a9-1691-4314-b9cf-3a92a2b6b01f'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.931+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.334+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.931+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'lastLinks': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '8b36dfad-1fc6-47d8-9531-9d1bc086ea0e'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-07-01T10:41:43.502+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.334+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-07-01T10:41:43.502+02:00
+        mgnl:lastModifiedBy: 'superuser'
+  'variant-1': 
+    'hideInNav': false
+    'title_de': 'Kontakt'
+    'title': 'Contact'
+    jcr:mixinTypes: ['mgnl:variant']
+    jcr:primaryType: 'mgnl:page'
+    jcr:uuid: 'bf4ef942-acbf-4b36-8d0b-47a6079df2ff'
+    mgnl:activationStatus: true
+    mgnl:assignedSegments: ['segments:f2df3cc8-86f2-4338-879f-27f0cf4c46db']
+    mgnl:created: 2015-02-02T21:04:23.355+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2016-08-23T17:04:15.943+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2016-08-23T09:43:52.988+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    mgnl:template: 'travel-demo:pages/standard'
+    mgnl:variantTitle: 'Asia-Pacific'
+    mgnl:variationOf: !weakreference 53b073cc-ea3a-4e44-bdea-8c8a790b55c5
+    'main': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '6f61bdc5-d658-4943-9501-5b2bfd5c8f8d'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-02-02T21:23:58.043+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2016-08-23T09:43:52.988+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      '0': 
+        'headlineLevel': 'small'
+        'headline_de': 'Kontakt'
+        'headline': 'Contact'
+        'imagePosition': 'below'
+        'text_de': '<p>Setzen Sie sich jederzeit mit uns in Verbindung, um eine schnelle, hilfreiche Antwort zu erhalten.</p>
+          '
+        'text': '<p>Contact us any time to get a fast, helpful response.</p>
+          '
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: 'b38e90f9-8ff4-4bbd-ac6d-25318178aa21'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-02T21:24:42.507+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-06-18T11:31:04.095+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo:components/jumbotron'
+      '00': 
+        'headlineLevel': 'big'
+        'imagePosition': 'below'
+        'text_de': '<p>Haben Sie Fragen zu einer unserer Reisen? M&ouml;chten Sie eine der Reisen auf Ihre pers&ouml;nlichen Bed&uuml;rfnisse zuschneiden lassen &ndash; oder sind Sie auf der Suche nach einer Reise, die Sie auf unserer Webseite nicht gefunden haben?</p>
+
+            <p>Haben Sie eine Frage dazu, wie unsere Reisen durchgef&uuml;hrt werden, zu Ihrer Buchung oder den Zahlungsmodalit&auml;ten? Oder befinden Sie sich gerade auf einer der Reisen und haben eine Frage dazu oder ben&ouml;tigen Unterst&uuml;tzung?<br />
+            &nbsp;&nbsp; &nbsp;<br />
+            Oder haben Sie eine Medien- oder Presseanfrage?<br />
+            &nbsp;&nbsp; &nbsp;<br />
+            F&uuml;r all diese Anfragen k&ouml;nnen Sie uns auf die f&uuml;r Sie geeignetste Art, wie Sie sie unten sehen, erreichen. Wir stehen Ihnen rund um die Uhr zur Verf&uuml;gung.<br />
+            &nbsp;&nbsp;&nbsp;<br />
+            <strong>Alle Anfragen</strong><br />
+            <a href="mailto:contact@magnolia-travels-example.com">contact@magnolia-travels-example.com</a><br />
+            <a href="tel:+1 800 123 4567">+1 800 123 4567</a></p>
+          '
+        'text': '<p>Do you have a question about one of our tours? Would you like to customize a tour - or looking for a trip you just can&rsquo;t find on our website?</p>
+
+            <p>Do you have a question about how our tours work, about a booking you&rsquo;ve placed or about payment? Or are you on your trip now and have a question or need support?</p>
+
+            <p>Or do you have a media or press query?</p>
+
+            <p>For any of these concerns please contact us via the most convenient method below. We are available for you 24/7.</p>
+
+            <p><strong>All inquiries</strong><br />
+            <a href="mailto:contact@magnolia-travels-example.com" style="text-decoration:none;">contact@magnolia-travels-example.com</a><br />
+            <a href="tel:+1 800 123 4567">+1 800 123 4567</a></p>
+          '
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: 'eead1b25-e61b-4dd3-9dda-fffe8967c28b'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-02T21:28:45.700+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-06-18T11:41:42.039+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo:components/textImage'
+      '02': 
+        'constrainAspectRatio': false
+        'headlineLevel': 'medium'
+        'headline': 'Asia Pacific'
+        'imagePosition': 'below'
+        'position': 'top'
+        'text': '<ul>
+	<li>Australia and New Zealand: 1-800-MAGNOLIA</li>
+	<li>China: 800 123 4567</li>
+	<li><span style="line-height:1.6em">Hong Kong: 800 55 6666</span></li>
+	<li>India: +91 12 34567890</li>
+	<li>Indonesia: +62 234 5 678 9090</li>
+	<li>Japan: +81 1 2345 6789</li>
+	<li>Korea: +82 1 123 4567</li>
+	<li>Singapore: +65 1234 5678</li>
+	<li>Taiwan: 0800 111 222</li>
+	<li>Thailand: +66 11 222 4444</li>
+	<li>Vietnam: +84 123 1234</li>
+	<li><a href="mailto:apac@magnolia-travels-example.com" style="line-height: 1.6em;">apac@magnolia-travels-example.com</a></li>
+</ul>
+'
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: '0c7e6520-b79f-4f4e-8e94-9449db32581d'
+        mgnl:created: 2016-08-23T08:32:03.468+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastModified: 2016-08-23T09:43:52.988+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo:components/textImage'
+      '01': 
+        'confirmContentType': 'text'
+        'confirmContentTypecode': ''
+        'confirmContentTypetext': 'We have received a message sent from ${email} through our contact form.
+            For your convenience, the message is repeated below.
+
+            Thank you for contacting us!
+            - John
+
+            ---- your message ----
+            ${message}'
+        'confirmMailFrom': 'contact@magnolia-travels-example.com'
+        'confirmMailSubject': 'We have received your message, ${email}'
+        'confirmMailTo': '${email}'
+        'contactMailFrom': '${email}'
+        'contactMailSubject': '${subject}'
+        'contactMailTo': 'contact@magnolia-travels-example.com'
+        'contentType': 'text'
+        'contentTypehtml': ''
+        'contentTypetext': 'Message:
+
+            Email: ${email}
+
+            Subject: ${subject}
+
+            Message: ${message}'
+        'displayStepNavigation': false
+        'formName': 'contact-form'
+        'formTitle_de': 'Kontaktformular'
+        'formTitle': 'Contact Form'
+        'requiredSymbol': '*'
+        'rightText_de': 'erforderlich'
+        'rightText': 'required'
+        'sendConfirmation': false
+        'trackMail': false
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: '6d18de54-1ba3-4d37-a5e5-a456d86c7886'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-09-03T09:36:33.087+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'form:components/form'
+        'fieldsets': 
+          jcr:primaryType: 'mgnl:area'
+          jcr:uuid: 'f4fccc8c-cd36-404a-8215-1b25ca9ec7dc'
+          mgnl:activationStatus: true
+          mgnl:created: 2015-09-03T09:36:33.253+02:00
+          mgnl:createdBy: 'superuser'
+          mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+          mgnl:lastActivatedBy: 'superuser'
+          mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+          mgnl:lastModifiedBy: 'superuser'
+          '0': 
+            jcr:primaryType: 'mgnl:component'
+            jcr:uuid: '0c157770-ff56-4c25-855a-0dfd7a3893ff'
+            mgnl:activationStatus: true
+            mgnl:created: 2015-09-03T09:37:09.255+02:00
+            mgnl:createdBy: 'superuser'
+            mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+            mgnl:lastActivatedBy: 'superuser'
+            mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+            mgnl:lastModifiedBy: 'superuser'
+            mgnl:template: 'form:components/formGroupFields'
+            'fields': 
+              jcr:primaryType: 'mgnl:area'
+              jcr:uuid: 'da9e0dc8-893e-4f6a-9d3f-d5be89c41add'
+              mgnl:activationStatus: true
+              mgnl:created: 2015-09-03T09:37:09.416+02:00
+              mgnl:createdBy: 'superuser'
+              mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+              mgnl:lastActivatedBy: 'superuser'
+              mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+              mgnl:lastModifiedBy: 'superuser'
+              '0': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'email'
+                'disabled': false
+                'inputType': 'email'
+                'mandatory': true
+                'readonly': false
+                'rows': 1
+                'title_de': 'Ihre E-Mail'
+                'title': 'Your Email'
+                'validation': ['email']
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: 'f03012df-3e0a-4311-9dba-353e0c8bd50e'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T09:37:47.300+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:42:31.429+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '00': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'subject'
+                'disabled': false
+                'inputType': 'text'
+                'mandatory': false
+                'readonly': false
+                'rows': 1
+                'title_de': 'Betreff'
+                'title': 'Subject'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '7436ff56-0ffe-4f2f-8130-1031e9429646'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T09:39:20.636+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:43:43.193+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '01': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'message'
+                'description_de': 'Ihre Nachricht an uns'
+                'description': 'Your message to our company'
+                'disabled': false
+                'inputType': 'text'
+                'mandatory': true
+                'readonly': false
+                'rows': 4
+                'title_de': 'Nachricht'
+                'title': 'Message'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '81665e42-6a11-491f-8c62-cea8a864bcba'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T09:40:11.327+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:44:40.902+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '02': 
+                'buttonText_de': 'Abschicken'
+                'buttonText': 'Send'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: 'c191dd73-43ed-46be-987a-772e51e5b90e'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T10:02:32.319+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formSubmit'
+                'conditionList': 
+                  jcr:primaryType: 'mgnl:area'
+                  jcr:uuid: '1c37766c-bc07-4975-b7c4-72be192ac0f3'
+                  mgnl:activationStatus: true
+                  mgnl:created: 2015-09-03T10:02:32.456+02:00
+                  mgnl:createdBy: 'superuser'
+                  mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                  mgnl:lastActivatedBy: 'superuser'
+                  mgnl:lastModified: 2015-09-03T10:02:32.456+02:00
+                  mgnl:lastModifiedBy: 'superuser'
+    'footer': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '16d16330-d151-4c72-af16-eb8e46a463db'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-02-02T21:23:58.056+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-07-01T10:41:43.498+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      'footer1': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '2cbafd0e-3e84-4c03-878c-12533d7366cc'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.864+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.864+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer2': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '722c15bf-afa3-4937-98b5-8d65a01dec71'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.886+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.886+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer3': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '2866b995-ce68-4002-ae35-0b1054cd52db'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.906+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.334+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.906+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer4': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '5b5ed0ea-b0db-4fad-abe2-4015ae230d15'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.931+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.334+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.931+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'lastLinks': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '8cd3a920-332f-4800-a6ab-95033ed27742'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-07-01T10:41:43.502+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.334+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-07-01T10:41:43.502+02:00
+        mgnl:lastModifiedBy: 'superuser'
+  'variant-2': 
+    'hideInNav': false
+    'title_de': 'Kontakt'
+    'title': 'Contact'
+    jcr:mixinTypes: ['mgnl:variant']
+    jcr:primaryType: 'mgnl:page'
+    jcr:uuid: 'ece4f4fb-2306-4ad2-ae66-e40a8fdeb9c9'
+    mgnl:activationStatus: true
+    mgnl:assignedSegments: ['segments:6896dff6-1584-4a26-be96-2ca5f5a04ac8']
+    mgnl:created: 2015-02-02T21:04:23.355+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2016-08-23T17:04:15.943+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2016-08-23T09:44:00.699+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    mgnl:template: 'travel-demo:pages/standard'
+    mgnl:variantTitle: 'Europe, Middle East & Africa'
+    mgnl:variationOf: !weakreference 53b073cc-ea3a-4e44-bdea-8c8a790b55c5
+    'main': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: 'f56a4b99-e235-4cb2-bd92-2f2450205b8e'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-02-02T21:23:58.043+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2016-08-23T09:44:00.699+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      '0': 
+        'headlineLevel': 'small'
+        'headline_de': 'Kontakt'
+        'headline': 'Contact'
+        'imagePosition': 'below'
+        'text_de': '<p>Setzen Sie sich jederzeit mit uns in Verbindung, um eine schnelle, hilfreiche Antwort zu erhalten.</p>
+          '
+        'text': '<p>Contact us any time to get a fast, helpful response.</p>
+          '
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: '6a09873f-6921-449b-9206-04828de7f7d9'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-02T21:24:42.507+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-06-18T11:31:04.095+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo:components/jumbotron'
+      '00': 
+        'headlineLevel': 'big'
+        'imagePosition': 'below'
+        'text_de': '<p>Haben Sie Fragen zu einer unserer Reisen? M&ouml;chten Sie eine der Reisen auf Ihre pers&ouml;nlichen Bed&uuml;rfnisse zuschneiden lassen &ndash; oder sind Sie auf der Suche nach einer Reise, die Sie auf unserer Webseite nicht gefunden haben?</p>
+
+            <p>Haben Sie eine Frage dazu, wie unsere Reisen durchgef&uuml;hrt werden, zu Ihrer Buchung oder den Zahlungsmodalit&auml;ten? Oder befinden Sie sich gerade auf einer der Reisen und haben eine Frage dazu oder ben&ouml;tigen Unterst&uuml;tzung?<br />
+            &nbsp;&nbsp; &nbsp;<br />
+            Oder haben Sie eine Medien- oder Presseanfrage?<br />
+            &nbsp;&nbsp; &nbsp;<br />
+            F&uuml;r all diese Anfragen k&ouml;nnen Sie uns auf die f&uuml;r Sie geeignetste Art, wie Sie sie unten sehen, erreichen. Wir stehen Ihnen rund um die Uhr zur Verf&uuml;gung.<br />
+            &nbsp;&nbsp;&nbsp;<br />
+            <strong>Alle Anfragen</strong><br />
+            <a href="mailto:contact@magnolia-travels-example.com">contact@magnolia-travels-example.com</a><br />
+            <a href="tel:+1 800 123 4567">+1 800 123 4567</a></p>
+          '
+        'text': '<p>Do you have a question about one of our tours? Would you like to customize a tour - or looking for a trip you just can&rsquo;t find on our website?</p>
+
+            <p>Do you have a question about how our tours work, about a booking you&rsquo;ve placed or about payment? Or are you on your trip now and have a question or need support?</p>
+
+            <p>Or do you have a media or press query?</p>
+
+            <p>For any of these concerns please contact us via the most convenient method below. We are available for you 24/7.</p>
+
+            <p><strong>All inquiries</strong><br />
+            <a href="mailto:contact@magnolia-travels-example.com" style="text-decoration:none;">contact@magnolia-travels-example.com</a><br />
+            <a href="tel:+1 800 123 4567">+1 800 123 4567</a></p>
+          '
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: '53ca30ea-0bf3-4dfb-ac4d-268a60160ebe'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-02T21:28:45.700+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-06-18T11:41:42.039+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo:components/textImage'
+      '02': 
+        'constrainAspectRatio': false
+        'headlineLevel': 'medium'
+        'headline': 'Europe, Middle East & Africa'
+        'imagePosition': 'below'
+        'text_de': '<p>Haben Sie Fragen zu einer unserer Reisen? M&ouml;chten Sie eine der Reisen auf Ihre pers&ouml;nlichen Bed&uuml;rfnisse zuschneiden lassen &ndash; oder sind Sie auf der Suche nach einer Reise, die Sie auf unserer Webseite nicht gefunden haben?</p>
+
+            <p>Haben Sie eine Frage dazu, wie unsere Reisen durchgef&uuml;hrt werden, zu Ihrer Buchung oder den Zahlungsmodalit&auml;ten? Oder befinden Sie sich gerade auf einer der Reisen und haben eine Frage dazu oder ben&ouml;tigen Unterst&uuml;tzung?<br />
+            &nbsp;&nbsp; &nbsp;<br />
+            Oder haben Sie eine Medien- oder Presseanfrage?<br />
+            &nbsp;&nbsp; &nbsp;<br />
+            F&uuml;r all diese Anfragen k&ouml;nnen Sie uns auf die f&uuml;r Sie geeignetste Art, wie Sie sie unten sehen, erreichen. Wir stehen Ihnen rund um die Uhr zur Verf&uuml;gung.<br />
+            &nbsp;&nbsp;&nbsp;<br />
+            <strong>Alle Anfragen</strong><br />
+            <a href="mailto:contact@magnolia-travels-example.com">contact@magnolia-travels-example.com</a><br />
+            <a href="tel:+1 800 123 4567">+1 800 123 4567</a></p>
+          '
+        'text': '<ul>
+	<li>France +33 1 23 45 67</li>
+	<li>Germany +49 1 234 567</li>
+	<li>UK +44 1234 567890</li>
+	<li><a href="mailto:europe@magnolia-travels-example.com">europe@magnolia-travels-example.com</a></li>
+</ul>
+'
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: '6981b7a0-79ac-4618-bde8-f0c197802798'
+        mgnl:activationStatus: false
+        mgnl:created: 2016-08-23T09:37:58.893+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2016-08-23T09:37:58.894+02:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2016-08-23T09:44:00.699+02:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'travel-demo:components/textImage'
+      '01': 
+        'confirmContentType': 'text'
+        'confirmContentTypecode': ''
+        'confirmContentTypetext': 'We have received a message sent from ${email} through our contact form.
+            For your convenience, the message is repeated below.
+
+            Thank you for contacting us!
+            - John
+
+            ---- your message ----
+            ${message}'
+        'confirmMailFrom': 'contact@magnolia-travels-example.com'
+        'confirmMailSubject': 'We have received your message, ${email}'
+        'confirmMailTo': '${email}'
+        'contactMailFrom': '${email}'
+        'contactMailSubject': '${subject}'
+        'contactMailTo': 'contact@magnolia-travels-example.com'
+        'contentType': 'text'
+        'contentTypehtml': ''
+        'contentTypetext': 'Message:
+
+            Email: ${email}
+
+            Subject: ${subject}
+
+            Message: ${message}'
+        'displayStepNavigation': false
+        'formName': 'contact-form'
+        'formTitle_de': 'Kontaktformular'
+        'formTitle': 'Contact Form'
+        'requiredSymbol': '*'
+        'rightText_de': 'erforderlich'
+        'rightText': 'required'
+        'sendConfirmation': false
+        'trackMail': false
+        jcr:primaryType: 'mgnl:component'
+        jcr:uuid: '58480b3f-e188-44b3-b582-60f9cf4671e9'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-09-03T09:36:33.087+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+        mgnl:lastModifiedBy: 'superuser'
+        mgnl:template: 'form:components/form'
+        'fieldsets': 
+          jcr:primaryType: 'mgnl:area'
+          jcr:uuid: 'a74e28f3-3e73-4aae-b3c2-ce40328e24aa'
+          mgnl:activationStatus: true
+          mgnl:created: 2015-09-03T09:36:33.253+02:00
+          mgnl:createdBy: 'superuser'
+          mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+          mgnl:lastActivatedBy: 'superuser'
+          mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+          mgnl:lastModifiedBy: 'superuser'
+          '0': 
+            jcr:primaryType: 'mgnl:component'
+            jcr:uuid: 'd4716544-f2b3-4d3c-b0e6-7e06b7fcb325'
+            mgnl:activationStatus: true
+            mgnl:created: 2015-09-03T09:37:09.255+02:00
+            mgnl:createdBy: 'superuser'
+            mgnl:lastActivated: 2015-10-30T11:45:33.332+01:00
+            mgnl:lastActivatedBy: 'superuser'
+            mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+            mgnl:lastModifiedBy: 'superuser'
+            mgnl:template: 'form:components/formGroupFields'
+            'fields': 
+              jcr:primaryType: 'mgnl:area'
+              jcr:uuid: '30f6d296-443c-4812-927a-b723313db58e'
+              mgnl:activationStatus: true
+              mgnl:created: 2015-09-03T09:37:09.416+02:00
+              mgnl:createdBy: 'superuser'
+              mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+              mgnl:lastActivatedBy: 'superuser'
+              mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+              mgnl:lastModifiedBy: 'superuser'
+              '0': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'email'
+                'disabled': false
+                'inputType': 'email'
+                'mandatory': true
+                'readonly': false
+                'rows': 1
+                'title_de': 'Ihre E-Mail'
+                'title': 'Your Email'
+                'validation': ['email']
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '12fff04a-d292-499a-85cc-dafc3fd54d9d'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T09:37:47.300+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:42:31.429+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '00': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'subject'
+                'disabled': false
+                'inputType': 'text'
+                'mandatory': false
+                'readonly': false
+                'rows': 1
+                'title_de': 'Betreff'
+                'title': 'Subject'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '3f391c57-c56d-4c97-b924-b47f5b783221'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T09:39:20.636+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:43:43.193+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '01': 
+                'autocomplete': false
+                'autofocus': false
+                'controlName': 'message'
+                'description_de': 'Ihre Nachricht an uns'
+                'description': 'Your message to our company'
+                'disabled': false
+                'inputType': 'text'
+                'mandatory': true
+                'readonly': false
+                'rows': 4
+                'title_de': 'Nachricht'
+                'title': 'Message'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: 'e4bd2b35-81a5-4d57-8e2c-a26fb5c059f3'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T09:40:11.327+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:44:40.902+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formEdit'
+              '02': 
+                'buttonText_de': 'Abschicken'
+                'buttonText': 'Send'
+                jcr:primaryType: 'mgnl:component'
+                jcr:uuid: '9ccf552e-370f-498a-a5cd-e092d47a0caa'
+                mgnl:activationStatus: true
+                mgnl:created: 2015-09-03T10:02:32.319+02:00
+                mgnl:createdBy: 'superuser'
+                mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                mgnl:lastActivatedBy: 'superuser'
+                mgnl:lastModified: 2015-10-30T11:44:55.784+01:00
+                mgnl:lastModifiedBy: 'superuser'
+                mgnl:template: 'form:components/formSubmit'
+                'conditionList': 
+                  jcr:primaryType: 'mgnl:area'
+                  jcr:uuid: '937fd3e4-c4d8-4d2c-9fc7-bdcacecad0b6'
+                  mgnl:activationStatus: true
+                  mgnl:created: 2015-09-03T10:02:32.456+02:00
+                  mgnl:createdBy: 'superuser'
+                  mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+                  mgnl:lastActivatedBy: 'superuser'
+                  mgnl:lastModified: 2015-09-03T10:02:32.456+02:00
+                  mgnl:lastModifiedBy: 'superuser'
+    'footer': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '180ae39c-42e0-4cf0-9115-11aad4bf0df2'
+      mgnl:activationStatus: true
+      mgnl:created: 2015-02-02T21:23:58.056+01:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2015-07-01T10:41:43.498+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      'footer1': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '6b375a71-2a03-46a1-9f68-1b5590143925'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.864+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.864+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer2': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: 'f0ef0168-ce21-49d5-8239-bf528531c154'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.886+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.333+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.886+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer3': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: '6f9a726d-b7fe-4c8f-a87c-2e6dd68adfe9'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.906+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.334+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.906+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'footer4': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: 'acb3b23e-1ecb-470a-88f3-fed42ccc0ef6'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-02-26T16:27:47.931+01:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.334+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-02-26T16:27:47.931+01:00
+        mgnl:lastModifiedBy: 'superuser'
+      'lastLinks': 
+        jcr:primaryType: 'mgnl:area'
+        jcr:uuid: 'bab81fbe-2b1e-4aa4-b2a9-d7a25c7730b0'
+        mgnl:activationStatus: true
+        mgnl:created: 2015-07-01T10:41:43.502+02:00
+        mgnl:createdBy: 'superuser'
+        mgnl:lastActivated: 2015-10-30T11:45:33.334+01:00
+        mgnl:lastActivatedBy: 'superuser'
+        mgnl:lastModified: 2015-07-01T10:41:43.502+02:00
+        mgnl:lastModifiedBy: 'superuser'
+
+

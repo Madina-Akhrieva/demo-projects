@@ -1,0 +1,114 @@
+'destinations': 
+  jcr:primaryType: 'mgnl:folder'
+  jcr:uuid: 'cf6d3586-0081-4690-a3eb-f985529711c7'
+  mgnl:activationStatus: true
+  mgnl:created: 2015-01-27T15:27:47.839+01:00
+  mgnl:createdBy: 'superuser'
+  mgnl:lastActivated: 2015-07-16T13:56:01.992+02:00
+  mgnl:lastActivatedBy: 'superuser'
+  mgnl:lastModified: 2015-01-27T15:32:23.094+01:00
+  mgnl:lastModifiedBy: 'superuser'
+  'northAmerica': 
+    'displayName_de': 'Nordamerika'
+    'displayName': 'North America'
+    'icon': 'jcr:27129f8f-7961-4f78-a5bb-a3a0dfbe6555'
+    'image': 'jcr:61c6d945-e7aa-4947-98d4-fae2d0d2c9e6'
+    'level': 'level-1'
+    'name': 'northAmerica'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: 'ed3dcd18-78af-46df-a9e1-bc732479f2e7'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:30:58.619+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:56:02.069+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:54:07.449+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'southAmerica': 
+    'displayName_de': 'Zentral & Südamerika'
+    'displayName': 'Central & South America'
+    'icon': 'jcr:475b75ad-d19c-4d87-af60-a98f5096d3ac'
+    'image': 'jcr:db52dd24-7d59-472b-bd53-c75f78849840'
+    'level': 'level-1'
+    'name': 'southAmerica'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: 'bed2e297-199c-4dc8-90cd-54ad3cb4221b'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:31:29.521+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:56:02.054+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:54:39.718+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'europe': 
+    'displayName_de': 'Europa'
+    'displayName': 'Europe'
+    'icon': 'jcr:e0894297-fd1c-478a-bac1-a1eb11c5f02f'
+    'image': 'jcr:7e5e5622-b266-4451-b45b-3fde392d3a54'
+    'level': 'level-1'
+    'name': 'europe'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: '6cc50e28-fb0e-4e49-b3b6-728690a2e861'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:31:39.321+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:56:02.040+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:55:01.450+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'africa': 
+    'displayName_de': 'Afrika, Naher & Mittlerer Osten'
+    'displayName': 'Africa & the Middle East'
+    'icon': 'jcr:7bcd9569-4cc3-4de9-b770-24b3941d511d'
+    'image': 'jcr:f9cf8c33-6e08-4846-b951-bb2fe13edd77'
+    'level': 'level-1'
+    'name': 'africa'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: '79da73f7-900b-4c91-b58b-3b1355485519'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:31:56.690+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:56:02.028+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:55:20.823+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'asia': 
+    'displayName_de': 'Asien-Pazifik'
+    'displayName': 'Asia & the Pacific'
+    'icon': 'jcr:75874ebc-eabe-4b24-8da2-92251ec7fcb3'
+    'image': 'jcr:20e4d7f7-3160-4670-9acb-5c87231088dd'
+    'level': 'level-1'
+    'name': 'asia'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: '7ec72c48-c33f-418e-b2ff-44cfb4bbb1f2'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:32:10.574+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:56:02.017+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:55:33.581+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'polar': 
+    'displayName_de': 'Polargebiete'
+    'displayName': 'Polar'
+    'icon': 'jcr:b22520a9-daca-41c6-8383-d4bcc3c181b0'
+    'image': 'jcr:baa86f2d-b1c6-413e-9879-bc2b166f9f1d'
+    'level': 'level-1'
+    'name': 'polar'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: 'ee483660-15cd-490d-b709-884b3f130286'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:32:23.094+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:56:02.005+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:55:49.928+02:00
+    mgnl:lastModifiedBy: 'superuser'
+
+

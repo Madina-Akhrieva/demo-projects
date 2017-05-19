@@ -80,9 +80,9 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                         new ArrayDelegateTask("",
                                 new FolderBootstrapTask("/mgnl-bootstrap-samples/tours/website/"),
                                 new ArrayDelegateTask("Re-Bootstrap category content for travel tours", "Re-bootstrap category content to account for all changes",
-                                        new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/tours/category.destinations.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING),
-                                        new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/tours/category.tour-types.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING)),
-                                new BootstrapSingleResource("Re bootstrap tours content", "", "/mgnl-bootstrap-samples/tours/tours.magnolia-travels.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING),
+                                        new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/tours/category.destinations.yaml"),
+                                        new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/tours/category.tour-types.yaml")),
+                                new BootstrapSingleResource("Re bootstrap tours content", "", "/mgnl-bootstrap-samples/tours/tours.magnolia-travels.yaml"),
                                 new FolderBootstrapTask("/mgnl-bootstrap-samples/tours/assets/"),
                                 new OrderNodeBeforeTask("Order careers zeroFive node before zeroFix", "", RepositoryConstants.WEBSITE, "/travel/about/careers/main/05", "06"))))
                 .addTask(new BootstrapSingleModuleResource("config.modules.tours.apps.tourCategories.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))

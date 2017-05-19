@@ -48,7 +48,6 @@ import info.magnolia.module.delta.IsAuthorInstanceDelegateTask;
 import info.magnolia.module.delta.IsInstallSamplesTask;
 import info.magnolia.module.delta.IsModuleInstalledOrRegistered;
 import info.magnolia.module.delta.NodeExistsDelegateTask;
-import info.magnolia.module.delta.PartialBootstrapTask;
 import info.magnolia.module.delta.PropertyExistsDelegateTask;
 import info.magnolia.module.delta.PropertyValueDelegateTask;
 import info.magnolia.module.delta.RemoveNodeTask;
@@ -100,7 +99,7 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
         register(DeltaBuilder.update("1.1.4", "")
                 .addTask(new IsInstallSamplesTask("Re-Bootstrap website content for travel pages", "Re-bootstrap website content to account for all changes",
                         new ArrayDelegateTask("",
-                                new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo/website.travel.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING),
+                                new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo/website.travel.yaml"),
                                 new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo/dam.travel-demo.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))))
                 // We re-bootstrap twice because a simple (and single) re-bootstrap (using ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING) would NOT
                 // "move" an existing site definition (which might actually exist from a previous version) in the site module
@@ -134,9 +133,7 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
 
                 .addTask(new IsModuleInstalledOrRegistered("Copy changes in site definition to multisite if multisite is installed", "multisite",
                         new IsModuleInstalledOrRegistered("", "public-user-registration",
-                                new CopyNodeTask("", "/modules/travel-demo/config/travel/templates/availability/templates/pur", "/modules/multisite/config/sites/travel/templates/availability/templates/pur", false)
-                        )))
-                .addTask(new PartialBootstrapTask("Bootstrap multiStep form demo.", "/mgnl-bootstrap-samples/travel-demo/website.travel.xml", "travel/book-tour"))
+                                new CopyNodeTask("", "/modules/travel-demo/config/travel/templates/availability/templates/pur", "/modules/multisite/config/sites/travel/templates/availability/templates/pur", false))))
         );
     }
 

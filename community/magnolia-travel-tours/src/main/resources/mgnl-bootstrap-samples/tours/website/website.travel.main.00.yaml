@@ -1,0 +1,16 @@
+'00': 
+  'title_de': 'Welcher Reisetyp bist Du?'
+  'title': 'Which tour type are you?'
+  'tourTypes': ['eaf9a648-fae1-48ae-a293-69bed874f159','e007e401-1bf8-4658-8293-b9c743784264','415025c6-e4b5-4506-9384-34f428a52104']
+  jcr:primaryType: 'mgnl:component'
+  jcr:uuid: '2bf3e57c-11b5-497e-806b-0e06dacffded'
+  mgnl:activationStatus: true
+  mgnl:created: 2015-02-12T17:45:09.155+01:00
+  mgnl:createdBy: 'superuser'
+  mgnl:lastActivated: 2015-07-01T10:43:52.643+02:00
+  mgnl:lastActivatedBy: 'superuser'
+  mgnl:lastModified: 2015-06-18T18:00:01.507+02:00
+  mgnl:lastModifiedBy: 'superuser'
+  mgnl:template: 'tours:components/tourTypeTeaserRow'
+
+

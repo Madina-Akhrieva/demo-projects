@@ -1,0 +1,141 @@
+'tour-types': 
+  jcr:primaryType: 'mgnl:folder'
+  jcr:uuid: 'bed25be3-378f-4f80-9140-a7302e045732'
+  mgnl:activationStatus: true
+  mgnl:created: 2015-01-27T15:26:54.468+01:00
+  mgnl:createdBy: 'superuser'
+  mgnl:lastActivated: 2015-07-16T13:55:58.066+02:00
+  mgnl:lastActivatedBy: 'superuser'
+  mgnl:lastModified: 2015-01-27T15:30:38.874+01:00
+  mgnl:lastModifiedBy: 'superuser'
+  'active': 
+    'body_de': 'Auf der faulen Haut liegen ist nicht Ihre Vorstellung von Urlaub. Egal ob Wandern, Radfahren oder Parasailing, wir haben den perfekten Urlaub für Sie. Sie können sich aufs Kajak fahren konzentrieren, während wir die langweiligen Sachen organisieren. '
+    'body': 'Lazing about isn’t your idea of a holiday. Whether it’s hiking, biking or parasailing, we have the perfect holiday for you. You can concentrate on the kayaking while we sort out all the boring stuff. '
+    'description_de': 'Aktiver Urlaub für aktive Leute'
+    'description': 'Active holidays for active people'
+    'displayName_de': 'Aktiv'
+    'displayName': 'Active'
+    'icon': 'jcr:57ad1ee6-87a5-4fb7-ac8c-16f6fdf35d28'
+    'image': 'jcr:b601ef57-a44a-432d-bc9a-bb228890b01d'
+    'level': 'level-1'
+    'name': 'active'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: 'eaf9a648-fae1-48ae-a293-69bed874f159'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:28:15.647+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:55:58.159+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:48:24.360+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'beach': 
+    'body_de': 'Nichts sieht mehr nach Urlaub aus, als ein schimmernder Sandstrand, ein paar türkise Wellen, die an den Strand schwappen und vielleicht ein paar schiefe Palmen. Dazu noch einen Cocktail und fertig sind die Strandferien. Egal ob Sie das Mittelmeer oder die Karibik anspricht, wir können Ihre Ferienträume wahr werden lassen. '
+    'body': 'Nothing says holidays more than a stretch of glimmering sand, some turquoise waves licking the shore, and maybe a few sloping palm trees. Throw in a cocktail and that’s your beach vacation sorted out. Whether it’s the Mediterranean or the Caribbean that floats your boat, we can make your holiday dreams come true.'
+    'description_de': 'Sand, Sand überall'
+    'description': 'Sand, sand everywhere..'
+    'displayName_de': 'Strand'
+    'displayName': 'Beach'
+    'icon': 'jcr:e236c74c-6b35-4467-b322-933419ecfd87'
+    'image': 'jcr:9471f8d5-389b-43f5-bbe6-8a4ee4a5944c'
+    'level': 'level-1'
+    'name': 'beach'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: '082c340c-b062-4b15-86b8-96dd9deff680'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:28:27.043+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:55:58.143+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:53:05.216+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'cultural': 
+    'body_de': 'Ferien sind für Erlebnisse da, um die bedeutendsten Orte der Welt zu entdecken. Egal ob Chinesische Mauer oder ägyptische Pyramiden, Sie möchten alles darüber wissen. Haben Sie schon einmal daran gedacht, die alten Tempel in Vietnam zu bereisen oder die gewundenen Gassen in Jerusalem? Wir organisieren die besten örtlichen Reiseführer und Hotels, damit Sie die ganze Kultur einfach nur in sich aufnehmen brauchen.'
+    'body': 'Holidays are for experiences, for discovering the greatest places in the world. Whether it’s the Great Wall of China or the Egyptian pyramids, you want to know all about them. And have you thought about visiting the ancient temples of Vietnam or the winding alleyways of Jerusalem?  We organize the best local guides and hotels, so you can just soak in all that culture.'
+    'description_de': 'Einmalige Erlebnisse'
+    'description': 'Experiences of a lifetime'
+    'displayName_de': 'Kultur'
+    'displayName': 'Cultural'
+    'icon': 'jcr:58c420b6-fa30-4578-8af0-c062ba51e5fb'
+    'image': 'jcr:a792164f-5a2a-4708-b3c8-62b48a578200'
+    'level': 'level-1'
+    'name': 'cultural'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: 'e007e401-1bf8-4658-8293-b9c743784264'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:29:00.891+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:55:58.128+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:53:20.693+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'ecotourism': 
+    'body_de': 'Die Natur ruft Sie. Und es gibt nichts natürlicheres als die afrikanische Savanne oder die eisige Wildnis der Antarktis. Aber was noch besser ist, als der Natur nahe zu sein, ist das Wissen, dass Sie dazu beitragen, diese unberührten Flecken der Erde so zu belassen, wie sie sind, wenn Sie mit uns reisen. '
+    'body': 'Nature is calling you. And there’s nowhere more natural than Africa’s savannah plains or the icy wilderness of Antartica. But what’s even better than getting closer to nature is knowing that when you travel with us, you’re making your own contribution to keeping those untouched parts of earth just as they are.'
+    'description_de': 'Der Ruf der Wildnis'
+    'description': 'Call of the wild'
+    'displayName_de': 'Ökotourismus, Pflanzen- und Tierwelt'
+    'displayName': 'Ecotourism, Nature & Wildlife'
+    'icon': 'jcr:8ad908e7-2ab7-4fe2-b1ed-e6eb3f68f3b0'
+    'image': 'jcr:2fd89d97-f932-4533-8a30-d70988bde30c'
+    'level': 'level-1'
+    'name': 'ecotourism'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: 'd2245867-ecaa-4b4e-8743-e0c939be68b7'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:29:33.403+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:55:58.114+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:53:32.401+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'family': 
+    'body_de': 'Der Urlaub kann für eine Familie die allerschönste, aber auch die allerschrecklichste Zeit sein! Es ist nicht einfach, vom Kleinkind bis zum Teenager und jeder Altersklasse dazwischen, alle bei Laune zu halten. Wir beherrschen die Kunst, den perfekten Familienurlaub zu organisieren, egal ob Sie durch die Alpen wandern möchten oder amerikanische Freizeitparks besuchen. Überlassen Sie die Planung den Experten und genießen Sie echte Familienzeit. '
+    'body': 'Holidays can be the best of times but they can also be the worst of times for families! It’s not easy to keep everyone happy, from toddlers to teenages and every age in between. We’ve mastered the art of organizing the perfect family holidays, whether you want to hike through the Alps or visit American theme parks. Leave the planning to experts and enjoy some real family time.
+'
+    'description_de': 'Die besten Familienurlaube'
+    'description': 'The best family holiday ever'
+    'displayName_de': 'Familie'
+    'displayName': 'Family'
+    'icon': 'jcr:1d52d31d-8cc2-4ade-a4cf-c0d6699423ad'
+    'image': 'jcr:acd47d04-5b98-4995-9c3b-cc3c81cd8288'
+    'level': 'level-1'
+    'name': 'family'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: '17da160b-da66-4e09-9e31-5fd040880f4a'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:29:44.203+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:55:58.099+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:53:44.724+02:00
+    mgnl:lastModifiedBy: 'superuser'
+  'offPath': 
+    'body_de': 'Auf einem großen Reisebus sitzen, Touristengerichte essen und Fotos vom Eiffelturm machen ist nicht Ihre Vorstellung vom Reisen. Sie möchten etwas Neues finden und die Dinge aus dem örtlichen Blickwinkel betrachten. Mit uns können Sie die örtlichen Juwelen entdecken, die die meisten Reisenden nie sehen. '
+    'body': 'Riding on a big tour bus, eating tourist menus and taking pictures of the Eiffel Tower is not your idea of travelling. You want to find something new, and see things from a local point of view. With us, you can discover the local gems that most travellers never experience.
+'
+    'description_de': 'Einzigartige Ferien abseits der ausgetretenen Pfade'
+    'description': 'Unique holidays that take you off the beaten track
+'
+    'displayName_de': 'Abseits der Trampelpfade'
+    'displayName': 'Off the Beaten Path'
+    'icon': 'jcr:6d5d576a-79f9-48d9-b141-6682f2eef585'
+    'image': 'jcr:272f75b9-ed87-4e0b-8bf3-15db217ba897'
+    'level': 'level-1'
+    'name': 'offPath'
+    jcr:mixinTypes: ['mgnl:hasVersion']
+    jcr:primaryType: 'mgnl:category'
+    jcr:uuid: '415025c6-e4b5-4506-9384-34f428a52104'
+    mgnl:activationStatus: true
+    mgnl:created: 2015-01-27T15:30:14.665+01:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastActivated: 2015-07-16T13:55:58.085+02:00
+    mgnl:lastActivatedBy: 'superuser'
+    mgnl:lastModified: 2015-07-16T13:53:56.235+02:00
+    mgnl:lastModifiedBy: 'superuser'
+
+

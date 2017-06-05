@@ -35,7 +35,7 @@ package info.magnolia.demo.travel.tours.setup;
 
 import static info.magnolia.test.hamcrest.NodeMatchers.*;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
 import info.magnolia.context.MgnlContext;
@@ -47,6 +47,7 @@ import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
 import info.magnolia.repository.RepositoryConstants;
+import info.magnolia.ui.framework.action.OpenExportDialogActionDefinition;
 
 import java.util.Arrays;
 import java.util.List;
@@ -225,6 +226,21 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
                 "05",
                 "06"
         ));
+    }
+
+    @Test
+    public void updateFrom113() throws Exception {
+        //GIVEN
+        NodeUtil.createPath(websiteSession.getRootNode(), "/travel/about/careers/main/06", NodeTypes.Component.NAME, true);
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.3"));
+
+        // THEN
+        Node exportActionNode = configSession.getNode("/modules/tours/apps/tours/subApps/browser/actions/export");
+        assertThat(exportActionNode, hasProperty("class", OpenExportDialogActionDefinition.class.getName()));
+        assertThat(exportActionNode, hasProperty("dialogName", "ui-admincentral:export"));
+        assertThat(exportActionNode, not(hasProperty("command", "export")));
     }
 
     private void setupBootstrapPages() throws RepositoryException {

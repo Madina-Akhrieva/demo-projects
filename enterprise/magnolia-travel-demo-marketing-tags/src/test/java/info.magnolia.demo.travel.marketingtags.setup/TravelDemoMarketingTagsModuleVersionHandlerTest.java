@@ -19,6 +19,8 @@ import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertThat;
 
 import info.magnolia.context.MgnlContext;
+import info.magnolia.marketingtags.MarketingTagsModule;
+import info.magnolia.marketingtags.app.TagsNodeTypes;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.repository.RepositoryConstants;
@@ -36,7 +38,7 @@ import org.junit.Test;
  */
 public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersionHandlerTestCase {
 
-    private Session session;
+    private Session config;
 
     @Override
     protected String getModuleDescriptorPath() {
@@ -55,7 +57,7 @@ public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersi
 
     @Override
     protected String[] getExtraWorkspaces() {
-        return new String[]{"tags"};
+        return new String[]{"marketing-tags"};
     }
 
     @Override
@@ -67,19 +69,20 @@ public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersi
     @Before
     public void setUp() throws Exception {
         super.setUp();
-        addSupportForSetupModuleRepositoriesTask(null);
-        session = MgnlContext.getJCRSession(RepositoryConstants.CONFIG);
+        addSupportForSetupModuleRepositoriesTask(MarketingTagsModule.WORKSPACE);
+        config = MgnlContext.getJCRSession(RepositoryConstants.CONFIG);
     }
 
     @Test
-    public void areasAreNotBootstrappedAfterCleanInstallIfMultisiteModuleIsNotInstalled() throws Exception {
+    public void cleanInstall() throws Exception {
         // GIVEN
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
 
         // THEN
-        assertThat(session.getNode("/modules"), not(hasNode("multisite")));
+        assertThat(config.getNode("/modules"), not(hasNode("multisite")));
+        assertThat(MgnlContext.getJCRSession(MarketingTagsModule.WORKSPACE).getRootNode(), hasNode("Google-Analytics-for-Travel-Demo", TagsNodeTypes.Tag.NAME));
     }
 
 }

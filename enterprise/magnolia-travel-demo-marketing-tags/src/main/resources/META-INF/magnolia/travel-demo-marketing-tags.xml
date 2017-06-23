@@ -14,7 +14,7 @@
     </dependency>
     <dependency>
       <name>marketing-tags</name>
-      <version>1.2/*</version>
+      <version>${marketingTagsVersion}/*</version>
     </dependency>
 
     <!-- Ensure that multisite is installed as this module bootstraps new areas to the prototype configuration in multisite. -->

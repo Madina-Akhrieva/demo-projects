@@ -304,10 +304,10 @@
             <sv:value>mgnl:contentNode</sv:value>
           </sv:property>
           <sv:property sv:name="class" sv:type="String">
-            <sv:value>info.magnolia.ui.framework.action.ExportActionDefinition</sv:value>
+            <sv:value>info.magnolia.ui.framework.action.OpenExportDialogActionDefinition</sv:value>
           </sv:property>
-          <sv:property sv:name="command" sv:type="String">
-            <sv:value>export</sv:value>
+          <sv:property sv:name="dialogName" sv:type="String">
+            <sv:value>ui-admincentral:export</sv:value>
           </sv:property>
           <sv:property sv:name="icon" sv:type="String">
             <sv:value>icon-export</sv:value>

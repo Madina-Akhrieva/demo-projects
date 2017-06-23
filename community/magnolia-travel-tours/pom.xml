@@ -33,6 +33,10 @@
       <groupId>info.magnolia</groupId>
       <artifactId>magnolia-i18n</artifactId>
     </dependency>
+    <dependency>
+      <groupId>info.magnolia.ui</groupId>
+      <artifactId>magnolia-ui-framework</artifactId>
+    </dependency>
 
     <!-- Dependencies to travel-demo -->
     <dependency>

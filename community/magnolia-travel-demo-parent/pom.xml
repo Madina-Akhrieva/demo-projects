@@ -16,8 +16,8 @@
 
   <properties>
     <javaVersion>1.8</javaVersion>
-    <magnoliaVersion>5.5.4</magnoliaVersion>
-    <magnoliaUiVersion>5.5.4</magnoliaUiVersion>
+    <magnoliaVersion>5.5.5-SNAPSHOT</magnoliaVersion>
+    <magnoliaUiVersion>5.5.5-SNAPSHOT</magnoliaUiVersion>
     <magnoliaDamVersion>2.1</magnoliaDamVersion>
     <siteVersion>1.0.8</siteVersion>
     <resourcesVersion>2.4</resourcesVersion>
@@ -46,6 +46,15 @@
         <groupId>info.magnolia</groupId>
         <artifactId>magnolia-project</artifactId>
         <version>${magnoliaVersion}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+
+      <!-- Import dependency management from UI project -->
+      <dependency>
+        <groupId>info.magnolia.ui</groupId>
+        <artifactId>magnolia-ui-project</artifactId>
+        <version>${magnoliaUiVersion}</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>

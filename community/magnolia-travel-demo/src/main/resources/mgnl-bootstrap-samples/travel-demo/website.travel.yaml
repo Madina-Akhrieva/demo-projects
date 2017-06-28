@@ -2699,18 +2699,20 @@
                   'controlName': 'mealOptions'
                   'default': 'none'
                   'horizontal': false
-                  'labels_de': 'Gluten Frei:gluten-free
-Halal:halal
-Kosher:kosher
-Vegan:vegan
-Vegetarier:vegeterian
-Keine spezielle Bedürfnisse:none'
-                  'labels': 'Gluten Free:gluten-free
-Halal:halal
-Kosher:kosher
-Vegan:vegan
-Vegetarian:vegeterian
-No Special Requirements:none'
+                  'labels_de': |
+                    Gluten Frei:gluten-free
+                    Halal:halal
+                    Kosher:kosher
+                    Vegan:vegan
+                    Vegetarier:vegeterian
+                    Keine spezielle Bedürfnisse:none
+                  'labels': |
+                    Gluten Free:gluten-free
+                    Halal:halal
+                    Kosher:kosher
+                    Vegan:vegan
+                    Vegetarian:vegeterian
+                    No Special Requirements:none
                   'mandatory': false
                   'multiple': true
                   'title_de': 'Menü Optionen'
@@ -3593,12 +3595,14 @@ Additional meal notes: ${additionalMealNotes!}'
               '00': 
                 'controlName': 'upgrades'
                 'horizontal': false
-                'labels_de': '$39 Abholung am Flughafen:pickup
-$99 CO2 Reduktion:co2
-$299 Unterstützung von lokalen, sozialen Einrichtungen, Umwelt, kleinen Unternehmen und Nothilfe.:support'
-                'labels': '$39 Airport Pickup:pickup
-$99 Carbon Offset:co2
-$299 Support local community social, environmental, small business, emergency relief.:support'
+                'labels_de': |
+                  $39 Abholung am Flughafen:pickup
+                  $99 CO2 Reduktion:co2
+                  $299 Unterstützung von lokalen, sozialen Einrichtungen, Umwelt, kleinen Unternehmen und Nothilfe.:support
+                'labels': |
+                  $39 Airport Pickup:pickup
+                  $99 Carbon Offset:co2
+                  $299 Support local community social, environmental, small business, emergency relief.:support
                 'mandatory': false
                 'multiple': true
                 'title': 'Upgrades'
@@ -3617,10 +3621,12 @@ $299 Support local community social, environmental, small business, emergency re
                 'controlName': 'meal'
                 'default': 'no'
                 'horizontal': false
-                'labels_de': 'Ja:yes
-Nein:no'
-                'labels': 'Yes:yes
-No:no'
+                'labels_de': |
+                  Ja:yes
+                  Nein:no
+                'labels': |
+                  Yes:yes
+                  No:no
                 'mandatory': false
                 'multiple': false
                 'title_de': 'Haben Sie spezielle Menü-Bedürfnisse?'

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sv:node sv:name="Clicky-for-Travel-Demo" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
-    <sv:value>mgnl:tag</sv:value>
+    <sv:value>mgnl:marketing-tag</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>e6715db2-8ea9-451b-a8f0-57bd21ed1d54</sv:value>

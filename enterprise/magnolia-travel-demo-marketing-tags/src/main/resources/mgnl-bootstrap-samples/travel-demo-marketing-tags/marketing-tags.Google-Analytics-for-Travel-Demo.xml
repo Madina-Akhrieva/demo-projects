@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sv:node sv:name="Google-Analytics-for-Travel-Demo" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
-    <sv:value>mgnl:tag</sv:value>
+    <sv:value>mgnl:marketing-tag</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>7b4a6f32-a3a4-4264-b4e0-e096afd4453c</sv:value>

@@ -1,0 +1,3 @@
+templateScript: /travel-demo-content-tags/templates/components/tourList-content-tags.ftl
+dialog: travel-demo-content-tags:components/tourList-content-tags
+renderType: freemarker

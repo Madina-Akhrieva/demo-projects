@@ -1,0 +1,32 @@
+actions:
+  addTags:
+    class: info.magnolia.contenttags.dialog.OpenTagDialogActionDefinition
+    icon: icon-tag
+    availability:
+      multiple: true
+      rules:
+        - name: IsNotDeletedRule
+          implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+
+actionbar:
+  sections:
+    item:
+      groups:
+        editActions:
+          items:
+            - name: addTags
+
+workbench:
+  contentViews:
+    list:
+      columns:
+        - name: tags
+          class: info.magnolia.contenttags.column.TagsColumnDefinition
+          propertyName: mgnl:tags
+          width: 160
+    tree:
+      columns:
+        - name: tags
+          class: info.magnolia.contenttags.column.TagsColumnDefinition
+          propertyName: mgnl:tags
+          width: 160

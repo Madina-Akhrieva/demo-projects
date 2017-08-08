@@ -1,0 +1,16 @@
+form:
+  tabs:
+    - name: tabMain
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+        - name: tourTags
+          class: info.magnolia.contenttags.form.field.TagFieldDefinition
+        - name: info
+          class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

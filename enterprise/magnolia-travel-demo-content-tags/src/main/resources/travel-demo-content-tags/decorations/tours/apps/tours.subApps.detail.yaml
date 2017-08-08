@@ -1,0 +1,8 @@
+editor:
+  form:
+    tabs:
+      tour:
+        fields:
+          - name: mgnl:tags
+            class: info.magnolia.contenttags.form.field.TagFieldDefinition
+            i18n: true

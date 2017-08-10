@@ -95,6 +95,7 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
 
                 .addTask(orderPageNodes)
                 .addTask(new SetPageAsPublishedTask("/travel", true))
+                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
     }
 

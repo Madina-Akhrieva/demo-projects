@@ -28,6 +28,10 @@
       <version>${magnoliaVersion}/*</version>
     </dependency>
     <dependency>
+      <name>virtual-uri</name>
+      <version>${magnoliaVersion}/*</version>
+    </dependency>
+    <dependency>
       <name>travel-demo</name>
       <version>${project.version}</version>
     </dependency>

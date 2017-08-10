@@ -22,6 +22,10 @@
       <artifactId>magnolia-core</artifactId>
     </dependency>
     <dependency>
+      <groupId>info.magnolia.core</groupId>
+      <artifactId>magnolia-virtual-uri</artifactId>
+    </dependency>
+    <dependency>
       <groupId>info.magnolia</groupId>
       <artifactId>magnolia-rendering</artifactId>
     </dependency>

@@ -72,7 +72,6 @@ import javax.jcr.Session;
 import org.junit.Before;
 import org.junit.Test;
 
-
 public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTestCase {
 
     private static final String UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_TARGET_NODE_PATH = "/modules/ui-admincentral/config/appLauncherLayout/groups/target";
@@ -235,7 +234,7 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
     }
 
     @Test
-    public void testUpgradeFrom081PurNotInstalled() throws Exception {
+    public void upgradeFrom081PurNotInstalled() throws Exception {
         // GIVEN
 
         // WHEN
@@ -262,7 +261,7 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
     }
 
     @Test
-    public void testCleanInstall() throws Exception {
+    public void cleanInstall() throws Exception {
         // GIVEN
         setupConfigNode("/modules/public-user-registration");
         setupConfigNode("/modules/multisite/config/sites/fallback");

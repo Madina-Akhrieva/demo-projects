@@ -48,7 +48,7 @@ public class TravelDemoMultiSiteModuleVersionHandler extends DefaultModuleVersio
 
                 .addTask(new IsInstallSamplesTask("Re-Bootstrap website content for sportstation pages", "Re-bootstrap website content to account for all changes",
                         new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-multisite/website.sportstation.yaml")))
-                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for travel-demo multi-site module.", "", "/mgnl-bootstrap/travel-demo-multisite/config.modules.tours.virtualURIMapping.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for travel-demo multi-site module.", "", "/mgnl-bootstrap/travel-demo-multisite/config.modules.tours.virtualUriMappings.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
     }
 

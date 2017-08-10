@@ -14,14 +14,11 @@
  */
 package info.magnolia.demo.travel.multisite.setup;
 
-import static info.magnolia.test.hamcrest.NodeMatchers.hasNode;
-import static info.magnolia.test.hamcrest.NodeMatchers.hasProperty;
+import static info.magnolia.test.hamcrest.NodeMatchers.*;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;
 
 import info.magnolia.context.MgnlContext;
-import info.magnolia.jcr.util.NodeTypes;
-import info.magnolia.jcr.util.NodeUtil;
 import info.magnolia.module.InstallContext;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
@@ -31,7 +28,6 @@ import info.magnolia.repository.RepositoryConstants;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.jcr.Node;
 import javax.jcr.Session;
 
 import org.junit.Before;
@@ -152,18 +148,21 @@ public class TravelDemoMultiSiteModuleVersionHandlerTest extends ModuleVersionHa
     }
 
     @Test
-    public void updateChangesVirtualURIMappings() throws Exception {
+    public void updateChangesVirtualUriMappings() throws Exception {
         //GIVEN
-        Node travelMapping = NodeUtil.createPath(session.getRootNode(), "modules/tours/virtualURIMapping/travelToursMapping", NodeTypes.ContentNode.NAME, true);
-        Node sportStationMapping = NodeUtil.createPath(session.getRootNode(), "modules/tours/virtualURIMapping/sportstationToursMapping", NodeTypes.ContentNode.NAME, true);
-        travelMapping.setProperty("toURI", "forward:/travel/tour?tour=$1");
-        sportStationMapping.setProperty("toURI", "forward:/sportstation/tour?tour=$1");
+        String travelToursMappingPath = "/modules/tours/virtualUriMappings/travelToursMapping";
+        String sportstationToursMapping = "/modules/tours/virtualUriMappings/sportstationToursMapping";
+
+        setupConfigNode(sportstationToursMapping);
+        setupConfigProperty(travelToursMappingPath, "toUri", "forward:/travel/tour?tour=$1");
+        setupConfigNode(sportstationToursMapping);
+        setupConfigProperty(sportstationToursMapping, "toUri", "forward:/sportstation/tour?tour=$1");
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.2"));
 
         //THEN
-        assertThat(session.getNode("/modules/tours/virtualURIMapping/travelToursMapping"), hasProperty("toURI","forward:/tour?tour=$1"));
-        assertThat(session.getNode("/modules/tours/virtualURIMapping/sportstationToursMapping"), hasProperty("toURI","forward:/tour?tour=$1"));
+        assertThat(session.getNode(travelToursMappingPath), hasProperty("toUri", "forward:/tour?tour=$1"));
+        assertThat(session.getNode(sportstationToursMapping), hasProperty("toUri", "forward:/tour?tour=$1"));
     }
 }

@@ -53,6 +53,7 @@ import info.magnolia.module.delta.PropertyValueDelegateTask;
 import info.magnolia.module.delta.RemoveNodeTask;
 import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.module.delta.Task;
+import info.magnolia.module.delta.WarnTask;
 import info.magnolia.module.site.setup.DefaultSiteExistsDelegateTask;
 import info.magnolia.repository.RepositoryConstants;
 
@@ -68,12 +69,14 @@ import com.google.common.collect.Lists;
  */
 public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler {
 
-    private static final String DEFAULT_URI_NODEPATH = "/modules/ui-admincentral/virtualURIMapping/default";
+    private static final String DEFAULT_URI_NODEPATH = "/modules/ui-admincentral/virtualUriMappings/default";
     private static final String DEFAULT_URI = "redirect:/travel.html";
 
     private final Task setDefaultUriOnPublicInstance = new PropertyValueDelegateTask("Set default URI to home travel page, when current site is travel site", "/modules/site/config/site", "extends", "/modules/travel-demo/config/travel", false,
-            new IsAuthorInstanceDelegateTask("Set default URI to home page", String.format("Sets default URI to point to '%s'", DEFAULT_URI), null,
-                    new SetPropertyTask(RepositoryConstants.CONFIG, DEFAULT_URI_NODEPATH, "toURI", DEFAULT_URI)));
+            new IsAuthorInstanceDelegateTask("Set default URI to home page", String.format("Set default URI to point to '%s'", DEFAULT_URI), null,
+                    new NodeExistsDelegateTask("", DEFAULT_URI_NODEPATH,
+                            new SetPropertyTask(RepositoryConstants.CONFIG, DEFAULT_URI_NODEPATH, "toUri", DEFAULT_URI),
+                            new WarnTask("Set default URI to home page", "Could not set default URI to home travel page, default mapping was not found."))));
 
     private final Task setupTravelSiteAsActiveSite = new NodeExistsDelegateTask("Set travel demo as an active site", "/modules/site/config/site",
             new PropertyExistsDelegateTask("Check extends property and update or create it", "/modules/site/config/site", "extends",

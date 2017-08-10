@@ -130,7 +130,7 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         setupConfigNode(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_STK_NODE_PATH);
         setupConfigNode(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_MANAGE_NODE_PATH);
         setupConfigNode(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_TARGET_NODE_PATH);
-        setupConfigNode("/modules/ui-admincentral/virtualURIMapping/default");
+        setupConfigNode("/modules/ui-admincentral/virtualUriMappings/default");
         setupConfigNode("/modules/site/config");
         setupConfigProperty("/server", "admin", "true");
         setupConfigNode("/server/filters/securityCallback/clientCallbacks/form");
@@ -272,6 +272,7 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
 
         // THEN
         assertThat(session.getRootNode(), hasNode("modules/multisite/config/sites/travel/templates/availability/templates/pur"));
+        assertThat("Default URI to home page has been set", session.getNode("/modules/ui-admincentral/virtualUriMappings/default"), hasProperty("toUri", "redirect:/travel.html"));
 
         this.checkPurSamplesAreInstalled(session.getNode("/server/filters/securityCallback/clientCallbacks"));
         this.checkIfEverythingIsActivated();

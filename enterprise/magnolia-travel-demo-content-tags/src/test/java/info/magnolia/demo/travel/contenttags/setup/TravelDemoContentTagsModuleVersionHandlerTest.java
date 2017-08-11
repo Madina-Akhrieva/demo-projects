@@ -32,6 +32,7 @@ import java.util.List;
 import static info.magnolia.test.hamcrest.NodeMatchers.hasProperty;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsArrayWithSize.arrayWithSize;
+import static org.mockito.Mockito.mock;
 
 
 public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersionHandlerTestCase {
@@ -45,7 +46,7 @@ public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersion
 
     @Override
     protected ModuleVersionHandler newModuleVersionHandlerForTests() {
-        return new TravelDemoContentTagsModuleVersionHandler(new TagManager(() -> MgnlContext.getInstance()));
+        return new TravelDemoContentTagsModuleVersionHandler(new TagManager(() -> MgnlContext.getInstance(), mock(RepositoryManager.class)));
     }
 
     @Override

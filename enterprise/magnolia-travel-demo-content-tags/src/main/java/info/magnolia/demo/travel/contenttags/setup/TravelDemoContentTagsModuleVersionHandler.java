@@ -15,7 +15,7 @@
 package info.magnolia.demo.travel.contenttags.setup;
 
 import com.google.common.collect.Sets;
-import info.magnolia.contenttags.delta.AddTagsToNodesTask;
+import info.magnolia.contenttags.setup.AddTagsToNodesTask;
 import info.magnolia.contenttags.manager.TagManager;
 import info.magnolia.module.DefaultModuleVersionHandler;
 import info.magnolia.module.InstallContext;

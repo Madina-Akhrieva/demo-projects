@@ -17,7 +17,6 @@
   <properties>
     <javaVersion>1.8</javaVersion>
     <personalizationVersion>1.4.3</personalizationVersion>
-    <marketingTagsVersion>1.3-SNAPSHOT</marketingTagsVersion>
   </properties>
 
   <scm>
@@ -83,7 +82,7 @@
       <dependency>
         <groupId>info.magnolia.marketingtags</groupId>
         <artifactId>magnolia-marketing-tags</artifactId>
-        <version>${marketingTagsVersion}</version>
+        <version>1.3-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>info.magnolia.multisite</groupId>

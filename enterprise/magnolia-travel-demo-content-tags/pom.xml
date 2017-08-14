@@ -12,7 +12,6 @@
   <name>Magnolia Travel Demo Content Tags Module</name>
   <description>Augments the Travel Demo with an example of the content tags feature.</description>
   <properties>
-    <contentTagsVersion>1.0-SNAPSHOT</contentTagsVersion>
     <cloverCoverageThreshold>80</cloverCoverageThreshold>
   </properties>
 
@@ -37,7 +36,6 @@
     <dependency>
       <groupId>info.magnolia.contenttags</groupId>
       <artifactId>magnolia-content-tags</artifactId>
-      <version>${contentTagsVersion}</version>
     </dependency>
 
     <!-- For tests -->

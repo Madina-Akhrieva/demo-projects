@@ -16,7 +16,12 @@
 
   <properties>
     <javaVersion>1.8</javaVersion>
+
+    <!-- These properties are also referenced in the module descriptors -->
     <personalizationVersion>1.4.3</personalizationVersion>
+    <marketingTagsVersion>1.3-SNAPSHOT</marketingTagsVersion>
+    <contentTagsVersion>1.0-SNAPSHOT</contentTagsVersion>
+    <multisiteVersion>1.2.1</multisiteVersion>
   </properties>
 
   <scm>
@@ -82,12 +87,12 @@
       <dependency>
         <groupId>info.magnolia.marketingtags</groupId>
         <artifactId>magnolia-marketing-tags</artifactId>
-        <version>1.3-SNAPSHOT</version>
+        <version>${marketingTagsVersion}</version>
       </dependency>
       <dependency>
         <groupId>info.magnolia.multisite</groupId>
         <artifactId>magnolia-module-multisite</artifactId>
-        <version>1.2.1</version>
+        <version>${multisiteVersion}</version>
       </dependency>
       <dependency>
         <groupId>info.magnolia.personalization</groupId>
@@ -102,7 +107,7 @@
       <dependency>
         <groupId>info.magnolia.contenttags</groupId>
         <artifactId>magnolia-content-tags</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${contentTagsVersion}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

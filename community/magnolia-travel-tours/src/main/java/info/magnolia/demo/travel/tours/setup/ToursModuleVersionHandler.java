@@ -84,7 +84,8 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                                         new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/tours/category.tour-types.yaml")),
                                 new BootstrapSingleResource("Re bootstrap tours content", "", "/mgnl-bootstrap-samples/tours/tours.magnolia-travels.yaml"),
                                 new FolderBootstrapTask("/mgnl-bootstrap-samples/tours/assets/"),
-                                new OrderNodeBeforeTask("Order careers zeroFive node before zeroFix", "", WEBSITE, "/travel/about/careers/main/05", "06"))))
+                                new NodeExistsDelegateTask("", "", WEBSITE, "/travel/about/careers/main/06",
+                                        new OrderNodeBeforeTask("Order careers 05 node before 06", "", WEBSITE, "/travel/about/careers/main/05", "06")))))
                 .addTask(new BootstrapSingleModuleResource("config.modules.tours.apps.tourCategories.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new BootstrapSingleModuleResource("config.modules.tours.apps.tours.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new IsModuleInstalledOrRegistered("Enable travel site in multisite configuration", "multisite",

@@ -232,7 +232,6 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     @Test
     public void updateFrom113() throws Exception {
         //GIVEN
-        NodeUtil.createPath(websiteSession.getRootNode(), "/travel/about/careers/main/06", NodeTypes.Component.NAME, true);
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.3"));
@@ -247,8 +246,6 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     @Test
     public void bootstrapsVirtualUriMappings() throws Exception {
         // GIVEN
-        // Need to set up this path because of task "Order careers zeroFive node before zeroFix"
-        NodeUtil.createPath(websiteSession.getRootNode(), "/travel/about/careers/main/06", NodeTypes.Component.NAME, true);
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.4"));

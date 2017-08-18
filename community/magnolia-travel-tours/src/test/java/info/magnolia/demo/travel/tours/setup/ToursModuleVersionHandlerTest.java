@@ -245,17 +245,22 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void bootstrapsVirtualUriMappings() throws Exception {
+    public void updateFrom114ReinstallsUriMappings() throws Exception {
         // GIVEN
+        Node toursModule = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours", NodeTypes.Content.NAME, true);
+        toursModule.addNode("virtualURIMapping", NodeTypes.Content.NAME);
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.4"));
 
         //THEN
-        Node toursMapping = configSession.getNode("/modules/tours/virtualUriMappings/toursMapping");
-        assertThat(toursMapping, hasProperty("class", RegexpVirtualUriMapping.class.getName()));
-        assertThat(toursMapping, hasProperty("fromUri", "/tours(.*).html"));
-        assertThat(toursMapping, hasProperty("toUri", "forward:/travel/tour?tour=$1"));
+        assertThat(toursModule, not(hasNode("virtualURIMapping")));
+        assertThat(toursModule, hasNode("virtualUriMappings"));
+        Node mappings = toursModule.getNode("virtualUriMappings");
+        assertThat(mappings, hasNode(allOf(
+                hasProperty("class", RegexpVirtualUriMapping.class.getName()),
+                hasProperty("fromUri", "/tours(.*).html"),
+                hasProperty("toUri", "forward:/travel/tour?tour=$1"))));
     }
 
     private void setupBootstrapPages() throws RepositoryException {

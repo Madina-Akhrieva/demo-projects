@@ -53,6 +53,7 @@ import info.magnolia.module.delta.IsInstallSamplesTask;
 import info.magnolia.module.delta.IsModuleInstalledOrRegistered;
 import info.magnolia.module.delta.NodeExistsDelegateTask;
 import info.magnolia.module.delta.OrderNodeBeforeTask;
+import info.magnolia.module.delta.RemoveNodeTask;
 import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.module.delta.Task;
 import info.magnolia.rendering.module.setup.InstallRendererContextAttributeTask;
@@ -96,6 +97,7 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
 
                 .addTask(orderPageNodes)
                 .addTask(new SetPageAsPublishedTask("/travel", true))
+                .addTask(new RemoveNodeTask("Cleanup deprecated virtualURIMapping location before re-install", "/modules/tours/virtualURIMapping"))
                 .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
     }

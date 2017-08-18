@@ -34,8 +34,8 @@
 package info.magnolia.demo.travel.tours.setup;
 
 import static info.magnolia.test.hamcrest.NodeMatchers.*;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.Matchers.contains;
 import static org.junit.Assert.assertThat;
 
 import info.magnolia.context.MgnlContext;
@@ -47,6 +47,7 @@ import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
 import info.magnolia.repository.RepositoryConstants;
+import info.magnolia.ui.framework.action.ExportActionDefinition;
 import info.magnolia.ui.framework.action.OpenExportDialogActionDefinition;
 import info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping;
 
@@ -64,9 +65,6 @@ import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.Lists;
 
-/**
- * Test class for {@link info.magnolia.demo.travel.tours.setup.ToursModuleVersionHandler}.
- */
 public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase {
 
     private Session configSession;
@@ -230,17 +228,20 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void updateFrom113() throws Exception {
+    public void updateFrom113ReconfiguresExportAction() throws Exception {
         //GIVEN
+        Node exportActionNode = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours/apps/tours/subApps/browser/actions/export", NodeTypes.ContentNode.NAME, true);
+        exportActionNode.setProperty("class", ExportActionDefinition.class.getName());
+        exportActionNode.setProperty("command", "export");
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.3"));
 
         // THEN
-        Node exportActionNode = configSession.getNode("/modules/tours/apps/tours/subApps/browser/actions/export");
+        exportActionNode = configSession.getNode("/modules/tours/apps/tours/subApps/browser/actions/export");
         assertThat(exportActionNode, hasProperty("class", OpenExportDialogActionDefinition.class.getName()));
         assertThat(exportActionNode, hasProperty("dialogName", "ui-admincentral:export"));
-        assertThat(exportActionNode, not(hasProperty("command", "export")));
+        assertThat(exportActionNode, not(hasProperty("command")));
     }
 
     @Test

@@ -14,25 +14,28 @@
  */
 package info.magnolia.demo.travel.contenttags.setup;
 
+import static info.magnolia.test.hamcrest.NodeMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.collection.IsArrayWithSize.arrayWithSize;
+
 import info.magnolia.cms.util.ClasspathResourcesUtil;
 import info.magnolia.contenttags.manager.TagManager;
 import info.magnolia.context.MgnlContext;
+import info.magnolia.module.InstallContext;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.objectfactory.Components;
 import info.magnolia.repository.RepositoryManager;
-import org.junit.Before;
-import org.junit.Test;
+
+import java.util.List;
 
 import javax.jcr.Property;
 import javax.jcr.Session;
-import java.util.Arrays;
-import java.util.List;
 
-import static info.magnolia.test.hamcrest.NodeMatchers.hasProperty;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.collection.IsArrayWithSize.arrayWithSize;
-import static org.mockito.Mockito.mock;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.google.common.collect.Lists;
 
 
 public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersionHandlerTestCase {
@@ -46,12 +49,12 @@ public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersion
 
     @Override
     protected ModuleVersionHandler newModuleVersionHandlerForTests() {
-        return new TravelDemoContentTagsModuleVersionHandler(new TagManager(() -> MgnlContext.getInstance(), mock(RepositoryManager.class)));
+        return new TravelDemoContentTagsModuleVersionHandler(new TagManager(MgnlContext::getInstance, null));
     }
 
     @Override
     protected List<String> getModuleDescriptorPathsForTests() {
-        return Arrays.asList("/META-INF/magnolia/core.xml");
+        return Lists.newArrayList("/META-INF/magnolia/core.xml");
     }
 
     @Override
@@ -77,11 +80,13 @@ public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersion
         setupNode("tours", "/magnolia-travels/Kyoto");
 
         // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
+        final InstallContext installContext = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
 
         // THEN
         assertThat(tours.getNode("/magnolia-travels/Kyoto"), hasProperty(TagManager.TAGS_PROPERTY));
         Property tags = tours.getNode("/magnolia-travels/Kyoto").getProperty(TagManager.TAGS_PROPERTY);
         assertThat(tags.getValues(), arrayWithSize(3));
+
+        assertThat(installContext.getConfigJCRSession().getRootNode(), hasNode("modules/content-tags/config/taggableWorkspaces/tours"));
     }
 }

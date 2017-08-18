@@ -48,6 +48,7 @@ import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
 import info.magnolia.repository.RepositoryConstants;
 import info.magnolia.ui.framework.action.OpenExportDialogActionDefinition;
+import info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping;
 
 import java.util.Arrays;
 import java.util.List;
@@ -241,6 +242,22 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
         assertThat(exportActionNode, hasProperty("class", OpenExportDialogActionDefinition.class.getName()));
         assertThat(exportActionNode, hasProperty("dialogName", "ui-admincentral:export"));
         assertThat(exportActionNode, not(hasProperty("command", "export")));
+    }
+
+    @Test
+    public void bootstrapsVirtualUriMappings() throws Exception {
+        // GIVEN
+        // Need to set up this path because of task "Order careers zeroFive node before zeroFix"
+        NodeUtil.createPath(websiteSession.getRootNode(), "/travel/about/careers/main/06", NodeTypes.Component.NAME, true);
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.4"));
+
+        //THEN
+        Node toursMapping = configSession.getNode("/modules/tours/virtualUriMappings/toursMapping");
+        assertThat(toursMapping, hasProperty("class", RegexpVirtualUriMapping.class.getName()));
+        assertThat(toursMapping, hasProperty("fromUri", "/tours(.*).html"));
+        assertThat(toursMapping, hasProperty("toUri", "forward:/travel/tour?tour=$1"));
     }
 
     private void setupBootstrapPages() throws RepositoryException {

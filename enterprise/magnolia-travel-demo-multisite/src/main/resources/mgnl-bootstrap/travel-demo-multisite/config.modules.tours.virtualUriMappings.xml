@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="virtualURIMapping" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node sv:name="virtualUriMappings" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:content</sv:value>
   </sv:property>
@@ -8,15 +8,15 @@
       <sv:value>mgnl:contentNode</sv:value>
     </sv:property>
     <sv:property sv:name="class" sv:type="String">
-      <sv:value>info.magnolia.multisite.MultiSiteRegexpVirtualURIMapping</sv:value>
+      <sv:value>info.magnolia.multisite.mapping.MultiSiteRegexpVirtualUriMapping</sv:value>
     </sv:property>
-    <sv:property sv:name="fromURI" sv:type="String">
+    <sv:property sv:name="fromUri" sv:type="String">
       <sv:value>/tours(.*).html</sv:value>
     </sv:property>
     <sv:property sv:name="site" sv:type="String">
       <sv:value>travel</sv:value>
     </sv:property>
-    <sv:property sv:name="toURI" sv:type="String">
+    <sv:property sv:name="toUri" sv:type="String">
       <sv:value>forward:/tour?tour=$1</sv:value>
     </sv:property>
   </sv:node>
@@ -25,15 +25,15 @@
       <sv:value>mgnl:contentNode</sv:value>
     </sv:property>
     <sv:property sv:name="class" sv:type="String">
-      <sv:value>info.magnolia.multisite.MultiSiteRegexpVirtualURIMapping</sv:value>
+      <sv:value>info.magnolia.multisite.mapping.MultiSiteRegexpVirtualUriMapping</sv:value>
     </sv:property>
-    <sv:property sv:name="fromURI" sv:type="String">
+    <sv:property sv:name="fromUri" sv:type="String">
       <sv:value>/tours(.*).html</sv:value>
     </sv:property>
     <sv:property sv:name="site" sv:type="String">
       <sv:value>sportstation</sv:value>
     </sv:property>
-    <sv:property sv:name="toURI" sv:type="String">
+    <sv:property sv:name="toUri" sv:type="String">
       <sv:value>forward:/tour?tour=$1</sv:value>
     </sv:property>
   </sv:node>

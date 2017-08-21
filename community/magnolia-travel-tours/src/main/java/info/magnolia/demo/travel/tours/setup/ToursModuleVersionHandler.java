@@ -33,6 +33,9 @@
  */
 package info.magnolia.demo.travel.tours.setup;
 
+import static info.magnolia.repository.RepositoryConstants.*;
+import static javax.jcr.ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING;
+
 import info.magnolia.demo.travel.setup.AddDemoTravelPermissionTask;
 import info.magnolia.demo.travel.setup.CopySiteToMultiSiteAndMakeItFallback;
 import info.magnolia.demo.travel.setup.FolderBootstrapTask;
@@ -50,15 +53,13 @@ import info.magnolia.module.delta.IsInstallSamplesTask;
 import info.magnolia.module.delta.IsModuleInstalledOrRegistered;
 import info.magnolia.module.delta.NodeExistsDelegateTask;
 import info.magnolia.module.delta.OrderNodeBeforeTask;
+import info.magnolia.module.delta.RemoveNodeTask;
 import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.module.delta.Task;
 import info.magnolia.rendering.module.setup.InstallRendererContextAttributeTask;
-import info.magnolia.repository.RepositoryConstants;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.jcr.ImportUUIDBehavior;
 
 /**
  * {@link DefaultModuleVersionHandler} of the {@link info.magnolia.demo.travel.tours.ToursModule}.
@@ -69,9 +70,9 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
     protected static final String DAM_PERMISSIONS_ROLES = "/modules/dam-app/apps/assets/permissions/roles";
 
     private final Task orderPageNodes = new ArrayDelegateTask("Order travel pages before the 'about' page", "",
-            new OrderNodeBeforeTask("", "", RepositoryConstants.WEBSITE, "/travel/tour-type", "about"),
-            new OrderNodeBeforeTask("", "", RepositoryConstants.WEBSITE, "/travel/destination", "about"),
-            new OrderNodeBeforeTask("", "", RepositoryConstants.WEBSITE, "/travel/tour", "about"));
+            new OrderNodeBeforeTask("", "", WEBSITE, "/travel/tour-type", "about"),
+            new OrderNodeBeforeTask("", "", WEBSITE, "/travel/destination", "about"),
+            new OrderNodeBeforeTask("", "", WEBSITE, "/travel/tour", "about"));
 
     public ToursModuleVersionHandler() {
         register(DeltaBuilder.update("1.2", "")
@@ -84,18 +85,20 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                                         new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/tours/category.tour-types.yaml")),
                                 new BootstrapSingleResource("Re bootstrap tours content", "", "/mgnl-bootstrap-samples/tours/tours.magnolia-travels.yaml"),
                                 new FolderBootstrapTask("/mgnl-bootstrap-samples/tours/assets/"),
-                                new OrderNodeBeforeTask("Order careers zeroFive node before zeroFix", "", RepositoryConstants.WEBSITE, "/travel/about/careers/main/05", "06"))))
-                .addTask(new BootstrapSingleModuleResource("config.modules.tours.apps.tourCategories.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
-                .addTask(new BootstrapSingleModuleResource("config.modules.tours.apps.tours.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                                new NodeExistsDelegateTask("", "", WEBSITE, "/travel/about/careers/main/06",
+                                        new OrderNodeBeforeTask("Order careers 05 node before 06", "", WEBSITE, "/travel/about/careers/main/05", "06")))))
+                .addTask(new BootstrapSingleModuleResource("config.modules.tours.apps.tourCategories.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new BootstrapSingleModuleResource("config.modules.tours.apps.tours.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new IsModuleInstalledOrRegistered("Enable travel site in multisite configuration", "multisite",
                         new NodeExistsDelegateTask("Check whether multisite can be enabled for travel demo", "/modules/travel-demo/config/travel",
                                 new CopySiteToMultiSiteAndMakeItFallback(true))))
                 .addTask(new NodeExistsDelegateTask("Add permission for access to Dam app", DAM_PERMISSIONS_ROLES,
-                        new SetPropertyTask(RepositoryConstants.CONFIG, DAM_PERMISSIONS_ROLES, TRAVEL_DEMO_TOUR_EDITOR_ROLE, TRAVEL_DEMO_TOUR_EDITOR_ROLE)))
+                        new SetPropertyTask(CONFIG, DAM_PERMISSIONS_ROLES, TRAVEL_DEMO_TOUR_EDITOR_ROLE, TRAVEL_DEMO_TOUR_EDITOR_ROLE)))
 
                 .addTask(orderPageNodes)
                 .addTask(new SetPageAsPublishedTask("/travel", true))
-                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new RemoveNodeTask("Cleanup deprecated virtualURIMapping location before re-install", "/modules/tours/virtualURIMapping"))
+                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
     }
 
@@ -109,7 +112,7 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
 
         /* Order bootstrapped pages accordingly */
         tasks.add(orderPageNodes);
-        tasks.add(new OrderNodeBeforeTask("Order careers zeroFive node before zeroFix", "", RepositoryConstants.WEBSITE, "/travel/about/careers/main/05", "06"));
+        tasks.add(new OrderNodeBeforeTask("Order careers zeroFive node before zeroFix", "", WEBSITE, "/travel/about/careers/main/05", "06"));
 
         /* Add travel-demo-base role to user anonymous */
         tasks.add(new AddRoleToUserTask("Adds role 'travel-demo-base' to user 'anonymous'", "anonymous", "travel-demo-base"));

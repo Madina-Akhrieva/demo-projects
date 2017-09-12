@@ -30,3 +30,6 @@ workbench:
           class: info.magnolia.contenttags.column.TagsColumnDefinition
           propertyName: mgnl:tags
           width: 160
+
+    search:
+      implementationClass: info.magnolia.contenttags.app.contenttool.search.TagSearchPresenter

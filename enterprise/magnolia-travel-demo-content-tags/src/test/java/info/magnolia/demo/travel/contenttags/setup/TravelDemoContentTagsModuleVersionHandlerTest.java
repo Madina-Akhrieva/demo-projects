@@ -17,10 +17,13 @@ package info.magnolia.demo.travel.contenttags.setup;
 import static info.magnolia.test.hamcrest.NodeMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsArrayWithSize.arrayWithSize;
+import static org.mockito.Mockito.mock;
 
 import info.magnolia.cms.util.ClasspathResourcesUtil;
 import info.magnolia.contenttags.manager.TagManager;
 import info.magnolia.context.MgnlContext;
+import info.magnolia.init.MagnoliaConfigurationProperties;
+import info.magnolia.jcr.util.NodeNameHelper;
 import info.magnolia.module.InstallContext;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
@@ -49,7 +52,7 @@ public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersion
 
     @Override
     protected ModuleVersionHandler newModuleVersionHandlerForTests() {
-        return new TravelDemoContentTagsModuleVersionHandler(new TagManager(MgnlContext::getInstance, null));
+        return new TravelDemoContentTagsModuleVersionHandler(new TagManager(MgnlContext::getInstance, null, new NodeNameHelper(mock(MagnoliaConfigurationProperties.class))));
     }
 
     @Override

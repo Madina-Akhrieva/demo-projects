@@ -1,3 +1,5 @@
+subAppClass: info.magnolia.contenttags.shortcut.TagShortcutAwareBrowserSubApp
+
 actions:
   addTags:
     class: info.magnolia.contenttags.dialog.OpenTagDialogActionDefinition
@@ -7,6 +9,8 @@ actions:
       rules:
         - name: IsNotDeletedRule
           implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      nodeTypes:
+        tour: mgnl:content
 
 actionbar:
   sections:
@@ -30,6 +34,11 @@ workbench:
           class: info.magnolia.contenttags.column.TagsColumnDefinition
           propertyName: mgnl:tags
           width: 160
-
     search:
+      columns:
+        - name: tags
+          class: info.magnolia.contenttags.column.TagsColumnDefinition
+          propertyName: mgnl:tags
+          width: 160
+
       implementationClass: info.magnolia.contenttags.app.contenttool.search.TagSearchPresenter

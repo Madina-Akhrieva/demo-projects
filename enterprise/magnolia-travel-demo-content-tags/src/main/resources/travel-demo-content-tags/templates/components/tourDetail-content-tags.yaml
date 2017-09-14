@@ -1,0 +1,11 @@
+templateScript: /travel-demo-content-tags/templates/components/tourDetail-content-tags.ftl
+dialog: travel-demo-content-tags:components/tourDetail-content-tags
+modelClass: info.magnolia.demo.travel.tours.model.TourDetailModel
+renderType: freemarker
+
+areas:
+  summary:
+    type: single
+    availableComponents:
+      social:
+        id: travel-demo:components/social

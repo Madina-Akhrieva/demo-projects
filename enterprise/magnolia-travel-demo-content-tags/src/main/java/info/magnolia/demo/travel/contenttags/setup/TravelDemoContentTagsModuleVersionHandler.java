@@ -17,10 +17,14 @@ package info.magnolia.demo.travel.contenttags.setup;
 import com.google.common.collect.Sets;
 import info.magnolia.contenttags.setup.AddTagsToNodesTask;
 import info.magnolia.contenttags.manager.TagManager;
+import info.magnolia.jcr.util.NodeTypes;
 import info.magnolia.module.DefaultModuleVersionHandler;
 import info.magnolia.module.InstallContext;
 import info.magnolia.module.delta.ArrayDelegateTask;
+import info.magnolia.module.delta.NodeExistsDelegateTask;
+import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.module.delta.Task;
+import info.magnolia.repository.RepositoryConstants;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
@@ -41,6 +45,11 @@ public class TravelDemoContentTagsModuleVersionHandler extends DefaultModuleVers
     @Override
     protected List<Task> getExtraInstallTasks(InstallContext installContext) {
         List<Task> tasks = new ArrayList<>();
+        tasks.add(new NodeExistsDelegateTask("Change the template of tour detail", "Change the tour detail component template to include tags.", RepositoryConstants.WEBSITE, "/travel/tour/main/0",
+                new ArrayDelegateTask("",
+                    new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel/tour/main/0", NodeTypes.Renderable.TEMPLATE, "travel-demo-content-tags:components/tourDetail-content-tags"),
+                    new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel/tour/main/0", "tourListLink", "a045a2d0-7b1c-466c-88bc-28352749959c")
+                )));
         tasks.add(new ArrayDelegateTask("Add tags to tours", "Tag the tours with set of tags.",
                 new AddTagsToNodesTask("tours", Sets.newHashSet("all-inclusive"),
                         Sets.newHashSet("/magnolia-travels/Spectacular-Ammouliani-Island",

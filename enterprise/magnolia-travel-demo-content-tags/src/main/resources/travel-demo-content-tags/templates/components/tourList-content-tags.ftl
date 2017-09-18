@@ -2,8 +2,8 @@
 [#include "/tours/templates/macros/tourTeaser.ftl"]
 
 [#assign title = content.title!]
-[#if content.tourTags?has_content]
-    [#assign tours = tagfn.getContentByTags("tours", "/magnolia-travels", content.tourTags)]
+[#if tagfn.getTags(content)?has_content]
+    [#assign tours = tagfn.getContentByTags("tours", "/magnolia-travels", tagfn.getTags(content))]
 [#elseif state.getSelector()?has_content]
     [#assign tours = tagfn.getContentByTags("tours", "/magnolia-travels", state.getSelector())]
     [#assign title = state.getSelector()]
@@ -44,3 +44,4 @@
 <script>
     jQuery(".tour-card-image").objectFitCoverSimple();
 </script>
+``

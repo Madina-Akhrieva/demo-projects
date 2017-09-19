@@ -4,7 +4,7 @@ form:
       fields:
         - name: title
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-        - name: tourTags
+        - name: mgnl:tags
           class: info.magnolia.contenttags.form.field.TagFieldDefinition
         - name: info
           class: info.magnolia.ui.form.field.definition.StaticFieldDefinition

@@ -35,11 +35,11 @@ package info.magnolia.demo.travel.setup;
 
 import static info.magnolia.demo.travel.setup.CopySiteToMultiSiteAndMakeItFallback.*;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 import info.magnolia.cms.core.HierarchyManager;
+import info.magnolia.cms.util.HierarchyManagerUtil;
 import info.magnolia.context.MgnlContext;
 import info.magnolia.jcr.util.NodeTypes;
 import info.magnolia.jcr.util.NodeUtil;
@@ -71,7 +71,7 @@ public class CopySiteToMultiSiteAndMakeItFallbackTest extends RepositoryTestCase
         configSession = MgnlContext.getJCRSession(RepositoryConstants.CONFIG);
 
         // Yes this is ugly, but our tests still use this
-        final HierarchyManager hierarchyManager = MgnlContext.getHierarchyManager(RepositoryConstants.CONFIG);
+        final HierarchyManager hierarchyManager = HierarchyManagerUtil.getHierarchyManager(MgnlContext.getInstance(), RepositoryConstants.CONFIG);
 
         installContext = mock(InstallContext.class);
         when(installContext.getConfigJCRSession()).thenReturn(configSession);

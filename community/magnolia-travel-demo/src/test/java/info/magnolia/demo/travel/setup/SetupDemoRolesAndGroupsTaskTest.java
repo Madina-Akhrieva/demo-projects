@@ -40,7 +40,6 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 
-import info.magnolia.cms.core.HierarchyManager;
 import info.magnolia.jcr.util.NodeTypes;
 import info.magnolia.jcr.util.NodeUtil;
 import info.magnolia.module.InstallContext;
@@ -52,24 +51,16 @@ import javax.jcr.Session;
 import org.junit.Before;
 import org.junit.Test;
 
-
-/**
- * Tests for {@link SetupDemoRolesAndGroupsTask}.
- */
 public class SetupDemoRolesAndGroupsTaskTest {
 
-    private static final String MODULES = "/modules/";
     private Session session;
     private InstallContext ctx;
-    private HierarchyManager hm;
 
     @Before
     public void setUp() throws Exception {
         session = new MockSession(RepositoryConstants.CONFIG);
         ctx = mock(InstallContext.class);
-        hm = mock(HierarchyManager.class);
         when(ctx.getJCRSession(eq(RepositoryConstants.CONFIG))).thenReturn(session);
-        when(ctx.getHierarchyManager(eq(RepositoryConstants.CONFIG))).thenReturn(hm);
     }
 
     @Test
@@ -90,7 +81,6 @@ public class SetupDemoRolesAndGroupsTaskTest {
         // GIVEN
         NodeUtil.createPath(session.getRootNode(), PAGES_ACTIVATE_ACCESS_ROLES, NodeTypes.ContentNode.NAME);
         when(ctx.isModuleRegistered(eq(ENTERPRISE_MODULE))).thenReturn(true);
-        when(hm.isExist(eq(MODULES + ENTERPRISE_MODULE))).thenReturn(true);
 
         // WHEN
         new SetupDemoRolesAndGroupsTask().execute(ctx);
@@ -156,7 +146,6 @@ public class SetupDemoRolesAndGroupsTaskTest {
         // GIVEN
         NodeUtil.createPath(session.getRootNode(), WORKFLOW_JBPM_PUBLISH_GROUPS, NodeTypes.ContentNode.NAME);
         when(ctx.isModuleRegistered(eq(WORKFLOW_JBPM_MODULE))).thenReturn(true);
-        when(hm.isExist(eq(MODULES + WORKFLOW_JBPM_MODULE))).thenReturn(true);
 
         // WHEN
         new SetupDemoRolesAndGroupsTask().execute(ctx);
@@ -169,7 +158,6 @@ public class SetupDemoRolesAndGroupsTaskTest {
     public void doNotAddDemoPublishersGroupToWorkflowIfWorkflowJbpmIsNotInstalled() throws Exception {
         // GIVEN
         when(ctx.isModuleRegistered(eq(WORKFLOW_JBPM_MODULE))).thenReturn(false);
-        when(hm.isExist(eq(MODULES + WORKFLOW_JBPM_MODULE))).thenReturn(false);
 
         // WHEN
         new SetupDemoRolesAndGroupsTask().execute(ctx);

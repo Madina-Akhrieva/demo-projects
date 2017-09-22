@@ -38,8 +38,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-import info.magnolia.cms.core.HierarchyManager;
-import info.magnolia.cms.util.HierarchyManagerUtil;
 import info.magnolia.context.MgnlContext;
 import info.magnolia.jcr.util.NodeTypes;
 import info.magnolia.jcr.util.NodeUtil;
@@ -70,13 +68,9 @@ public class CopySiteToMultiSiteAndMakeItFallbackTest extends RepositoryTestCase
 
         configSession = MgnlContext.getJCRSession(RepositoryConstants.CONFIG);
 
-        // Yes this is ugly, but our tests still use this
-        final HierarchyManager hierarchyManager = HierarchyManagerUtil.getHierarchyManager(MgnlContext.getInstance(), RepositoryConstants.CONFIG);
-
         installContext = mock(InstallContext.class);
         when(installContext.getConfigJCRSession()).thenReturn(configSession);
         when(installContext.getJCRSession(RepositoryConstants.CONFIG)).thenReturn(configSession);
-        when(installContext.getHierarchyManager(RepositoryConstants.CONFIG)).thenReturn(hierarchyManager);
 
         copySiteToMultiSiteAndMakeItFallback = new CopySiteToMultiSiteAndMakeItFallback();
 
@@ -127,5 +121,4 @@ public class CopySiteToMultiSiteAndMakeItFallbackTest extends RepositoryTestCase
         assertTrue(configSession.propertyExists(MULTISITE_FALLBACK_SITE + "/extends"));
         assertThat(configSession.getProperty(MULTISITE_FALLBACK_SITE + "/extends").getString(), is("../travel"));
     }
-
 }

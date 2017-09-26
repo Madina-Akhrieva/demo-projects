@@ -45,7 +45,7 @@
     </dependency>
     <dependency>
       <name>dam</name>
-      <version>2.1/*</version>
+      <version>${magnoliaDamVersion}/*</version>
     </dependency>
     <dependency>
       <name>categorization</name>
@@ -53,7 +53,7 @@
     </dependency>
     <dependency>
       <name>site</name>
-      <version>1.0.8/*</version>
+      <version>${siteVersion}/*</version>
     </dependency>
     <dependency>
       <name>multisite</name>
@@ -62,7 +62,7 @@
     </dependency>
     <dependency>
       <name>mtk</name>
-      <version>1.1/*</version>
+      <version>${mteVersion}/*</version>
     </dependency>
   </dependencies>
 

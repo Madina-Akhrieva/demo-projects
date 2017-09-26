@@ -18,7 +18,7 @@
     </dependency>
     <dependency>
       <name>dam-jcr</name>
-      <version>2.1/*</version>
+      <version>${magnoliaDamVersion}/*</version>
     </dependency>
     <dependency>
       <name>imaging</name>
@@ -30,15 +30,15 @@
     </dependency>
     <dependency>
       <name>site</name>
-      <version>1.0.8/*</version>
+      <version>${siteVersion}/*</version>
     </dependency>
     <dependency>
       <name>mte</name>
-      <version>1.1/*</version>
+      <version>${mteVersion}/*</version>
     </dependency>
     <dependency>
       <name>mtk</name>
-      <version>1.1/*</version>
+      <version>${mteVersion}/*</version>
     </dependency>
     <dependency>
       <name>multisite</name>

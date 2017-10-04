@@ -22,6 +22,7 @@ import static org.mockito.Mockito.mock;
 import info.magnolia.cms.util.ClasspathResourcesUtil;
 import info.magnolia.contenttags.manager.TagManager;
 import info.magnolia.context.MgnlContext;
+import info.magnolia.context.SystemContext;
 import info.magnolia.init.MagnoliaConfigurationProperties;
 import info.magnolia.jcr.util.NodeNameHelper;
 import info.magnolia.jcr.util.NodeTypes;
@@ -55,7 +56,7 @@ public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersion
 
     @Override
     protected ModuleVersionHandler newModuleVersionHandlerForTests() {
-        return new TravelDemoContentTagsModuleVersionHandler(new TagManager(MgnlContext::getInstance, null, new NodeNameHelper(mock(MagnoliaConfigurationProperties.class))));
+        return new TravelDemoContentTagsModuleVersionHandler(new TagManager(() -> Components.getComponent(SystemContext.class), null, new NodeNameHelper(mock(MagnoliaConfigurationProperties.class))));
     }
 
     @Override

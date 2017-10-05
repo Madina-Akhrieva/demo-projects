@@ -17,7 +17,7 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <name>content-tags</name>
+      <name>content-tags-ui</name>
       <version>${contentTagsVersion}/*</version>
     </dependency>
   </dependencies>

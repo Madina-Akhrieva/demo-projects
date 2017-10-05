@@ -111,7 +111,7 @@
       </dependency>
       <dependency>
         <groupId>info.magnolia.contenttags</groupId>
-        <artifactId>magnolia-content-tags</artifactId>
+        <artifactId>magnolia-content-tags-core</artifactId>
         <version>${contentTagsVersion}</version>
       </dependency>
       <dependency>

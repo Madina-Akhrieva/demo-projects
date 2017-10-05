@@ -23,7 +23,7 @@
 
     <dependency>
       <groupId>info.magnolia.contenttags</groupId>
-      <artifactId>magnolia-content-tags</artifactId>
+      <artifactId>magnolia-content-tags-core</artifactId>
     </dependency>
 
     <dependency>

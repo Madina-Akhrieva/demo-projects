@@ -119,9 +119,9 @@
       </dependency>
 
       <dependency>
-        <groupId>info.magnolia</groupId>
-        <artifactId>magnolia-module-form</artifactId>
-        <version>2.3.1</version>
+        <groupId>info.magnolia.form</groupId>
+        <artifactId>magnolia-form</artifactId>
+        <version>2.4-SNAPSHOT</version>
       </dependency>
 
       <!-- This brings PUR to demo webapps -->

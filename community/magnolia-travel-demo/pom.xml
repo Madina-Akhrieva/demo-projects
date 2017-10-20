@@ -67,8 +67,8 @@
       <artifactId>magnolia-templating-kit</artifactId>
     </dependency>
     <dependency>
-      <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-module-form</artifactId>
+      <groupId>info.magnolia.form</groupId>
+      <artifactId>magnolia-form</artifactId>
     </dependency>
     <dependency>
       <groupId>info.magnolia</groupId>

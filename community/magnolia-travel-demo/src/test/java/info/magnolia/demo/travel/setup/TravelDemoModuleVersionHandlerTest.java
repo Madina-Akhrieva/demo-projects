@@ -261,6 +261,19 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
     }
 
     @Test
+    public void upgradeFrom115OverwritesMultisitePurTemplateAvailabilityWithNoError() throws Exception {
+        // GIVEN
+        setupConfigNode("/modules/public-user-registration");
+        setupConfigNode("/modules/multisite/config/sites/travel/templates/availability/templates/pur");
+
+        // WHEN
+        final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.5"));
+
+        // THEN
+        this.assertNoMessages(ctx);
+    }
+
+    @Test
     public void cleanInstall() throws Exception {
         // GIVEN
         setupConfigNode("/modules/public-user-registration");

@@ -45,14 +45,13 @@ import info.magnolia.rendering.template.RenderableDefinition;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.google.inject.Inject;
 
 /**
  * Model class for the carousel. Gets the linked tours from current content node and creates {@link Tour} objects.

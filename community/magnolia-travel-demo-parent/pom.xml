@@ -16,8 +16,8 @@
 
   <properties>
     <javaVersion>1.8</javaVersion>
-    <magnoliaVersion>5.6-SNAPSHOT</magnoliaVersion>
-    <magnoliaUiVersion>5.6-SNAPSHOT</magnoliaUiVersion>
+    <magnoliaVersion>5.6</magnoliaVersion>
+    <magnoliaUiVersion>5.6</magnoliaUiVersion>
     <magnoliaDamVersion>2.1</magnoliaDamVersion>
     <siteVersion>1.0.8</siteVersion>
     <resourcesVersion>2.4</resourcesVersion>
@@ -121,7 +121,7 @@
       <dependency>
         <groupId>info.magnolia.form</groupId>
         <artifactId>magnolia-form</artifactId>
-        <version>2.4-SNAPSHOT</version>
+        <version>2.4</version>
       </dependency>
 
       <!-- This brings PUR to demo webapps -->

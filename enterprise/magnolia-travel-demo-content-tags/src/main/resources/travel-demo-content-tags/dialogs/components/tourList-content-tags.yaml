@@ -4,10 +4,14 @@ form:
       fields:
         - name: title
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+        - name: logicalOperand
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          options:
+            - name: OR
+              selected: true
+            - name: AND
         - name: mgnl:tags
           class: info.magnolia.contenttags.form.field.TagFieldDefinition
-        - name: info
-          class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
 
 actions:
   commit:

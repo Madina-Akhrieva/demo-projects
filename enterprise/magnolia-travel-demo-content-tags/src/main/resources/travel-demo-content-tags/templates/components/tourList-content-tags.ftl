@@ -3,7 +3,7 @@
 
 [#assign title = content.title!]
 [#if tagfn.getTags(content)?has_content]
-    [#assign tours = tagfn.getContentByTags("tours", "/magnolia-travels", tagfn.getTags(content))]
+    [#assign tours = tagfn.getContentByTags("tours", "/magnolia-travels", content.logicalOperand!"OR", tagfn.getTags(content))]
 [#elseif state.getSelector()?has_content]
     [#assign tours = tagfn.getContentByTags("tours", "/magnolia-travels", state.getSelector())]
 [#else]
@@ -43,4 +43,3 @@
 <script>
     jQuery(".tour-card-image").objectFitCoverSimple();
 </script>
-``

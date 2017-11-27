@@ -6,7 +6,6 @@
     [#assign tours = tagfn.getContentByTags("tours", "/magnolia-travels", tagfn.getTags(content))]
 [#elseif state.getSelector()?has_content]
     [#assign tours = tagfn.getContentByTags("tours", "/magnolia-travels", state.getSelector())]
-    [#assign title = state.getSelector()]
 [#else]
     [#assign tours = cmsfn.children(cmsfn.contentByPath("/magnolia-travels", "tours"))?chunk(10)?first]
 [/#if]

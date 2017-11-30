@@ -95,7 +95,7 @@ public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersion
         Property tags = tours.getNode("/magnolia-travels/Kyoto").getProperty(TagManager.TAGS_PROPERTY);
         assertThat(tags.getValues(), arrayWithSize(3));
 
-        assertThat(installContext.getConfigJCRSession().getRootNode(), hasNode("modules/content-tags-core/config/taggableWorkspaces/tours"));
+        assertThat(installContext.getConfigJCRSession().getRootNode(), hasNode("modules/content-tags-core/config/tagableWorkspaces/tours"));
         Node component = installContext.getJCRSession(RepositoryConstants.WEBSITE).getNode("/travel/tour/main/0");
         assertThat(component, hasProperty(NodeTypes.Renderable.TEMPLATE, "travel-demo-content-tags:components/tourDetail-content-tags"));
         assertThat(component, hasProperty("tourListLink", installContext.getJCRSession(RepositoryConstants.WEBSITE).getNode("/travel/tour-tag").getIdentifier()));

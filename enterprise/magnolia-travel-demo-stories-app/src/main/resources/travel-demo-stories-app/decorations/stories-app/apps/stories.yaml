@@ -19,7 +19,7 @@ subApps:
             tours:
               class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
               field:
-                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                class: info.magnolia.editor.app.field.ExpandingLinkFieldDefinition
                 targetWorkspace: tours
                 appName: tours
                 placeholder: stories.editor.relatedContent.tours.add.label

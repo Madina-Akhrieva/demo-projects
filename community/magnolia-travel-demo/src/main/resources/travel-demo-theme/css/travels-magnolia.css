@@ -811,7 +811,7 @@ h1.category {
 /* Carousel base class */
 .carousel {
     height: 680px;
-    margin-bottom: 20px;
+    margin-bottom: -230px;
 }
 
 /* Declare heights because of positioning of img element */
@@ -826,7 +826,7 @@ h1.category {
 }
 
 .after-lead-image {
-    margin-top: -250px;
+    margin-top: 0px;
     background-color: white;
     position: relative;
 }

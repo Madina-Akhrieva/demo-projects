@@ -21,5 +21,3 @@ areas:
           id: tours:components/tourDetailRelatedTours
   footer:
     editable: false
-i18nBasename: info.magnolia.module.sportstation.messages
-title: pages.tourSportstation

@@ -1580,9 +1580,6 @@
                   <sv:property sv:name="extends" sv:type="String">
                     <sv:value>/modules/categorization/dialogs/generic/tabCategorization/fields/categories</sv:value>
                   </sv:property>
-                  <sv:property sv:name="i18nBasename" sv:type="String">
-                    <sv:value>info.magnolia.module.travel-tours.messages</sv:value>
-                  </sv:property>
                   <sv:property sv:name="label" sv:type="String">
                     <sv:value>tours.detail.editor.tourTypes.label</sv:value>
                   </sv:property>
@@ -1601,9 +1598,6 @@
                   </sv:property>
                   <sv:property sv:name="extends" sv:type="String">
                     <sv:value>/modules/categorization/dialogs/generic/tabCategorization/fields/categories</sv:value>
-                  </sv:property>
-                  <sv:property sv:name="i18nBasename" sv:type="String">
-                    <sv:value>info.magnolia.module.travel-tours.messages</sv:value>
                   </sv:property>
                   <sv:property sv:name="label" sv:type="String">
                     <sv:value>tours.detail.editor.destination.label</sv:value>

@@ -5,5 +5,3 @@ renderType: freemarker
 parameters:
   showTourTypes: false
   showDestinations: false
-i18nBasename: info.magnolia.module.sportstation.messages
-title: components.tourDetailSportstation

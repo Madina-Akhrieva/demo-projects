@@ -1,9 +1,6 @@
 dialog: form:form
-description: paragraph.form.description
-title: paragraph.form.title
 renderType: freemarker
 templateScript: /form/components/form.ftl
-i18nBasename: info.magnolia.module.form.messages
 modelClass: info.magnolia.module.form.templates.components.FormModel
 class: info.magnolia.module.form.templates.components.FormParagraph
 formProcessors:

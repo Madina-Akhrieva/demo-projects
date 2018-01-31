@@ -2,8 +2,6 @@ dialog: mte:pages/pageProperties
 class: info.magnolia.module.site.templates.PageTemplateDefinition
 renderType: site
 type: feature
-i18nBasename: info.magnolia.module.publicuserregistration.messages
-title: menu.security.usersPublic
 
 areas:
   main:

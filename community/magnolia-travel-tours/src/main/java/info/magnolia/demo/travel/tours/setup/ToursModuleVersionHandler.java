@@ -54,12 +54,16 @@ import info.magnolia.module.delta.IsModuleInstalledOrRegistered;
 import info.magnolia.module.delta.NodeExistsDelegateTask;
 import info.magnolia.module.delta.OrderNodeBeforeTask;
 import info.magnolia.module.delta.RemoveNodeTask;
+import info.magnolia.module.delta.RemovePropertiesTask;
 import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.module.delta.Task;
 import info.magnolia.rendering.module.setup.InstallRendererContextAttributeTask;
+import info.magnolia.repository.RepositoryConstants;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.google.common.collect.Lists;
 
 /**
  * {@link DefaultModuleVersionHandler} of the {@link info.magnolia.demo.travel.tours.ToursModule}.
@@ -99,6 +103,13 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                 .addTask(new SetPageAsPublishedTask("/travel", true))
                 .addTask(new RemoveNodeTask("Cleanup deprecated virtualURIMapping location before re-install", "/modules/tours/virtualURIMapping"))
                 .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+        );
+
+        register(DeltaBuilder.update("1.2.2", "")
+                .addTask(new RemovePropertiesTask("Remove obsolete i18nBasename properties", RepositoryConstants.CONFIG, Lists.newArrayList(
+                        "/modules/tours/apps/tours/subApps/detail/editor/form/tabs/tour/fields/tourTypes/i18nBasename",
+                        "/modules/tours/apps/tours/subApps/detail/editor/form/tabs/tour/fields/destination/i18nBasename"
+                ), false))
         );
     }
 

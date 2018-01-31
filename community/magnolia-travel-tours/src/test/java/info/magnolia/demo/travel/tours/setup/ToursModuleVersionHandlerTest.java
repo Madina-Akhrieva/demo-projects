@@ -263,6 +263,22 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
                 hasProperty("toUri", "forward:/travel/tour?tour=$1"))));
     }
 
+    @Test
+    public void updateFrom121() throws Exception {
+        // GIVEN
+        Node tourTypes = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours/apps/tours/subApps/detail/editor/form/tabs/tour/fields/tourTypes", NodeTypes.Content.NAME, true);
+        tourTypes.setProperty("i18nBasename", "info.magnolia.module.travel-tours.messages");
+        Node destination = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours/apps/tours/subApps/detail/editor/form/tabs/tour/fields/destination", NodeTypes.Content.NAME, true);
+        destination.setProperty("i18nBasename", "info.magnolia.module.travel-tours.messages");
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2.1"));
+
+        //THEN
+        assertThat(tourTypes, not(hasProperty("i18nBasename")));
+        assertThat(destination, not(hasProperty("i18nBasename")));
+    }
+
     private void setupBootstrapPages() throws RepositoryException {
         websiteSession.getRootNode().addNode("travel", NodeTypes.Page.NAME);
         websiteSession.getRootNode().addNode("travel/about", NodeTypes.Page.NAME);

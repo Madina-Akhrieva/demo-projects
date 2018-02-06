@@ -1,6 +1,7 @@
 templateScript: /tours/templates/components/tourListFeaturedRow.ftl
 modelClass: info.magnolia.demo.travel.tours.model.RelatedToursModel
 class: info.magnolia.demo.travel.tours.model.definition.TourCategoryTemplateDefinition
+dialog: tours:components/tourList
 
 renderType: freemarker
 category: tourTypes

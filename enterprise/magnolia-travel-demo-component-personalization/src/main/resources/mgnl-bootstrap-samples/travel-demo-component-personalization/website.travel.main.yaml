@@ -4,9 +4,9 @@
   mgnl:activationStatus: true
   mgnl:created: 2015-01-26T17:25:11.795+01:00
   mgnl:createdBy: 'superuser'
-  mgnl:lastActivated: 2015-10-27T16:59:09.980+01:00
+  mgnl:lastActivated: 2018-02-06T15:06:48.609+01:00
   mgnl:lastActivatedBy: 'superuser'
-  mgnl:lastModified: 2016-08-30T09:35:52.394+02:00
+  mgnl:lastModified: 2018-02-06T15:04:01.396+01:00
   mgnl:lastModifiedBy: 'superuser'
   '0': 
     'tours': ['d30b9ca6-e22d-45c5-9456-7538ab7bccf8','a358f3ad-5a03-4f5d-b0ab-cb2219100472','730c8850-d638-4e91-b3fb-4041a0c59ffe']
@@ -16,7 +16,7 @@
     mgnl:activationStatus: true
     mgnl:created: 2015-02-24T15:43:35.913+01:00
     mgnl:createdBy: 'superuser'
-    mgnl:lastActivated: 2015-07-01T10:43:52.643+02:00
+    mgnl:lastActivated: 2018-02-06T15:06:48.610+01:00
     mgnl:lastActivatedBy: 'superuser'
     mgnl:lastModified: 2016-08-18T13:26:44.574+02:00
     mgnl:lastModifiedBy: 'superuser'
@@ -24,6 +24,9 @@
     'variants': 
       jcr:primaryType: 'mgnl:componentVariants'
       jcr:uuid: '1a92fc26-1b3f-41c0-aa50-98e5145057b4'
+      mgnl:activationStatus: true
+      mgnl:lastActivated: 2018-02-06T15:06:48.610+01:00
+      mgnl:lastActivatedBy: 'superuser'
       mgnl:lastModified: 2016-08-18T13:26:44.574+02:00
       mgnl:lastModifiedBy: 'superuser'
       'variant-0': 
@@ -32,11 +35,11 @@
         jcr:mixinTypes: ['mgnl:variant']
         jcr:primaryType: 'mgnl:component'
         jcr:uuid: 'f807c032-968c-4066-959e-74f1a17a9f78'
-        mgnl:activationStatus: false
+        mgnl:activationStatus: true
         mgnl:assignedSegments: ['segments:7c178722-5347-418f-af81-e95e40ca95d3']
         mgnl:created: 2015-02-24T15:43:35.913+01:00
         mgnl:createdBy: 'superuser'
-        mgnl:lastActivated: 2016-08-18T13:21:47.471+02:00
+        mgnl:lastActivated: 2018-02-06T15:06:48.611+01:00
         mgnl:lastActivatedBy: 'superuser'
         mgnl:lastModified: 2016-08-18T13:24:06.208+02:00
         mgnl:lastModifiedBy: 'superuser'
@@ -49,11 +52,11 @@
         jcr:mixinTypes: ['mgnl:variant']
         jcr:primaryType: 'mgnl:component'
         jcr:uuid: '7ec2be90-d0c6-45e2-8d3f-ec1d06a6fde6'
-        mgnl:activationStatus: false
+        mgnl:activationStatus: true
         mgnl:assignedSegments: ['segments:f2df3cc8-86f2-4338-879f-27f0cf4c46db']
         mgnl:created: 2015-02-24T15:43:35.913+01:00
         mgnl:createdBy: 'superuser'
-        mgnl:lastActivated: 2016-08-18T13:21:51.039+02:00
+        mgnl:lastActivated: 2018-02-06T15:06:48.611+01:00
         mgnl:lastActivatedBy: 'superuser'
         mgnl:lastModified: 2016-08-18T13:26:44.574+02:00
         mgnl:lastModifiedBy: 'superuser'
@@ -66,11 +69,11 @@
         jcr:mixinTypes: ['mgnl:variant']
         jcr:primaryType: 'mgnl:component'
         jcr:uuid: 'b6619780-aee9-40f5-acd7-68e6b6d19b92'
-        mgnl:activationStatus: false
+        mgnl:activationStatus: true
         mgnl:assignedSegments: ['segments:6896dff6-1584-4a26-be96-2ca5f5a04ac8']
         mgnl:created: 2015-02-24T15:43:35.913+01:00
         mgnl:createdBy: 'superuser'
-        mgnl:lastActivated: 2016-08-18T13:21:54.271+02:00
+        mgnl:lastActivated: 2018-02-06T15:06:48.612+01:00
         mgnl:lastActivatedBy: 'superuser'
         mgnl:lastModified: 2016-08-18T13:26:20.716+02:00
         mgnl:lastModifiedBy: 'superuser'
@@ -88,44 +91,53 @@
     mgnl:created: 2015-02-12T17:45:09.155+01:00
     mgnl:createdBy: 'superuser'
     mgnl:hideOriginal: false
-    mgnl:lastActivated: 2015-07-01T10:43:52.643+02:00
+    mgnl:lastActivated: 2018-02-06T15:06:48.612+01:00
     mgnl:lastActivatedBy: 'superuser'
-    mgnl:lastModified: 2016-08-30T09:35:32.607+02:00
+    mgnl:lastModified: 2018-02-06T15:04:01.396+01:00
     mgnl:lastModifiedBy: 'superuser'
     mgnl:template: 'tours:components/tourTypeTeaserRow'
     'variants': 
       jcr:primaryType: 'mgnl:componentVariants'
       jcr:uuid: 'c4bdd030-9d9a-40a9-a87b-624b17abeb90'
-      mgnl:lastModified: 2016-08-30T09:35:32.607+02:00
+      mgnl:activationStatus: true
+      mgnl:lastActivated: 2018-02-06T15:06:48.614+01:00
+      mgnl:lastActivatedBy: 'superuser'
+      mgnl:lastModified: 2018-02-06T15:04:01.396+01:00
       mgnl:lastModifiedBy: 'superuser'
       'variant-1': 
         'title_de': 'Welcher Reisetyp bist Du?'
         jcr:mixinTypes: ['mgnl:variant']
         jcr:primaryType: 'mgnl:component'
         jcr:uuid: '119ca153-a229-48b2-bebd-f49c8dd5153d'
-        mgnl:activationStatus: false
+        mgnl:activationStatus: true
         mgnl:created: 2015-02-12T17:45:09.155+01:00
         mgnl:createdBy: 'superuser'
         mgnl:hideOriginal: false
-        mgnl:lastActivated: 2016-08-23T14:02:47.336+02:00
+        mgnl:lastActivated: 2018-02-06T15:06:48.616+01:00
         mgnl:lastActivatedBy: 'superuser'
-        mgnl:lastModified: 2016-08-30T09:35:32.607+02:00
+        mgnl:lastModified: 2018-02-06T15:04:01.396+01:00
         mgnl:lastModifiedBy: 'superuser'
-        mgnl:template: 'tours:components/tourTypeTeaserRow'
+        mgnl:template: 'tours:components/tourListFeaturedRow'
         mgnl:variantTitle: 'Tour type is known'
         mgnl:variationOf: !weakreference 2bf3e57c-11b5-497e-806b-0e06dacffded
         mgnl:ruleSet: 
           'class': 'info.magnolia.personalization.RuleSet'
           'op': 'AND'
           jcr:uuid: '5c399631-22b5-49ad-a1ed-1a6627d67922'
+          mgnl:activationStatus: true
           mgnl:created: 2016-08-29T14:24:32.094+02:00
           mgnl:createdBy: 'superuser'
+          mgnl:lastActivated: 2018-02-06T15:06:48.616+01:00
+          mgnl:lastActivatedBy: 'superuser'
           mgnl:lastModified: 2016-08-30T09:35:32.607+02:00
           mgnl:lastModifiedBy: 'superuser'
           'voters': 
             jcr:uuid: '1ab20ad5-fc9f-4d5f-804c-f7fbaa3d2213'
+            mgnl:activationStatus: true
             mgnl:created: 2016-08-29T14:24:32.095+02:00
             mgnl:createdBy: 'superuser'
+            mgnl:lastActivated: 2018-02-06T15:06:48.618+01:00
+            mgnl:lastActivatedBy: 'superuser'
             mgnl:lastModified: 2016-08-30T09:35:32.607+02:00
             mgnl:lastModifiedBy: 'superuser'
             'voter0': 
@@ -134,64 +146,12 @@
               'cookieValue': 'any'
               'traitId': 'cookies'
               jcr:uuid: 'd116ee98-6274-4e84-bb8f-df214d797d69'
+              mgnl:activationStatus: true
               mgnl:created: 2016-08-29T14:24:32.096+02:00
               mgnl:createdBy: 'superuser'
+              mgnl:lastActivated: 2018-02-06T15:06:48.620+01:00
+              mgnl:lastActivatedBy: 'superuser'
               mgnl:lastModified: 2016-08-30T09:35:32.607+02:00
-              mgnl:lastModifiedBy: 'superuser'
-  '01': 
-    'position': 'bottom'
-    jcr:mixinTypes: ['mgnl:hasVariant']
-    jcr:primaryType: 'mgnl:component'
-    jcr:uuid: '13c12166-b457-463d-90b4-411d07cc445f'
-    mgnl:created: 2016-08-17T16:14:49.497+02:00
-    mgnl:createdBy: 'superuser'
-    mgnl:hideOriginal: true
-    mgnl:lastModified: 2016-08-30T09:35:52.394+02:00
-    mgnl:lastModifiedBy: 'superuser'
-    mgnl:template: 'tours:components/tourListFeaturedRow'
-    'variants': 
-      jcr:primaryType: 'mgnl:componentVariants'
-      jcr:uuid: '9ecd7136-9cf9-404a-902f-25aed7022bde'
-      mgnl:lastModified: 2016-08-30T09:35:52.394+02:00
-      mgnl:lastModifiedBy: 'superuser'
-      'variant-0': 
-        'position': 'bottom'
-        jcr:mixinTypes: ['mgnl:variant']
-        jcr:primaryType: 'mgnl:component'
-        jcr:uuid: 'e18bb6ae-2585-4e63-b350-4fb01529c044'
-        mgnl:activationStatus: false
-        mgnl:created: 2016-08-17T16:14:49.497+02:00
-        mgnl:createdBy: 'superuser'
-        mgnl:lastActivated: 2016-08-17T16:14:57.466+02:00
-        mgnl:lastActivatedBy: 'superuser'
-        mgnl:lastModified: 2016-08-30T09:35:52.394+02:00
-        mgnl:lastModifiedBy: 'superuser'
-        mgnl:template: 'tours:components/tourListFeaturedRow'
-        mgnl:variantTitle: 'Tour type is known'
-        mgnl:variationOf: !weakreference 13c12166-b457-463d-90b4-411d07cc445f
-        mgnl:ruleSet: 
-          'class': 'info.magnolia.personalization.RuleSet'
-          'op': 'OR'
-          jcr:uuid: '5d24495a-d5aa-449d-8372-c9a9360bc86f'
-          mgnl:created: 2016-08-17T16:15:48.604+02:00
-          mgnl:createdBy: 'superuser'
-          mgnl:lastModified: 2016-08-30T09:35:52.394+02:00
-          mgnl:lastModifiedBy: 'superuser'
-          'voters': 
-            jcr:uuid: '47ed7682-925e-47f5-98a9-a96a1a798b35'
-            mgnl:created: 2016-08-17T16:15:48.604+02:00
-            mgnl:createdBy: 'superuser'
-            mgnl:lastModified: 2016-08-30T09:35:52.394+02:00
-            mgnl:lastModifiedBy: 'superuser'
-            'voter2': 
-              'class': 'info.magnolia.personalization.cookie.CookieVoter'
-              'cookieName': 'tourType'
-              'cookieValue': 'any'
-              'traitId': 'cookies'
-              jcr:uuid: 'fdb505ca-8d02-4905-990c-542ce8dfff9c'
-              mgnl:created: 2016-08-17T16:15:48.606+02:00
-              mgnl:createdBy: 'superuser'
-              mgnl:lastModified: 2016-08-30T09:35:52.394+02:00
               mgnl:lastModifiedBy: 'superuser'
 
 

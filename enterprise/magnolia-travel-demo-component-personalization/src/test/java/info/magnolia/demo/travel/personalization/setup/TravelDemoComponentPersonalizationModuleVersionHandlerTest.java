@@ -14,10 +14,10 @@
  */
 package info.magnolia.demo.travel.personalization.setup;
 
+import static info.magnolia.test.hamcrest.NodeMatchers.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
-import static info.magnolia.test.hamcrest.NodeMatchers.*;
 
 import info.magnolia.cms.security.MgnlRoleManager;
 import info.magnolia.cms.security.RoleManager;
@@ -31,7 +31,6 @@ import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
 import info.magnolia.objectfactory.Components;
 import info.magnolia.repository.RepositoryConstants;
-import info.magnolia.test.hamcrest.NodeMatchers;
 
 import java.util.Arrays;
 import java.util.List;
@@ -133,7 +132,7 @@ public class TravelDemoComponentPersonalizationModuleVersionHandlerTest extends 
         // THEN
         Node variantRoot = travelPage.getNode("main/0/variants");
         List<Node> variants = Lists.newArrayList(NodeUtil.getNodes(variantRoot));
-        assertThat(variants, hasItems(NodeMatchers.hasProperty("jcr:primaryType", NodeTypes.Component.NAME), new MixinPropertyMatcher("mgnl:variant")));
+        assertThat(variants, hasItems(hasProperty("jcr:primaryType", NodeTypes.Component.NAME), new MixinPropertyMatcher("mgnl:variant")));
     }
 
     @Test
@@ -153,6 +152,19 @@ public class TravelDemoComponentPersonalizationModuleVersionHandlerTest extends 
                 not(hasNode("tourTypeOffbeat")),
                 not(hasNode("tourTypeCultural"))
         ));
+    }
+
+    @Test
+    public void updateFrom12MovesComponentVariant() throws Exception {
+        // GIVEN
+        Node travelPage = websiteSession.getRootNode().addNode("travel", NodeTypes.Page.NAME);
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2"));
+
+        // THEN
+        Node variant = travelPage.getNode("main/00/variants/variant-1");
+        assertThat(variant, hasProperty("mgnl:template", "tours:components/tourListFeaturedRow"));
     }
 
     /**

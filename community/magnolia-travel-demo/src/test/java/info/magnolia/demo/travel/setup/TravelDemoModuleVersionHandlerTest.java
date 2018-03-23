@@ -134,6 +134,7 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         setupConfigNode("/modules/site/config");
         setupConfigProperty("/server", "admin", "true");
         setupConfigNode("/server/filters/securityCallback/clientCallbacks/form");
+        setupConfigNode("/server/filters/uriSecurity");
     }
 
     @Override

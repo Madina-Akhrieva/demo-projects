@@ -39,11 +39,13 @@ import info.magnolia.module.InstallContext;
 import info.magnolia.module.delta.ArrayDelegateTask;
 import info.magnolia.module.delta.BootstrapSingleModuleResource;
 import info.magnolia.module.delta.BootstrapSingleResource;
+import info.magnolia.module.delta.BootstrapSingleResourceAndOrderAfter;
 import info.magnolia.module.delta.CheckAndModifyPropertyValueTask;
 import info.magnolia.module.delta.CopyNodeTask;
 import info.magnolia.module.delta.CreateNodePathTask;
 import info.magnolia.module.delta.CreateNodeTask;
 import info.magnolia.module.delta.DeltaBuilder;
+import info.magnolia.module.delta.FilterOrderingTask;
 import info.magnolia.module.delta.IsAuthorInstanceDelegateTask;
 import info.magnolia.module.delta.IsInstallSamplesTask;
 import info.magnolia.module.delta.IsModuleInstalledOrRegistered;
@@ -138,6 +140,10 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
                         new IsModuleInstalledOrRegistered("", "public-user-registration",
                                 new CopyNodeTask("", "/modules/travel-demo/config/travel/templates/availability/templates/pur", "/modules/multisite/config/sites/travel/templates/availability/templates/pur", true))))
         );
+        register(DeltaBuilder.update("1.2.3", "")
+                .addTask(new BootstrapSingleResourceAndOrderAfter("Bootstrap addCORSHeaders filter to be /.rest/* urls available via CORS", "Bootstrap addCORSHeaders filter to be /.rest/* urls available via CORS",
+                        "/mgnl-bootstrap/travel-demo/config.server.filters.addCORSHeaders.xml", "uriSecurity"))
+        );
     }
 
     @Override
@@ -155,6 +161,7 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
         tasks.add(new SetupDemoRolesAndGroupsTask());
         tasks.add(setupAccessPermissionsForDemoUsers);
         tasks.add(setupTargetAppGroupAccessPermissions);
+        tasks.add(new FilterOrderingTask("addCORSHeaders", new String[] { "uriSecurity" }));
         return tasks;
     }
 

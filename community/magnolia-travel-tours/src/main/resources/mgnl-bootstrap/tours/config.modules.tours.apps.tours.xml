@@ -1640,6 +1640,9 @@
                   <sv:property sv:name="class" sv:type="String">
                     <sv:value>info.magnolia.ui.form.field.definition.SelectFieldDefinition</sv:value>
                   </sv:property>
+                  <sv:property sv:name="type" sv:type="String">
+                    <sv:value>Long</sv:value>
+                  </sv:property>
                   <sv:node sv:name="options">
                     <sv:property sv:name="jcr:primaryType" sv:type="Name">
                       <sv:value>mgnl:contentNode</sv:value>
@@ -1648,7 +1651,7 @@
                       <sv:property sv:name="jcr:primaryType" sv:type="Name">
                         <sv:value>mgnl:contentNode</sv:value>
                       </sv:property>
-                      <sv:property sv:name="value" sv:type="String">
+                      <sv:property sv:name="value" sv:type="Long">
                         <sv:value>2</sv:value>
                       </sv:property>
                     </sv:node>
@@ -1656,7 +1659,7 @@
                       <sv:property sv:name="jcr:primaryType" sv:type="Name">
                         <sv:value>mgnl:contentNode</sv:value>
                       </sv:property>
-                      <sv:property sv:name="value" sv:type="String">
+                      <sv:property sv:name="value" sv:type="Long">
                         <sv:value>7</sv:value>
                       </sv:property>
                     </sv:node>
@@ -1664,7 +1667,7 @@
                       <sv:property sv:name="jcr:primaryType" sv:type="Name">
                         <sv:value>mgnl:contentNode</sv:value>
                       </sv:property>
-                      <sv:property sv:name="value" sv:type="String">
+                      <sv:property sv:name="value" sv:type="Long">
                         <sv:value>14</sv:value>
                       </sv:property>
                     </sv:node>
@@ -1672,7 +1675,7 @@
                       <sv:property sv:name="jcr:primaryType" sv:type="Name">
                         <sv:value>mgnl:contentNode</sv:value>
                       </sv:property>
-                      <sv:property sv:name="value" sv:type="String">
+                      <sv:property sv:name="value" sv:type="Long">
                         <sv:value>21</sv:value>
                       </sv:property>
                     </sv:node>

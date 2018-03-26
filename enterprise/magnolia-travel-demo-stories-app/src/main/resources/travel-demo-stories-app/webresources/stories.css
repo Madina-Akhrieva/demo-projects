@@ -516,11 +516,3 @@ See: https://github.com/sapegin/jquery.mosaicflow */
     background-color: transparent;
     display: block;
 }
-
-.opacity-full {
-    opacity: 1;
-}
-
-.opacity-zero {
-    opacity: 0;
-}

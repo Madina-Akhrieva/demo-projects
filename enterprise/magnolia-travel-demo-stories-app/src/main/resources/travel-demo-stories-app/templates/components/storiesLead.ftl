@@ -25,11 +25,11 @@
                 [#assign videoRendition = damfn.getRendition(story.videosource, "original")!]
 
             [#elseIf visualType == "embed"]
-                [#assign embedBackground = story.embedimage?hasContent?then(cssBackground(story.embedimage), background)]
-
                 [#if story.embedsource?hasContent]
                     [#assign embed = true]
                     [#assign cssVideoOrEmbed = " video-or-embed"]
+                [#elseIf story.embedimage?hasContent]
+                    [#assign background = cssBackground(story.embedimage)]
                 [/#if]
             [/#if]
             [#if video || embed]
@@ -37,7 +37,7 @@
             [/#if]
             <a href="${storyLink(content, story)!"#"}" class="story ${cssClass}${cssVideoOrEmbed}" style="${background}">
                 [#if embed == true]
-                    <div class="story-video-base" style="${embedBackground!}">
+                    <div class="story-video-base">
                         <div class="responsive-wrapper-16x9 video-background">
                             ${story.embedsource!}
                         </div>
@@ -46,11 +46,7 @@
                 <div class="story-video-base">
                     <video autoplay loop>
                         <source src="${videoRendition?hasContent?then(videoRendition.link!, "")}">
-                        [#if story.videoimage?hasContent]
-                            <img src="${damfn.getAssetLink(story.videoimage)}"/>
-                        [#else]
-                            ${i18n['stories.page.browser.not.support.video.tag']}
-                        [/#if]
+                        ${i18n['stories.page.browser.not.support.video.tag']}
                     </video>
                 </div>
                 [/#if]
@@ -128,26 +124,3 @@
     </div>
     [/#list]
 [/#if]
-
-<script src="https://player.vimeo.com/api/player.js"></script>
-<script language="javascript">
-
-    (function () {
-        const players = [];
-        const iframes = document.getElementsByTagName('iframe');
-        for (let i = 0; i < iframes.length; i++) {
-            const iframe = iframes[i];
-            const classList = iframe.classList;
-            classList.add('opacity-zero');
-            players[i] = new Vimeo.Player(iframe);
-
-            players[i].on('timeupdate', function(event) {
-                if (event.seconds > 0.1) {
-                    classList.remove('opacity-zero');
-                    classList.add('opacity-full');
-                    players[i].off('timeupdate');
-                }
-            });
-        }
-    })()
-</script>

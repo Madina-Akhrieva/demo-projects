@@ -2,7 +2,7 @@ form:
   tabs:
     - name: tabMain
       fields:
-        - !include /mtk/dialogs/components/linkSwitchableField.yaml
+        - !include /mtk/includes/linkSwitchableField.yaml
         - name: teaserTitle
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           i18n: true

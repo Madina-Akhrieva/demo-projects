@@ -14,6 +14,7 @@
  */
 package info.magnolia.demo.travel.stories.setup;
 
+import static info.magnolia.test.hamcrest.NodeMatchers.hasNode;
 import static info.magnolia.test.hamcrest.NodeMatchers.hasProperty;
 import static org.junit.Assert.assertThat;
 
@@ -23,6 +24,9 @@ import info.magnolia.cms.security.RoleManager;
 import info.magnolia.cms.security.SecuritySupport;
 import info.magnolia.cms.security.SecuritySupportImpl;
 import info.magnolia.context.MgnlContext;
+import info.magnolia.dam.jcr.DamConstants;
+import info.magnolia.jcr.util.NodeTypes;
+import info.magnolia.jcr.util.NodeUtil;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
@@ -58,6 +62,11 @@ public class TravelDemoStoriesAppModuleVersionHandlerTest extends ModuleVersionH
     }
 
     @Override
+    protected String getExtraNodeTypes() {
+        return "/mgnl-nodetypes/magnolia-dam-nodetypes.xml";
+    }
+
+    @Override
     protected List<String> getModuleDescriptorPathsForTests() {
         return Arrays.asList("/META-INF/magnolia/core.xml");
     }
@@ -65,6 +74,11 @@ public class TravelDemoStoriesAppModuleVersionHandlerTest extends ModuleVersionH
     @Override
     protected ModuleVersionHandler newModuleVersionHandlerForTests() {
         return new TravelDemoStoriesAppModuleVersionHandler();
+    }
+
+    @Override
+    protected String[] getExtraWorkspaces() {
+        return new String[] { DamConstants.WORKSPACE };
     }
 
     @Override
@@ -102,4 +116,18 @@ public class TravelDemoStoriesAppModuleVersionHandlerTest extends ModuleVersionH
         assertThat("We expect that " + TRAVEL_DEMO_BASE + " doesn't have any permissions to stories", this.travelDemoBaseNode.getNode("acl_stories/0"), hasProperty("permissions", Permission.NONE));
 
     }
+
+    @Test
+    public void updateFrom122() throws Exception {
+        // GIVEN
+        Node storiesDemo = NodeUtil.createPath(MgnlContext.getJCRSession(DamConstants.WORKSPACE).getRootNode(),"stories-demo", NodeTypes.Folder.NAME);
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2.2"));
+
+        // THEN
+        assertThat(storiesDemo, hasNode("flying-grand-canyon/video-thumbnail-grand-canyon.jpg"));
+
+    }
+
 }

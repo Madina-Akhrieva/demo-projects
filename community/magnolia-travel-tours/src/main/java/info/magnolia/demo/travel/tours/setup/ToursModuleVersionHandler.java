@@ -111,6 +111,11 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                         "/modules/tours/apps/tours/subApps/detail/editor/form/tabs/tour/fields/destination/i18nBasename"
                 ), false))
         );
+
+        register(DeltaBuilder.update("1.2.3", "")
+                .addTask(new BootstrapSingleResource("Change type of duration field to number", "Re-bootstrap the duration field in tours editor.", "/mgnl-bootstrap/tours/config.modules.tours.apps.tours.xml", "tours/subApps/detail/editor/form/tabs/tour/fields/duration", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new BootstrapSingleResource("Re-bootstrap the tours workspace", "Re-bootstrap the tours workspace.", "/mgnl-bootstrap-samples/tours/tours.magnolia-travels.yaml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+        );
     }
 
     @Override

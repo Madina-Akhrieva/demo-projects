@@ -31,7 +31,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Entdecken Sie die Kultur und die alltäglichen Schätze eines Phoenix aus der Asche'
     'description': 'Discover the culture and everyday treasures of a rising phoenix'
     'destination': ['7ec72c48-c33f-418e-b2ff-44cfb4bbb1f2']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:1044b3b8-30b1-48fe-8078-832b6cef8fb5'
     'isFeatured': true
     'location': 'Ho Chi Minh City, Vietnam'
@@ -65,7 +65,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Die Schweiz ist mehr als nur Skifahren'
     'description': 'There''s more to Switzerland than skiing'
     'destination': ['6cc50e28-fb0e-4e49-b3b6-728690a2e861']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:80d091ae-22ce-4cfc-b302-cb39f25c3d30'
     'location': 'Zurich, Switzerland'
     'name_de': 'Von Hütte zu Hütte in den Schweizer Alpen'
@@ -96,7 +96,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Familienreisen in den USA'
     'description': 'Family travels in USA'
     'destination': ['ed3dcd18-78af-46df-a9e1-bc732479f2e7']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:d44f783c-91ca-4b48-9533-ea4e147e13e9'
     'location': 'Seattle, USA'
     'name_de': 'Westküste - Highway 101'
@@ -129,7 +129,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Lernen Sie Delhi ganz aus der Nähe und intim kennen'
     'description': 'Get to know Delhi up close and personal'
     'destination': ['7ec72c48-c33f-418e-b2ff-44cfb4bbb1f2']
-    'duration': '2'
+    'duration': 2
     'image': 'jcr:ad33e9b0-855e-4bac-b35e-3c7e7588465c'
     'location': 'New Delhi, India'
     'name_de': 'In Neu Delhi eintauchen'
@@ -158,7 +158,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Die natürliche Seite Japans'
     'description': 'The natural side of Japan'
     'destination': ['7ec72c48-c33f-418e-b2ff-44cfb4bbb1f2']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:44689d29-5966-4d41-8fd4-2dc7da783528'
     'location': 'Kyoto, Japan'
     'name_de': 'Kyoto'
@@ -183,7 +183,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Bereisen Sie die großartigsten Natur-Sehenswürdigkeiten Amerikas - in einem Wohnmobil . Los geht''s!'
     'description': 'Tour the great monuments of america - in an RV Caravan. Roll out!'
     'destination': ['ed3dcd18-78af-46df-a9e1-bc732479f2e7']
-    'duration': '21'
+    'duration': 21
     'image': 'jcr:5843f97c-a825-40af-855b-f02483c6f354'
     'location': 'San Francisco, USA'
     'name_de': 'Grand Canyon & der Südwesten der USA'
@@ -212,7 +212,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Die Reise, die einen köstlichen Geschmack auf Ihren Lippen lassen wird'
     'description': 'The trip that will leave a delicious taste on your lips'
     'destination': ['7ec72c48-c33f-418e-b2ff-44cfb4bbb1f2']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:78399215-aed5-4518-9cfc-9b39855f4740'
     'isFeatured': true
     'location': 'Kuala Lumpur, Malaysia'
@@ -242,7 +242,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Ein Inselrefugium in Europa'
     'description': 'An island hideaway in Europe'
     'destination': ['6cc50e28-fb0e-4e49-b3b6-728690a2e861']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:0084dfb3-fc4a-4d39-9bfb-43eb5b20bdb7'
     'isFeatured': true
     'location': 'Athens, Greece'
@@ -276,7 +276,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Mit dem Fahrrad über die Gipfel und durch die Täler der italienischen Alpen'
     'description': 'Cycle the peaks and valleys of the Italian Alps'
     'destination': ['6cc50e28-fb0e-4e49-b3b6-728690a2e861']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:e483188e-b01b-4fef-a220-dc68debb8801'
     'location': 'Venice, Italy'
     'name_de': 'Radfahren in den Dolomiten'
@@ -301,7 +301,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Betrachten Sie Belize mit den Augen Ihrer Kinder'
     'description': 'See Belize through the eyes of your children'
     'destination': ['bed2e297-199c-4dc8-90cd-54ad3cb4221b']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:f90c8094-542d-4037-a4f5-dcd634fd0393'
     'isFeatured': true
     'location': 'Belize City, Belize'
@@ -339,7 +339,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Tauchen Sie in das geistige Herz eines Kontinents'
     'description': 'Go deep into the spiritual heart of a continent'
     'destination': ['7ec72c48-c33f-418e-b2ff-44cfb4bbb1f2']
-    'duration': '21'
+    'duration': 21
     'image': 'jcr:9269e62f-cb98-47eb-91ce-db1f09040896'
     'location': 'Beijing, China'
     'name_de': 'Tempel des Orients'
@@ -372,7 +372,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Testen Sie sich auf dieser extremen Tour'
     'description': 'Test yourself on this extreme tour'
     'destination': ['bed2e297-199c-4dc8-90cd-54ad3cb4221b']
-    'duration': '21'
+    'duration': 21
     'image': 'jcr:47811104-60d5-44c8-914c-8ab13cafd0ee'
     'isFeatured': false
     'location': 'Santiago, Chile'
@@ -407,7 +407,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Sri Lanka bietet schöne Strände, eine entspannte Atmosphäre und vor allem: großartige Breaks.'
     'description': 'Sri Lanka offers beautiful beaches, a laid back attitude, and most importantly: excellent breaks'
     'destination': ['7ec72c48-c33f-418e-b2ff-44cfb4bbb1f2']
-    'duration': '21'
+    'duration': 21
     'image': 'jcr:d01deefa-dba9-4708-8cfa-604320720253'
     'isFeatured': true
     'location': 'Galle, Sri Lanka'
@@ -434,7 +434,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Faszinierende Reise durch Russland'
     'description': 'A fascinating tour through Russia.'
     'destination': ['6cc50e28-fb0e-4e49-b3b6-728690a2e861']
-    'duration': '21'
+    'duration': 21
     'image': 'jcr:5d3a5a2c-dec2-4ac6-915f-0a487aaecf7f'
     'location': 'Vladivostok, Russia'
     'name_de': 'Die Trans-Sibirische Eisenbahn'
@@ -465,7 +465,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Entscheiden Sie sich für die spirituellen Zentren, die staunenswerten Naturschutzgebiete - und den Omul'
     'description': 'Go for the spiritual centers, the amazing nature reserves - and the Omul'
     'destination': ['6cc50e28-fb0e-4e49-b3b6-728690a2e861']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:951fa74b-9309-400e-8959-e86b0c46321b'
     'isFeatured': true
     'location': 'Irkutsk, Russia'
@@ -511,7 +511,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Durchstreifen Sie mit einem zuverlässigen Minsk-Motorrad die Nordprovinz Vietnams'
     'description': 'Roam Vietnam''s northern province on a trusty Minsk motorcycle'
     'destination': ['7ec72c48-c33f-418e-b2ff-44cfb4bbb1f2']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:b68b6ff7-f2fb-42b9-910c-fb0aed391a39'
     'isFeatured': true
     'location': 'Hanoi, Vietnam'
@@ -541,7 +541,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Das persische Reich damals und heute'
     'description': 'The Persian empire then and now'
     'destination': ['79da73f7-900b-4c91-b58b-3b1355485519']
-    'duration': '21'
+    'duration': 21
     'image': 'jcr:f6b154d7-731d-4de9-83be-a526dab5815f'
     'location': 'Tehran, Iran'
     'name_de': 'Iran einmal anders'
@@ -574,7 +574,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Antarktika: Nicht mehr nur für Wissenschaftler'
     'description': 'Antarctica: It’s not just for scientists anymore'
     'destination': ['ee483660-15cd-490d-b709-884b3f130286']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:00235c15-98bb-43b8-8e96-f4d8e0b622d6'
     'location': 'Ushuia, Argentina'
     'name_de': 'Aktiv Abenteuer in der Antarktis'
@@ -607,7 +607,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Mit Delfinen am schönsten Strand der Welt schwimmen'
     'description': 'Swimming with the dolphins on the world’s finest beach'
     'destination': ['ed3dcd18-78af-46df-a9e1-bc732479f2e7']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:5c013c07-c969-4ce8-ae88-6bd156a6351a'
     'location': 'Honolulu, USA'
     'name_de': 'Hawaii Five-O'
@@ -640,7 +640,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Ein Amazonas-Strandurlaub'
     'description': 'An Amazonian beach holiday'
     'destination': ['bed2e297-199c-4dc8-90cd-54ad3cb4221b']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:950cc73c-1b12-4f2a-bba7-97ad9d171f5d'
     'isFeatured': true
     'location': 'São Luís, Brasil'
@@ -666,7 +666,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Schöne Strände und erstaunliche Kultur'
     'description': 'Beautiful beaches and amazing culture'
     'destination': ['7ec72c48-c33f-418e-b2ff-44cfb4bbb1f2']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:06e63c9d-ef7f-42e6-a0a1-fdecf9b7886d'
     'location': 'Jakarta, Indonesia'
     'name_de': 'Insel-Hopping in Indonesien'
@@ -695,7 +695,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Ein unvergessliches Erlebnis im Arabischen Golf'
     'description': 'An unforgettable experience in the Arabian Gulf'
     'destination': ['79da73f7-900b-4c91-b58b-3b1355485519']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:7eeb9a4f-72ef-43f4-a392-5c1916b31e3a'
     'location': 'Muscat, Oman'
     'name_de': 'Dubai und Oman'
@@ -725,7 +725,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description': 'Seeking the crossroads of civilisations
 '
     'destination': ['79da73f7-900b-4c91-b58b-3b1355485519']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:2b51aaf3-dc5a-4012-89e5-d3b3dd6c08cb'
     'isFeatured': false
     'location': 'Amman, Jordan'
@@ -751,7 +751,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Ein einzigartiger Einblick in alte Zivilisationen'
     'description': 'A unique glimpse into ancient civilisations'
     'destination': ['bed2e297-199c-4dc8-90cd-54ad3cb4221b']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:cf9a4aa6-2129-4c14-b69c-48f28f976bef'
     'location': 'Mexico City, Mexico'
     'name_de': 'Die Reiche der Maya und Azteken'
@@ -786,7 +786,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Ein von Geschichte und Kultur durchdrungenes Land'
     'description': 'A country deep in history and culture'
     'destination': ['6cc50e28-fb0e-4e49-b3b6-728690a2e861']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:c51f88cd-0f4f-4fab-8dd2-84d243450d2c'
     'isFeatured': false
     'location': 'Prague, Czech Republic'
@@ -812,7 +812,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Ein Himmelreich für Naturliebhaber'
     'description': 'Heaven for nature lovers'
     'destination': ['bed2e297-199c-4dc8-90cd-54ad3cb4221b']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:f62138ad-3498-4256-a552-6d5dfb958cc6'
     'isFeatured': true
     'location': 'San José, Costa Rica'
@@ -838,7 +838,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Eine tropische Safari im Delta'
     'description': 'A tropical delta safari'
     'destination': ['79da73f7-900b-4c91-b58b-3b1355485519']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:fa01a364-0738-4e95-9a99-5f36a5f658c5'
     'location': 'Johannesburg, South Africa'
     'name_de': 'Herrliches Botswana'
@@ -867,7 +867,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'In den Armen des Meeres'
     'description': 'At the mercy of the sea'
     'destination': ['6cc50e28-fb0e-4e49-b3b6-728690a2e861']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:7f3cbb8f-a909-47da-b678-543ce6f244b9'
     'location': 'Hamburg, Germany'
     'name_de': 'Inseln der Nordsee'
@@ -896,7 +896,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Eine Polar-Erfahrung fürs Leben'
     'description': 'Polar experience of a lifetime'
     'destination': ['ee483660-15cd-490d-b709-884b3f130286']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:98d6c33f-ff8f-4869-9e1d-2775d2e63797'
     'location': 'Moscow, Russia'
     'name_de': 'Die arktischen Inselgruppen'
@@ -925,7 +925,7 @@ W&auml;hrend wir dort sind, besuchen wir den ber&uuml;hmten Wei&szlig;en Palast,
     'description_de': 'Zwei Wildreservate in einer Woche'
     'description': 'Two game reserves in one week'
     'destination': ['79da73f7-900b-4c91-b58b-3b1355485519']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:8d1e164c-22a2-483e-9b49-f8088599c036'
     'isFeatured': true
     'location': 'Johannesburg, South Africa'
@@ -956,7 +956,7 @@ At Christmas time, children can also join visits to Santa and his famous grotto,
     'description_de': 'Ihr eigenes Polarkreis-Abenteuer'
     'description': 'Your own Arctic Circle adventure'
     'destination': ['ee483660-15cd-490d-b709-884b3f130286']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:71b9a58b-3c78-41bd-9fe4-17ce0f3b5dd4'
     'isFeatured': true
     'location': 'Kittilä, Finland'
@@ -986,7 +986,7 @@ At Christmas time, children can also join visits to Santa and his famous grotto,
     'description_de': 'Entdecken Sie das meistbesuchte Land der Welt'
     'description': 'Discover why its world’s most visited country'
     'destination': ['6cc50e28-fb0e-4e49-b3b6-728690a2e861']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:090eb9c4-b35b-4869-a12f-6ea80292cba4'
     'location': 'Paris, France'
     'name_de': 'Frankreich für Familien'
@@ -1023,7 +1023,7 @@ Wir verbringen 5 Tage mit Wandern auf dem Juan de Fuca Marine-Trail, der direkt 
     'description_de': 'Tauchen Sie in die raue Wildnis der gemäßigten Regenwälder und Inselgruppen des Pazifischen Nordwestens ein'
     'description': 'Immerse yourself in the rugged wilderness of the Pacific Northwest temperate rainforest and island archipelagos'
     'destination': ['ed3dcd18-78af-46df-a9e1-bc732479f2e7']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:b0a55c58-e258-4783-bc81-2613cdfd65be'
     'location': 'Vancouver, Canada'
     'name_de': 'Wald Wasser Stein'
@@ -1048,7 +1048,7 @@ Wir verbringen 5 Tage mit Wandern auf dem Juan de Fuca Marine-Trail, der direkt 
     'description_de': 'Fühlen Sie sich wieder wie ein Kind - mit einem Drachen für Erwachsene'
     'description': 'Feel like a kid again - with a kite that is all grown up'
     'destination': ['6cc50e28-fb0e-4e49-b3b6-728690a2e861']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:37157de7-4634-4772-90fd-9fc1566f234b'
     'isFeatured': true
     'location': 'Kos, Greece'
@@ -1085,7 +1085,7 @@ Aber da ist noch mehr als Programmieren: Du erh&auml;ltst die Gelegenheit, gleic
     'description_de': 'Lebe wie ein Einheimischer'
     'description': 'Live like a local'
     'destination': ['6cc50e28-fb0e-4e49-b3b6-728690a2e861']
-    'duration': '7'
+    'duration': 7
     'image': 'jcr:94696095-3327-4816-8618-e55dfbb6c193'
     'location': 'Basel, Switzerland'
     'name_de': 'Einmalige Ferien in Basel'
@@ -1118,7 +1118,7 @@ Aber da ist noch mehr als Programmieren: Du erh&auml;ltst die Gelegenheit, gleic
     'description_de': 'Lassen Sie sich von einer Meeresschildkröte überraschen, die plötzlich auf Ihrem Foto erscheint'
     'description': 'Get photobombed by a Sea Turtle'
     'destination': ['ed3dcd18-78af-46df-a9e1-bc732479f2e7']
-    'duration': '14'
+    'duration': 14
     'image': 'jcr:795449d2-6c16-402e-9e8a-bbb101fe22bb'
     'isFeatured': true
     'location': 'Miami, USA'

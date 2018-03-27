@@ -1,0 +1,4 @@
+tourfinder:
+  addFingerPrint: true
+  link: /.resources/tours/webresources/css/tourfinder.css
+  media: all

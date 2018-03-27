@@ -1,0 +1,11 @@
+'01': 
+  'tourFinder': 'd25e69d9-27d0-4477-824c-7cc0714c97ce'
+  jcr:primaryType: 'mgnl:component'
+  jcr:uuid: '6c91f600-5b3c-4030-b3ce-63dbb7e4c989'
+  mgnl:created: 2018-03-27T11:05:57.163+02:00
+  mgnl:createdBy: 'superuser'
+  mgnl:lastModified: 2018-03-27T11:05:57.163+02:00
+  mgnl:lastModifiedBy: 'superuser'
+  mgnl:template: 'tours:components/tourFinderRow'
+
+

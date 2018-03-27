@@ -1,0 +1,62 @@
+'tour-finder': 
+  'hideInNav': true
+  'title': 'Tour Finder'
+  jcr:primaryType: 'mgnl:page'
+  jcr:uuid: 'd25e69d9-27d0-4477-824c-7cc0714c97ce'
+  mgnl:created: 2018-03-27T11:02:36.701+02:00
+  mgnl:createdBy: 'superuser'
+  mgnl:lastModified: 2018-03-27T11:03:06.652+02:00
+  mgnl:lastModifiedBy: 'superuser'
+  mgnl:template: 'travel-demo:pages/standard'
+  'main': 
+    jcr:primaryType: 'mgnl:area'
+    jcr:uuid: '9cafcc1e-e561-4f15-83ba-6019c8107a86'
+    mgnl:created: 2018-03-27T11:02:45.786+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastModified: 2018-03-27T11:03:06.652+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    '0': 
+      jcr:primaryType: 'mgnl:component'
+      jcr:uuid: '506bfd9a-ef9f-42bf-8650-f32a3b2fd841'
+      mgnl:created: 2018-03-27T11:03:06.654+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-03-27T11:03:06.654+02:00
+      mgnl:lastModifiedBy: 'superuser'
+      mgnl:template: 'tours:components/tourFinder'
+  'footer': 
+    jcr:primaryType: 'mgnl:area'
+    jcr:uuid: 'ce31ad28-22b2-4c94-9bff-515ee7883634'
+    mgnl:created: 2018-03-27T11:02:45.924+02:00
+    mgnl:createdBy: 'superuser'
+    mgnl:lastModified: 2018-03-27T11:02:46.822+02:00
+    mgnl:lastModifiedBy: 'superuser'
+    'footer1': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '76c936d5-c305-4745-8e23-cfb694692bad'
+      mgnl:created: 2018-03-27T11:02:46.032+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-03-27T11:02:46.032+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    'footer2': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: 'a2d47f9d-eddf-493e-bf83-e7a64c7be2f0'
+      mgnl:created: 2018-03-27T11:02:46.468+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-03-27T11:02:46.468+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    'footer3': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: '7f6f9305-d354-4e24-b9a4-b2c8d0f231ef'
+      mgnl:created: 2018-03-27T11:02:46.707+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-03-27T11:02:46.707+02:00
+      mgnl:lastModifiedBy: 'superuser'
+    'footer4': 
+      jcr:primaryType: 'mgnl:area'
+      jcr:uuid: 'e98167e0-3732-4d22-a223-77542756f51d'
+      mgnl:created: 2018-03-27T11:02:46.831+02:00
+      mgnl:createdBy: 'superuser'
+      mgnl:lastModified: 2018-03-27T11:02:46.831+02:00
+      mgnl:lastModifiedBy: 'superuser'
+
+

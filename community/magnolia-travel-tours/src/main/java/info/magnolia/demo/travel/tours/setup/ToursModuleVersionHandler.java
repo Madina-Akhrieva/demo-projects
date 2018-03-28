@@ -47,6 +47,7 @@ import info.magnolia.module.delta.AddRoleToUserTask;
 import info.magnolia.module.delta.ArrayDelegateTask;
 import info.magnolia.module.delta.BootstrapSingleModuleResource;
 import info.magnolia.module.delta.BootstrapSingleResource;
+import info.magnolia.module.delta.BootstrapSingleResourceAndOrderAfter;
 import info.magnolia.module.delta.CopyNodeTask;
 import info.magnolia.module.delta.DeltaBuilder;
 import info.magnolia.module.delta.IsInstallSamplesTask;
@@ -115,6 +116,9 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
         register(DeltaBuilder.update("1.2.3", "")
                 .addTask(new BootstrapSingleResource("Change type of duration field to number", "Re-bootstrap the duration field in tours editor.", "/mgnl-bootstrap/tours/config.modules.tours.apps.tours.xml", "tours/subApps/detail/editor/form/tabs/tour/fields/duration", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new BootstrapSingleResource("Re-bootstrap the tours workspace", "Re-bootstrap the tours workspace.", "/mgnl-bootstrap-samples/tours/tours.magnolia-travels.yaml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new ArrayDelegateTask("Bootstrap Tour Finder", "Extract files and modify the travel demo.",
+                    new BootstrapSingleResource("", "","/mgnl-bootstrap-samples/tours/website/website.travel.tour-finder.yaml"),
+                    new BootstrapSingleResourceAndOrderAfter("/mgnl-bootstrap-samples/tours/website/website.travel.main.01.yaml", "0")))
         );
     }
 
@@ -128,7 +132,8 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
 
         /* Order bootstrapped pages accordingly */
         tasks.add(orderPageNodes);
-        tasks.add(new OrderNodeBeforeTask("Order careers zeroFive node before zeroFix", "", WEBSITE, "/travel/about/careers/main/05", "06"));
+        tasks.add(new OrderNodeBeforeTask("Order careers zeroFive node before zeroFix", "Order careers zeroFive node before zeroFix", WEBSITE, "/travel/about/careers/main/05", "06"));
+        tasks.add(new OrderNodeBeforeTask("Place Tour Finder component on travel-demo home page", "Place Tour Finder component on the correct position on the home page.", WEBSITE, "/travel/main/01", "00"));
 
         /* Add travel-demo-base role to user anonymous */
         tasks.add(new AddRoleToUserTask("Adds role 'travel-demo-base' to user 'anonymous'", "anonymous", "travel-demo-base"));

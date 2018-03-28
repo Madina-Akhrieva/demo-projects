@@ -1,0 +1,30 @@
+<!-- Main Form -->
+<div class="finder-header">
+    <h1><img src="{{ contextPath }}/.resources/tours/webresources/img/map_red.png">Tour Finder</h1>
+    <div class="finder-search-container">
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+        <input class="finder-search" type="text" placeholder="What would you like to see?" ng-model="search.query" ng-model-options="{ updateOn: 'change blur' }" />
+    </div>
+</div>
+
+<!-- Search Filters -->
+<div class="finder-section-filters" id="finder-section-filters" ng-include="contextPath + '/.resources/tours/webresources/views/filters.html'">
+</div>
+
+<!-- Results -->
+<div class="finder-list">
+    <div class="finder-summary col-md-12">
+        <span class="finder-count">{{ filteredTours.length }}</span> tours found.
+    </div>
+    <div class="finder-summary-no-tours col-md-12" ng-hide="filteredTours.length" ng-cloak>
+        {{ notFoundMessage }}
+    </div>
+    <div class="tour-list">
+        <div class="row" ng-show="filteredTours.length">
+            <div class="col-md-6 tour-card card" ng-repeat="tour in filteredTours" ng-include="contextPath + '/.resources/tours/webresources/views/tourCard.html'" />
+        </div>
+        <div class="row" ng-hide="filteredTours.length">
+            <div class="col-md-6 tour-card card" ng-repeat="tour in tours" ng-include="contextPath + '/.resources/tours/webresources/views/tourCard.html'" />
+        </div>
+    </div>
+</div>

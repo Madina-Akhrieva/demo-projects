@@ -185,7 +185,8 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
                 "tour-type",
                 "destination",
                 "tour",
-                "about"
+                "about",
+                "tour-finder"
         ));
     }
 
@@ -277,6 +278,27 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
         //THEN
         assertThat(tourTypes, not(hasProperty("i18nBasename")));
         assertThat(destination, not(hasProperty("i18nBasename")));
+    }
+
+    @Test
+    public void updateFrom122InstallsTourFinder() throws Exception {
+        // GIVEN
+        Node travel = NodeUtil.createPath(websiteSession.getRootNode(), "travel", NodeTypes.Content.NAME);
+        Node main = NodeUtil.createPath(travel, "main", NodeTypes.Content.NAME);
+        NodeUtil.createPath(main, "0", NodeTypes.ContentNode.NAME);
+        NodeUtil.createPath(main, "00", NodeTypes.ContentNode.NAME);
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2.2"));
+
+        //THEN
+        assertThat(travel, hasNode("tour-finder"));
+        List<Node> components = Lists.newArrayList(main.getNodes());
+        assertThat(Collections2.transform(components, new ToNodeName()), contains(
+                "0",
+                "01",
+                "00"
+        ));
     }
 
     private void setupBootstrapPages() throws RepositoryException {

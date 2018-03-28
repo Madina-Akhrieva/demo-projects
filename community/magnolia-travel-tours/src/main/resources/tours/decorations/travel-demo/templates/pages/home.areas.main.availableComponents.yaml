@@ -4,3 +4,5 @@ tourTypeTeaserRow:
   id: tours:components/tourTypeTeaserRow
 tourList:
   id: tours:components/tourList
+tourFinderRow:
+  id: tours:components/tourFinderRow

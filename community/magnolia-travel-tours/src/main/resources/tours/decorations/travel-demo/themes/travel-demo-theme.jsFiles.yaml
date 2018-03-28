@@ -1,0 +1,12 @@
+angular:
+  addFingerPrint: true
+  link: /.resources/tours/webresources/js/angular.min.js
+angular-animate:
+  addFingerPrint: true
+  link: /.resources/tours/webresources/js/angular-animate.min.js
+angular-route:
+  addFingerPrint: true
+  link: /.resources/tours/webresources/js/angular-route.min.js
+tourfinder:
+  addFingerPrint: true
+  link: /.resources/tours/webresources/js/tourfinder.js

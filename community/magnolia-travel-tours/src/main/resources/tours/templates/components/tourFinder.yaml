@@ -1,0 +1,2 @@
+templateScript: /tours/templates/components/tourFinder.ftl
+renderType: freemarker

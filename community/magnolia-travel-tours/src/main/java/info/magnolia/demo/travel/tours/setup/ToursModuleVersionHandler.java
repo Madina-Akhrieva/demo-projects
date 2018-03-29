@@ -114,6 +114,7 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
         );
 
         register(DeltaBuilder.update("1.2.3", "")
+                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "Re-Bootstrap virtal URI mapping to avoid collision with resource files.", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new BootstrapSingleResource("Change type of duration field to number", "Re-bootstrap the duration field in tours editor.", "/mgnl-bootstrap/tours/config.modules.tours.apps.tours.xml", "tours/subApps/detail/editor/form/tabs/tour/fields/duration", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new BootstrapSingleResource("Re-bootstrap the tours workspace", "Re-bootstrap the tours workspace.", "/mgnl-bootstrap-samples/tours/tours.magnolia-travels.yaml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new ArrayDelegateTask("Bootstrap Tour Finder", "Extract files and modify the travel demo.",

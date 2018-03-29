@@ -260,7 +260,7 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
         Node mappings = toursModule.getNode("virtualUriMappings");
         assertThat(mappings, hasNode(allOf(
                 hasProperty("class", RegexpVirtualUriMapping.class.getName()),
-                hasProperty("fromUri", "/tours(.*).html"),
+                hasProperty("fromUri", "^/tours(.*).html"),
                 hasProperty("toUri", "forward:/travel/tour?tour=$1"))));
     }
 

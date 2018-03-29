@@ -11,7 +11,7 @@
       <sv:value>info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping</sv:value>
     </sv:property>
     <sv:property sv:name="fromUri" sv:type="String">
-      <sv:value>/tours(.*).html</sv:value>
+      <sv:value>^/tours(.*).html</sv:value>
     </sv:property>
     <sv:property sv:name="toUri" sv:type="String">
       <sv:value>forward:/travel/tour?tour=$1</sv:value>

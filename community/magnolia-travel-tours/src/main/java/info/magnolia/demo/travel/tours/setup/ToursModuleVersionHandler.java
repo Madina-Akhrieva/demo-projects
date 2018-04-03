@@ -58,6 +58,7 @@ import info.magnolia.module.delta.RemoveNodeTask;
 import info.magnolia.module.delta.RemovePropertiesTask;
 import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.module.delta.Task;
+import info.magnolia.module.delta.ValueOfPropertyDelegateTask;
 import info.magnolia.rendering.module.setup.InstallRendererContextAttributeTask;
 import info.magnolia.repository.RepositoryConstants;
 
@@ -114,7 +115,8 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
         );
 
         register(DeltaBuilder.update("1.2.3", "")
-                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "Re-Bootstrap virtal URI mapping to avoid collision with resource files.", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new ValueOfPropertyDelegateTask("Re-Bootstrap virtual URI mapping for tours module.", "/modules/tours/virtualUriMappings/toursMapping", "class", "info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping", true,
+                        new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "Re-Bootstrap virtual URI mapping to avoid collision with resource files.", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING)))
                 .addTask(new BootstrapSingleResource("Change type of duration field to number", "Re-bootstrap the duration field in tours editor.", "/mgnl-bootstrap/tours/config.modules.tours.apps.tours.xml", "tours/subApps/detail/editor/form/tabs/tour/fields/duration", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new BootstrapSingleResource("Re-bootstrap the tours workspace", "Re-bootstrap the tours workspace.", "/mgnl-bootstrap-samples/tours/tours.magnolia-travels.yaml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new ArrayDelegateTask("Bootstrap Tour Finder", "Extract files and modify the travel demo.",

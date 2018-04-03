@@ -18,47 +18,6 @@
     Do NOT use as a PARENT pom.
   </description>
 
-  <profiles>
-    <profile>
-      <id>all-modules</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <modules>
-        <module>community/magnolia-travel-demo-parent</module>
-        <module>community/magnolia-travel-demo</module>
-        <module>community/magnolia-travel-tours</module>
-        <module>enterprise/magnolia-travel-demo-enterprise-parent</module>
-        <module>enterprise/magnolia-travel-demo-marketing-tags</module>
-        <module>enterprise/magnolia-travel-demo-personalization</module>
-        <module>enterprise/magnolia-travel-demo-multisite</module>
-        <module>enterprise/magnolia-travel-demo-component-personalization</module>
-        <module>enterprise/magnolia-travel-demo-content-tags</module>
-        <module>enterprise/magnolia-travel-demo-stories-app</module>
-      </modules>
-    </profile>
-    <profile>
-      <id>community-modules</id>
-      <modules>
-        <module>community/magnolia-travel-demo-parent</module>
-        <module>community/magnolia-travel-demo</module>
-        <module>community/magnolia-travel-tours</module>
-      </modules>
-    </profile>
-    <profile>
-      <id>enterprise-modules</id>
-      <modules>
-        <module>enterprise/magnolia-travel-demo-enterprise-parent</module>
-        <module>enterprise/magnolia-travel-demo-marketing-tags</module>
-        <module>enterprise/magnolia-travel-demo-personalization</module>
-        <module>enterprise/magnolia-travel-demo-multisite</module>
-        <module>enterprise/magnolia-travel-demo-component-personalization</module>
-        <module>enterprise/magnolia-travel-demo-content-tags</module>
-        <module>enterprise/magnolia-travel-demo-stories-app</module>
-      </modules>
-    </profile>
-  </profiles>
-
   <properties>
     <scmTagPrefix>magnolia-demo-projects</scmTagPrefix>
   </properties>

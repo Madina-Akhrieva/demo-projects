@@ -50,6 +50,10 @@ public class TravelDemoMultiSiteModuleVersionHandler extends DefaultModuleVersio
                         new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-multisite/website.sportstation.yaml")))
                 .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for travel-demo multi-site module.", "", "/mgnl-bootstrap/travel-demo-multisite/config.modules.tours.virtualUriMappings.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
+
+        register(DeltaBuilder.update("1.2.3", "")
+                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for travel-demo multi-site module.", "Re-Bootstrap virtual URI mapping for travel-demo multi-site module.", "/mgnl-bootstrap/travel-demo-multisite/config.modules.tours.virtualUriMappings.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+        );
     }
 
     @Override

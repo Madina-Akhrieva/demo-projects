@@ -11,7 +11,7 @@
       <sv:value>info.magnolia.multisite.mapping.MultiSiteRegexpVirtualUriMapping</sv:value>
     </sv:property>
     <sv:property sv:name="fromUri" sv:type="String">
-      <sv:value>/tours(.*).html</sv:value>
+      <sv:value>^/tours(.*).html</sv:value>
     </sv:property>
     <sv:property sv:name="site" sv:type="String">
       <sv:value>travel</sv:value>
@@ -28,7 +28,7 @@
       <sv:value>info.magnolia.multisite.mapping.MultiSiteRegexpVirtualUriMapping</sv:value>
     </sv:property>
     <sv:property sv:name="fromUri" sv:type="String">
-      <sv:value>/tours(.*).html</sv:value>
+      <sv:value>^/tours(.*).html</sv:value>
     </sv:property>
     <sv:property sv:name="site" sv:type="String">
       <sv:value>sportstation</sv:value>

@@ -64,18 +64,28 @@
         [#assign firstTextTruncated = firstTextBlock.text[0..*75]!]
     [/#if]
 
+    [#assign embedBackground = story.embedimage?hasContent?then(cssBackground(story.embedimage), "background-color: black;")]
 
     [#-------------- RENDERING --------------]
 
     [#-- Something to take up the proper height of the responsive video size. --]
     <div class="responsive-wrapper-16x9 video-spacer">
-        <div class="video-background-color"></div>
+        <div class="video-background-color" style="${embedBackground!}"></div>
     </div>
 
     <div class="story-header-videos">
         <div class="story-video-base">
-            <div class="responsive-wrapper-16x9 video-background">
-            ${story.embedsource}
+            <div class="responsive-wrapper-16x9 video-background" id="embedVideo">
+                <script>
+                    var testEl = document.createElement("video"), canPlayH264;
+                    if (testEl.canPlayType) {
+                        // Check for H264 support
+                        canPlayH264 = "" !== (testEl.canPlayType('video/mp4; codecs="avc1.42E01E"') || testEl.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"'));
+                    }
+                    if(canPlayH264) {
+                        document.getElementById('embedVideo').innerHTML = '${story.embedsource!}';
+                    }
+                </script>
             </div>
         </div>
     </div>

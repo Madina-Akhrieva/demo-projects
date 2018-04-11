@@ -55,3 +55,8 @@
     [#assign bookNode = cmsfn.contentByPath("/travel/book-tour")!]
     [#return cmsfn.link(bookNode)!"#"]
 [/#function]
+
+[#function cssBackground image]
+    [#assign rendition = damfn.getRendition(image, "original")!]
+    [#return rendition?hasContent?then("background-image: url(${rendition.link!}); background-size: cover; background-position: center;", "")]
+[/#function]

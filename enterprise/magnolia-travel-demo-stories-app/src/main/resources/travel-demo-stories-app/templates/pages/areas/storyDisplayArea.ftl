@@ -69,13 +69,13 @@
     [#-------------- RENDERING --------------]
 
     [#-- Something to take up the proper height of the responsive video size. --]
-    <div class="responsive-wrapper-16x9 video-spacer">
-        <div class="video-background-color" style="${embedBackground!}"></div>
+    <div class="responsive-wrapper-16x9 video-spacer" >
+        <div class="video-background-color"></div>
     </div>
 
     <div class="story-header-videos">
         <div class="story-video-base">
-            <div class="responsive-wrapper-16x9 video-background" id="embedVideo">
+            <div class="responsive-wrapper-16x9 video-background" id="embedVideo" style="${embedBackground!}">
                 <script>
                     var testEl = document.createElement("video"), canPlayH264;
                     if (testEl.canPlayType) {
@@ -170,6 +170,16 @@
         [/#list]
 
     </div>
+
+    <script>
+        if (!canPlayH264) {
+            var videoContainers = document.querySelectorAll('.video-container');
+            for (var i = 0; i < videoContainers.length; i++) {
+                videoContainers[i].setAttribute("style", "${embedBackground!}");
+                videoContainers[i].querySelector('.scalable-video').style.opacity = 0;
+            }
+        }
+    </script>
 
     [#if story.tours?hasContent]
 

@@ -1,5 +1,5 @@
 <div class="tour-card-background">
-    <img data-sizes="auto" class="tour-card-image" ng-src="{{ contextPath }}/dam/{{ tour.image }}" />
+    <img data-sizes="auto" class="tour-card-image" ng-src="{{ tour.image.renditions['960x720'].link }}" />
 </div>
 <a class="tour-card-anchor" ng-href="{{ contextPath }}/travel/tour?tour={{ tour['@path'] }}">
     <div class="tour-card-content-shader"></div>

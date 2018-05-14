@@ -23,5 +23,11 @@
       <version>${multisiteVersion}/*</version>
       <optional>true</optional>
     </dependency>
+    
+    <dependency>
+      <name>cookie-manager</name>
+      <version>1.0/*</version>
+      <optional>true</optional>
+    </dependency>
   </dependencies>
 </module>

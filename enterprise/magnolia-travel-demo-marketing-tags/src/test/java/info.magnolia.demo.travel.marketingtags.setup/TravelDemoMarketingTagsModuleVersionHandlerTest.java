@@ -14,15 +14,18 @@
  */
 package info.magnolia.demo.travel.marketingtags.setup;
 
-import static info.magnolia.test.hamcrest.NodeMatchers.hasNode;
-import static org.hamcrest.CoreMatchers.not;
+import static info.magnolia.test.hamcrest.NodeMatchers.*;
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
 
 import info.magnolia.context.MgnlContext;
+import info.magnolia.jcr.util.NodeTypes;
+import info.magnolia.jcr.util.NodeUtil;
 import info.magnolia.marketingtags.MarketingTagsModule;
 import info.magnolia.marketingtags.app.TagsNodeTypes;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
+import info.magnolia.module.model.Version;
 import info.magnolia.repository.RepositoryConstants;
 
 import java.util.Arrays;
@@ -39,6 +42,8 @@ import org.junit.Test;
 public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersionHandlerTestCase {
 
     private Session config;
+
+    private Session website;
 
     @Override
     protected String getModuleDescriptorPath() {
@@ -71,6 +76,9 @@ public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersi
         super.setUp();
         addSupportForSetupModuleRepositoriesTask(MarketingTagsModule.WORKSPACE);
         config = MgnlContext.getJCRSession(RepositoryConstants.CONFIG);
+        website = MgnlContext.getJCRSession(RepositoryConstants.WEBSITE);
+
+        NodeUtil.createPath(website.getRootNode(), "travel", NodeTypes.Page.NAME);
     }
 
     @Test
@@ -85,4 +93,26 @@ public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersi
         assertThat(MgnlContext.getJCRSession(MarketingTagsModule.WORKSPACE).getRootNode(), hasNode("Google-Analytics-for-Travel-Demo", TagsNodeTypes.Tag.NAME));
     }
 
+    @Test
+    public void updateTo125() throws Exception {
+        // GIVEN
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2.4"));
+
+        // THEN
+        assertThat(website.getNode("/travel"), allOf(
+                hasProperty("bannerbackground", "#000"),
+                hasProperty("buttonbackground", "#ef6155"),
+                hasProperty("buttontext", "#fff"),
+                hasProperty("complianceType", "info"),
+                hasProperty("dismiss", "Got it!"),
+                hasProperty("layout", "block"),
+                hasProperty("link", "Learn more"),
+                hasProperty("message", "This website uses cookies to ensure you get the best experience on our website."),
+                hasProperty("position", "bottom"),
+                hasProperty("readMoreLink", "external"),
+                hasProperty("readMoreLinkexternal", "https://cookiesandyou.com/")
+        ));
+    }
 }

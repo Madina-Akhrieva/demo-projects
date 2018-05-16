@@ -1,6 +1,19 @@
 templateScript: /travel-demo-marketing-tags/templates/pages/main-marketing-tags.ftl
 
+jsFiles:
+  - name: cookieconsent
+    link: /.resources/travel-demo-marketing-tags/webresources/js/cookieconsent.min.js
+    addFingerPrint: true
+
+cssFiles:
+  - name: cookieconsent
+    link: /.resources/travel-demo-marketing-tags/webresources/css/cookieconsent.min.css
+    addFingerPrint: true
+    media: all
+
 areas:
+  htmlHeader:
+    templateScript: /travel-demo-marketing-tags/templates/pages/areas/htmlHeader-marketing-tags.ftl
   headerScripts: &headerScriptsConfig
     createAreaNode: false
     modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel

@@ -1,0 +1,116 @@
+form:
+  tabs:
+    - name: tabCookieConsent
+      fields:
+        - name: complianceType
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          required: true
+          sortOptions: false
+          options:
+            - name: info
+              value: info
+              selected: true
+            - name: opt-out
+              value: opt-out
+            - name: opt-in
+              value: opt-in
+        - name: header
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          defaultValue: Cookies used on the website!
+        - name: message
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          defaultValue: This website uses cookies to ensure you get the best experience on our website.
+        - name: dismiss
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          defaultValue: Got it!
+        - name: allow
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          defaultValue: Allow cookies
+        - name: deny
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          defaultValue: Decline
+        - name: link
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          defaultValue: Learn more
+        - name: readMoreLink
+          class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+          options:
+            - name: none
+              value: none
+            - name: external
+              value: external
+              selected: true
+            - name: internal
+              value: internal
+          fields:
+            - name: external
+              class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              defaultValue: https://cookiesandyou.com/
+            - name: internal
+              class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+              targetWorkspace: website
+              appName: pages
+              identifierToPathConverter:
+                class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+    - name: tabCookieConsentVisuals
+      fields:
+        - name: position
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          sortOptions: false
+          options:
+            - name: bottom
+              value: bottom
+              selected: true
+            - name: top
+              value: top
+            - name: left
+              value: left
+            - name: right
+              value: right
+        - name: layout
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          sortOptions: false
+          options:
+            - name: block
+              value: block
+              selected: true
+            - name: classic
+              value: classic
+            - name: edgeless
+              value: edgeless
+            - name: wire
+              value: wire
+        - name: palette
+          class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+          transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+          layout: vertical
+          fields:
+            - name: banner
+              class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+              fields:
+                - name: backgroud
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                  defaultValue: '#000'
+                - name: text
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                - name: link
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+            - name: button
+              class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+              fields:
+                - name: backgroud
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                  defaultValue: '#f1d600'
+                - name: border
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                - name: text
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+            - name: highlight
+              class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+              fields:
+                - name: backgroud
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                - name: border
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                - name: text
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition

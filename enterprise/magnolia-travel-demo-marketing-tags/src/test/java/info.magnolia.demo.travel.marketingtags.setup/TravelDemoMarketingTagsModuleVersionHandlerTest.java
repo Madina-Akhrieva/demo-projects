@@ -45,6 +45,8 @@ public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersi
 
     private Session website;
 
+    private Session marketingTags;
+
     @Override
     protected String getModuleDescriptorPath() {
         return "/META-INF/magnolia/travel-demo-marketing-tags.xml";
@@ -71,12 +73,18 @@ public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersi
     }
 
     @Override
+    protected String getRepositoryConfigFileName() {
+        return "test-marketing-tags-repositories.xml";
+    }
+
+    @Override
     @Before
     public void setUp() throws Exception {
         super.setUp();
         addSupportForSetupModuleRepositoriesTask(MarketingTagsModule.WORKSPACE);
         config = MgnlContext.getJCRSession(RepositoryConstants.CONFIG);
         website = MgnlContext.getJCRSession(RepositoryConstants.WEBSITE);
+        marketingTags = MgnlContext.getJCRSession(MarketingTagsModule.WORKSPACE);
 
         NodeUtil.createPath(website.getRootNode(), "travel", NodeTypes.Page.NAME);
     }
@@ -91,6 +99,18 @@ public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersi
         // THEN
         assertThat(config.getNode("/modules"), not(hasNode("multisite")));
         assertThat(MgnlContext.getJCRSession(MarketingTagsModule.WORKSPACE).getRootNode(), hasNode("Google-Analytics-for-Travel-Demo", TagsNodeTypes.Tag.NAME));
+    }
+
+    @Test
+    public void updateTo12() throws Exception {
+        // GIVEN
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1"));
+
+        // THEN
+        assertThat(marketingTags.getRootNode(), hasNode("Clicky-for-Travel-Demo"));
+        assertThat(marketingTags.getRootNode(), hasNode("Google-Analytics-for-Travel-Demo"));
     }
 
     @Test

@@ -51,8 +51,8 @@ public class TravelDemoMarketingTagsModuleVersionHandler extends DefaultModuleVe
     public TravelDemoMarketingTagsModuleVersionHandler() {
         // We re-bootstrap every config/content item upon update
         register(DeltaBuilder.update("1.2", "")
-                .addTask(new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-marketing-tags/marketing-tags.Clicky-for-Travel-Demo.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
-                .addTask(new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-marketing-tags/marketing-tags.Google-Analytics-for-Travel-Demo.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-marketing-tags/marketing-tags.Clicky-for-Travel-Demo.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-marketing-tags/marketing-tags.Google-Analytics-for-Travel-Demo.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
         register(DeltaBuilder.update("1.2.5", "")
                 .addTask(cookieConsentPluginSetup)

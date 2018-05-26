@@ -43,9 +43,9 @@ public class TravelDemoComponentPersonalizationModuleVersionHandler extends Defa
                 .addTask(new IsInstallSamplesTask("Re-Bootstrap website and configuration specific to personalization", "Re-Bootstraps website and configuration specific to personalization to account for all changes", new ArrayDelegateTask("", "",
                         new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-component-personalization/website.travel.main.0.yaml"),
                         new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-component-personalization/website.travel.main.00.yaml"),
-                        new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-component-personalization/config.modules.personalization-traits.traits.cookies.ruleField.fields.tourType.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING),
-                        new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-component-personalization/config.modules.personalization-traits.traits.cookies.ruleField.options.tourType.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING),
-                        new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-component-personalization/config.modules.personalization-traits.traits.cookies.valueField.options.tourTypeAny.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING)
+                        new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-component-personalization-deprecated/config.modules.personalization-traits.traits.cookies.ruleField.fields.tourType.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING),
+                        new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-component-personalization-deprecated/config.modules.personalization-traits.traits.cookies.ruleField.options.tourType.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING),
+                        new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-component-personalization-deprecated/config.modules.personalization-traits.traits.cookies.valueField.options.tourTypeAny.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING)
                 )))
                 .addTask(new AddPermissionTask("Add permission", "travel-demo-admincentral", "personas", "/*", Permission.READ, true))
                 .addTask(new SetPageAsPublishedTask("/travel", true))

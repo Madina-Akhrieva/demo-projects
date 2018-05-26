@@ -27,6 +27,7 @@
     <multisiteVersion>1.2.1</multisiteVersion>
     <storiesAppVersion>1.0.6</storiesAppVersion>
     <javascriptModelsVersion>1.0</javascriptModelsVersion>
+    <privacyVersion>1.0-SNAPSHOT</privacyVersion>
   </properties>
 
   <scm>
@@ -123,6 +124,11 @@
         <groupId>info.magnolia.javascript-models</groupId>
         <artifactId>magnolia-module-javascript-models</artifactId>
         <version>${javascriptModelsVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>info.magnolia.privacy</groupId>
+        <artifactId>magnolia-privacy-cookie-manager</artifactId>
+        <version>${privacyVersion}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

@@ -15,6 +15,7 @@
 package info.magnolia.demo.travel.personalization.setup;
 
 import static info.magnolia.test.hamcrest.NodeMatchers.*;
+import static info.magnolia.test.hamcrest.NodeMatchers.hasProperty;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
@@ -23,9 +24,11 @@ import info.magnolia.cms.security.MgnlRoleManager;
 import info.magnolia.cms.security.RoleManager;
 import info.magnolia.cms.security.SecuritySupport;
 import info.magnolia.cms.security.SecuritySupportImpl;
+import info.magnolia.consent.cookie.CookieManagerModule;
 import info.magnolia.context.MgnlContext;
 import info.magnolia.jcr.util.NodeTypes;
 import info.magnolia.jcr.util.NodeUtil;
+import info.magnolia.module.InstallContext;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
@@ -167,6 +170,18 @@ public class TravelDemoComponentPersonalizationModuleVersionHandlerTest extends 
         assertThat(variant, hasProperty("mgnl:template", "tours:components/tourListFeaturedRow"));
     }
 
+    @Test
+    public void cleanInstall() throws Exception {
+        // GIVEN
+
+        // WHEN
+        InstallContext context = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
+
+        // THEN
+        assertThat(configSession.getNode(CookieManagerModule.CONFIG_PATH), hasNode("tourType_any"));
+        assertNoMessages(context);
+    }
+
     /**
      * This function is used to extract node name of a given node.
      */
@@ -198,7 +213,7 @@ public class TravelDemoComponentPersonalizationModuleVersionHandlerTest extends 
                     }
                 }
             } catch (RepositoryException e) {
-               throw new RuntimeException(e);
+                throw new RuntimeException(e);
             }
             return false;
         }

@@ -114,7 +114,7 @@ public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersi
     }
 
     @Test
-    public void updateTo125() throws Exception {
+    public void updateTo13() throws Exception {
         // GIVEN
 
         // WHEN

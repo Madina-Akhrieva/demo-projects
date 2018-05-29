@@ -14,7 +14,7 @@
 [#assign complianceType = root.complianceType!]
 [#assign showLink = root.readMoreLink != 'none']
 [#if showLink]
-    [#assign linkType = root.readMoreLink]
+    [#assign linkType = root.readMoreLink!]
     [#if linkType == 'external']
         [#assign href = root.readMoreLinkexternal]
     [#else]

@@ -7,7 +7,7 @@
     <sv:value>e6715db2-8ea9-451b-a8f0-57bd21ed1d54</sv:value>
   </sv:property>
   <sv:property sv:name="activeAuthor" sv:type="Boolean">
-    <sv:value>true</sv:value>
+    <sv:value>false</sv:value>
   </sv:property>
   <sv:property sv:name="content" sv:type="String">
     <sv:value>&lt;script src="//static.getclicky.com/js" type="text/javascript"&gt;&lt;/script&gt;

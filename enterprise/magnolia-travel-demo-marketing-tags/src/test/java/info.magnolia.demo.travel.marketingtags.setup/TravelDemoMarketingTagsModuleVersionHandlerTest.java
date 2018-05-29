@@ -134,5 +134,8 @@ public class TravelDemoMarketingTagsModuleVersionHandlerTest extends ModuleVersi
                 hasProperty("readMoreLink", "external"),
                 hasProperty("readMoreLinkexternal", "https://cookiesandyou.com/")
         ));
+        assertThat(marketingTags.getRootNode(), hasNode("Clicky-for-Travel-Demo"));
+        assertThat(marketingTags.getRootNode(), hasNode("Google-Analytics-for-Travel-Demo"));
+        assertThat(config.getRootNode(), hasNode("modules/cookie-manager/config/cookies"));
     }
 }

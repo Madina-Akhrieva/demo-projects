@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="Google-Analytics-for-Travel-Demo" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="Google-Analytics-for-Travel-Demo">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:marketing-tag</sv:value>
   </sv:property>
@@ -21,11 +21,14 @@ ga('send', 'pageview');
 &lt;/script&gt;
 &lt;!-- End Google Analytics --&gt;</sv:value>
   </sv:property>
+  <sv:property sv:name="cookies" sv:type="String" sv:multiple="true">
+    <sv:value>/modules/cookie-manager/config/cookies/google_analytics</sv:value>
+  </sv:property>
   <sv:property sv:name="dashboardUrl" sv:type="String">
     <sv:value>https://www.google.com/analytics/</sv:value>
   </sv:property>
-  <sv:property sv:name="jcr:createdBy" sv:type="String">
-    <sv:value>admin</sv:value>
+  <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+    <sv:value>true</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:created" sv:type="Date">
     <sv:value>2015-07-27T16:33:30.949+02:00</sv:value>
@@ -33,23 +36,20 @@ ga('send', 'pageview');
   <sv:property sv:name="mgnl:createdBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
+  <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+    <sv:value>2015-08-06T10:04:07.551+02:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2015-07-28T10:27:30.426+02:00</sv:value>
+    <sv:value>2018-05-29T12:57:40.338+02:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="name" sv:type="String">
     <sv:value>Google Analytics for Travel Demo</sv:value>
-  </sv:property>
-  <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
-    <sv:value>superuser</sv:value>
-  </sv:property>
-  <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
-    <sv:value>true</sv:value>
-  </sv:property>
-  <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2015-08-06T10:04:07.551+02:00</sv:value>
   </sv:property>
   <sv:property sv:name="placeToPut" sv:type="String">
     <sv:value>bodyEndScripts</sv:value>
@@ -61,8 +61,8 @@ ga('send', 'pageview');
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>27cc906b-4258-43a1-939b-2bb01177bd7e</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:createdBy" sv:type="String">
-      <sv:value>admin</sv:value>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:created" sv:type="Date">
       <sv:value>2015-07-27T16:33:30.950+02:00</sv:value>
@@ -70,17 +70,14 @@ ga('send', 'pageview');
     <sv:property sv:name="mgnl:createdBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
-    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2015-07-28T10:17:45.286+02:00</sv:value>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2015-08-06T10:04:07.551+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
-    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
-    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-      <sv:value>2015-08-06T10:04:07.551+02:00</sv:value>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2015-07-28T10:17:45.286+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>
@@ -95,8 +92,8 @@ ga('send', 'pageview');
       <sv:property sv:name="insertInSubPages" sv:type="Boolean">
         <sv:value>true</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:createdBy" sv:type="String">
-        <sv:value>admin</sv:value>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:created" sv:type="Date">
         <sv:value>2015-07-27T16:33:30.955+02:00</sv:value>
@@ -104,20 +101,17 @@ ga('send', 'pageview');
       <sv:property sv:name="mgnl:createdBy" sv:type="String">
         <sv:value>superuser</sv:value>
       </sv:property>
-      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-        <sv:value>2015-07-28T10:27:30.427+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
-        <sv:value>superuser</sv:value>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2015-08-06T10:04:07.551+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
         <sv:value>superuser</sv:value>
       </sv:property>
-      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
-        <sv:value>true</sv:value>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2018-05-29T12:57:40.339+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-        <sv:value>2015-08-06T10:04:07.551+02:00</sv:value>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
       </sv:property>
       <sv:property sv:name="path" sv:type="String">
         <sv:value>/</sv:value>
@@ -125,3 +119,4 @@ ga('send', 'pageview');
     </sv:node>
   </sv:node>
 </sv:node>
+

@@ -16,7 +16,7 @@ form:
               value: opt-in
         - name: header
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          defaultValue: Cookies used on the website!
+          defaultValue: Cookies are used on this website!
         - name: message
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           defaultValue: This website uses cookies to ensure you get the best experience on our website.
@@ -28,10 +28,10 @@ form:
           defaultValue: Allow cookies
         - name: deny
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          defaultValue: Decline
+          defaultValue: Decline cookies
         - name: link
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          defaultValue: Learn more
+          defaultValue: Learn more ...
         - name: readMoreLink
           class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
           options:

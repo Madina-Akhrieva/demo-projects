@@ -40,8 +40,11 @@ public class TravelDemoMarketingTagsModuleVersionHandler extends DefaultModuleVe
             new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "buttontext", "#fff"),
             new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "complianceType", "info"),
             new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "dismiss", "Got it!"),
+            new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "allow", "Allow cookies"),
+            new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "deny", "Decline cookies"),
             new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "layout", "block"),
-            new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "link", "Learn more"),
+            new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "link", "Learn more ..."),
+            new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "header", "Cookies are used on this website!"),
             new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "message", "This website uses cookies to ensure you get the best experience on our website."),
             new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "position", "bottom"),
             new SetPropertyTask(RepositoryConstants.WEBSITE, "/travel", "readMoreLink", "external"),
@@ -51,9 +54,9 @@ public class TravelDemoMarketingTagsModuleVersionHandler extends DefaultModuleVe
     public TravelDemoMarketingTagsModuleVersionHandler() {
         register(DeltaBuilder.update("1.3", "")
                 .addTask(cookieConsentPluginSetup)
-                .addTask(new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-marketing-tags/marketing-tags.Clicky-for-Travel-Demo.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
-                .addTask(new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-marketing-tags/marketing-tags.Google-Analytics-for-Travel-Demo.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
-                .addTask(new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-marketing-tags/config.modules.cookie-manager.config.cookies.google_analytics.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new BootstrapSingleResource("Bootstrap Clicky sample to Travel Demo.", "", "/mgnl-bootstrap-samples/travel-demo-marketing-tags/marketing-tags.Clicky-for-Travel-Demo.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new BootstrapSingleResource("Bootstrap Google Analytics sample to Travel Demo.", "", "/mgnl-bootstrap-samples/travel-demo-marketing-tags/marketing-tags.Google-Analytics-for-Travel-Demo.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new BootstrapSingleResource("Bootstrap configuration of Google Analytics cookie to cookie manager.", "", "/mgnl-bootstrap-samples/travel-demo-marketing-tags/config.modules.cookie-manager.config.cookies.google_analytics.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
     }
 

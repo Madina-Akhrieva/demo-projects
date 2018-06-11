@@ -1,5 +1,8 @@
-'tourType_any':
-  'name': 'tourType'
+'tourType_any': 
+  'cookieName': 'tourType'
+  'enabled': true
+  'isHttpOnly': true
+  'requiredConsentRegexp': '.+'
   'value': 'any'
 
 

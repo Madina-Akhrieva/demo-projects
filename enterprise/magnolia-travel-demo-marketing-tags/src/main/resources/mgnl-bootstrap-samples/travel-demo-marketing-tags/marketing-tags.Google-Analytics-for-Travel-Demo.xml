@@ -22,7 +22,7 @@ ga('send', 'pageview');
 &lt;!-- End Google Analytics --&gt;</sv:value>
   </sv:property>
   <sv:property sv:name="cookies" sv:type="String" sv:multiple="true">
-    <sv:value>/modules/cookie-manager/config/cookies/google_analytics</sv:value>
+    <sv:value>google_analytics</sv:value>
   </sv:property>
   <sv:property sv:name="dashboardUrl" sv:type="String">
     <sv:value>https://www.google.com/analytics/</sv:value>

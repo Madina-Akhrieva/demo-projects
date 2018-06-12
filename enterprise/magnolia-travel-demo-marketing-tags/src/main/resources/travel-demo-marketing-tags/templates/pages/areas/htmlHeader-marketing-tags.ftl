@@ -12,7 +12,7 @@
     [#assign cookieConsentName = cookieNode.name!"cookieconsent_status"]
 [/#if]
 [#assign complianceType = root.complianceType!]
-[#assign showLink = root.readMoreLink != 'none']
+[#assign showLink = root.readMoreLink! != 'none']
 [#if showLink]
     [#assign linkType = root.readMoreLink!]
     [#if linkType == 'external']

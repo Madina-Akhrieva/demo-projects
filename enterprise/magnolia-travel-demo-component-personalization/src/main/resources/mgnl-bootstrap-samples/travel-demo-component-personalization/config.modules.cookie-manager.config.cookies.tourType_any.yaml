@@ -2,7 +2,9 @@
   'cookieName': 'tourType'
   'enabled': true
   'isHttpOnly': true
+  'secure': false
   'requiredConsentRegexp': '.+'
   'value': 'any'
+
 
 

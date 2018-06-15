@@ -60,7 +60,8 @@
           mgnl:lastModifiedBy: 'superuser'
           'voter0':
             'class': 'info.magnolia.personalization.cookie.CookieVoter'
-            'ruleField': 'tourType_any'
+            'cookieName': 'tourType'
+            'cookieValue': 'any'
             'traitId': 'cookies'
             jcr:uuid: 'd116ee98-6274-4e84-bb8f-df214d797d69'
             mgnl:activationStatus: true

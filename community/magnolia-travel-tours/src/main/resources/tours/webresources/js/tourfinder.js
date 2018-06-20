@@ -11,20 +11,23 @@ var TourFinder = TourFinder || (function(){
                     });
                 })
                 .controller('MainController', ['$scope', '$routeParams', '$http', '$location', function($scope, $routeParams, $http, $location) {
-                    var notFoundMessages = ["Oops! Didn't find anything. How about these tours instead?",
-                                            "No matches, d'oh! Would you like to browse some?",
-                                            "bleep bloop 404 Not found. Go for a random adventure?"];
+                    var notFoundMessages = ["tourFinder.search.noResults1",
+                                            "tourFinder.search.noResults2",
+                                            "tourFinder.search.noResults3"];
                     var randomIndex = Math.floor(Math.random() * notFoundMessages.length);
                     $scope.notFoundMessage = notFoundMessages[randomIndex];
-                    $scope.durations = [{ value: 2, name: 'Weekend' },
-                                        { value: 7, name: '7 days' },
-                                        { value: 14, name: '14 days' },
-                                        { value: 21, name: '21 days' }];
+                    $scope.durations = [{ value: 2, name: 'tourFinder.duration.options.2-days' },
+                                        { value: 7, name: 'tourFinder.duration.options.7-days' },
+                                        { value: 14, name: 'tourFinder.duration.options.14-days' },
+                                        { value: 21, name: 'tourFinder.duration.options.21-days' }];
                     $scope.useDurations = {};
                     $scope.useDestinations = {};
                     $scope.useTourTypes = {};
                     $scope.search = {};
+
                     $scope.contextPath = args.contextPath;
+                    $scope.language = args.language;
+                    $scope.i18n = args.i18n;
 
                     if ($routeParams.duration) {
                         $scope.useDurations = {};
@@ -38,7 +41,7 @@ var TourFinder = TourFinder || (function(){
                     }
 
                     // obtain the data
-                    $http.get(args.restBase + '/destinations/v1/').then(function(response) {
+                    $http.get(args.restBase + '/destinations/v1/?lang=' + args.language).then(function(response) {
                         $scope.destinations = response.data.results;
                         if ($routeParams.destination) {
                             var split = $routeParams.destination.split(',');
@@ -49,7 +52,7 @@ var TourFinder = TourFinder || (function(){
                     }, function(response) {
                         console.error("Couldn't reach endpoint.");
                     });
-                    $http.get(args.restBase + '/tourTypes/v1/').then(function(response) {
+                    $http.get(args.restBase + '/tourTypes/v1/?lang=' + args.language).then(function(response) {
                         $scope.tourTypes = response.data.results;
                         if ($routeParams.tourTypes) {
                             var split = $routeParams.tourTypes.split(',');
@@ -60,7 +63,7 @@ var TourFinder = TourFinder || (function(){
                     }, function(response) {
                         console.error("Couldn't reach endpoint.");
                     });
-                    $http.get(args.restBase + '/tours/v1/').then(function(response) {
+                    $http.get(args.restBase + '/tours/v1/?lang=' + args.language).then(function(response) {
                         $scope.tours = response.data.results;
                     }, function(response) {
                         console.error("Couldn't reach endpoint.");
@@ -108,6 +111,7 @@ var TourFinder = TourFinder || (function(){
                             if (newValues.search.query) {
                                 parameters.q = [newValues.search.query];
                             }
+                            parameters.lang = [args.language];
                             var qs = '';
                             if (Object.keys(parameters).length > 0) {
                                 var p = [];

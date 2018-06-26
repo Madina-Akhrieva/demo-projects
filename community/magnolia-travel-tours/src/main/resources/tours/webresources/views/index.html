@@ -1,6 +1,6 @@
 <!-- Main Form -->
 <div class="finder-header">
-    <h1><img src="{{ contextPath }}/.resources/tours/webresources/img/map_red.png">Tour Finder</h1>
+    <h1><img src="{{ contextPath }}/.resources/tours/webresources/img/map_red.png">{{ i18n['tourFinder.title'] }}</h1>
     <div class="finder-search-container">
         <span class="glyphicon glyphicon-search form-control-feedback"></span>
         <input class="finder-search" type="text" placeholder="What would you like to see?" ng-model="search.query" ng-model-options="{ updateOn: 'change blur' }" />
@@ -14,10 +14,10 @@
 <!-- Results -->
 <div class="finder-list">
     <div class="finder-summary col-md-12">
-        <span class="finder-count">{{ filteredTours.length }}</span> tours found.
+        <span class="finder-count">{{ filteredTours.length }}</span> {{ i18n['tourFinder.search.resultsFound'] }}
     </div>
     <div class="finder-summary-no-tours col-md-12" ng-hide="filteredTours.length" ng-cloak>
-        {{ notFoundMessage }}
+        {{ i18n[notFoundMessage] }}
     </div>
     <div class="tour-list">
         <div class="row" ng-show="filteredTours.length">

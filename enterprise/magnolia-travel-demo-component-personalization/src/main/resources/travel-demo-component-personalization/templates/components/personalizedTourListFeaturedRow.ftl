@@ -4,6 +4,9 @@
 
 [#assign cookie = detectCookie("tourType")! /]
 
+[#-- Disable caching because the content is generated dynamically according to the tour type cookie. --]
+${ctx.response.setHeader("Cache-Control", "no-cache")}
+
 [#assign page = cmsfn.page(content)]
 [#if cookie?has_content && cmsfn.hasTemplateOfType(page, "home")]
     [#assign category = model.getCategoryByName(cookie)!]

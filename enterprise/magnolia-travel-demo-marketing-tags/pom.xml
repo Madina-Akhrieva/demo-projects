@@ -39,6 +39,11 @@
       <artifactId>magnolia-marketing-tags</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>javax.jcr</groupId>
+      <artifactId>jcr</artifactId>
+    </dependency>
+
     <!-- For tests -->
     <dependency>
       <groupId>javax.servlet</groupId>

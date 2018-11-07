@@ -36,6 +36,11 @@
       <artifactId>magnolia-module-javascript-models</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>javax.jcr</groupId>
+      <artifactId>jcr</artifactId>
+    </dependency>
+
     <!-- TEST -->
     <dependency>
       <groupId>junit</groupId>

@@ -42,6 +42,7 @@
         <workspace name="config" />
         <workspace name="users" />
         <workspace name="tours" />
+        <workspace name="dam" />
         <workspace name="userroles" />
         <workspace name="usergroups" />
         <workspace name="mgnlSystem" />

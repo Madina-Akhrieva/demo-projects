@@ -69,6 +69,7 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
 
     private Session configSession;
     private Session websiteSession;
+    private Session damSession;
 
     @Override
     protected String getModuleDescriptorPath() {
@@ -96,12 +97,18 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Override
+    public String getRepositoryConfigFileName() {
+        return "/info/magnolia/demo/travel/tours/service/test-tours-repositories.xml";
+    }
+
+    @Override
     @Before
     public void setUp() throws Exception {
         super.setUp();
 
         configSession = MgnlContext.getJCRSession(RepositoryConstants.CONFIG);
         websiteSession = MgnlContext.getJCRSession(RepositoryConstants.WEBSITE);
+        damSession = MgnlContext.getJCRSession("dam");
 
         addSupportForSetupModuleRepositoriesTask(null);
     }
@@ -298,6 +305,23 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
                 "0",
                 "01",
                 "00"
+        ));
+    }
+
+    @Test
+    public void updateFrom13Installs60DemoImages() throws Exception {
+        // GIVEN
+        NodeUtil.createPath(damSession.getRootNode(), "tours", NodeTypes.Folder.NAME);
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.3"));
+
+        // THEN
+        List<Node> toursNodeList = Lists.newArrayList(damSession.getRootNode().getNode("tours").getNodes());
+        assertThat(Collections2.transform(toursNodeList, new ToNodeName()), hasItems(
+                "ash-edmonds-441220-unsplash",
+                "ruben-mishchuk-571314-unsplash",
+                "simon-mumenthaler-199501-unsplash"
         ));
     }
 

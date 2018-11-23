@@ -123,6 +123,10 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                     new BootstrapSingleResource("", "","/mgnl-bootstrap-samples/tours/website/website.travel.tour-finder.yaml"),
                     new BootstrapSingleResourceAndOrderAfter("/mgnl-bootstrap-samples/tours/website/website.travel.main.01.yaml", "0")))
         );
+
+        register(DeltaBuilder.update("1.4", "")
+                .addTask(new FolderBootstrapTask("/mgnl-bootstrap-samples/tours/assets/"))
+        );
     }
 
     @Override

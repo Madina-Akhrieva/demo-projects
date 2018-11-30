@@ -16,8 +16,8 @@
 
   <properties>
     <javaVersion>1.8</javaVersion>
-    <magnoliaVersion>6.0-SNAPSHOT</magnoliaVersion>
-    <magnoliaUiVersion>6.0-SNAPSHOT</magnoliaUiVersion>
+    <magnoliaVersion>6.0</magnoliaVersion>
+    <magnoliaUiVersion>6.0</magnoliaUiVersion>
     <magnoliaDamVersion>2.1</magnoliaDamVersion>
     <siteVersion>1.0.8</siteVersion>
     <resourcesVersion>2.4</resourcesVersion>

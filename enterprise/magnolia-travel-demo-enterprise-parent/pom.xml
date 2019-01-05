@@ -27,6 +27,7 @@
     <multisiteVersion>1.2.1</multisiteVersion>
     <storiesAppVersion>1.0.6</storiesAppVersion>
     <javascriptModelsVersion>1.0</javascriptModelsVersion>
+    <magnoliaDamVersion>2.1</magnoliaDamVersion>
   </properties>
 
   <scm>
@@ -123,6 +124,13 @@
         <groupId>info.magnolia.javascript-models</groupId>
         <artifactId>magnolia-module-javascript-models</artifactId>
         <version>${javascriptModelsVersion}</version>
+      </dependency>
+
+      <!-- Other dependencies -->
+      <dependency>
+        <groupId>info.magnolia.dam</groupId>
+        <artifactId>magnolia-dam-jcr</artifactId>
+        <version>${magnoliaDamVersion}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

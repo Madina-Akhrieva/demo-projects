@@ -15,6 +15,7 @@
 package info.magnolia.demo.travel.contenttags.setup;
 
 import static info.magnolia.test.hamcrest.NodeMatchers.*;
+import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsArrayWithSize.arrayWithSize;
 import static org.mockito.Mockito.mock;
@@ -26,9 +27,11 @@ import info.magnolia.context.SystemContext;
 import info.magnolia.init.MagnoliaConfigurationProperties;
 import info.magnolia.jcr.util.NodeNameHelper;
 import info.magnolia.jcr.util.NodeTypes;
+import info.magnolia.jcr.util.NodeUtil;
 import info.magnolia.module.InstallContext;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
+import info.magnolia.module.model.Version;
 import info.magnolia.objectfactory.Components;
 import info.magnolia.repository.RepositoryConstants;
 import info.magnolia.repository.RepositoryManager;
@@ -48,6 +51,7 @@ import com.google.common.collect.Lists;
 public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersionHandlerTestCase {
 
     private Session tours;
+    private Session dam;
 
     @Override
     protected String getModuleDescriptorPath() {
@@ -79,6 +83,7 @@ public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersion
         repositoryManager.getRepositoryProvider("magnolia").registerNodeTypes(ClasspathResourcesUtil.getResource("mgnl-nodetypes/content-tags-nodetypes.xml").openStream());
 
         tours = MgnlContext.getJCRSession("tours");
+        dam = MgnlContext.getJCRSession("dam");
     }
 
     @Test
@@ -99,5 +104,37 @@ public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersion
         Node component = installContext.getJCRSession(RepositoryConstants.WEBSITE).getNode("/travel/tour/main/0");
         assertThat(component, hasProperty(NodeTypes.Renderable.TEMPLATE, "travel-demo-content-tags:components/tourDetail-content-tags"));
         assertThat(component, hasProperty("tourListLink", installContext.getJCRSession(RepositoryConstants.WEBSITE).getNode("/travel/tour-tag").getIdentifier()));
+    }
+
+    @Test
+    public void tourAssetsAreTaggedUponFreshInstall() throws Exception {
+        // GIVEN
+        String assetPath = "/tours/shark_brian_warrick_0824.JPG";
+        Node assetNode = NodeUtil.createPath(dam.getRootNode(), assetPath, NodeTypes.ContentNode.NAME);
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
+
+        // THEN
+        assertThat(assetNode, allOf(
+                hasProperty(TagManager.TAGS_PROPERTY, arrayWithSize(5)),
+                hasProperty("mgnl:lastTaggedDate")
+        ));
+    }
+
+    @Test
+    public void updateFrom14ThenTourAssetsAreTagged() throws Exception {
+        // GIVEN
+        String assetPath = "/tours/shark_brian_warrick_0824.JPG";
+        Node assetNode = NodeUtil.createPath(dam.getRootNode(), assetPath, NodeTypes.ContentNode.NAME);
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.4"));
+
+        // THEN
+        assertThat(assetNode, allOf(
+                hasProperty(TagManager.TAGS_PROPERTY, arrayWithSize(5)),
+                hasProperty("mgnl:lastTaggedDate")
+        ));
     }
 }

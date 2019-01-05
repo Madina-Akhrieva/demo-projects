@@ -28,6 +28,7 @@
         <Map name="usergroups" repositoryName="magnolia" workspaceName="usergroups" />
         <Map name="mgnlSystem" repositoryName="magnolia" workspaceName="mgnlSystem" /> <!-- System internal data -->
         <Map name="mgnlVersion" repositoryName="magnolia" workspaceName="mgnlVersion" /> <!-- magnolia version workspace -->
+        <Map name="dam" repositoryName="magnolia" workspaceName="dam" />
     </RepositoryMapping>
 
     <!-- magnolia default repository -->
@@ -45,5 +46,6 @@
         <workspace name="users" />
         <workspace name="userroles" />
         <workspace name="usergroups" />
+        <workspace name="dam" />
     </Repository>
 </JCR>

@@ -20,5 +20,9 @@
       <name>content-tags-ui</name>
       <version>${contentTagsVersion}/*</version>
     </dependency>
+    <dependency>
+      <name>dam-jcr</name>
+      <version>${magnoliaDamVersion}/*</version>
+    </dependency>
   </dependencies>
 </module>

@@ -40,6 +40,11 @@
       <artifactId>jcr</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>info.magnolia.dam</groupId>
+      <artifactId>magnolia-dam-jcr</artifactId>
+    </dependency>
+
     <!-- For tests -->
     <dependency>
       <groupId>javax.servlet</groupId>

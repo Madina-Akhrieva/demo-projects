@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="flickr-family-hands-woodleywonderworks-2397012858_277b3f403a_o"
-  xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="flickr-family-hands-woodleywonderworks-2397012858_277b3f403a_o.jpg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:asset</sv:value>
   </sv:property>
@@ -8,7 +7,22 @@
     <sv:value>acd47d04-5b98-4995-9c3b-cc3c81cd8288</sv:value>
   </sv:property>
   <sv:property sv:name="caption" sv:type="String">
-    <sv:value>Woodley Wonder Works</sv:value>
+    <sv:value>Luna moth</sv:value>
+  </sv:property>
+  <sv:property sv:name="contributor" sv:type="String">
+    <sv:value>woodleywonderworks</sv:value>
+  </sv:property>
+  <sv:property sv:name="copyright" sv:type="String">
+    <sv:value>by/2.0/</sv:value>
+  </sv:property>
+  <sv:property sv:name="coverage" sv:type="String">
+    <sv:value>Tulsa, Oklahoma</sv:value>
+  </sv:property>
+  <sv:property sv:name="description" sv:type="String">
+    <sv:value>The Luna Moth (Actias luna) is a lime-green, Nearctic Saturniid moth in the subfamily Saturniinae.</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:created" sv:type="Date">
+    <sv:value>2019-01-07T14:06:42.524+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:createdBy" sv:type="String">
     <sv:value>admin</sv:value>
@@ -23,19 +37,28 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2015-07-01T10:48:00.588+02:00</sv:value>
+    <sv:value>2019-01-07T14:15:02.820+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2015-03-12T17:02:12.464+01:00</sv:value>
+    <sv:value>2019-01-07T14:13:52.368+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="name" sv:type="String">
     <sv:value>flickr-family-hands-woodleywonderworks-2397012858_277b3f403a_o.jpg</sv:value>
+  </sv:property>
+  <sv:property sv:name="publisher" sv:type="String">
+    <sv:value>woodleywonderworks</sv:value>
+  </sv:property>
+  <sv:property sv:name="source" sv:type="String">
+    <sv:value>https://www.flickr.com/photos/wwworks/2397012858</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>Luna moth</sv:value>
   </sv:property>
   <sv:node sv:name="jcr:content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -65,14 +88,23 @@
     <sv:property sv:name="jcr:mimeType" sv:type="String">
       <sv:value>image/jpeg</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:created" sv:type="Date">
       <sv:value>2015-02-25T08:24:05.566+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:createdBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-01-07T14:15:02.820+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2015-03-12T17:02:12.464+01:00</sv:value>
+      <sv:value>2019-01-07T14:13:52.368+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>

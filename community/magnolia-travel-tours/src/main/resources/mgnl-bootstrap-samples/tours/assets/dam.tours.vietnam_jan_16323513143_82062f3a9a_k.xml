@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="flickr-vietnam-halong-davidlohr-bueso-4754050863_4e2262c4ce_o.jpg"
-  xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="vietnam_jan_16323513143_82062f3a9a_k" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:asset</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>mgnl:hasVersion</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>1044b3b8-30b1-48fe-8078-832b6cef8fb5</sv:value>
   </sv:property>
   <sv:property sv:name="caption" sv:type="String">
+    <sv:value>Vietnam leaf hat</sv:value>
+  </sv:property>
+  <sv:property sv:name="contributor" sv:type="String">
     <sv:value>Jan Haderka</sv:value>
+  </sv:property>
+  <sv:property sv:name="copyright" sv:type="String">
+    <sv:value>by/2.0/</sv:value>
+  </sv:property>
+  <sv:property sv:name="coverage" sv:type="String">
+    <sv:value>Vietnam</sv:value>
+  </sv:property>
+  <sv:property sv:name="description" sv:type="String">
+    <sv:value>Nón lá (leaf hat) of the Vietnamese people forms a perfect right circular cone which tapers smoothly from the base to the apex. Special conical hats in Vietnam contain colourful hand-stitch depictions or words while the Huế varieties are famous for their nón bài thơ (lit. poem conical hats). These contain random poetic verses and Hán tự which can be revealed when the hat is directed above one's head in the sunlight. Today, it has become part of Vietnam's national costume.</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:created" sv:type="Date">
+    <sv:value>2019-01-07T13:38:41.261+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:createdBy" sv:type="String">
     <sv:value>admin</sv:value>
@@ -23,19 +40,38 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2015-07-01T10:47:47.318+02:00</sv:value>
+    <sv:value>2019-01-07T13:41:06.665+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
+  <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+    <sv:value>1.0</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+    <sv:value>2019-01-07T13:41:03.888+01:00</sv:value>
+  </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2015-06-02T16:13:12.997+02:00</sv:value>
+    <sv:value>2019-01-07T13:40:44.423+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
+  <sv:property sv:name="mgnl:lastTaggedDate" sv:type="Date">
+    <sv:value>2019-01-07T13:40:44.402+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:tags" sv:type="String" sv:multiple="true"/>
   <sv:property sv:name="name" sv:type="String">
     <sv:value>vietnam_jan_16323513143_82062f3a9a_k</sv:value>
+  </sv:property>
+  <sv:property sv:name="publisher" sv:type="String">
+    <sv:value>Jan Haderka</sv:value>
+  </sv:property>
+  <sv:property sv:name="subject" sv:type="String">
+    <sv:value>Vietnam, person, hat, sitting</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>Vietnam leaf hat</sv:value>
   </sv:property>
   <sv:node sv:name="jcr:content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -65,14 +101,23 @@
     <sv:property sv:name="jcr:mimeType" sv:type="String">
       <sv:value>image/jpeg</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:created" sv:type="Date">
       <sv:value>2015-01-29T08:55:42.141+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:createdBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-01-07T13:41:06.666+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2015-06-02T16:13:13.008+02:00</sv:value>
+      <sv:value>2019-01-07T13:40:43.783+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>

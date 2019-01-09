@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="flickr-grand-canyon-grand-canyon-national-park-12094069375_881928ee56_k.jpg"
-  xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="flickr-grand-canyon-grand-canyon-national-park-12094069375_881928ee56_k" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:asset</sv:value>
   </sv:property>
@@ -8,10 +7,22 @@
     <sv:value>5843f97c-a825-40af-855b-f02483c6f354</sv:value>
   </sv:property>
   <sv:property sv:name="caption" sv:type="String">
-    <sv:value>Grand Canyon National Park</sv:value>
+    <sv:value>Ranger Guided Hike To Cedar Ridge</sv:value>
+  </sv:property>
+  <sv:property sv:name="contributor" sv:type="String">
+    <sv:value>M. Quinn</sv:value>
   </sv:property>
   <sv:property sv:name="copyright" sv:type="String">
-    <sv:value>by/2.0</sv:value>
+    <sv:value>by/2.0/</sv:value>
+  </sv:property>
+  <sv:property sv:name="coverage" sv:type="String">
+    <sv:value>Grand Canyon National Park, Arizona, USA</sv:value>
+  </sv:property>
+  <sv:property sv:name="description" sv:type="String">
+    <sv:value>Windy Ridge provides an amazing view. Step into the panorama on a ranger guided hike to Cedar Ridge on the South Kaibab Trail.</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:created" sv:type="Date">
+    <sv:value>2019-01-07T13:38:39.469+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:createdBy" sv:type="String">
     <sv:value>admin</sv:value>
@@ -26,19 +37,31 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2015-07-01T10:47:45.049+02:00</sv:value>
+    <sv:value>2019-01-04T13:16:42.222+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2015-06-02T16:15:26.582+02:00</sv:value>
+    <sv:value>2018-10-19T16:58:13.402+02:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="name" sv:type="String">
     <sv:value>flickr-grand-canyon-grand-canyon-national-park-12094069375_881928ee56_k</sv:value>
+  </sv:property>
+  <sv:property sv:name="publisher" sv:type="String">
+    <sv:value>Grand Canyon National Park</sv:value>
+  </sv:property>
+  <sv:property sv:name="source" sv:type="String">
+    <sv:value>https://www.flickr.com/photos/grand_canyon_nps/12094069375/</sv:value>
+  </sv:property>
+  <sv:property sv:name="subject" sv:type="String">
+    <sv:value>South Kaibab Trail, South Rim, hiking, walk, tour, Grand Canyon, national park, landscape, outdoor, canyon, mountain</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>Ranger Guided Hike To Cedar Ridge</sv:value>
   </sv:property>
   <sv:node sv:name="jcr:content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -68,14 +91,23 @@
     <sv:property sv:name="jcr:mimeType" sv:type="String">
       <sv:value>image/jpeg</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:created" sv:type="Date">
       <sv:value>2015-01-29T08:44:17.420+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:createdBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-01-04T13:16:42.222+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2015-06-02T16:15:26.583+02:00</sv:value>
+      <sv:value>2018-10-19T16:58:13.402+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>

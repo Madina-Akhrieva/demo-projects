@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="flickr_christoph_meier_baikal_boat_14631748310_70ed1f03ae_k.jpg"
-  xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="flickr_christoph_meier_baikal_boat_14631748310_70ed1f03ae_k" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:asset</sv:value>
   </sv:property>
@@ -8,7 +7,22 @@
     <sv:value>951fa74b-9309-400e-8959-e86b0c46321b</sv:value>
   </sv:property>
   <sv:property sv:name="caption" sv:type="String">
+    <sv:value>Baikal boat</sv:value>
+  </sv:property>
+  <sv:property sv:name="contributor" sv:type="String">
     <sv:value>Christoph Meier</sv:value>
+  </sv:property>
+  <sv:property sv:name="copyright" sv:type="String">
+    <sv:value>by/2.0/</sv:value>
+  </sv:property>
+  <sv:property sv:name="coverage" sv:type="String">
+    <sv:value>Lake Baikal, Siberia, Russia</sv:value>
+  </sv:property>
+  <sv:property sv:name="description" sv:type="String">
+    <sv:value>Lake Baikal is an ancient, massive lake in the mountainous Russian region of Siberia, north of the Mongolian border. Considered the deepest lake in the world, it’s circled by a network of hiking paths called the Great Baikal Trail.</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:created" sv:type="Date">
+    <sv:value>2019-01-07T13:38:41.839+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:createdBy" sv:type="String">
     <sv:value>admin</sv:value>
@@ -23,19 +37,31 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2015-07-01T10:47:47.738+02:00</sv:value>
+    <sv:value>2019-01-04T13:16:46.190+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2015-06-02T16:45:45.554+02:00</sv:value>
+    <sv:value>2018-10-19T16:43:00.379+02:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="name" sv:type="String">
     <sv:value>flickr_christoph_meier_baikal_boat_14631748310_70ed1f03ae_k</sv:value>
+  </sv:property>
+  <sv:property sv:name="publisher" sv:type="String">
+    <sv:value>Christoph Meier</sv:value>
+  </sv:property>
+  <sv:property sv:name="source" sv:type="String">
+    <sv:value>https://www.flickr.com/photos/125393749@N02/</sv:value>
+  </sv:property>
+  <sv:property sv:name="subject" sv:type="String">
+    <sv:value>Lake Baikal, boat, beach, sand</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>Baikal boat</sv:value>
   </sv:property>
   <sv:node sv:name="jcr:content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -65,14 +91,23 @@
     <sv:property sv:name="jcr:mimeType" sv:type="String">
       <sv:value>image/jpeg</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:created" sv:type="Date">
       <sv:value>2015-06-02T16:45:45.555+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:createdBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-01-04T13:16:46.190+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2015-06-02T16:45:45.555+02:00</sv:value>
+      <sv:value>2018-10-19T16:43:00.379+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>

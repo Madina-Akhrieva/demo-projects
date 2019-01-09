@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="type-ecotourism-flickr-daniel-borman-4299987274_4dbeaf6fec_b.jpg"
-  xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="type-ecotourism-flickr-daniel-borman-4299987274_4dbeaf6fec_b.jpg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:asset</sv:value>
   </sv:property>
@@ -8,7 +7,19 @@
     <sv:value>2fd89d97-f932-4533-8a30-d70988bde30c</sv:value>
   </sv:property>
   <sv:property sv:name="caption" sv:type="String">
+    <sv:value>Beautiful toucan</sv:value>
+  </sv:property>
+  <sv:property sv:name="contributor" sv:type="String">
     <sv:value>Daniel Borman</sv:value>
+  </sv:property>
+  <sv:property sv:name="copyright" sv:type="String">
+    <sv:value>by/2.0/</sv:value>
+  </sv:property>
+  <sv:property sv:name="coverage" sv:type="String">
+    <sv:value>Costa Rica</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:created" sv:type="Date">
+    <sv:value>2019-01-07T14:06:42.924+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:createdBy" sv:type="String">
     <sv:value>admin</sv:value>
@@ -23,19 +34,28 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2015-07-01T10:48:01.082+02:00</sv:value>
+    <sv:value>2019-01-07T14:15:03.385+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2015-03-12T17:01:53.668+01:00</sv:value>
+    <sv:value>2019-01-07T14:13:16.289+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="name" sv:type="String">
     <sv:value>type-ecotourism-flickr-daniel-borman-4299987274_4dbeaf6fec_b.jpg</sv:value>
+  </sv:property>
+  <sv:property sv:name="publisher" sv:type="String">
+    <sv:value>Daniel Borman</sv:value>
+  </sv:property>
+  <sv:property sv:name="source" sv:type="String">
+    <sv:value>https://www.flickr.com/photos/dborman2/4299987274</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>Beautiful toucan</sv:value>
   </sv:property>
   <sv:node sv:name="jcr:content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -65,14 +85,23 @@
     <sv:property sv:name="jcr:mimeType" sv:type="String">
       <sv:value>image/jpeg</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:created" sv:type="Date">
       <sv:value>2015-02-25T08:22:33.361+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:createdBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-01-07T14:15:03.386+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2015-03-12T17:01:53.668+01:00</sv:value>
+      <sv:value>2019-01-07T14:13:16.289+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="type-active-flickr-eric-surfdude-9134874719_55ec158bc9_o.jpg" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="type-active-flickr-eric-surfdude-9134874719_55ec158bc9_o.jpg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:asset</sv:value>
   </sv:property>
@@ -7,7 +7,19 @@
     <sv:value>b601ef57-a44a-432d-bc9a-bb228890b01d</sv:value>
   </sv:property>
   <sv:property sv:name="caption" sv:type="String">
-    <sv:value>Eric Surfdude</sv:value>
+    <sv:value>Water Over Cockpit</sv:value>
+  </sv:property>
+  <sv:property sv:name="contributor" sv:type="String">
+    <sv:value>eric.surfdude</sv:value>
+  </sv:property>
+  <sv:property sv:name="copyright" sv:type="String">
+    <sv:value>by/2.0/</sv:value>
+  </sv:property>
+  <sv:property sv:name="coverage" sv:type="String">
+    <sv:value>Hood River, Oregon, United States</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:created" sv:type="Date">
+    <sv:value>2019-01-07T14:06:42.818+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:createdBy" sv:type="String">
     <sv:value>admin</sv:value>
@@ -22,19 +34,31 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2015-07-01T10:48:02.173+02:00</sv:value>
+    <sv:value>2019-01-07T14:15:07.174+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2015-03-12T17:00:55.235+01:00</sv:value>
+    <sv:value>2019-01-07T14:11:29.898+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="name" sv:type="String">
     <sv:value>type-active-flickr-eric-surfdude-9134874719_55ec158bc9_o.jpg</sv:value>
+  </sv:property>
+  <sv:property sv:name="publisher" sv:type="String">
+    <sv:value>eric.surfdude</sv:value>
+  </sv:property>
+  <sv:property sv:name="source" sv:type="String">
+    <sv:value>https://www.flickr.com/photos/ericsurfdude/9134874719/</sv:value>
+  </sv:property>
+  <sv:property sv:name="subject" sv:type="String">
+    <sv:value>sailing</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>Water Over Cockpit</sv:value>
   </sv:property>
   <sv:node sv:name="jcr:content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -64,14 +88,23 @@
     <sv:property sv:name="jcr:mimeType" sv:type="String">
       <sv:value>image/jpeg</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:created" sv:type="Date">
       <sv:value>2015-02-25T08:22:33.578+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:createdBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-01-07T14:15:07.175+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2015-03-12T17:00:55.236+01:00</sv:value>
+      <sv:value>2019-01-07T14:11:29.898+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>

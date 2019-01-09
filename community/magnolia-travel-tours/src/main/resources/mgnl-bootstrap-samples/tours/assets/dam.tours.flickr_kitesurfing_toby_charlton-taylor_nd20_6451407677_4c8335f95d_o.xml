@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="flickr_kitesurfing_toby_charlton-taylor_nd20_6451407677_4c8335f95d_o.jpg"
-  xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="flickr_kitesurfing_toby_charlton-taylor_nd20_6451407677_4c8335f95d_o" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:asset</sv:value>
   </sv:property>
@@ -8,10 +7,22 @@
     <sv:value>37157de7-4634-4772-90fd-9fc1566f234b</sv:value>
   </sv:property>
   <sv:property sv:name="caption" sv:type="String">
-    <sv:value>Toby Charlton Taylor</sv:value>
+    <sv:value>Kite Surfing in Camber Sands</sv:value>
+  </sv:property>
+  <sv:property sv:name="contributor" sv:type="String">
+    <sv:value>Toby Charlton-Taylor</sv:value>
   </sv:property>
   <sv:property sv:name="copyright" sv:type="String">
-    <sv:value>by-nd/2.0</sv:value>
+    <sv:value>by-nd/2.0/</sv:value>
+  </sv:property>
+  <sv:property sv:name="coverage" sv:type="String">
+    <sv:value>Jurys Gap, England, United Kingdom</sv:value>
+  </sv:property>
+  <sv:property sv:name="description" sv:type="String">
+    <sv:value>Camber Sands is a beach at the village of Camber, East Sussex near Rye, East Sussex, England. It is the only sand dune system in East Sussex, and is east of the estuary of the River Rother at Rye Bay stretching as one expanse beyond the Kent border.</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:created" sv:type="Date">
+    <sv:value>2019-01-07T13:38:40.864+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:createdBy" sv:type="String">
     <sv:value>admin</sv:value>
@@ -26,19 +37,31 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2015-07-01T10:47:45.277+02:00</sv:value>
+    <sv:value>2019-01-04T13:16:42.550+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2015-06-02T22:19:07.374+02:00</sv:value>
+    <sv:value>2018-10-19T16:57:09.140+02:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="name" sv:type="String">
     <sv:value>flickr_kitesurfing_toby_charlton-taylor_nd20_6451407677_4c8335f95d_o</sv:value>
+  </sv:property>
+  <sv:property sv:name="publisher" sv:type="String">
+    <sv:value>Toby Charlton-Taylor</sv:value>
+  </sv:property>
+  <sv:property sv:name="source" sv:type="String">
+    <sv:value>https://www.flickr.com/photos/tfpc/6451407677/</sv:value>
+  </sv:property>
+  <sv:property sv:name="subject" sv:type="String">
+    <sv:value>Camber Sands, Kent, kite surfing, sea, waves, clouds, outdoor, bird, animal</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>Kite Surfing in Camber Sands</sv:value>
   </sv:property>
   <sv:node sv:name="jcr:content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -68,14 +91,23 @@
     <sv:property sv:name="jcr:mimeType" sv:type="String">
       <sv:value>image/jpeg</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:created" sv:type="Date">
       <sv:value>2015-06-02T22:19:07.374+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:createdBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-01-04T13:16:42.550+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2015-06-02T22:19:07.374+02:00</sv:value>
+      <sv:value>2018-10-19T16:57:09.140+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>

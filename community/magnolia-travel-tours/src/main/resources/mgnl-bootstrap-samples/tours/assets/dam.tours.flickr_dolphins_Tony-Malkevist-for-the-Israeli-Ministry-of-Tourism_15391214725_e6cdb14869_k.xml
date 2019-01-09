@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="flickr_dolphins_Tony-Malkevist-for-the-Israeli-Ministry-of-Tourism_15391214725_e6cdb14869_k.jpg"
-  xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="flickr_dolphins_Tony-Malkevist-for-the-Israeli-Ministry-of-Tourism_15391214725_e6cdb14869_k" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:asset</sv:value>
   </sv:property>
@@ -8,10 +7,22 @@
     <sv:value>5c013c07-c969-4ce8-ae88-6bd156a6351a</sv:value>
   </sv:property>
   <sv:property sv:name="caption" sv:type="String">
+    <sv:value>Diving with dolphins</sv:value>
+  </sv:property>
+  <sv:property sv:name="contributor" sv:type="String">
     <sv:value>Tony Malkevist</sv:value>
   </sv:property>
   <sv:property sv:name="copyright" sv:type="String">
-    <sv:value>by-nd/2.0</sv:value>
+    <sv:value>by-nd/2.0/</sv:value>
+  </sv:property>
+  <sv:property sv:name="coverage" sv:type="String">
+    <sv:value>Eilat, Israel</sv:value>
+  </sv:property>
+  <sv:property sv:name="description" sv:type="String">
+    <sv:value>Dolphin Reef is a horseshoe-shaped sea-pen holding captive bottlenose dolphins in the Gulf of Eilat in the northern-eastern Red Sea near the city of Eilat in southern Israel. It is a major tourist attraction in this area.</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:created" sv:type="Date">
+    <sv:value>2019-01-07T13:38:41.229+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:createdBy" sv:type="String">
     <sv:value>admin</sv:value>
@@ -26,19 +37,31 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2015-07-01T10:47:44.825+02:00</sv:value>
+    <sv:value>2019-01-04T13:16:41.839+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2015-06-03T09:31:31.636+02:00</sv:value>
+    <sv:value>2018-10-19T16:57:37.911+02:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="name" sv:type="String">
     <sv:value>flickr_dolphins_Tony Malkevist for the Israeli Ministry of Tourism_15391214725_e6cdb14869_k</sv:value>
+  </sv:property>
+  <sv:property sv:name="publisher" sv:type="String">
+    <sv:value>Israeli Ministry of Tourism</sv:value>
+  </sv:property>
+  <sv:property sv:name="source" sv:type="String">
+    <sv:value>https://www.flickr.com/photos/israelphotogallery/15391214725</sv:value>
+  </sv:property>
+  <sv:property sv:name="subject" sv:type="String">
+    <sv:value>diver, Red Sea, dolphin, reef, Eilat, Israel, animal, swim</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>Diving with dolphins</sv:value>
   </sv:property>
   <sv:node sv:name="jcr:content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -68,14 +91,23 @@
     <sv:property sv:name="jcr:mimeType" sv:type="String">
       <sv:value>image/jpeg</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:created" sv:type="Date">
       <sv:value>2015-06-02T17:12:23.187+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:createdBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-01-04T13:16:41.839+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
     <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2015-06-03T09:31:31.642+02:00</sv:value>
+      <sv:value>2018-10-19T16:57:37.911+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>

@@ -5,8 +5,9 @@
 
 [#assign tour = model.tour]
 [#assign asset = tour.image!]
+[#assign dc = damfn.getAssetMap(asset).metadata.dc!]
 [#if asset?exists]
-    [#assign assetCredit = asset.caption!]
+    [#assign assetCredit = dc.contributor?first!]
     [#assign imageHtml][@responsiveImageTravel asset "" "" "header-image" "data-ratio='1.33'" true /][/#assign]
 [/#if]
 

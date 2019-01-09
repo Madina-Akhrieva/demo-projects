@@ -19,7 +19,8 @@
 
         [#-- Image caption / credit; Falls back to asset's properties --]
         [#assign imageCaption = content.imageCaption!image.asset.caption!""]
-        [#assign imageCredit = content.imageCredit!image.asset.copyright!""]
+        [#assign dc = damfn.getAssetMap(image.asset).metadata.dc!]
+        [#assign imageCredit = content.imageCredit!dc.contributor?first!""]
 
         [#-- CSS --]
         [#-- Image class is used from def.parameters, otherwise falls back to given parameter --]

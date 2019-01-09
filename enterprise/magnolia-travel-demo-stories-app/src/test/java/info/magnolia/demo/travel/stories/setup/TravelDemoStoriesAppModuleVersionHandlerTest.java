@@ -100,7 +100,6 @@ public class TravelDemoStoriesAppModuleVersionHandlerTest extends ModuleVersionH
         this.travelDemoPublisherNode = userRolesSession.getNode("/" + TRAVEL_DEMO_PUBLISHER);
         this.travelDemoEditorNode = userRolesSession.getNode("/" + TRAVEL_DEMO_EDITOR);
         this.travelDemoBaseNode = userRolesSession.getNode("/" + TRAVEL_DEMO_BASE);
-
     }
 
     @Test
@@ -114,20 +113,18 @@ public class TravelDemoStoriesAppModuleVersionHandlerTest extends ModuleVersionH
         assertThat("We expect that " + TRAVEL_DEMO_PUBLISHER + " has R/W permissions to stories", this.travelDemoPublisherNode.getNode("acl_stories/0"), hasProperty("permissions", Permission.ALL));
         assertThat("We expect that " + TRAVEL_DEMO_EDITOR + " has R/W permissions to stories", this.travelDemoEditorNode.getNode("acl_stories/0"), hasProperty("permissions", Permission.ALL));
         assertThat("We expect that " + TRAVEL_DEMO_BASE + " doesn't have any permissions to stories", this.travelDemoBaseNode.getNode("acl_stories/0"), hasProperty("permissions", Permission.NONE));
-
     }
 
     @Test
     public void updateFrom122() throws Exception {
         // GIVEN
-        Node storiesDemo = NodeUtil.createPath(MgnlContext.getJCRSession(DamConstants.WORKSPACE).getRootNode(),"stories-demo", NodeTypes.Folder.NAME);
+        NodeUtil.createPath(MgnlContext.getJCRSession(DamConstants.WORKSPACE).getRootNode(),"stories-demo", NodeTypes.Folder.NAME);
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2.2"));
 
         // THEN
-        assertThat(storiesDemo, hasNode("flying-grand-canyon/video-thumbnail-grand-canyon.jpg"));
-
+        Node storiesDemo = NodeUtil.createPath(MgnlContext.getJCRSession(DamConstants.WORKSPACE).getRootNode(),"stories-demo", NodeTypes.Folder.NAME);
+        assertThat(storiesDemo, hasNode("flying-grand-canyon/video-thumbnail-grand-canyon"));
     }
-
 }

@@ -56,7 +56,10 @@ public class TravelDemoStoriesAppModuleVersionHandler extends DefaultModuleVersi
                 .addTask(new BootstrapSingleResource("Configure storiesFolder property in storiesLead component", "", "/mgnl-bootstrap-samples/travel-demo-stories-app/website.travel.stories.yaml", "stories/main/0", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
         register(DeltaBuilder.update("1.2.3", "")
-                .addTask(new BootstrapSingleResource("Bootstrap video-thumbnail-grand-canyon.jpg image", "Bootstrap video-thumbnail-grand-canyon.jpg image", "/mgnl-bootstrap-samples/travel-demo-stories-app/dam.stories-demo.xml", "stories-demo/flying-grand-canyon/video-thumbnail-grand-canyon.jpg", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+                .addTask(new BootstrapSingleResource("Bootstrap video-thumbnail-grand-canyon image", "Bootstrap video-thumbnail-grand-canyon image", "/mgnl-bootstrap-samples/travel-demo-stories-app/dam.stories-demo.xml", "stories-demo/flying-grand-canyon/video-thumbnail-grand-canyon", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+        );
+        register(DeltaBuilder.update("1.4.1", "")
+                .addTask(new BootstrapSingleResource("Bootstrap dam.stories-demo.xml", "", "/mgnl-bootstrap-samples/travel-demo-stories-app/dam.stories-demo.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
     }
 

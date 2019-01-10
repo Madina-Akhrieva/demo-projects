@@ -325,6 +325,19 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
         ));
     }
 
+    @Test
+    public void updateFrom14InstallsNewImageMetadata() throws Exception {
+        // GIVEN
+        NodeUtil.createPath(damSession.getRootNode(), "tours", NodeTypes.Folder.NAME);
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.4"));
+
+        // THEN
+        Node ashEdmonds = damSession.getRootNode().getNode("tours/ash-edmonds-441220-unsplash");
+        assertThat(ashEdmonds, hasProperty("coverage"));
+    }
+
     private void setupBootstrapPages() throws RepositoryException {
         websiteSession.getRootNode().addNode("travel", NodeTypes.Page.NAME);
         websiteSession.getRootNode().addNode("travel/about", NodeTypes.Page.NAME);

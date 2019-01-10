@@ -127,6 +127,10 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
         register(DeltaBuilder.update("1.4", "")
                 .addTask(new FolderBootstrapTask("/mgnl-bootstrap-samples/tours/assets/"))
         );
+
+        register(DeltaBuilder.update("1.4.1", "")
+                .addTask(new FolderBootstrapTask("/mgnl-bootstrap-samples/tours/assets/"))
+        );
     }
 
     @Override

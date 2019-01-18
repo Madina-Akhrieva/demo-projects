@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="flickr_vancouver_kayak_zack_kuzins_nd20_4770124492_0d2dda7082_o" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="flickr_vancouver_kayak_zack_kuzins_nd20_4770124492_0d2dda7082_o.jpg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:asset</sv:value>
   </sv:property>
@@ -25,7 +25,7 @@
     <sv:value>The Broughton Archipelago is a group of islands on the northeastern flank of the Queen Charlotte Strait on the coast of British Columbia, Canada.</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:created" sv:type="Date">
-    <sv:value>2019-01-07T13:38:41.504+01:00</sv:value>
+    <sv:value>2019-01-17T16:09:07.678+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:createdBy" sv:type="String">
     <sv:value>admin</sv:value>
@@ -40,19 +40,19 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2019-01-07T13:41:15.302+01:00</sv:value>
+    <sv:value>2019-01-17T14:22:44.965+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
-    <sv:value>1.0</sv:value>
+    <sv:value>1.2</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
-    <sv:value>2019-01-07T13:41:14.104+01:00</sv:value>
+    <sv:value>2019-01-17T14:22:44.435+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2019-01-04T15:31:23.889+01:00</sv:value>
+    <sv:value>2019-01-17T10:39:24.401+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
@@ -110,13 +110,13 @@
       <sv:value>superuser</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-      <sv:value>2019-01-07T13:41:15.303+01:00</sv:value>
+      <sv:value>2019-01-17T14:22:44.965+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2019-01-04T15:31:21.270+01:00</sv:value>
+      <sv:value>2019-01-17T10:39:24.401+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>

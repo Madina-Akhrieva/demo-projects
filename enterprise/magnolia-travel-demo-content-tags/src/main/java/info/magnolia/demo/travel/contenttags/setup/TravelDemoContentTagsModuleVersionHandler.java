@@ -212,7 +212,7 @@ public class TravelDemoContentTagsModuleVersionHandler extends DefaultModuleVers
 
                 new AddTagsToTourAssetsTask("/tours/flickr-new-delhi-paul-hamilton-14646786170_1cf41f94b0_k.jpg", "vehicle", "shop", "motorcycle", "scooter", "bazaar", "market"),
 
-                new AddTagsToTourAssetsTask("/tours/flickr-angkor-mariusz-kluzniak-14223920410_fc02de82ef_k.jpg", "nature", "sky", "sunset", "dusk", "red-sky"),
+                new AddTagsToTourAssetsTask("/tours/flickr_angkor_chi_king_1071292582_1ed88ac42f_o.jpg", "nature", "sky", "sunset", "dusk", "red-sky"),
 
                 new AddTagsToTourAssetsTask("/tours/flickr_jordan_petra_jcookfisher_13348246373_efe64f0880_k.jpg", "nature", "cave", "light"),
 
@@ -230,7 +230,7 @@ public class TravelDemoContentTagsModuleVersionHandler extends DefaultModuleVers
 
                 new AddTagsToTourAssetsTask("/tours/flickr_antarctica_Christopher_Michel_8370647648_a57a86bab4_o.jpg", "nature", "snow", "iceberg", "ice", "arctic"),
 
-                new AddTagsToTourAssetsTask("/tours/flickr-vietnam-halong-davidlohr-bueso-4754050863_4e2262c4ce_o.jpg", "tree", "plant", "human", "sunlight"),
+                new AddTagsToTourAssetsTask("/tours/vietnam_jan_16323513143_82062f3a9a_k.jpg", "tree", "plant", "human", "sunlight"),
 
                 new AddTagsToTourAssetsTask("/tours/flickr_beach_greece_horia_varlan_by20_4332387580_dc593654a3_o.jpg", "nature", "water", "beach", "coast", "sea"),
 
@@ -248,7 +248,9 @@ public class TravelDemoContentTagsModuleVersionHandler extends DefaultModuleVers
 
                 new AddTagsToTourAssetsTask("/tours/flickr-grand-canyon-grand-canyon-national-park-12094069375_881928ee56_k.jpg", "path", "rock", "trail", "valley", "wilderness", "canyon"),
 
-                new AddTagsToTourAssetsTask("/tours/flickr_dolphins_Tony-Malkevist-for-the-Israeli-Ministry-of-Tourism_15391214725_e6cdb14869_k.jpg", "water", "diver", "snorkeling", "diving", "swimming")
+                new AddTagsToTourAssetsTask("/tours/flickr_dolphins_Tony-Malkevist-for-the-Israeli-Ministry-of-Tourism_15391214725_e6cdb14869_k.jpg", "water", "diver", "snorkeling", "diving", "swimming"),
+
+                new AddTagsToTourAssetsTask("/tours/flickr_halligen_jaym_s_14844840920_12546a2afe_k.jpg", "nature", "weather", "cloud", "sky", "water")
         );
     }
 

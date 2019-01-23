@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="flickr_transib_christoph_meier_14763739493_d586e99041_k" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="flickr_transib_christoph_meier_14763739493_d586e99041_k.jpg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>mgnl:asset</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>mgnl:hasVersion</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>5d3a5a2c-dec2-4ac6-915f-0a487aaecf7f</sv:value>
@@ -22,7 +25,7 @@
     <sv:value>Yekaterinburg–Passazhirsky (Russian: Екатеринбург-Пассажирский)[3] is the central passenger railway station in Yekaterinburg, a major transportation hub, located on the Trans-Siberian main line and Sverdlovsk Railway.</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:created" sv:type="Date">
-    <sv:value>2019-01-07T13:38:41.006+01:00</sv:value>
+    <sv:value>2019-01-17T16:09:07.320+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:createdBy" sv:type="String">
     <sv:value>admin</sv:value>
@@ -37,13 +40,13 @@
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-    <sv:value>2019-01-04T13:16:49.123+01:00</sv:value>
+    <sv:value>2019-01-17T14:21:48.093+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
     <sv:value>superuser</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-    <sv:value>2018-10-19T16:35:20.674+02:00</sv:value>
+    <sv:value>2019-01-17T10:31:55.059+01:00</sv:value>
   </sv:property>
   <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
     <sv:value>superuser</sv:value>
@@ -98,13 +101,13 @@
       <sv:value>superuser</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
-      <sv:value>2019-01-04T13:16:49.123+01:00</sv:value>
+      <sv:value>2019-01-17T14:21:48.093+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
       <sv:value>superuser</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModified" sv:type="Date">
-      <sv:value>2018-10-19T16:35:20.674+02:00</sv:value>
+      <sv:value>2019-01-17T10:31:55.059+01:00</sv:value>
     </sv:property>
     <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
       <sv:value>superuser</sv:value>

@@ -1,1 +1,1 @@
-magnoliaDefaultPipeline(jdk: 'JDK8')
+magnoliaDefaultPipeline()

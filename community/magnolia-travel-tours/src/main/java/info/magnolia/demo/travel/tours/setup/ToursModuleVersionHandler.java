@@ -48,6 +48,7 @@ import info.magnolia.module.delta.ArrayDelegateTask;
 import info.magnolia.module.delta.BootstrapSingleModuleResource;
 import info.magnolia.module.delta.BootstrapSingleResource;
 import info.magnolia.module.delta.BootstrapSingleResourceAndOrderAfter;
+import info.magnolia.module.delta.CheckAndModifyPropertyValueTask;
 import info.magnolia.module.delta.CopyNodeTask;
 import info.magnolia.module.delta.DeltaBuilder;
 import info.magnolia.module.delta.IsInstallSamplesTask;
@@ -61,6 +62,8 @@ import info.magnolia.module.delta.Task;
 import info.magnolia.module.delta.ValueOfPropertyDelegateTask;
 import info.magnolia.rendering.module.setup.InstallRendererContextAttributeTask;
 import info.magnolia.repository.RepositoryConstants;
+import info.magnolia.ui.contentapp.ConfiguredContentAppDescriptor;
+import info.magnolia.ui.contentapp.contenttypes.ConfiguredContentTypeAppDescriptor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -130,6 +133,16 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
 
         register(DeltaBuilder.update("1.4.1", "")
                 .addTask(new FolderBootstrapTask("/mgnl-bootstrap-samples/tours/assets/"))
+                .addTask(new NodeExistsDelegateTask("Change tours app definition to support Content Type", "/modules/tours/apps/tours",
+                        new ArrayDelegateTask("",
+                                new CheckAndModifyPropertyValueTask("/modules/tours/apps/tours", "class", ConfiguredContentAppDescriptor.class.getName(), ConfiguredContentTypeAppDescriptor.class.getName()),
+                                new SetPropertyTask(RepositoryConstants.CONFIG, "/modules/tours/apps/tours", "contentType", "tour")
+                        )))
+                .addTask(new NodeExistsDelegateTask("Change tourCategories app definition to support Content Type", "/modules/tours/apps/tourCategories",
+                        new ArrayDelegateTask("",
+                                new CheckAndModifyPropertyValueTask("/modules/tours/apps/tourCategories", "class", ConfiguredContentAppDescriptor.class.getName(), ConfiguredContentTypeAppDescriptor.class.getName()),
+                                new SetPropertyTask(RepositoryConstants.CONFIG, "/modules/tours/apps/tourCategories", "contentType", "tourCategory")
+                        )))
         );
     }
 

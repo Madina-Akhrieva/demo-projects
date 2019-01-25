@@ -47,6 +47,8 @@ import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
 import info.magnolia.repository.RepositoryConstants;
+import info.magnolia.ui.contentapp.ConfiguredContentAppDescriptor;
+import info.magnolia.ui.contentapp.contenttypes.ConfiguredContentTypeAppDescriptor;
 import info.magnolia.ui.framework.action.ExportActionDefinition;
 import info.magnolia.ui.framework.action.OpenExportDialogActionDefinition;
 import info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping;
@@ -58,6 +60,7 @@ import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
+import org.hamcrest.MatcherAssert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -336,6 +339,25 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
         // THEN
         Node ashEdmonds = damSession.getRootNode().getNode("tours/ash-edmonds-441220-unsplash");
         assertThat(ashEdmonds, hasProperty("coverage"));
+    }
+
+    @Test
+    public void updateFrom14AndCheckContentTypeSupport() throws Exception {
+        // GIVEN
+        Node node = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours/apps/tours", NodeTypes.ContentNode.NAME);
+        node.setProperty("class", ConfiguredContentAppDescriptor.class.getName());
+
+        Node nodeCategories = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours/apps/tourCategories", NodeTypes.ContentNode.NAME);
+        nodeCategories.setProperty("class", ConfiguredContentAppDescriptor.class.getName());
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.4"));
+
+        // THEN
+        MatcherAssert.assertThat(node, hasProperty("class", ConfiguredContentTypeAppDescriptor.class.getName()));
+        MatcherAssert.assertThat(node, hasProperty("contentType", "tour"));
+        MatcherAssert.assertThat(nodeCategories, hasProperty("class", ConfiguredContentTypeAppDescriptor.class.getName()));
+        MatcherAssert.assertThat(nodeCategories, hasProperty("contentType", "tourCategory"));
     }
 
     private void setupBootstrapPages() throws RepositoryException {

@@ -7,7 +7,10 @@
     <sv:value>info.magnolia.ui.contentapp.ContentApp</sv:value>
   </sv:property>
   <sv:property sv:name="class" sv:type="String">
-    <sv:value>info.magnolia.ui.contentapp.ConfiguredContentAppDescriptor</sv:value>
+    <sv:value>info.magnolia.ui.contentapp.contenttypes.ConfiguredContentTypeAppDescriptor</sv:value>
+  </sv:property>
+  <sv:property sv:name="contentType" sv:type="String">
+    <sv:value>tour</sv:value>
   </sv:property>
   <sv:property sv:name="name" sv:type="String">
     <sv:value>tours</sv:value>

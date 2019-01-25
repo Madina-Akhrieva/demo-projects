@@ -1,0 +1,3 @@
+datasource:
+  workspace: category
+  autoCreate: false

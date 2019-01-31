@@ -13,6 +13,9 @@
     <sv:property sv:name="class" sv:type="String">
       <sv:value>info.magnolia.module.publicuserregistration.strategy.Always</sv:value>
     </sv:property>
+    <sv:property sv:name="extends" sv:type="String">
+      <sv:value>override</sv:value>
+    </sv:property>
   </sv:node>
   <sv:node sv:name="passwordRetrievalStrategy">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">

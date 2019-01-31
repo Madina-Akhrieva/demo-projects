@@ -53,6 +53,7 @@ import info.magnolia.cms.util.QueryUtil;
 import info.magnolia.context.MgnlContext;
 import info.magnolia.dam.jcr.DamConstants;
 import info.magnolia.jcr.util.NodeTypes;
+import info.magnolia.jcr.util.NodeUtil;
 import info.magnolia.module.InstallContext;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
@@ -271,6 +272,19 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.5"));
 
         // THEN
+        this.assertNoMessages(ctx);
+    }
+
+    @Test
+    public void upgradeFrom123() throws Exception {
+        // GIVEN
+        Node registrationStrategy = NodeUtil.createPath(session.getRootNode(), "modules/public-user-registration/config/configurations/travel/registrationStrategy", NodeTypes.ContentNode.NAME);
+
+        // WHEN
+        final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2.3"));
+
+        // THEN
+        assertThat(registrationStrategy, hasProperty("extends", "override"));
         this.assertNoMessages(ctx);
     }
 

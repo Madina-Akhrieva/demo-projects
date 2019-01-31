@@ -1,0 +1,17 @@
+realmName: public
+defaultRoles:
+  anonymous: anonymous
+defaultGroups:
+  pur: travel-demo-pur
+registrationStrategy:
+  class: info.magnolia.module.publicuserregistration.strategy.Always
+passwordRetrievalStrategy:
+  fromEmail: test@test.com
+  i18nBasename: info.magnolia.module.publicuserregistration.messages
+  class: info.magnolia.module.publicuserregistration.password.MailChangePasswordLinkStrategy
+  emailTemplate: /public-user-registration/templates/mail/password-reset-email.ftl
+  fromName: mail.passwordreminder.from
+  targetPagePath: /travel/members/forgotten-password/password-change
+  subject: mail.passwordreminder.subject
+userProfileConfiguration:
+  userProfileClass: info.magnolia.module.publicuserregistration.UserProfile

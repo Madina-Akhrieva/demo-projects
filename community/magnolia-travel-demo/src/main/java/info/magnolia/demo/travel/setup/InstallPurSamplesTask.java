@@ -69,7 +69,6 @@ public class InstallPurSamplesTask extends ArrayDelegateTask {
     public InstallPurSamplesTask() {
         super("Install PUR samples if public-user-registration module is installed");
         this.addTask(new BootstrapSingleModuleResource("config.server.filters.securityCallback.clientCallbacks.travel-demo-pur.xml"));
-        this.addTask(new BootstrapSingleModuleResource("config.modules.public-user-registration.config.configurations.travel.xml"));
         this.addTask(new BootstrapSingleResource("Install user role for PUR", "", "/mgnl-bootstrap-samples/travel-demo/userroles.travel-demo-pur.xml"));
         this.addTask(new BootstrapSingleResource("Install user group for PUR", "", "/mgnl-bootstrap-samples/travel-demo/usergroups.travel-demo-pur.xml"));
         this.addTask(new ArrayDelegateTask("",

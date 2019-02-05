@@ -278,13 +278,14 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
     @Test
     public void upgradeFrom123() throws Exception {
         // GIVEN
-        Node registrationStrategy = NodeUtil.createPath(session.getRootNode(), "modules/public-user-registration/config/configurations/travel/registrationStrategy", NodeTypes.ContentNode.NAME);
+        Node configurations = NodeUtil.createPath(session.getRootNode(), "modules/public-user-registration/config/configurations", NodeTypes.ContentNode.NAME);
+        configurations.addNode("travel", NodeTypes.ContentNode.NAME);
 
         // WHEN
         final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2.3"));
 
         // THEN
-        assertThat(registrationStrategy, hasProperty("extends", "override"));
+        assertThat(configurations, not(hasNode("travel")));
         this.assertNoMessages(ctx);
     }
 
@@ -329,8 +330,6 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         ));
 
         assertThat(session.getRootNode(), hasNode("modules/travel-demo/config/travel/templates/availability/templates/pur"));
-        assertThat(session.getNode("/modules/public-user-registration/config/configurations/travel/passwordRetrievalStrategy"), hasProperty("targetPagePath", "/" + InstallPurSamplesTask.PASSWORD_CHANGE_PAGE_PATH));
-        assertThat(session.getNode("/modules/public-user-registration/config/configurations/travel/defaultGroups"), hasProperty("pur", "travel-demo-pur"));
 
         assertThat(MgnlContext.getJCRSession(RepositoryConstants.USER_ROLES).getRootNode(), hasNode(UserManager.ANONYMOUS_USER + "/acl_uri"));
         NodeIterator permissions = MgnlContext.getJCRSession(RepositoryConstants.USER_ROLES).getNode("/" + UserManager.ANONYMOUS_USER + "/acl_uri").getNodes();

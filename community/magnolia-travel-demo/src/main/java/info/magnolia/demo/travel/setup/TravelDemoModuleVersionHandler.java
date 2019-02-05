@@ -145,7 +145,7 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
                         "/mgnl-bootstrap/travel-demo/config.server.filters.addCORSHeaders.xml", "uriSecurity"))
         );
         register(DeltaBuilder.update("1.4.1", "")
-                .addTask(new SetPropertyTask("Avoid extending registrationStrategy", RepositoryConstants.CONFIG, "/modules/public-user-registration/config/configurations/travel/registrationStrategy", "extends", "override"))
+                .addTask(new RemoveNodeTask("Remove travel node from PUR module configuration in favor of YAML decoration", "/modules/public-user-registration/config/configurations/travel"))
         );
     }
 

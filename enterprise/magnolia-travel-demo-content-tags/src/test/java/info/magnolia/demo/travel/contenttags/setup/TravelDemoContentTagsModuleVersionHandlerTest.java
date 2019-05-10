@@ -24,6 +24,7 @@ import info.magnolia.cms.util.ClasspathResourcesUtil;
 import info.magnolia.contenttags.manager.TagManager;
 import info.magnolia.context.MgnlContext;
 import info.magnolia.context.SystemContext;
+import info.magnolia.dam.jcr.AssetNodeTypes;
 import info.magnolia.init.MagnoliaConfigurationProperties;
 import info.magnolia.jcr.util.NodeNameHelper;
 import info.magnolia.jcr.util.NodeTypes;
@@ -118,7 +119,7 @@ public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersion
         // THEN
         assertThat(assetNode, allOf(
                 hasProperty(TagManager.TAGS_PROPERTY, arrayWithSize(5)),
-                hasProperty("mgnl:lastTaggedDate")
+                hasProperty(AssetNodeTypes.Asset.LAST_TAGGING_ATTEMPT_DATE)
         ));
     }
 
@@ -134,7 +135,7 @@ public class TravelDemoContentTagsModuleVersionHandlerTest extends ModuleVersion
         // THEN
         assertThat(assetNode, allOf(
                 hasProperty(TagManager.TAGS_PROPERTY, arrayWithSize(5)),
-                hasProperty("mgnl:lastTaggedDate")
+                hasProperty(AssetNodeTypes.Asset.LAST_TAGGING_ATTEMPT_DATE)
         ));
     }
 }

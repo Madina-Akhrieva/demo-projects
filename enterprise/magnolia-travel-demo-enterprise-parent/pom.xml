@@ -27,7 +27,7 @@
     <multisiteVersion>1.2.1</multisiteVersion>
     <storiesAppVersion>1.0.6</storiesAppVersion>
     <javascriptModelsVersion>1.0</javascriptModelsVersion>
-    <magnoliaDamVersion>2.1</magnoliaDamVersion>
+    <magnoliaDamVersion>2.5.1-SNAPSHOT</magnoliaDamVersion>
   </properties>
 
   <scm>

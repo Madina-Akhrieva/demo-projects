@@ -17,6 +17,7 @@ package info.magnolia.demo.travel.contenttags.setup;
 import com.google.common.collect.Sets;
 import info.magnolia.contenttags.setup.AddTagsToNodesTask;
 import info.magnolia.contenttags.manager.TagManager;
+import info.magnolia.dam.jcr.AssetNodeTypes;
 import info.magnolia.dam.jcr.DamConstants;
 import info.magnolia.jcr.util.NodeTypes;
 import info.magnolia.module.DefaultModuleVersionHandler;
@@ -260,7 +261,7 @@ public class TravelDemoContentTagsModuleVersionHandler extends DefaultModuleVers
             super("Add tags to " + path, "", DamConstants.WORKSPACE, path,
                     new ArrayDelegateTask("", "",
                             new AddTagsToNodesTask(DamConstants.WORKSPACE, Sets.newHashSet(tags), Sets.newHashSet(path), tagManager),
-                            new SetPropertyTask("", DamConstants.WORKSPACE, path,  "mgnl:lastTaggedDate", Calendar.getInstance())
+                            new SetPropertyTask("", DamConstants.WORKSPACE, path, AssetNodeTypes.Asset.LAST_TAGGING_ATTEMPT_DATE, Calendar.getInstance())
             ));
         }
     }

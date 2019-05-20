@@ -99,6 +99,56 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>get-tomcat</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>info.magnolia.tomcat.barebone</groupId>
+                  <artifactId>magnolia-tomcat-barebone</artifactId>
+                  <type>tar.gz</type>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>${basedir}/target/extracted-tomcat</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <!-- inhibit default-assembly! -->
+            <id>default-assembly</id>
+            <configuration>
+              <skipAssembly>true</skipAssembly>
+            </configuration>
+          </execution>
+          <execution>
+            <id>bundle-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <skipAssembly>false</skipAssembly>
+              <finalName>magnolia-dx-core-demo-${project.version}</finalName>
+              <descriptors>
+                <descriptor>src/release/tomcat-bundle.xml</descriptor>
+              </descriptors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>

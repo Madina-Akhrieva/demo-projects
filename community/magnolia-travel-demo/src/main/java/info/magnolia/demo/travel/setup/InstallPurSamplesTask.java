@@ -38,7 +38,7 @@ import info.magnolia.module.delta.AddURIPermissionTask;
 import info.magnolia.module.delta.ArrayDelegateTask;
 import info.magnolia.module.delta.BootstrapSingleModuleResource;
 import info.magnolia.module.delta.BootstrapSingleResource;
-import info.magnolia.module.delta.IsAuthorInstanceDelegateTask;
+import info.magnolia.module.delta.IsAdminInstanceDelegateTask;
 import info.magnolia.module.delta.OrderNodeBeforeTask;
 import info.magnolia.module.delta.Task;
 
@@ -72,7 +72,7 @@ public class InstallPurSamplesTask extends ArrayDelegateTask {
         this.addTask(new BootstrapSingleResource("Install user role for PUR", "", "/mgnl-bootstrap-samples/travel-demo/userroles.travel-demo-pur.xml"));
         this.addTask(new BootstrapSingleResource("Install user group for PUR", "", "/mgnl-bootstrap-samples/travel-demo/usergroups.travel-demo-pur.xml"));
         this.addTask(new ArrayDelegateTask("",
-                new IsAuthorInstanceDelegateTask("", (Task) null, this.getPermissionTasks()),
+                new IsAdminInstanceDelegateTask("", (Task) null, this.getPermissionTasks()),
                 new OrderNodeBeforeTask("/server/filters/securityCallback/clientCallbacks/travel-demo-pur", "form")
         ));
     }

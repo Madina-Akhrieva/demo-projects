@@ -46,15 +46,15 @@ import info.magnolia.module.delta.CreateNodePathTask;
 import info.magnolia.module.delta.CreateNodeTask;
 import info.magnolia.module.delta.DeltaBuilder;
 import info.magnolia.module.delta.FilterOrderingTask;
-import info.magnolia.module.delta.IsAuthorInstanceDelegateTask;
+import info.magnolia.module.delta.HasPropertyDelegateTask;
+import info.magnolia.module.delta.IsAdminInstanceDelegateTask;
 import info.magnolia.module.delta.IsInstallSamplesTask;
 import info.magnolia.module.delta.IsModuleInstalledOrRegistered;
 import info.magnolia.module.delta.NodeExistsDelegateTask;
-import info.magnolia.module.delta.PropertyExistsDelegateTask;
-import info.magnolia.module.delta.PropertyValueDelegateTask;
 import info.magnolia.module.delta.RemoveNodeTask;
 import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.module.delta.Task;
+import info.magnolia.module.delta.ValueOfPropertyDelegateTask;
 import info.magnolia.module.delta.WarnTask;
 import info.magnolia.module.site.setup.DefaultSiteExistsDelegateTask;
 import info.magnolia.repository.RepositoryConstants;
@@ -74,14 +74,14 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
     private static final String DEFAULT_URI_NODEPATH = "/modules/ui-admincentral/virtualUriMappings/default";
     private static final String DEFAULT_URI = "redirect:/travel.html";
 
-    private final Task setDefaultUriOnPublicInstance = new PropertyValueDelegateTask("Set default URI to home travel page, when current site is travel site", "/modules/site/config/site", "extends", "/modules/travel-demo/config/travel", false,
-            new IsAuthorInstanceDelegateTask("Set default URI to home page", String.format("Set default URI to point to '%s'", DEFAULT_URI), null,
+    private final Task setDefaultUriOnPublicInstance = new ValueOfPropertyDelegateTask("Set default URI to home travel page, when current site is travel site", "/modules/site/config/site", "extends", "/modules/travel-demo/config/travel", false,
+            new IsAdminInstanceDelegateTask("Set default URI to home page", String.format("Set default URI to point to '%s'", DEFAULT_URI), null,
                     new NodeExistsDelegateTask("", DEFAULT_URI_NODEPATH,
                             new SetPropertyTask(RepositoryConstants.CONFIG, DEFAULT_URI_NODEPATH, "toUri", DEFAULT_URI),
                             new WarnTask("Set default URI to home page", "Could not set default URI to home travel page, default mapping was not found."))));
 
     private final Task setupTravelSiteAsActiveSite = new NodeExistsDelegateTask("Set travel demo as an active site", "/modules/site/config/site",
-            new PropertyExistsDelegateTask("Check extends property and update or create it", "/modules/site/config/site", "extends",
+            new HasPropertyDelegateTask("Check extends property and update or create it", "/modules/site/config/site", "extends",
                     new CheckAndModifyPropertyValueTask("/modules/site/config/site", "extends", "/modules/standard-templating-kit/config/site", "/modules/travel-demo/config/travel"),
                     new DefaultSiteExistsDelegateTask("", "",
                             new SetPropertyTask(RepositoryConstants.CONFIG, "/modules/site/config/site", "extends", "/modules/travel-demo/config/travel"))),

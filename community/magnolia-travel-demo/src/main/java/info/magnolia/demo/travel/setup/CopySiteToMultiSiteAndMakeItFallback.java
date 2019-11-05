@@ -36,7 +36,7 @@ package info.magnolia.demo.travel.setup;
 import info.magnolia.module.delta.ArrayDelegateTask;
 import info.magnolia.module.delta.CheckAndModifyPropertyValueTask;
 import info.magnolia.module.delta.CopyNodeTask;
-import info.magnolia.module.delta.PropertyExistsDelegateTask;
+import info.magnolia.module.delta.HasPropertyDelegateTask;
 import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.repository.RepositoryConstants;
 
@@ -56,7 +56,7 @@ public class CopySiteToMultiSiteAndMakeItFallback extends ArrayDelegateTask {
     public CopySiteToMultiSiteAndMakeItFallback(final boolean override) {
         super("Copy site definition to multisite", "Copies site definition to multisite and makes it fallback site",
                 new CopyNodeTask("Copy site definition to multisite", TRAVEL_DEMO_SITE, MULTISITE_TRAVEL_SITE, override),
-                new PropertyExistsDelegateTask("Set travel demo as fallback site if possible", MULTISITE_FALLBACK_SITE, "extends",
+                new HasPropertyDelegateTask("Set travel demo as fallback site if possible", MULTISITE_FALLBACK_SITE, "extends",
                         new CheckAndModifyPropertyValueTask(MULTISITE_FALLBACK_SITE, "extends", "../default", "../travel"),
                         new SetPropertyTask(RepositoryConstants.CONFIG, MULTISITE_FALLBACK_SITE, "extends", "../travel")));
     }

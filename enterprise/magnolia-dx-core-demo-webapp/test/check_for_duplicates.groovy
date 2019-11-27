@@ -1,7 +1,7 @@
 // Checks for jars with same name but different versions
 // and prints them out.
 
-def exceptions = ["antlr", "icepush", "annotations"]
+def exceptions = ["antlr", "icepush", "annotations", "swagger-annotations"]
 
 def directory = "."
 try {

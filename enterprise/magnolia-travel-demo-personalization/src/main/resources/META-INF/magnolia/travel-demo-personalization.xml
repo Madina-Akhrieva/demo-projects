@@ -13,7 +13,7 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <name>personalization-integration</name>
+      <name>personalization-core</name>
       <version>${personalizationVersion}/*</version>
     </dependency>
   </dependencies>

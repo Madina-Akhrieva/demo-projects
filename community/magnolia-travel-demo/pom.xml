@@ -31,28 +31,12 @@
     </dependency>
 
     <dependency>
-      <groupId>info.magnolia.resources</groupId>
-      <artifactId>magnolia-resources</artifactId>
-    </dependency>
-    <dependency>
       <groupId>info.magnolia.categorization</groupId>
       <artifactId>magnolia-categorization</artifactId>
     </dependency>
     <dependency>
       <groupId>info.magnolia.dam</groupId>
       <artifactId>magnolia-dam-templating</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>info.magnolia.dam</groupId>
-      <artifactId>magnolia-dam-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>info.magnolia.dam</groupId>
-      <artifactId>magnolia-dam-jcr</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>info.magnolia.dam</groupId>
-      <artifactId>magnolia-dam-imaging</artifactId>
     </dependency>
     <dependency>
       <groupId>info.magnolia.site</groupId>
@@ -108,11 +92,7 @@
     </dependency>
     <dependency>
       <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-library</artifactId>
+      <artifactId>hamcrest</artifactId>
     </dependency>
     <dependency>
       <groupId>info.magnolia</groupId>

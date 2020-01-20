@@ -32,7 +32,7 @@
 
     <dependency>
       <groupId>info.magnolia.personalization</groupId>
-      <artifactId>magnolia-personalization-integration</artifactId>
+      <artifactId>magnolia-personalization-pages</artifactId>
     </dependency>
     <dependency>
       <groupId>info.magnolia.personalization</groupId>

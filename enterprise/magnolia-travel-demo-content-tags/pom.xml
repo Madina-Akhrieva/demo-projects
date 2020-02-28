@@ -4,7 +4,7 @@
   <parent>
     <groupId>info.magnolia.eedemo</groupId>
     <artifactId>magnolia-travel-demo-enterprise-parent</artifactId>
-    <version>1.4.2-SNAPSHOT</version>
+    <version>1.5-SNAPSHOT</version>
     <relativePath>../magnolia-travel-demo-enterprise-parent/pom.xml</relativePath>
   </parent>
   <artifactId>magnolia-travel-demo-content-tags</artifactId>
@@ -56,11 +56,7 @@
     </dependency>
     <dependency>
       <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-library</artifactId>
+      <artifactId>hamcrest</artifactId>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>

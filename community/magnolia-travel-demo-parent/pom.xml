@@ -9,18 +9,18 @@
   <groupId>info.magnolia.demo</groupId>
   <artifactId>magnolia-travel-demo-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.4.2-SNAPSHOT</version>
+  <version>1.5-SNAPSHOT</version>
   <name>Magnolia Travel Demo (parent pom)</name>
   <inceptionYear>2015</inceptionYear>
   <description>Magnolia Travel is a demo project showing best practices when working with Magnolia.</description>
 
   <properties>
     <javaVersion>1.8</javaVersion>
-    <magnoliaVersion>6.1</magnoliaVersion>
-    <magnoliaUiVersion>6.1</magnoliaUiVersion>
-    <magnoliaDamVersion>2.6</magnoliaDamVersion>
+    <magnoliaVersion>6.2-SNAPSHOT</magnoliaVersion>
+    <magnoliaUiVersion>6.2-SNAPSHOT</magnoliaUiVersion>
+    <magnoliaDamVersion>3.0-SNAPSHOT</magnoliaDamVersion>
     <siteVersion>1.0.8</siteVersion>
-    <resourcesVersion>2.4</resourcesVersion>
+    <resourcesVersion>3.0-SNAPSHOT</resourcesVersion>
     <mteVersion>1.2.1</mteVersion>
   </properties>
 

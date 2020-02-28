@@ -4,7 +4,7 @@
   <parent>
     <groupId>info.magnolia.demo</groupId>
     <artifactId>magnolia-travel-demo-parent</artifactId>
-    <version>1.4.2-SNAPSHOT</version>
+    <version>1.5-SNAPSHOT</version>
     <relativePath>../magnolia-travel-demo-parent/pom.xml</relativePath>
   </parent>
   <artifactId>magnolia-travel-tours</artifactId>
@@ -32,14 +32,6 @@
     <dependency>
       <groupId>info.magnolia</groupId>
       <artifactId>magnolia-templating</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-i18n</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>info.magnolia.ui</groupId>
-      <artifactId>magnolia-ui-framework</artifactId>
     </dependency>
     <dependency>
       <groupId>info.magnolia.ui</groupId>
@@ -112,11 +104,7 @@
     </dependency>
     <dependency>
       <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-library</artifactId>
+      <artifactId>hamcrest</artifactId>
     </dependency>
     <dependency>
       <groupId>info.magnolia</groupId>

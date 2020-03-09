@@ -63,7 +63,7 @@ public class TravelDemoStoriesAppModuleVersionHandlerTest extends ModuleVersionH
 
     @Override
     protected String getExtraNodeTypes() {
-        return "/mgnl-nodetypes/magnolia-dam-nodetypes.xml";
+        return "/mgnl-nodetypes/magnolia-dam-nodetypes.cnd";
     }
 
     @Override

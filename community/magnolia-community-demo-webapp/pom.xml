@@ -3,11 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>info.magnolia.bundle</groupId>
-    <artifactId>magnolia-packs-community-parent</artifactId>
+    <artifactId>magnolia-bundle-parent</artifactId>
     <version>6.2-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
-  <groupId>info.magnolia.bundle</groupId>
   <artifactId>magnolia-community-demo-webapp</artifactId>
   <packaging>war</packaging>
   <name>magnolia-community-demo-webapp</name>

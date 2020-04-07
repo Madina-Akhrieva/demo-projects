@@ -80,6 +80,41 @@
       <groupId>info.magnolia.contacts</groupId>
       <artifactId>magnolia-contacts</artifactId>
     </dependency>
+
+    <!-- Addon modules -->
+    <dependency>
+      <groupId>info.magnolia.ai.image</groupId>
+      <artifactId>magnolia-image-recognition</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.ai.image</groupId>
+      <artifactId>magnolia-image-recognition-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.ai.image</groupId>
+      <artifactId>magnolia-content-tags-integration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.ai.image</groupId>
+      <artifactId>magnolia-amazon-image-recognition</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.ai.text</groupId>
+      <artifactId>magnolia-text-classification-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.ai.text</groupId>
+      <artifactId>magnolia-text-classification</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.ai.text</groupId>
+      <artifactId>magnolia-amazon-text-classification</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.ai.text</groupId>
+      <artifactId>magnolia-pages-content-tags-integration</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <parent>
     <groupId>info.magnolia.bundle</groupId>
     <artifactId>magnolia-bundle-parent</artifactId>
     <version>6.2.3-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
+
   <artifactId>magnolia-community-demo-webapp</artifactId>
   <packaging>war</packaging>
-  <name>magnolia-community-demo-webapp</name>
-  <description>Magnolia webapp pre-bundled with the DAM module and Magnolia Templating Essentials.</description>
+
+  <name>Magnolia Community demo webapp</name>
+  <description>Magnolia Community webapp with the travel demo.</description>
+
   <dependencies>
     <dependency>
       <groupId>info.magnolia.bundle</groupId>

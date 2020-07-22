@@ -12,7 +12,7 @@
   <artifactId>magnolia-dx-core-demo-webapp</artifactId>
   <packaging>war</packaging>
 
-  <name>magnolia-dx-core-demo-webapp</name>
+  <name>Magnolia DX Core demo webapp</name>
   <description>Magnolia DX Core pre-installed with several modules and with MTE travel demo.</description>
 
   <dependencies>

@@ -290,6 +290,16 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
     }
 
     @Test
+    public void upgradeFrom141() throws Exception {
+        // GIVEN
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.4.1"));
+
+        // THEN
+    }
+
+    @Test
     public void cleanInstall() throws Exception {
         // GIVEN
         setupConfigNode("/modules/public-user-registration");
@@ -306,6 +316,34 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         this.checkPurSamplesAreInstalled(session.getNode("/server/filters/securityCallback/clientCallbacks"));
         this.checkIfEverythingIsActivated();
         this.assertNoMessages(ctx);
+    }
+
+    @Test
+    public void updateTo151_MigrateCorsToTravelSite() throws Exception {
+        // GIVEN
+        setupConfigNode("/modules/travel-demo/config/travel");
+        setupConfigNode("/server/filters/addCORSHeaders/headers");
+        setupConfigProperty("/server/filters/addCORSHeaders", "enabled", "true");
+        setupConfigProperty("/server/filters/addCORSHeaders/headers", "Access-Control-Allow-Headers", "X-PINGOTHER, Origin, X-Requested-With, Content-Type, Accept");
+        setupConfigProperty("/server/filters/addCORSHeaders/headers", "Access-Control-Allow-Methods", "GET");
+        setupConfigProperty("/server/filters/addCORSHeaders/headers", "Access-Control-Allow-Origin", "*");
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.5.0"));
+
+        // THEN
+        assertThat(session.nodeExists("/modules/travel-demo/config/travel/cors/travel"), is(true));
+        final Node node = session.getNode("/modules/travel-demo/config/travel/cors/travel");
+        assertThat(node.getNode("uris").getNode("rest"), hasProperty("patternString", "/.rest/*"));
+        assertThat(node.getNode("allowedOrigins"), hasProperty("0", "*"));
+        assertThat(node.getNode("allowedMethods"), hasProperty("0", "GET"));
+        assertThat(node.getNode("allowedHeaders"), allOf(
+                hasProperty("0", "X-PINGOTHER"),
+                hasProperty("1", "Origin"),
+                hasProperty("2", "X-Requested-With"),
+                hasProperty("3", "Content-Type"),
+                hasProperty("4", "Accept")
+        ));
     }
 
     private void checkPurSamplesAreInstalled(Node clientCallbacks) throws RepositoryException {

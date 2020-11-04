@@ -15,7 +15,8 @@
 package info.magnolia.demo.travel.multisite.setup;
 
 import static info.magnolia.test.hamcrest.NodeMatchers.*;
-import static org.hamcrest.CoreMatchers.not;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.Matchers.allOf;
 import static org.junit.Assert.*;
 
 import info.magnolia.context.MgnlContext;
@@ -28,6 +29,7 @@ import info.magnolia.repository.RepositoryConstants;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.jcr.Node;
 import javax.jcr.Session;
 
 import org.junit.Before;
@@ -164,5 +166,33 @@ public class TravelDemoMultiSiteModuleVersionHandlerTest extends ModuleVersionHa
         //THEN
         assertThat(session.getNode(travelToursMappingPath), hasProperty("toUri", "forward:/tour?tour=$1"));
         assertThat(session.getNode(sportstationToursMapping), hasProperty("toUri", "forward:/tour?tour=$1"));
+    }
+
+    @Test
+    public void updateTo151_MigrateCorsToTravelSite() throws Exception {
+        // GIVEN
+        setupConfigNode("/modules/multisite/config/sites/travel");
+        setupConfigNode("/server/filters/addCORSHeaders/headers");
+        setupConfigProperty("/server/filters/addCORSHeaders", "enabled", "true");
+        setupConfigProperty("/server/filters/addCORSHeaders/headers", "Access-Control-Allow-Headers", "X-PINGOTHER, Origin, X-Requested-With, Content-Type, Accept");
+        setupConfigProperty("/server/filters/addCORSHeaders/headers", "Access-Control-Allow-Methods", "GET");
+        setupConfigProperty("/server/filters/addCORSHeaders/headers", "Access-Control-Allow-Origin", "*");
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.5.0"));
+
+        // THEN
+        assertThat(session.nodeExists("/modules/multisite/config/sites/travel/cors/travel"), is(true));
+        final Node node = session.getNode("/modules/multisite/config/sites/travel/cors/travel");
+        assertThat(node.getNode("uris").getNode("rest"), hasProperty("patternString", "/.rest/*"));
+        assertThat(node.getNode("allowedOrigins"), hasProperty("0", "*"));
+        assertThat(node.getNode("allowedMethods"), hasProperty("0", "GET"));
+        assertThat(node.getNode("allowedHeaders"), allOf(
+                hasProperty("0", "X-PINGOTHER"),
+                hasProperty("1", "Origin"),
+                hasProperty("2", "X-Requested-With"),
+                hasProperty("3", "Content-Type"),
+                hasProperty("4", "Accept")
+        ));
     }
 }

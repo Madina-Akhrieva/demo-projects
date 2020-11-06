@@ -14,11 +14,13 @@
  */
 package info.magnolia.demo.travel.multisite.setup;
 
+import info.magnolia.demo.travel.setup.MigrateCorsFilterConfigurationToSiteCorsConfiguration;
 import info.magnolia.module.DefaultModuleVersionHandler;
 import info.magnolia.module.InstallContext;
 import info.magnolia.module.delta.ArrayDelegateTask;
 import info.magnolia.module.delta.BootstrapConditionally;
 import info.magnolia.module.delta.BootstrapSingleResource;
+import info.magnolia.module.delta.CheckAndModifyPropertyValueTask;
 import info.magnolia.module.delta.DeltaBuilder;
 import info.magnolia.module.delta.IsInstallSamplesTask;
 import info.magnolia.module.delta.NodeExistsDelegateTask;
@@ -53,6 +55,13 @@ public class TravelDemoMultiSiteModuleVersionHandler extends DefaultModuleVersio
 
         register(DeltaBuilder.update("1.2.3", "")
                 .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for travel-demo multi-site module.", "Re-Bootstrap virtual URI mapping for travel-demo multi-site module.", "/mgnl-bootstrap/travel-demo-multisite/config.modules.tours.virtualUriMappings.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
+        );
+
+        register(DeltaBuilder.update("1.5.1", "")
+                .addTask(new NodeExistsDelegateTask("Disable addCORSHeaders filter and migrate to new CORS configuration", "/server/filters/addCORSHeaders", new ArrayDelegateTask("",
+                        new CheckAndModifyPropertyValueTask("/server/filters/addCORSHeaders", "enabled", "true", "false"),
+                        new MigrateCorsFilterConfigurationToSiteCorsConfiguration("/modules/multisite/config/sites/travel")
+                )))
         );
     }
 

@@ -122,5 +122,64 @@
       </sv:node>
     </sv:node>
   </sv:node>
+  <sv:node sv:name="cors">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:node sv:name="travel">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mgnl:contentNode</sv:value>
+      </sv:property>
+      <sv:node sv:name="uris">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>mgnl:contentNode</sv:value>
+        </sv:property>
+        <sv:node sv:name="rest">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mgnl:contentNode</sv:value>
+          </sv:property>
+          <sv:property sv:name="patternString" sv:type="String">
+            <sv:value>/.rest/*</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="allowedOrigins">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>mgnl:contentNode</sv:value>
+        </sv:property>
+        <sv:property sv:name="all" sv:type="String">
+          <sv:value>*</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="allowedMethods">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>mgnl:contentNode</sv:value>
+        </sv:property>
+        <sv:property sv:name="get" sv:type="String">
+          <sv:value>GET</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="allowedHeaders">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>mgnl:contentNode</sv:value>
+        </sv:property>
+        <sv:property sv:name="accept" sv:type="String">
+          <sv:value>Accept</sv:value>
+        </sv:property>
+        <sv:property sv:name="content-type" sv:type="String">
+          <sv:value>Content-Type</sv:value>
+        </sv:property>
+        <sv:property sv:name="origin" sv:type="String">
+          <sv:value>Origin</sv:value>
+        </sv:property>
+        <sv:property sv:name="X-PINGOTHER" sv:type="String">
+          <sv:value>Accept</sv:value>
+        </sv:property>
+        <sv:property sv:name="x-requested-with" sv:type="String">
+          <sv:value>X-Requested-With</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
 </sv:node>
 

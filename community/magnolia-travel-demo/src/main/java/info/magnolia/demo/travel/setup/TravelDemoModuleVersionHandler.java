@@ -39,13 +39,11 @@ import info.magnolia.module.InstallContext;
 import info.magnolia.module.delta.ArrayDelegateTask;
 import info.magnolia.module.delta.BootstrapSingleModuleResource;
 import info.magnolia.module.delta.BootstrapSingleResource;
-import info.magnolia.module.delta.BootstrapSingleResourceAndOrderAfter;
 import info.magnolia.module.delta.CheckAndModifyPropertyValueTask;
 import info.magnolia.module.delta.CopyNodeTask;
 import info.magnolia.module.delta.CreateNodePathTask;
 import info.magnolia.module.delta.CreateNodeTask;
 import info.magnolia.module.delta.DeltaBuilder;
-import info.magnolia.module.delta.FilterOrderingTask;
 import info.magnolia.module.delta.HasPropertyDelegateTask;
 import info.magnolia.module.delta.IsAdminInstanceDelegateTask;
 import info.magnolia.module.delta.IsInstallSamplesTask;
@@ -140,12 +138,16 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
                         new IsModuleInstalledOrRegistered("", "public-user-registration",
                                 new CopyNodeTask("", "/modules/travel-demo/config/travel/templates/availability/templates/pur", "/modules/multisite/config/sites/travel/templates/availability/templates/pur", true))))
         );
-        register(DeltaBuilder.update("1.2.3", "")
-                .addTask(new BootstrapSingleResourceAndOrderAfter("Bootstrap addCORSHeaders filter to be /.rest/* urls available via CORS", "Bootstrap addCORSHeaders filter to be /.rest/* urls available via CORS",
-                        "/mgnl-bootstrap/travel-demo/config.server.filters.addCORSHeaders.xml", "uriSecurity"))
-        );
+
         register(DeltaBuilder.update("1.4.1", "")
                 .addTask(new RemoveNodeTask("Remove travel node from PUR module configuration in favor of YAML decoration", "/modules/public-user-registration/config/configurations/travel"))
+        );
+
+        register(DeltaBuilder.update("1.5.1", "")
+                .addTask(new NodeExistsDelegateTask("Disable addCORSHeaders filter and migrate to new CORS configuration", "/server/filters/addCORSHeaders", new ArrayDelegateTask("",
+                        new CheckAndModifyPropertyValueTask("/server/filters/addCORSHeaders", "enabled", "true", "false"),
+                        new MigrateCorsFilterConfigurationToSiteCorsConfiguration("/modules/travel-demo/config/travel")
+                )))
         );
     }
 
@@ -164,7 +166,6 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
         tasks.add(new SetupDemoRolesAndGroupsTask());
         tasks.add(setupAccessPermissionsForDemoUsers);
         tasks.add(setupTargetAppGroupAccessPermissions);
-        tasks.add(new FilterOrderingTask("addCORSHeaders", new String[] { "uriSecurity" }));
         return tasks;
     }
 

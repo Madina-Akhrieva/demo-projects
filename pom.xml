@@ -9,7 +9,7 @@
   <groupId>info.magnolia.demo</groupId>
   <artifactId>magnolia-demo-projects-reactor</artifactId>
   <packaging>pom</packaging>
-  <version>1.5.1-SNAPSHOT</version>
+  <version>1.5.1</version>
   <name>Magnolia Demo Projects Reactor</name>
   <inceptionYear>2015</inceptionYear>
 
@@ -26,7 +26,7 @@
     <connection>scm:git:ssh://git@git.magnolia-cms.com/MODULES/demo-projects</connection>
     <developerConnection>scm:git:ssh://git@git.magnolia-cms.com/MODULES/demo-projects</developerConnection>
     <url>https://git.magnolia-cms.com/projects/MODULES/repos/demo-projects</url>
-    <tag>HEAD</tag>
+    <tag>magnolia-demo-projects-1.5.1</tag>
   </scm>
 
   <modules>

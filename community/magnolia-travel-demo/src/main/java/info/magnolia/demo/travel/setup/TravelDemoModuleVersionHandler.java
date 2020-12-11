@@ -50,6 +50,7 @@ import info.magnolia.module.delta.IsInstallSamplesTask;
 import info.magnolia.module.delta.IsModuleInstalledOrRegistered;
 import info.magnolia.module.delta.NodeExistsDelegateTask;
 import info.magnolia.module.delta.RemoveNodeTask;
+import info.magnolia.module.delta.RemovePropertyTask;
 import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.module.delta.Task;
 import info.magnolia.module.delta.ValueOfPropertyDelegateTask;
@@ -147,6 +148,12 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
                 .addTask(new NodeExistsDelegateTask("Disable addCORSHeaders filter and migrate to new CORS configuration", "/server/filters/addCORSHeaders", new ArrayDelegateTask("",
                         new CheckAndModifyPropertyValueTask("/server/filters/addCORSHeaders", "enabled", "true", "false"),
                         new MigrateCorsFilterConfigurationToSiteCorsConfiguration("/modules/travel-demo/config/travel")
+                )))
+        );
+        register(DeltaBuilder.update("1.5.2", "")
+                .addTask(new NodeExistsDelegateTask("Make SPA templates available by default.", "/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType", new ArrayDelegateTask("",
+                        new RemovePropertyTask("Remove JSP configuration", "", RepositoryConstants.CONFIG, "/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType", "jsp"),
+                        new SetPropertyTask("Add SPA configuration", RepositoryConstants.CONFIG, "/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType", "spa", "spa")
                 )))
         );
     }

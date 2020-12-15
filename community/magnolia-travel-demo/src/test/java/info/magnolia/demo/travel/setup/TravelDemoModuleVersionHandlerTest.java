@@ -346,6 +346,20 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         ));
     }
 
+    @Test
+    public void updateTo152_removeJSPAndAddSPAAvailability() throws Exception {
+        setupConfigNode("/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType");
+        setupConfigProperty("/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType", "jsp", "jsp");
+
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.5.1"));
+
+        final Node node = session.getNode("/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType");
+        assertThat(node, allOf(
+                hasProperty("spa", "spa"),
+                not(hasProperty("jsp", "jsp"))
+        ));
+    }
+
     private void checkPurSamplesAreInstalled(Node clientCallbacks) throws RepositoryException {
         assertThat(website.getRootNode(), hasNode("travel/" + InstallPurSamplesTask.PUR_SAMPLE_ROOT_PAGE_NAME));
         assertThat(website.getRootNode(), hasNode(InstallPurSamplesTask.PASSWORD_CHANGE_PAGE_PATH));

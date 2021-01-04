@@ -1,10 +1,10 @@
-class: info.magnolia.editor.block.stock.FieldSetBlockDefinition
 templateId: travel-demo-stories-app:blocks/tour
 icon: shape-circle
-fields:
-  tour:
-    class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
-    targetWorkspace: tours
-    appName: tours
-    identifierToPathConverter:
-      class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+block:
+  properties:
+    tour:
+      $type: linkField
+      buttonSelectNewLabel: Select new... #blocks.tour.selectNew
+      buttonSelectOtherLabel: Select other... #blocks.tour.selectOther
+      chooserId: stories-app:chooserTours
+      converterClass: info.magnolia.ui.editor.converter.JcrNodeToPathConverter

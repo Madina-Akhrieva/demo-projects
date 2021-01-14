@@ -195,4 +195,18 @@ public class TravelDemoMultiSiteModuleVersionHandlerTest extends ModuleVersionHa
                 hasProperty("4", "Accept")
         ));
     }
+
+    @Test
+    public void updateTo152_removeJSPAndAddSPAAvailability() throws Exception {
+        setupConfigNode("/modules/multisite/config/sites/travel/templates/availability/enableAllWithRenderType");
+        setupConfigProperty("/modules/multisite/config/sites/travel/templates/availability/enableAllWithRenderType", "jsp", "jsp");
+
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.5.1"));
+
+        final Node node = session.getNode("/modules/multisite/config/sites/travel/templates/availability/enableAllWithRenderType");
+        assertThat(node, allOf(
+                hasProperty("spa", "spa"),
+                not(hasProperty("jsp", "jsp"))
+        ));
+    }
 }

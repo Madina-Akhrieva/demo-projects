@@ -10,9 +10,13 @@ subApps:
             tours:
               label: Related Tours
               $type: jcrMultiValueField
+              buttonSelectAddLabel: Add
               field:
-                class: info.magnolia.editor.app.field.ExpandingLinkFieldDefinition
+                $type: linkField
                 chooserId: stories-app:chooserTours
+                buttonSelectNewLabel: Select new...
+                buttonSelectOtherLabel: Select other...
+                converterClass: info.magnolia.ui.editor.converter.JcrNodeToPathConverter
         custom:
           blocks:
             - text

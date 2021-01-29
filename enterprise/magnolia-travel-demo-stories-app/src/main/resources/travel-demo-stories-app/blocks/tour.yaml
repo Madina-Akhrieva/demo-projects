@@ -7,4 +7,3 @@ block:
       buttonSelectNewLabel: Select new... #blocks.tour.selectNew
       buttonSelectOtherLabel: Select other... #blocks.tour.selectOther
       chooserId: stories-app:chooserTours
-      converterClass: info.magnolia.ui.editor.converter.JcrNodeToPathConverter

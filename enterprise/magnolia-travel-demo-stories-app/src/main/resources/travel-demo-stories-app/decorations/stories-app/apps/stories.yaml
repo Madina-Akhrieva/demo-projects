@@ -14,9 +14,11 @@ subApps:
               field:
                 $type: linkField
                 chooserId: stories-app:chooserTours
+                datasource:
+                  $type: jcrDatasource
+                  workspace: tours
                 buttonSelectNewLabel: Select new...
                 buttonSelectOtherLabel: Select other...
-                converterClass: info.magnolia.ui.editor.converter.JcrNodeToPathConverter
         custom:
           blocks:
             - text

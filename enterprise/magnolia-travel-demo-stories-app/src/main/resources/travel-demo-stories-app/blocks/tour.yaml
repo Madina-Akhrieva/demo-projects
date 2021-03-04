@@ -4,6 +4,9 @@ block:
   properties:
     tour:
       $type: linkField
+      datasource:
+        $type: jcrDatasource
+        workspace: tours
       buttonSelectNewLabel: Select new... #blocks.tour.selectNew
       buttonSelectOtherLabel: Select other... #blocks.tour.selectOther
       chooserId: stories-app:chooserTours

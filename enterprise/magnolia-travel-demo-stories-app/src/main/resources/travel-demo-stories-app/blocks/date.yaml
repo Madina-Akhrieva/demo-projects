@@ -3,6 +3,7 @@ icon: datepicker
 block:
   properties:
     date:
+      label: Date
       $type: dateField
       required: true
       time: true

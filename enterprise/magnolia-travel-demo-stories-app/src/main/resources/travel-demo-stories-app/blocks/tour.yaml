@@ -3,6 +3,7 @@ icon: shape-circle
 block:
   properties:
     tour:
+      label: Tour
       $type: linkField
       datasource:
         $type: jcrDatasource

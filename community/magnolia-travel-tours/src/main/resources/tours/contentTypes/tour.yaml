@@ -1,3 +1,44 @@
 datasource:
   workspace: tours
   autoCreate: false
+
+model:
+  nodeType: mgnl:content
+  properties:
+    - name: name
+      required: true
+    - name: description
+      i18n: true
+    - name: isFeatured
+      type: Boolean
+    - name: image
+      required: true
+      type: asset
+    - name: tourTypes
+      multiple: true
+      type: reference:tourCategory
+    - name: destination
+      multiple: true
+      type: reference:tourCategory
+    - name: location
+    - name: date
+      type: Date
+    - name: duration
+      options:
+        2-days:
+          name: 2-days
+          value: 2
+        7-days:
+          name: 7-days
+          value: 7
+        14-days:
+          name: 14-days
+          value: 14
+        21-days:
+          name: 21-days
+          value: 21
+      type: Long
+    - name: author
+    - name: body
+      i18n: true
+      type: richText

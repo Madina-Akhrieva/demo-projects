@@ -18,7 +18,6 @@ subApps:
                   $type: jcrDatasource
                   workspace: tours
                 buttonSelectNewLabel: Select new...
-                buttonSelectOtherLabel: Select other...
         custom:
           blocks:
             - text

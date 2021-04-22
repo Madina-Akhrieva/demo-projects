@@ -1,5 +1,6 @@
 templateId: travel-demo-stories-app:blocks/tour
 icon: shape-circle
+label: Tour
 block:
   properties:
     tour:
@@ -9,5 +10,4 @@ block:
         $type: jcrDatasource
         workspace: tours
       buttonSelectNewLabel: Select new... #blocks.tour.selectNew
-      buttonSelectOtherLabel: Select other... #blocks.tour.selectOther
       chooserId: stories-app:chooserTours

@@ -1,0 +1,4 @@
+tourfinderService:
+  addFingerPrint: true
+  link: /.resources/tours-enterprise/webresources/css/tourfinderService.css
+  media: all

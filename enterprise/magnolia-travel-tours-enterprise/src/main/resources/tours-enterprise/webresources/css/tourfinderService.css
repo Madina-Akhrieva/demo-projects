@@ -1,0 +1,20 @@
+.finder-service {
+  width: 300px;
+  font-size: 0.75em;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.finder-service span {
+  padding-right: 20px;
+}
+
+.finder-service label{
+  min-height: 20px;
+  margin-bottom: 0;
+  font-weight: 400;
+  cursor: pointer;
+  color: white;
+  padding-right: 10px;
+  vertical-align: middle;
+}

@@ -88,7 +88,11 @@
         <artifactId>magnolia-travel-demo-component-personalization</artifactId>
         <version>${project.version}</version>
       </dependency>
-
+      <dependency>
+        <groupId>info.magnolia.eedemo</groupId>
+        <artifactId>magnolia-travel-tours-enterprise</artifactId>
+        <version>${project.version}</version>
+      </dependency>
       <!--  EE modules -->
       <dependency>
         <groupId>info.magnolia.marketingtags</groupId>

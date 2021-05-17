@@ -1,0 +1,16 @@
+tourfinder: !override
+  addFingerPrint: true
+  link: /.resources/tours-enterprise/webresources/js/tourfinder.js
+tour-service:
+  addFingerPrint: true
+  link: /.resources/tours-enterprise/webresources/js/tour-service.js
+tour-queries:
+  addFingerPrint: true
+  link: /.resources/tours-enterprise/webresources/js/graphql-tour-queries-provider.js
+tour-data-mapper:
+  addFingerPrint: true
+  link: /.resources/tours-enterprise/webresources/js/tour-data-mapper.js
+category-data-mapper:
+  addFingerPrint: true
+  link: /.resources/tours-enterprise/webresources/js/category-data-mapper.js
+

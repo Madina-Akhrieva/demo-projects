@@ -1,0 +1,19 @@
+<div class="tour-card-background">
+    <img data-sizes="auto" class="tour-card-image" ng-src="{{ tour.image.renditions['960x720'].link }}" />
+</div>
+<a class="tour-card-anchor" ng-href="{{ contextPath }}/travel/tour?tour={{ tour.path }}">
+    <div class="tour-card-content-shader"></div>
+    <div class="tour-card-content">
+        <h4 class="finder-card-title">{{ tour.name }}</h4>
+        <div class="finder-card-meta">{{ tour.duration }} days, {{ tour.destination[0].displayName }}</div>
+        <div class="category-icons finder-tourtype-container">
+            <div class="category-icon finder-tourtype absolute-center-container" ng-repeat="tourType in tour.tourTypes">
+                <img class="finder-tourtype-icon" ng-src="{{ tourType.icon.link }}" />
+                <div class="finder-tourtype-name">{{ tourType.displayName }}</div>
+            </div>
+        </div>
+        <div class="card-button">
+            <div class="btn btn-primary">{{ i18n['tour.view'] }}</div>
+        </div>
+    </div>
+</a>

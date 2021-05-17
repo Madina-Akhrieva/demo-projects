@@ -33,6 +33,7 @@
     <module>community/magnolia-travel-demo-parent</module>
     <module>community/magnolia-travel-demo</module>
     <module>community/magnolia-travel-tours</module>
+    <module>enterprise/magnolia-travel-tours-enterprise</module>
     <module>enterprise/magnolia-travel-demo-enterprise-parent</module>
     <module>enterprise/magnolia-travel-demo-marketing-tags</module>
     <module>enterprise/magnolia-travel-demo-personalization</module>

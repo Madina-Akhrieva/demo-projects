@@ -1,0 +1,36 @@
+<div class="finder-filter">
+    <div class="finder-filter-header">
+        <span>{{ i18n['tourFinder.filter.duration'] }}</span>
+    </div>
+    <div class="form-group">
+        <div class="checkbox" ng-repeat="duration in durations" ng-cloak>
+            <label>
+                <input type="checkbox" value="{{ duration.value }}" ng-model="useDurations[duration.value]" />{{ i18n[duration.name] }}
+            </label>
+        </div>
+    </div>
+</div>
+<div class="finder-filter">
+    <div class="finder-filter-header">
+        <span>{{ i18n['tourFinder.filter.destination'] }}</span>
+    </div>
+    <div class="form-group">
+        <div class="checkbox" ng-repeat="destination in destinations" ng-cloak>
+            <label>
+                <input type="checkbox" value="{{ destination.id }}" ng-model="useDestinations[destination.id]" />{{ destination.displayName }}
+            </label>
+        </div>
+    </div>
+</div>
+<div class="finder-filter">
+    <div class="finder-filter-header">
+        <span>{{ i18n['tourFinder.filter.type'] }}</span>
+    </div>
+    <div class="form-group">
+        <div class="checkbox" ng-repeat="tourType in tourTypes" ng-cloak>
+            <label>
+                <input type="checkbox" value="{{ tourType.id }}" ng-model="useTourTypes[tourType.id]" />{{ tourType.displayName }}
+            </label>
+        </div>
+    </div>
+</div>

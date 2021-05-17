@@ -1,0 +1,8 @@
+query tourCategoryByPath($path: String!) {
+  tourCategories(path: $path) {
+    displayName
+    _metadata {
+      id
+    }
+  }
+}

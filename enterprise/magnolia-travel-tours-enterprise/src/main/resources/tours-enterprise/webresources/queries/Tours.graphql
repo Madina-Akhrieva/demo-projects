@@ -1,0 +1,26 @@
+query FilterTours($filter: String!) {
+    tours(filter: $filter, limit: 50) {
+        name
+        image {
+            name
+            renditions(renditionNames:["960x720"]) {
+                link
+                renditionName
+            }
+        }
+        tourTypes {
+            displayName
+            icon {
+                link
+            }
+        }
+        destination {
+            displayName
+        }
+        duration
+        _metadata {
+          path
+        }
+    }
+}
+

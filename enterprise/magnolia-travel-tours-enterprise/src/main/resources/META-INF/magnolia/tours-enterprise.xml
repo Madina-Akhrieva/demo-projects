@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module SYSTEM "module.dtd" >
+<module>
+  <name>tours-enterprise</name>
+  <displayName>${project.name}</displayName>
+  <description>${project.description}</description>
+  <version>${project.version}</version>
+
+  <dependencies>
+    <dependency>
+      <name>tours</name>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <name>graphql-core</name>
+      <version>1.0/*</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <name>graphql-jcr</name>
+      <version>1.0/*</version>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+</module>

@@ -1,116 +1,153 @@
 form:
-  tabs:
-    - name: tabCookieConsent
-      fields:
-        - name: complianceType
-          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
-          required: true
-          sortOptions: false
-          options:
-            - name: info
-              value: info
-              selected: true
-            - name: opt-out
-              value: opt-out
-            - name: opt-in
-              value: opt-in
-        - name: header
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          defaultValue: Cookies are used on this website!
-        - name: message
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          defaultValue: This website uses cookies to ensure you get the best experience on our website.
-        - name: dismiss
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          defaultValue: Got it!
-        - name: allow
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          defaultValue: Allow cookies
-        - name: deny
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          defaultValue: Decline cookies
-        - name: link
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          defaultValue: Learn more ...
-        - name: readMoreLink
-          class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+  properties:
+    - name: complianceType
+      $type: comboBoxField
+      required: true
+      defaultValue: info
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: info
+            value: info
+          - name: opt-out
+            value: opt-out
+          - name: opt-in
+            value: opt-in
+    - name: header
+      $type: textField
+      defaultValue: Cookies are used on this website!
+    - name: message
+      $type: textField
+      defaultValue: This website uses cookies to ensure you get the best experience on our website.
+    - name: dismiss
+      $type: textField
+      defaultValue: Got it!
+    - name: allow
+      $type: textField
+      defaultValue: Allow cookies
+    - name: deny
+      $type: textField
+      defaultValue: Decline cookies
+    - name: link
+      $type: textField
+      defaultValue: Learn more ...
+    - name: readMoreLink
+      $type: switchableField
+      propertyNameDecorator: info.magnolia.ui.field.PrefixNameDecorator
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        name: readMoreLink
+        $type: radioButtonGroupField
+        layout: vertical
+        defaultValue: external
+        datasource:
+          $type: optionListDatasource
           options:
             - name: none
               value: none
             - name: external
               value: external
-              selected: true
             - name: internal
               value: internal
-          fields:
-            - name: external
-              class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+      forms:
+        - name: external
+          properties:
+            external:
+              $type: textField
               defaultValue: https://cookiesandyou.com/
-            - name: internal
-              class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
-              targetWorkspace: website
-              appName: pages
-              identifierToPathConverter:
-                class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
-    - name: tabCookieConsentVisuals
-      fields:
-        - name: position
-          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
-          sortOptions: false
-          options:
-            - name: bottom
-              value: bottom
-              selected: true
-            - name: top
-              value: top
-            - name: left
-              value: left
-            - name: right
-              value: right
-        - name: layout
-          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
-          sortOptions: false
-          options:
-            - name: block
-              value: block
-              selected: true
-            - name: classic
-              value: classic
-            - name: edgeless
-              value: edgeless
-            - name: wire
-              value: wire
-        - name: palette
-          class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
-          transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
-          layout: vertical
-          fields:
-            - name: banner
-              class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
-              fields:
-                - name: backgroud
-                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-                  defaultValue: '#000'
-                - name: text
-                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-                - name: link
-                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-            - name: button
-              class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
-              fields:
-                - name: backgroud
-                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-                  defaultValue: '#f1d600'
-                - name: border
-                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-                - name: text
-                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-            - name: highlight
-              class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
-              fields:
-                - name: backgroud
-                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-                - name: border
-                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-                - name: text
-                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+        - name: internal
+          properties:
+            internal:
+              $type: linkField
+    - name: position
+      $type: comboBoxField
+      defaultValue: bottom
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: bottom
+            value: bottom
+          - name: top
+            value: top
+          - name: left
+            value: left
+          - name: right
+            value: right
+    - name: layout
+      $type: comboBoxField
+      defaultValue: block
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: block
+            value: block
+          - name: classic
+            value: classic
+          - name: edgeless
+            value: edgeless
+          - name: wire
+            value: wire
+    - name: palette
+      $type: compositeField
+      propertyNameDecorator: info.magnolia.ui.field.PrefixNameDecorator
+      itemProvider:
+        $type: currentItemProvider
+      properties:
+      - name: banner
+        $type: compositeField
+        propertyNameDecorator: info.magnolia.ui.field.PrefixNameDecorator
+        itemProvider:
+          $type: currentItemProvider
+        properties:
+          - name: background
+            $type: textField
+            defaultValue: '#000'
+          - name: text
+            $type: textField
+          - name: link
+            $type: textField
+      - name: button
+        $type: compositeField
+        propertyNameDecorator: info.magnolia.ui.field.PrefixNameDecorator
+        itemProvider:
+          $type: currentItemProvider
+        properties:
+          - name: background
+            $type: textField
+            defaultValue: '#f1d600'
+          - name: border
+            $type: textField
+          - name: text
+            $type: textField
+      - name: highlight
+        $type: compositeField
+        itemProvider:
+          $type: currentItemProvider
+        properties:
+          - name: background
+            $type: textField
+            defaultValue: '#000'
+          - name: border
+            $type: textField
+          - name: text
+            $type: textField
+
+  layout:
+    $type: tabbedLayout
+    tabs:
+      - name: tabCookieConsent
+        fields:
+          - name: complianceType
+          - name: header
+          - name: message
+          - name: dismiss
+          - name: allow
+          - name: deny
+          - name: link
+          - name: readMoreLink
+      - name: tabCookieConsentVisuals
+        fields:
+          - name: position
+          - name: layout
+          - name: palette

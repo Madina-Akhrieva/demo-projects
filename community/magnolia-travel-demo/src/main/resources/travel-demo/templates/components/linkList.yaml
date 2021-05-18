@@ -1,5 +1,5 @@
 templateScript: /mtk/templates/components/linkList.ftl
-dialog: mtk:components/linkList
+dialog: mtk2:components/linkList
 
 renderType: freemarker
 areas:

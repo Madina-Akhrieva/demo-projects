@@ -44,12 +44,16 @@
       <version>${magnoliaUiVersion}/*</version>
     </dependency>
     <dependency>
-      <name>dam</name>
+      <name>dam-app-core</name>
       <version>${magnoliaDamVersion}/*</version>
     </dependency>
     <dependency>
-      <name>categorization</name>
-      <version>2.4/*</version>
+      <name>pages-app</name>
+      <version>${magnoliaPagesVersion}/*</version>
+    </dependency>
+    <dependency>
+      <name>categories-app</name>
+      <version>2.8/*</version>
     </dependency>
     <dependency>
       <name>site</name>
@@ -61,7 +65,7 @@
       <optional>true</optional>
     </dependency>
     <dependency>
-      <name>mtk</name>
+      <name>mtk2</name>
       <version>${mteVersion}/*</version>
     </dependency>
   </dependencies>

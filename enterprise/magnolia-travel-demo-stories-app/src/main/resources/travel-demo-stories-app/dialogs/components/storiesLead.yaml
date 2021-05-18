@@ -1,15 +1,7 @@
 form:
-  tabs:
-    storiesFolderTab:
-      fields:
-        storiesFolder:
-          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
-          targetWorkspace: stories
-          appName: stories
-          identifierToPathConverter:
-            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
-actions:
-  commit:
-    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
-  cancel:
-    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+  properties:
+    storiesFolder:
+      $type: linkField
+      datasource:
+        $type: jcrDatasource
+        workspace: stories

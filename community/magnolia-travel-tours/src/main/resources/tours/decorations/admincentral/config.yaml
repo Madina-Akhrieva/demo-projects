@@ -1,0 +1,6 @@
+appLauncherLayout:
+  groups:
+    edit:
+      apps:
+        - name: tours
+        - name: tourCategories

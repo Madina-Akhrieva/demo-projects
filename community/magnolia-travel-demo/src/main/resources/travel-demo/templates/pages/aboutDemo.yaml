@@ -19,14 +19,14 @@ areas:
       cssClass: container
     availableComponents:
       textImage:
-        id: mtk:components/textImage
+        id: mtk2:components/textImage
       jumbotron:
         id: travel-demo:components/jumbotron
       linkList:
         id: travel-demo:components/linkList
       teaser:
-        id: mtk:components/teaser
+        id: mtk2:components/teaser
       html:
-        id: mtk:components/html
+        id: mtk2:components/html
   footer:
     editable: false

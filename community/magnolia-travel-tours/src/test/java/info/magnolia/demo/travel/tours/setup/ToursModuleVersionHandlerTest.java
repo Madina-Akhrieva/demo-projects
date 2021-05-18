@@ -35,8 +35,8 @@ package info.magnolia.demo.travel.tours.setup;
 
 import static info.magnolia.test.hamcrest.NodeMatchers.*;
 import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
-import static org.junit.Assert.assertThat;
 
 import info.magnolia.context.MgnlContext;
 import info.magnolia.jcr.util.NodeTypes;
@@ -47,10 +47,6 @@ import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
 import info.magnolia.repository.RepositoryConstants;
-import info.magnolia.ui.contentapp.ConfiguredContentAppDescriptor;
-import info.magnolia.ui.contentapp.contenttypes.ConfiguredContentTypeAppDescriptor;
-import info.magnolia.ui.framework.action.ExportActionDefinition;
-import info.magnolia.ui.framework.action.OpenExportDialogActionDefinition;
 import info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping;
 
 import java.util.Arrays;
@@ -60,7 +56,6 @@ import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
-import org.hamcrest.MatcherAssert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -114,20 +109,8 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
         damSession = MgnlContext.getJCRSession("dam");
 
         addSupportForSetupModuleRepositoriesTask(null);
-    }
 
-    @Test
-    public void demoRolesCanAccessTourCategoriesApp() throws Exception {
-        // GIVEN
-        setupBootstrapPages();
-        setupConfigNode("/modules/tours/apps/tourCategories/permissions/roles");
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.7"));
-
-        // THEN
-        assertThat(configSession.getNode("/modules/tours/apps/tourCategories/permissions/roles"), hasProperty("travel-demo-editor", "travel-demo-editor"));
-        assertThat(configSession.getNode("/modules/tours/apps/tourCategories/permissions/roles"), hasProperty("travel-demo-publisher", "travel-demo-publisher"));
+        setupConfigNode("/modules/tours/apps");
     }
 
     @Test
@@ -239,23 +222,6 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void updateFrom113ReconfiguresExportAction() throws Exception {
-        //GIVEN
-        Node exportActionNode = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours/apps/tours/subApps/browser/actions/export", NodeTypes.ContentNode.NAME, true);
-        exportActionNode.setProperty("class", ExportActionDefinition.class.getName());
-        exportActionNode.setProperty("command", "export");
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.3"));
-
-        // THEN
-        exportActionNode = configSession.getNode("/modules/tours/apps/tours/subApps/browser/actions/export");
-        assertThat(exportActionNode, hasProperty("class", OpenExportDialogActionDefinition.class.getName()));
-        assertThat(exportActionNode, hasProperty("dialogName", "ui-admincentral:export"));
-        assertThat(exportActionNode, not(hasProperty("command")));
-    }
-
-    @Test
     public void updateFrom114ReinstallsUriMappings() throws Exception {
         // GIVEN
         Node toursModule = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours", NodeTypes.Content.NAME, true);
@@ -272,22 +238,6 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
                 hasProperty("class", RegexpVirtualUriMapping.class.getName()),
                 hasProperty("fromUri", "^/tours(.*).html"),
                 hasProperty("toUri", "forward:/travel/tour?tour=$1"))));
-    }
-
-    @Test
-    public void updateFrom121() throws Exception {
-        // GIVEN
-        Node tourTypes = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours/apps/tours/subApps/detail/editor/form/tabs/tour/fields/tourTypes", NodeTypes.Content.NAME, true);
-        tourTypes.setProperty("i18nBasename", "info.magnolia.module.travel-tours.messages");
-        Node destination = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours/apps/tours/subApps/detail/editor/form/tabs/tour/fields/destination", NodeTypes.Content.NAME, true);
-        destination.setProperty("i18nBasename", "info.magnolia.module.travel-tours.messages");
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2.1"));
-
-        //THEN
-        assertThat(tourTypes, not(hasProperty("i18nBasename")));
-        assertThat(destination, not(hasProperty("i18nBasename")));
     }
 
     @Test
@@ -342,22 +292,19 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void updateFrom14AndCheckContentTypeSupport() throws Exception {
+    public void updateFrom153() throws Exception {
         // GIVEN
-        Node node = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours/apps/tours", NodeTypes.ContentNode.NAME);
-        node.setProperty("class", ConfiguredContentAppDescriptor.class.getName());
-
-        Node nodeCategories = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours/apps/tourCategories", NodeTypes.ContentNode.NAME);
-        nodeCategories.setProperty("class", ConfiguredContentAppDescriptor.class.getName());
+        NodeUtil.createPath(configSession.getRootNode(), "modules/tours/apps", NodeTypes.Folder.NAME);
 
         // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.4"));
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.5.3"));
 
         // THEN
-        MatcherAssert.assertThat(node, hasProperty("class", ConfiguredContentTypeAppDescriptor.class.getName()));
-        MatcherAssert.assertThat(node, hasProperty("contentType", "tour"));
-        MatcherAssert.assertThat(nodeCategories, hasProperty("class", ConfiguredContentTypeAppDescriptor.class.getName()));
-        MatcherAssert.assertThat(nodeCategories, hasProperty("contentType", "tourCategory"));
+        assertThat(configSession.getRootNode(), allOf(
+                not(hasNode("modules/tours/apps")),
+                not(hasNode("modules/ui-admincentral/config/appLauncherLayout/groups/edit/apps/")),
+                not(hasNode("modules/tours/apps"))
+        ));
     }
 
     private void setupBootstrapPages() throws RepositoryException {

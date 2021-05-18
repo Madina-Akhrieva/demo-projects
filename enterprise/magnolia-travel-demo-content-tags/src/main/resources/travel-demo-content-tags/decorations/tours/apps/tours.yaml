@@ -1,0 +1,25 @@
+subApps:
+  browser:
+    workbench:
+      contentViews:
+        list:
+          columns:
+            mgnl:tags: &tags
+              $type: columnComponent
+              type: java.util.Collection
+              width: 160
+              editor:
+                field:
+                  $type: tokenField
+                  comboBox:
+                    datasource:
+                      $type: jcrDatasource
+                      workspace: tags
+        tree:
+          columns:
+            mgnl:tags: *tags
+  detail:
+    form:
+      properties:
+        mgnl:tags:
+          class: info.magnolia.contenttags.ui.field.TagsFieldDefinition

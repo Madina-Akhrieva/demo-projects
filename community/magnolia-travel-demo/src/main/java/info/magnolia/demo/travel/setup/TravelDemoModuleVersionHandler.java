@@ -57,6 +57,7 @@ import info.magnolia.module.delta.ValueOfPropertyDelegateTask;
 import info.magnolia.module.delta.WarnTask;
 import info.magnolia.module.site.setup.DefaultSiteExistsDelegateTask;
 import info.magnolia.repository.RepositoryConstants;
+import info.magnolia.templating.models.setup.MigrateTemplatesToMTK2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -155,6 +156,9 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
                         new RemovePropertyTask("Remove JSP configuration", "", RepositoryConstants.CONFIG, "/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType", "jsp"),
                         new SetPropertyTask("Add SPA configuration", RepositoryConstants.CONFIG, "/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType", "spa", "spa")
                 )))
+        );
+        register(DeltaBuilder.update("1.5.4", "")
+                .addTask(new MigrateTemplatesToMTK2("/travel"))
         );
     }
 

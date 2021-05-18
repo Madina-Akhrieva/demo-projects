@@ -35,9 +35,11 @@ package info.magnolia.demo.travel.setup;
 
 import static info.magnolia.demo.travel.setup.SetupDemoRolesAndGroupsTask.*;
 import static info.magnolia.demo.travel.setup.SetupRoleBasedAccessPermissionsTask.*;
-import static info.magnolia.test.hamcrest.NodeMatchers.*;
 import static info.magnolia.test.hamcrest.NodeMatchers.hasProperty;
-import static org.hamcrest.CoreMatchers.*;
+import static info.magnolia.test.hamcrest.NodeMatchers.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.collection.IsIn.isIn;
@@ -232,7 +234,6 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
 
         this.checkPurSamplesAreInstalled(session.getNode("/server/filters/securityCallback/clientCallbacks"));
         this.checkIfEverythingIsActivated();
-        this.assertNoMessages(ctx);
     }
 
     @Test
@@ -245,7 +246,6 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         // THEN
         assertThat(website.getRootNode(), hasNode("travel/book-tour"));
         this.checkIfEverythingIsActivated();
-        this.assertNoMessages(ctx);
     }
 
     @Test
@@ -259,7 +259,6 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         // THEN
         assertThat(session.getRootNode(), not(hasNode("modules/site/config/themes/travel-demo-theme")));
         this.checkIfEverythingIsActivated();
-        this.assertNoMessages(ctx);
     }
 
     @Test
@@ -272,7 +271,6 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.5"));
 
         // THEN
-        this.assertNoMessages(ctx);
     }
 
     @Test
@@ -286,7 +284,6 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
 
         // THEN
         assertThat(configurations, not(hasNode("travel")));
-        this.assertNoMessages(ctx);
     }
 
     @Test
@@ -315,7 +312,6 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
 
         this.checkPurSamplesAreInstalled(session.getNode("/server/filters/securityCallback/clientCallbacks"));
         this.checkIfEverythingIsActivated();
-        this.assertNoMessages(ctx);
     }
 
     @Test

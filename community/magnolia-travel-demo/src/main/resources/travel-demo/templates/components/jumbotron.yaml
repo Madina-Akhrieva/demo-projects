@@ -1,5 +1,5 @@
 templateScript: /mtk/templates/components/textImage.ftl
-dialog: mtk:components/textImage
+dialog: mtk2:components/textImage
 
 renderType: freemarker
 parameters:

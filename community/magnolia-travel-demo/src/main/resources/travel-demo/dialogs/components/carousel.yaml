@@ -1,46 +1,42 @@
 form:
-  tabs:
-    - name: tabMain
-      fields:
-        - name: id
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          type: String
-        - name: dots
-          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
-          type: String
-          defaultValue: true
-        - name: arrows
-          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
-          type: String
-          defaultValue: true
-        - name: fade
-          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
-          type: String
-          defaultValue: false
-        - name: variableWidth
-          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
-          type: String
-          defaultValue: false
-        - name: slidesToShow
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          type: String
-          defaultValue: 1
-        - name: autoplay
-          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
-          type: String
-          defaultValue: false
-        - name: autoplaySeconds
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          type: String
-          defaultValue: 5
-    - name: tabAdvanced
-      fields:
-        - name: slickConfig
-          class: info.magnolia.ui.form.field.definition.CodeFieldDefinition
-          language: json
-
-actions:
-  commit:
-    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
-  cancel:
-    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+  properties:
+    id:
+      $type: textField
+    dots:
+      $type: checkBoxField
+      defaultValue: true
+    fade:
+      $type: checkBoxField
+    variableWidth:
+      $type: checkBoxField
+    arrows:
+      $type: checkBoxField
+      defaultValue: true
+    slidesToShow:
+      $type: textField
+      defaultValue: '1'
+    autoplay:
+      $type: checkBoxField
+      defaultValue: true
+    autoplaySeconds:
+      $type: textField
+      defaultValue: '5'
+    slickConfig:
+      $type: codeField
+      language: json
+  layout:
+    $type: tabbedLayout
+    tabs:
+      tabMain:
+        fields:
+          - name: id
+          - name: dots
+          - name: arrows
+          - name: fade
+          - name: variableWidth
+          - name: slidesToShow
+          - name: autoplay
+          - name: autoplaySeconds
+      tabAdvanced:
+        fields:
+          - name: slickConfig

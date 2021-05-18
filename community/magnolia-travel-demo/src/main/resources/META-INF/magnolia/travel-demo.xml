@@ -37,7 +37,7 @@
       <version>${mteVersion}/*</version>
     </dependency>
     <dependency>
-      <name>mtk</name>
+      <name>mtk2</name>
       <version>${mteVersion}/*</version>
     </dependency>
     <dependency>

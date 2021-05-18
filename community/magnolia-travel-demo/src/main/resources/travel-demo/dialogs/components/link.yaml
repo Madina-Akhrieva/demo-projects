@@ -1,24 +1,15 @@
+!inherit:mtk2:components/link
 form:
-  tabs:
-    - name: tabLink
-      fields:
-        - !include /mtk/includes/linkSwitchableField.yaml
-        - name: title
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          i18n: true
-    - name: tabImage
-      fields:
-        - name: image
-          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
-          targetWorkspace: dam
-          appName: assets
-          identifierToPathConverter:
-            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
-          contentPreviewDefinition:
-            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
-
-actions:
-  commit:
-    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
-  cancel:
-    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+  properties:
+    image:
+      $type: damLinkField
+  layout:
+    $type: tabbedLayout
+    tabs:
+      tabMain:
+        fields:
+          - name: linkType
+          - name: title
+      tabImage:
+        fields:
+          - name: image

@@ -20,11 +20,23 @@
       <groupId>info.magnolia.dx</groupId>
       <artifactId>magnolia-dx-core-webapp</artifactId>
       <type>war</type>
+      <exclusions>
+        <exclusion>
+          <groupId>info.magnolia.templating</groupId>
+          <artifactId>magnolia-templating-kit</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>info.magnolia.dx</groupId>
       <artifactId>magnolia-dx-core-webapp</artifactId>
       <type>pom</type>
+      <exclusions>
+        <exclusion>
+          <groupId>info.magnolia.templating</groupId>
+          <artifactId>magnolia-templating-kit</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- Version managed in ui-project (which is indirectly imported) -->

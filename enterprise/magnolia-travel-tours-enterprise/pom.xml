@@ -4,12 +4,12 @@
   <parent>
     <groupId>info.magnolia.eedemo</groupId>
     <artifactId>magnolia-travel-demo-enterprise-parent</artifactId>
-    <version>1.5.4-SNAPSHOT</version>
+    <version>1.5.4</version>
     <relativePath>../magnolia-travel-demo-enterprise-parent/pom.xml</relativePath>
   </parent>
   <artifactId>magnolia-travel-tours-enterprise</artifactId>
   <packaging>jar</packaging>
-  <version>1.5.4-SNAPSHOT</version>
+  <version>1.5.4</version>
   <name>Magnolia Travel Tours Enterprise Module</name>
   <description>Magnolia module showcasing a travel-tours website. Especially, this supports graphQL implementation</description>
 

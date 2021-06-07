@@ -1,0 +1,32 @@
+!inherit:categories-app
+subApps:
+  browser:
+    workbench:
+      contentViews:
+        - name: tree
+          columns:
+            jcrName:
+              editable: false
+    actions:
+      editCategory:
+        appName: tourCategories
+      addCategory:
+        appName: tourCategories
+      copy: !override
+      paste: !override
+  detail:
+    form:
+      properties:
+        description:
+          $type: textField
+          i18n: true
+          rows: 4
+        image:
+          $type: damLinkField
+        icon:
+          $type: damLinkField
+        body:
+          $type: textField
+          i18n: true
+          rows: 10
+

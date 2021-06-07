@@ -17,9 +17,9 @@ areas:
       carousel:
         id: travel-demo:components/carousel
       video:
-        id: mtk:components/video
+        id: mtk2:components/video
       html:
-        id: mtk:components/html
+        id: mtk2:components/html
       form:
         id: form:components/form
   column2: *column1

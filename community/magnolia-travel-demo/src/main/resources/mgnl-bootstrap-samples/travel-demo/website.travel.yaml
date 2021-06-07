@@ -469,7 +469,7 @@
             mgnl:lastActivatedBy: 'superuser'
             mgnl:lastModified: 2015-10-27T13:48:35.936+01:00
             mgnl:lastModifiedBy: 'superuser'
-            mgnl:template: 'mtk:components/video'
+            mgnl:template: 'mtk2:components/video'
         'column2': 
           jcr:primaryType: 'mgnl:area'
           jcr:uuid: 'dc699052-c8b4-4981-a421-511948269653'
@@ -2452,7 +2452,7 @@
           mgnl:lastActivatedBy: 'superuser'
           mgnl:lastModified: 2015-06-25T16:41:09.296+02:00
           mgnl:lastModifiedBy: 'superuser'
-          mgnl:template: 'mtk:components/html'
+          mgnl:template: 'mtk2:components/html'
       'footer': 
         jcr:primaryType: 'mgnl:area'
         jcr:uuid: 'e8b54055-21c1-4d29-b228-b489b2f9ec5e'

@@ -28,13 +28,13 @@ areas:
       carousel:
         id: travel-demo:components/carousel
       video:
-        id: mtk:components/video
+        id: mtk2:components/video
       social:
         id: travel-demo:components/social
       columnLayout:
         id: travel-demo:components/columnLayout
       html:
-        id: mtk:components/html
+        id: mtk2:components/html
       form:
         id: travel-demo:components/form
       formStep:

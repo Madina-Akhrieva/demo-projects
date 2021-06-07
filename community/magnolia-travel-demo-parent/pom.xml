@@ -4,12 +4,12 @@
   <parent>
     <groupId>info.magnolia.maven.poms</groupId>
     <artifactId>magnolia-parent-pom-community</artifactId>
-    <version>41</version>
+    <version>42-SNAPSHOT</version>
   </parent>
   <groupId>info.magnolia.demo</groupId>
   <artifactId>magnolia-travel-demo-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.5.5-SNAPSHOT</version>
+  <version>1.6-SNAPSHOT</version>
   <name>Magnolia Travel Demo (parent pom)</name>
   <inceptionYear>2015</inceptionYear>
   <description>Magnolia Travel is a demo project showing best practices when working with Magnolia.</description>
@@ -19,9 +19,10 @@
     <magnoliaVersion>6.2.4</magnoliaVersion>
     <magnoliaUiVersion>6.2.4</magnoliaUiVersion>
     <magnoliaDamVersion>3.0</magnoliaDamVersion>
+    <magnoliaPagesVersion>6.2</magnoliaPagesVersion>
     <siteVersion>1.4</siteVersion>
     <resourcesVersion>3.0</resourcesVersion>
-    <mteVersion>1.2.1</mteVersion>
+    <mteVersion>2.0-SNAPSHOT</mteVersion>
   </properties>
 
   <scm>
@@ -114,7 +115,7 @@
       </dependency>
       <dependency>
         <groupId>info.magnolia.templating</groupId>
-        <artifactId>magnolia-templating-kit</artifactId>
+        <artifactId>magnolia-templating-kit-2</artifactId>
         <version>${mteVersion}</version>
       </dependency>
 
@@ -122,6 +123,19 @@
         <groupId>info.magnolia.form</groupId>
         <artifactId>magnolia-form</artifactId>
         <version>2.4</version>
+      </dependency>
+      <dependency>
+        <groupId>info.magnolia.templating</groupId>
+        <artifactId>magnolia-templating-kit-2</artifactId>
+        <type>test-jar</type>
+        <scope>test</scope>
+        <version>2.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>info.magnolia.dam</groupId>
+        <artifactId>magnolia-dam-app</artifactId>
+        <scope>test</scope>
+        <version>${magnoliaDamVersion}</version>
       </dependency>
 
       <!-- This brings PUR to demo webapps -->

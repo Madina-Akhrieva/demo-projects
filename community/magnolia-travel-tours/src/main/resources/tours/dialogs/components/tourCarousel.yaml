@@ -1,27 +1,13 @@
 form:
-  tabs:
-    - name: tabMain
-      fields:
-        - name: tours
-          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
-          buttonSelectAddLabel: field.link.select.add
-          field:
-            class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
-            targetWorkspace: tours
-            appName: tours
-            identifierToPathConverter:
-              class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
-            fieldEditable: false
-            label: tours
-            buttonSelectNewLabel: field.link.select.new
-            buttonSelectOtherLabel: field.link.select.another
-        - name: showTourTypes
-          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
-          defaultValue: true
-          type: Boolean
-
-actions:
-  commit:
-    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
-  cancel:
-    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+  properties:
+    - name: tours
+      $type: jcrMultiValueField
+      field:
+        $type: linkField
+        editable: false
+        datasource:
+          $type: jcrDatasource
+          workspace: tours
+    - name: showTourTypes
+      $type: checkBoxField
+      defaultValue: true

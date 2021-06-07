@@ -4,12 +4,12 @@
   <parent>
     <groupId>info.magnolia.maven.poms-enterprise</groupId>
     <artifactId>magnolia-parent-pom-enterprise</artifactId>
-    <version>41</version>
+    <version>42-SNAPSHOT</version>
   </parent>
   <groupId>info.magnolia.eedemo</groupId>
   <artifactId>magnolia-travel-demo-enterprise-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.5.5-SNAPSHOT</version>
+  <version>1.6-SNAPSHOT</version>
   <name>Magnolia Travel Demo Enterprise (parent pom)</name>
   <inceptionYear>2015</inceptionYear>
   <description>Magnolia Travel is a demo project showing best practices when working with Magnolia Enterprise.</description>
@@ -28,6 +28,8 @@
     <storiesAppVersion>1.0.6</storiesAppVersion>
     <javascriptModelsVersion>1.0</javascriptModelsVersion>
     <magnoliaDamVersion>3.0</magnoliaDamVersion>
+    <magnoliaVersion>6.2.8</magnoliaVersion>
+    <magnoliaUiVersion>6.2.8</magnoliaUiVersion>
   </properties>
 
   <scm>
@@ -51,6 +53,24 @@
         <groupId>info.magnolia.demo</groupId>
         <artifactId>magnolia-travel-demo-parent</artifactId>
         <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- Import dependency management section from ui -->
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-project</artifactId>
+        <version>${magnoliaVersion}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- Import dependency management section from ui -->
+      <dependency>
+        <groupId>info.magnolia.ui</groupId>
+        <artifactId>magnolia-ui-project</artifactId>
+        <version>${magnoliaUiVersion}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -135,6 +155,13 @@
         <groupId>info.magnolia.dam</groupId>
         <artifactId>magnolia-dam-jcr</artifactId>
         <version>${magnoliaDamVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>info.magnolia.templating</groupId>
+        <artifactId>magnolia-templating-kit-2</artifactId>
+        <type>test-jar</type>
+        <scope>test</scope>
+        <version>2.0-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

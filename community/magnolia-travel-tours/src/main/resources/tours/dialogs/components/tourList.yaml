@@ -1,12 +1,4 @@
 form:
-  tabs:
-    - name: tabMain
-      fields:
-        - name: title
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-
-actions:
-  commit:
-    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
-  cancel:
-    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+  properties:
+    title:
+      $type: textField

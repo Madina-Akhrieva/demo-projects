@@ -1,61 +1,64 @@
 form:
-  tabs:
-    - name: tabMain
-      fields:
-        - name: size
-          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
-          options:
-            - name: 16
-              value: 16
-            - name: 24
-              value: 24
-            - name: 32
-              value: 32
-              selected: true
-            - name: 48
-              value: 48
-        - name: floating
-          class: info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition
-          sortOptions: false
-          options: &yesno # named reference for these yes/no options
-            - name: yes
-              value: true
-            - name: no
-              selected: true
-              value: false
-        - name: vertical
-          class: info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition
-          sortOptions: false
-          options: *yesno # reference to above yes/no option
-        - name: rounded
-          class: info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition
-          sortOptions: false
-          options: *yesno # reference to above yes/no option
-        - name: services
-          class: info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition
-          multiselect: true
-          options:
-            - name: facebook
-              label: Facebook
-              selected: true
-            - name: twitter
-              label: Twitter
-              selected: true
-            - name: google_plus
-              label: Google+
-              selected: true
-            - name: pinterest
-              label: Pinterest
-            - name: linkedin
-              label: LinkedIn
-            - name: email
-              label: Email
-            - name: reddit
-              label: Reddit
-            - name: stumbleupon
-              label: StumbleUpon
-actions:
-  commit:
-    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
-  cancel:
-    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+  properties:
+    - name: size
+      $type: comboBoxField
+      defaultValue: 32
+      datasource:
+        $type: optionListDatasource
+        options:
+        - name: 16
+          value: 16
+        - name: 24
+          value: 24
+        - name: 32
+          value: 32
+        - name: 48
+          value: 48
+    - name: floating
+      $type: radioButtonGroupField
+      defaultValue: true
+      datasource: &yesno # named reference for these yes/no options
+        $type: optionListDatasource
+        options:
+          - name: yes
+            value: true
+          - name: no
+            value: false
+    - name: vertical
+      $type: radioButtonGroupField
+      defaultValue: true
+      datasource: *yesno # reference to above yes/no option
+    - name: rounded
+      $type: radioButtonGroupField
+      defaultValue: true
+      datasource: *yesno # reference to above yes/no option
+    - name: services
+      $type: checkBoxGroupField
+      defaultValue: [facebook, twitter, google_plus]
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: facebook
+            label: Facebook
+            value: facebook
+          - name: twitter
+            label: Twitter
+            value: twitter
+          - name: google_plus
+            label: Google+
+            value: google_plus
+          - name: pinterest
+            label: Pinterest
+            value: pinterest
+          - name: linkedin
+            label: LinkedIn
+            value: linkedin
+          - name: email
+            label: Email
+            value: email
+          - name: reddit
+            label: Reddit
+            value: reddit
+          - name: stumbleupon
+            label: StumbleUpon
+            value: stumbleupon

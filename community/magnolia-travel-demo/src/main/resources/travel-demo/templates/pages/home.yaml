@@ -15,7 +15,7 @@ areas:
     type: list
     availableComponents:
       textImage:
-        id: mtk:components/textImage
+        id: mtk2:components/textImage
       teaser:
         id: travel-demo:components/teaser
       columnLayout:

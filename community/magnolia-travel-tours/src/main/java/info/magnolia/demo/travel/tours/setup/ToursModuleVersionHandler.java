@@ -45,7 +45,6 @@ import info.magnolia.module.DefaultModuleVersionHandler;
 import info.magnolia.module.InstallContext;
 import info.magnolia.module.delta.AddRoleToUserTask;
 import info.magnolia.module.delta.ArrayDelegateTask;
-import info.magnolia.module.delta.BootstrapSingleModuleResource;
 import info.magnolia.module.delta.BootstrapSingleResource;
 import info.magnolia.module.delta.BootstrapSingleResourceAndOrderAfter;
 import info.magnolia.module.delta.CheckAndModifyPropertyValueTask;
@@ -56,6 +55,7 @@ import info.magnolia.module.delta.IsModuleInstalledOrRegistered;
 import info.magnolia.module.delta.NodeExistsDelegateTask;
 import info.magnolia.module.delta.OrderNodeBeforeTask;
 import info.magnolia.module.delta.RemoveNodeTask;
+import info.magnolia.module.delta.RemoveNodesTask;
 import info.magnolia.module.delta.RemovePropertiesTask;
 import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.module.delta.Task;
@@ -66,6 +66,7 @@ import info.magnolia.ui.contentapp.ConfiguredContentAppDescriptor;
 import info.magnolia.ui.contentapp.contenttypes.ConfiguredContentTypeAppDescriptor;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.common.collect.Lists;
@@ -96,8 +97,6 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                                 new FolderBootstrapTask("/mgnl-bootstrap-samples/tours/assets/"),
                                 new NodeExistsDelegateTask("", "", WEBSITE, "/travel/about/careers/main/06",
                                         new OrderNodeBeforeTask("Order careers 05 node before 06", "", WEBSITE, "/travel/about/careers/main/05", "06")))))
-                .addTask(new BootstrapSingleModuleResource("config.modules.tours.apps.tourCategories.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
-                .addTask(new BootstrapSingleModuleResource("config.modules.tours.apps.tours.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new IsModuleInstalledOrRegistered("Enable travel site in multisite configuration", "multisite",
                         new NodeExistsDelegateTask("Check whether multisite can be enabled for travel demo", "/modules/travel-demo/config/travel",
                                 new CopySiteToMultiSiteAndMakeItFallback(true))))
@@ -120,7 +119,6 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
         register(DeltaBuilder.update("1.2.3", "")
                 .addTask(new ValueOfPropertyDelegateTask("Re-Bootstrap virtual URI mapping for tours module.", "/modules/tours/virtualUriMappings/toursMapping", "class", "info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping", true,
                         new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "Re-Bootstrap virtual URI mapping to avoid collision with resource files.", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING)))
-                .addTask(new BootstrapSingleResource("Change type of duration field to number", "Re-bootstrap the duration field in tours editor.", "/mgnl-bootstrap/tours/config.modules.tours.apps.tours.xml", "tours/subApps/detail/editor/form/tabs/tour/fields/duration", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new BootstrapSingleResource("Re-bootstrap the tours workspace", "Re-bootstrap the tours workspace.", "/mgnl-bootstrap-samples/tours/tours.magnolia-travels.yaml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new ArrayDelegateTask("Bootstrap Tour Finder", "Extract files and modify the travel demo.",
                     new BootstrapSingleResource("", "","/mgnl-bootstrap-samples/tours/website/website.travel.tour-finder.yaml"),
@@ -143,6 +141,15 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                                 new CheckAndModifyPropertyValueTask("/modules/tours/apps/tourCategories", "class", ConfiguredContentAppDescriptor.class.getName(), ConfiguredContentTypeAppDescriptor.class.getName()),
                                 new SetPropertyTask(RepositoryConstants.CONFIG, "/modules/tours/apps/tourCategories", "contentType", "tourCategory")
                         )))
+        );
+
+        register(DeltaBuilder.update("1.5.4", "")
+                .addTask(new RemoveNodesTask("Remove JCR based configuration for apps in favour of new YAML base apps", CONFIG,
+                        Arrays.asList("/modules/tours/apps/",
+                                "/modules/ui-admincentral/config/appLauncherLayout/groups/edit/apps/tourCategories",
+                                "/modules/ui-admincentral/config/appLauncherLayout/groups/edit/apps/tours"
+                        ), false)
+                )
         );
     }
 

@@ -1,31 +1,18 @@
 form:
-  tabs:
-    - name: tabMain
-      fields:
-        - name: title
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          i18n: true
-        - name: body
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          rows: 8
-          i18n: true
-        - name: tourTypes
-          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
-          buttonSelectAddLabel: field.link.select.add
-          field:
-            class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
-            targetWorkspace: category
-            targetTreeRootPath: /tour-types
-            appName: categories
-            identifierToPathConverter:
-              class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
-            fieldEditable: false
-            label: tours
-            buttonSelectNewLabel: field.link.select.new
-            buttonSelectOtherLabel: field.link.select.another
-
-actions:
-  commit:
-    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
-  cancel:
-    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+  properties:
+    - name: title
+      $type: textField
+      i18n: true
+    - name: body
+      $type: textField
+      rows: 8
+      i18n: true
+    - name: tourTypes
+      $type: jcrMultiValueField
+      field:
+        $type: linkField
+        editable: false
+        datasource:
+          $type: jcrDatasource
+          workspace: category
+          rootPath: /tour-types

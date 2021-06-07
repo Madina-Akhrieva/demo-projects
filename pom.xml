@@ -4,12 +4,12 @@
   <parent>
     <groupId>info.magnolia.maven.poms</groupId>
     <artifactId>magnolia-parent-pom-community</artifactId>
-    <version>41</version>
+    <version>42-SNAPSHOT</version>
   </parent>
   <groupId>info.magnolia.demo</groupId>
   <artifactId>magnolia-demo-projects-reactor</artifactId>
   <packaging>pom</packaging>
-  <version>1.5.5-SNAPSHOT</version>
+  <version>1.6-SNAPSHOT</version>
   <name>Magnolia Demo Projects Reactor</name>
   <inceptionYear>2015</inceptionYear>
 

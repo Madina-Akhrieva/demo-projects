@@ -70,6 +70,10 @@
       <groupId>info.magnolia.eedemo</groupId>
       <artifactId>magnolia-travel-demo-stories-app</artifactId>
     </dependency>
+    <dependency>
+      <groupId>info.magnolia.eedemo</groupId>
+      <artifactId>magnolia-travel-tours-enterprise</artifactId>
+    </dependency>
 
     <dependency>
       <groupId>info.magnolia.privacy</groupId>
@@ -118,6 +122,19 @@
     <dependency>
       <groupId>info.magnolia.ai.text</groupId>
       <artifactId>magnolia-pages-content-tags-integration-compatibility</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.graphql</groupId>
+      <artifactId>magnolia-graphql-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.graphql</groupId>
+      <artifactId>magnolia-graphql-jcr</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.graphql</groupId>
+      <artifactId>magnolia-graphql-assets</artifactId>
     </dependency>
   </dependencies>
 

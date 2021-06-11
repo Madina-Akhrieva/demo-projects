@@ -63,7 +63,7 @@
 
 [#else]
 
-    <span class="${divClass!}"${divID}><a href="${link}"${linkTarget!}>
+    <span class="${divClass!}"${divID}><a href="${link!""}"${linkTarget!}>
         [#if hasImage]
             [#assign assetRendition=damfn.getRendition(content.image, "original")]
             [@image assetRendition content "list-image" true /]

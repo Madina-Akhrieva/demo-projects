@@ -1,6 +1,6 @@
 [#-- This custom link component can include an image. --]
 [#-------------- ASSIGNMENTS --------------]
-[#include "/mtk/templates/includes/init.ftl"]
+[#include "/mtk2/templates/includes/init.ftl"]
 
 [#-- Custom image macro for links only --]
 [#-- Renders an image (asset) rendition --]
@@ -44,11 +44,11 @@
 
 [#-------------- ASSIGNMENTS FOR EACH TYPE --------------]
 [#if linkType=="page"]
-    [#include "/mtk/templates/includes/linkPage.ftl"]
+    [#include "/mtk2/templates/includes/linkPage.ftl"]
 [#elseif linkType=="external"]
-    [#include "/mtk/templates/includes/linkExternal.ftl"]
+    [#include "/mtk2/templates/includes/linkExternal.ftl"]
 [#elseif linkType=="download"]
-    [#include "/mtk/templates/includes/linkDownload.ftl"]
+    [#include "/mtk2/templates/includes/linkDownload.ftl"]
 [/#if]
 
 [#if resolveError && cmsfn.editMode]

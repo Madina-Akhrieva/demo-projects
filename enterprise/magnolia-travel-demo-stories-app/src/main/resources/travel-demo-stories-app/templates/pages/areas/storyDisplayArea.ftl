@@ -3,7 +3,6 @@
 
 [#include "/travel-demo-stories-app/templates/shared/functions.ftl"]
 
-
 [#-- Displays a 'list' of related stories. --]
 [#macro relatedStories stories]
 
@@ -150,7 +149,7 @@
     <div class="author">
         [#-- Lead image (uses mtk image macro) --]
         [#if story.authorImage?hasContent]
-            [#include "/mtk/templates/macros/image.ftl"]
+            [#include "/mtk2/templates/macros/image.ftl"]
             [#assign rendition = damfn.getRendition(story.authorImage, "author")]
             [@image rendition story "author-image" false {} /]
         [/#if]

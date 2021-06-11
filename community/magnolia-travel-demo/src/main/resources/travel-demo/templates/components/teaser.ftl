@@ -1,5 +1,5 @@
 [#-------------- ASSIGNMENTS --------------]
-[#include "/mtk/templates/includes/init.ftl"]
+[#include "/mtk2/templates/includes/init.ftl"]
 
 [#assign title = content.teaserTitle!]
 [#assign linkType = content.linkType!]
@@ -32,11 +32,11 @@
 
 [#-------------- ASSIGNMENTS FOR EACH TYPE --------------]
 [#if linkType=="page"]
-    [#include "/mtk/templates/includes/teaserPage.ftl"]
+    [#include "/mtk2/templates/includes/teaserPage.ftl"]
 [#elseif linkType=="external"]
-    [#include "/mtk/templates/includes/teaserExternal.ftl"]
+    [#include "/mtk2/templates/includes/teaserExternal.ftl"]
 [#elseif linkType=="download"]
-    [#include "/mtk/templates/includes/teaserDownload.ftl"]
+    [#include "/mtk2/templates/includes/teaserDownload.ftl"]
 [/#if]
 
 [#if resolveError && cmsfn.editMode]

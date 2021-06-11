@@ -1,5 +1,5 @@
 [#-------------- INCLUDE AND ASSIGN PART --------------]
-[#include "/mtk/templates/includes/init.ftl"]
+[#include "/mtk2/templates/includes/init.ftl"]
 
 [#assign size = content.size!'32']
 [#assign style = content.vertical?boolean?string('a2a_vertical_style', 'a2a_default_style')]

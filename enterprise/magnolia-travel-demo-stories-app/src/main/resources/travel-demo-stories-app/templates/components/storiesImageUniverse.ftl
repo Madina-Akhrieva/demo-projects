@@ -1,6 +1,6 @@
 [#-------------- ASSIGNMENTS --------------]
 
-[#include "/mtk/templates/macros/image.ftl"]
+[#include "/mtk2/templates/macros/image.ftl"]
 [#include "/travel-demo-stories-app/templates/shared/functions.ftl"]
 
 [#assign imageBlocks = getAllBlocksOfType('image')!]

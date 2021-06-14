@@ -1,5 +1,5 @@
 [#-------------- INCLUDE AND ASSIGN PART --------------]
-[#include "/mtk/templates/includes/init.ftl"]
+[#include "/mtk2/templates/includes/init.ftl"]
 [#-- Image --]
 [#-- Basic positioning of an image below or above the text --]
 [#assign imagePosition = content.imagePosition!"below"]

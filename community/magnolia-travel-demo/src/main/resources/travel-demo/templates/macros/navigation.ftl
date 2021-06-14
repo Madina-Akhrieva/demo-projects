@@ -1,5 +1,5 @@
 [#--
-Customized /mtk/templates/macros/navigation.ftl macro for travel-demo project.
+Customized /mtk2/templates/macros/navigation.ftl macro for travel-demo project.
 Uncommented and adjusted section for resolving menu for destination and travel from the category content app.
 --]
 [#macro navigation navParentItem depth=1 expandAll=false navClass="nav"]

@@ -21,7 +21,7 @@ cssFiles:
     media: all
   video:
     addFingerPrint: true
-    link: /.resources/mtk/webresources/css/video.css
+    link: /.resources/mtk2/webresources/css/video.css
     media: all
 jsFiles:
   respimage:

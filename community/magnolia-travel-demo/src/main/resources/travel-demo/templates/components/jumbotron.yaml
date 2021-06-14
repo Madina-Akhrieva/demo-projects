@@ -1,4 +1,4 @@
-templateScript: /mtk/templates/components/textImage.ftl
+templateScript: /mtk2/templates/components/textImage.ftl
 dialog: mtk2:components/textImage
 
 renderType: freemarker

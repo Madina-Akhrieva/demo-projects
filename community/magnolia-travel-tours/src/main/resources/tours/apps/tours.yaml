@@ -1,20 +1,12 @@
 !content-type:tour
 label: tours.app.label
 icon: icon-language-app
+permissions:
+  roles:
+    - travel-demo-editor
+    - travel-demo-publisher
 subApps:
   browser:
-#    workbench:
-#      contentViews:
-#        - name: tree
-#          columns: !override
-#            - name: name
-#              $type: jcrTitleColumn
-#              nodeTypeToIcon:
-#                mgnl:folder: icon-folder
-#            - name: author
-#            - $type: jcrStatusColumn
-#            - name: mgnl:lastModified
-#              $type: dateColumn
     actions:
      editItem:
        appName: tours

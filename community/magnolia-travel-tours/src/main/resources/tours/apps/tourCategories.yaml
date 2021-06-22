@@ -1,4 +1,8 @@
 !inherit:categories-app
+permissions:
+  roles:
+    - travel-demo-editor
+    - travel-demo-publisher
 subApps:
   browser:
     workbench:

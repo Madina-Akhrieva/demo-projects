@@ -22,6 +22,14 @@
     </component>
   </components>
 
+  <components>
+    <id>app-tourCategories-browser</id>
+    <component>
+      <type>info.magnolia.ui.framework.ContentClipboard</type>
+      <implementation>info.magnolia.ui.contentapp.action.clipboard.JcrClipboard</implementation>
+    </component>
+  </components>
+
   <dependencies>
     <dependency>
       <name>core</name>

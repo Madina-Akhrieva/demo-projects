@@ -16,8 +16,6 @@ subApps:
         appName: tourCategories
       addCategory:
         appName: tourCategories
-      copy: !override
-      paste: !override
   detail:
     form:
       properties:

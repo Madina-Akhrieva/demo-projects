@@ -1,6 +1,10 @@
 !content-type:tour
 label: tours.app.label
 icon: icon-language-app
+permissions:
+  roles:
+    - travel-demo-editor
+    - travel-demo-publisher
 subApps:
   browser:
 #    workbench:

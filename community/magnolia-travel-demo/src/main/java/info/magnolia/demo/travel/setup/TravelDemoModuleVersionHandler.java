@@ -157,7 +157,7 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
                         new SetPropertyTask("Add SPA configuration", RepositoryConstants.CONFIG, "/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType", "spa", "spa")
                 )))
         );
-        register(DeltaBuilder.update("1.5.4", "")
+        register(DeltaBuilder.update("1.6", "")
                 .addTask(new MigrateTemplatesToMTK2("/travel"))
         );
     }

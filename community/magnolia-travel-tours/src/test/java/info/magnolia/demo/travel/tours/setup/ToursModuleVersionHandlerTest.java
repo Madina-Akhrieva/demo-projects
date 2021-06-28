@@ -292,12 +292,12 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void updateFrom153() throws Exception {
+    public void updateFrom154() throws Exception {
         // GIVEN
         NodeUtil.createPath(configSession.getRootNode(), "modules/tours/apps", NodeTypes.Folder.NAME);
 
         // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.5.3"));
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.5.4"));
 
         // THEN
         assertThat(configSession.getRootNode(), allOf(

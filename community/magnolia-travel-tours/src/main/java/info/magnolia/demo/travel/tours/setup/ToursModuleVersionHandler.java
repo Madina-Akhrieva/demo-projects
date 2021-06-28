@@ -143,7 +143,7 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                         )))
         );
 
-        register(DeltaBuilder.update("1.5.4", "")
+        register(DeltaBuilder.update("1.6", "")
                 .addTask(new RemoveNodesTask("Remove JCR based configuration for apps in favour of new YAML base apps", CONFIG,
                         Arrays.asList("/modules/tours/apps/",
                                 "/modules/ui-admincentral/config/appLauncherLayout/groups/edit/apps/tourCategories",

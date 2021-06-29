@@ -22,7 +22,7 @@
     <magnoliaPagesVersion>6.2</magnoliaPagesVersion>
     <siteVersion>1.4</siteVersion>
     <resourcesVersion>3.0</resourcesVersion>
-    <mteVersion>2.0-SNAPSHOT</mteVersion>
+    <mteVersion>2.0</mteVersion>
   </properties>
 
   <scm>
@@ -129,7 +129,7 @@
         <artifactId>magnolia-templating-kit-2</artifactId>
         <type>test-jar</type>
         <scope>test</scope>
-        <version>2.0-SNAPSHOT</version>
+        <version>2.0</version>
       </dependency>
       <dependency>
         <groupId>info.magnolia.dam</groupId>

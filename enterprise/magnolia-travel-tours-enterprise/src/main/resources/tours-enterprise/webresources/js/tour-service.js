@@ -1,77 +1,75 @@
 class TourService {
-  static rest = 'rest';
-  static graphQL = 'graphQL';
-  #serviceImp;
-  #location
+  serviceImp;
+  location
 
   constructor(contextPath, httpService, location, serviceType) {
-    this.#location = location;
-    this.#serviceImp = this.#initService(serviceType, contextPath, httpService);
+    this.serviceImp = this.initService(serviceType, contextPath, httpService);
+    this.location = location;
   }
 
-  #initService(serviceType, contextPath, httpService ) {
-    return serviceType === TourService.graphQL ? new GraphQLService(contextPath, httpService) : new RestService(contextPath, httpService);
+  initService(serviceType, contextPath, httpService ) {
+    return serviceType === 'graphQL' ? new GraphQLService(contextPath, httpService) : new RestService(contextPath, httpService);
   }
 
   getDestinations(language) {
-    return this.#serviceImp.getDestinations(language);
+    return this.serviceImp.getDestinations(language);
   }
 
   getTourTypes(language) {
-    return this.#serviceImp.getTourTypes(language);
+    return this.serviceImp.getTourTypes(language);
   }
 
   filterTours(parameters) {
-    this.#updateLocation(parameters);
-    return this.#serviceImp.filterTours(parameters)
+    this.updateLocation(parameters);
+    return this.serviceImp.filterTours(parameters)
   }
 
-  #updateLocation(parameters) {
+  updateLocation(parameters) {
     Object.keys(parameters).forEach(key => {
       if (parameters[key].length > 0) {
         let values = parameters[key];
-        this.#location.search(key, values.join(','));
+        this.location.search(key, values.join(','));
       } else {
-        this.#location.search(key, null);
+        this.location.search(key, null);
       }
     });
   }
 }
 
 class RestService {
-  #restBase = '/.rest/delivery';
-  #contextPath;
-  #httpService;
+  restBase = '/.rest/delivery';
+  contextPath;
+  httpService;
 
   constructor(contextPath, httpService) {
-    this.#contextPath = contextPath;
-    this.#httpService = httpService;
+    this.contextPath = contextPath;
+    this.httpService = httpService;
   }
 
   getDestinations(language) {
-    return this.#getCategory(language, 'destinations');
+    return this.getCategory(language, 'destinations');
   }
 
   getTourTypes(language) {
-    return this.#getCategory(language, 'tourTypes');
+    return this.getCategory(language, 'tourTypes');
   }
 
-  #getCategory(language, categoryType) {
-    const relativePath = this.#getCategoryRequestPath(language, categoryType);
-    return this.#httpService.get(relativePath)
-      .then(response => CategoryDataMapper.toCategoryViewModel(TourService.rest, response));
+  getCategory(language, categoryType) {
+    const relativePath = this.getCategoryRequestPath(language, categoryType);
+    return this.httpService.get(relativePath)
+      .then(response => new CategoryDataMapper().toCategoryViewModel('rest', response));
   }
 
-  #getCategoryRequestPath(language, categoryType) {
-    return `${this.#contextPath}${this.#restBase}/${categoryType}/v1/?lang=${language}`;
+  getCategoryRequestPath(language, categoryType) {
+    return `${this.contextPath}${this.restBase}/${categoryType}/v1/?lang=${language}`;
   }
 
   filterTours(parameters) {
-    return this.#httpService.get(`${this.#contextPath}${this.#restBase }/tours/v1/${this.#buildRestQuery(parameters)}`)
-      .then(response => new TourDataMapper(this.#contextPath).mapToTourViews(TourService.rest, response));
+    return this.httpService.get(`${this.contextPath}${this.restBase }/tours/v1/${this.buildRestQuery(parameters)}`)
+      .then(response => new TourDataMapper(this.contextPath).mapToTourViews('rest', response));
   }
 
-  #buildRestQuery(parameters) {
+  buildRestQuery(parameters) {
     let query = Object.keys(parameters).map(key => {
       if (parameters[key].length == 0) {
         return '';
@@ -86,46 +84,46 @@ class RestService {
 }
 
 class GraphQLService {
-  #graphQLBase ='/.graphql';
-  #headers = { 'Content-type': 'application/json' };
-  #contextPath;
-  #httpService;
-  #queryProvider;
+  graphQLBase ='/.graphql';
+  headers = { 'Content-type': 'application/json' };
+  contextPath;
+  httpService;
+  queryProvider;
 
   constructor(contextPath, httpService) {
-    this.#contextPath = contextPath;
-    this.#httpService = httpService;
-    this.#queryProvider = new GraphqlTourQueriesProvider(httpService, contextPath);
+    this.contextPath = contextPath;
+    this.httpService = httpService;
+    this.queryProvider = new GraphqlTourQueriesProvider(httpService, contextPath);
   }
 
   getDestinations(language) {
-    return this.#getCategory('/destinations');
+    return this.getCategory('/destinations');
   }
 
   getTourTypes(language){
-    return this.#getCategory('/tour-types');
+    return this.getCategory('/tour-types');
   }
 
-  #getCategory(queryPath) {
-    return this.#queryProvider.getCategoryQueries()
-      .then(query => this.#getCategories(query, queryPath)
-        .then(response => CategoryDataMapper.toCategoryViewModel(TourService.graphQL, response)));
+  getCategory(queryPath) {
+    return this.queryProvider.getCategoryQueries()
+      .then(query => this.getCategories(query, queryPath)
+        .then(response => new CategoryDataMapper().toCategoryViewModel('graphQL', response)));
   }
 
-  #getCategories(query, queryPath) {
-    return this.#httpService
-      .post(this.#contextPath + this.#graphQLBase,
+  getCategories(query, queryPath) {
+    return this.httpService
+      .post(this.contextPath + this.graphQLBase,
         { query: query.data, variables: { path: queryPath } },
-        { headers: this.#headers }
+        { headers: this.headers }
       );
   }
 
   filterTours(parameters) {
-    return this.#queryProvider.getTourQueries().then(query => {
-      const filter = GraphqlTourQueriesProvider.buildGraphQLFilterQueryParams(parameters);
-      return this.#httpService.post(this.#contextPath + this.#graphQLBase,
+    return this.queryProvider.getTourQueries().then(query => {
+      const filter = new GraphqlTourQueriesProvider().buildGraphQLFilterQueryParams(parameters);
+      return this.httpService.post(this.contextPath + this.graphQLBase,
         { query: query.data, variables: { filter: filter } },
-        { headers: this.#headers })
-    }).then(response => new TourDataMapper(this.#contextPath).mapToTourViews(TourService.graphQL, response));
+        { headers: this.headers })
+    }).then(response => new TourDataMapper(this.contextPath).mapToTourViews('graphQL', response));
   }
 }

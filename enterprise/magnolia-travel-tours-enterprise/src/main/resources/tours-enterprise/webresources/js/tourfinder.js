@@ -24,13 +24,13 @@ var TourFinder = TourFinder || (function(){
                     $scope.useDestinations = {};
                     $scope.useTourTypes = {};
                     $scope.search = {};
-                    $scope.serviceType = TourService.rest;
+                    $scope.serviceType = 'rest';
 
                     $scope.contextPath = args.contextPath;
                     $scope.language = args.language;
                     $scope.i18n = args.i18n;
 
-                    if ($routeParams.service && [TourService.rest, TourService.graphQL].includes($routeParams.service)) {
+                    if ($routeParams.service && ['rest', 'graphQL'].includes($routeParams.service)) {
                         $scope.serviceType = $routeParams.service;
                     }
 

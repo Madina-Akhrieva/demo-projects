@@ -13,44 +13,44 @@ class GraphqlTourQueriesProvider {
     return this.httpClient.get(`${this.baseContext}/.resources/tours-enterprise/webresources/queries/TourCategory.graphql`);
   }
 
-  static buildGraphQLFilterQueryParams(parameters) {
-    const durationQuery = this.#buildDurationQuery(parameters.duration);
-    const tourTypesQuery = this.#buildTourTypeQuery(parameters.tourTypes);
-    const destinationQuery = this.#buildDestinationQuery(parameters.destination);
-    const ftsQuery = this.#buildFTSQuery(parameters.q);
+  buildGraphQLFilterQueryParams(parameters) {
+    const durationQuery = this.buildDurationQuery(parameters.duration);
+    const tourTypesQuery = this.buildTourTypeQuery(parameters.tourTypes);
+    const destinationQuery = this.buildDestinationQuery(parameters.destination);
+    const ftsQuery = this.buildFTSQuery(parameters.q);
     return [durationQuery, tourTypesQuery, destinationQuery, ftsQuery]
       .filter(item => item.length > 0)
       .join(' AND ')
   }
 
-  static #buildDurationQuery(durations) {
+  buildDurationQuery(durations) {
     const NAMED_QUERY = '@duration';
-    return this.#buildFilterQuery(durations, NAMED_QUERY);
+    return this.buildFilterQuery(durations, NAMED_QUERY);
   }
 
-  static #buildTourTypeQuery(tourTypes) {
+  buildTourTypeQuery(tourTypes) {
     const NAMED_QUERY = '@tourTypes';
-    return this.#buildFilterQuery(tourTypes, NAMED_QUERY);
+    return this.buildFilterQuery(tourTypes, NAMED_QUERY);
   }
 
-  static #buildDestinationQuery(destinations) {
+  buildDestinationQuery(destinations) {
     const NAMED_QUERY = '@destination';
-    return this.#buildFilterQuery(destinations, NAMED_QUERY);
+    return this.buildFilterQuery(destinations, NAMED_QUERY);
   }
 
-  static #buildFilterQuery(values, namedQuery) {
+  buildFilterQuery(values, namedQuery) {
     if (!values || !values.length) {
       return '';
     }
-    return values.map(value => `${namedQuery}=${this.#queryValueWrapper(value, namedQuery)}`)
+    return values.map(value => `${namedQuery}=${this.queryValueWrapper(value, namedQuery)}`)
       .join(' AND ')
   }
 
-  static #queryValueWrapper(value, namedQuery) {
+  queryValueWrapper(value, namedQuery) {
     return NO_WRAPPED_VALUE_FIELD.includes(namedQuery) ? value : `'${value}'`;
   }
 
-  static #buildFTSQuery(queryValue) {
+  buildFTSQuery(queryValue) {
     if (!queryValue || !queryValue.length) {
       return '';
     }

@@ -1,10 +1,10 @@
 class CategoryDataMapper {
 
-  static toCategoryViewModel(serviceType, response) {
-    return serviceType == TourService.graphQL ? this.#fromGraphQL(response) : this.#fromRest(response);
+  toCategoryViewModel(serviceType, response) {
+    return serviceType == 'graphQL' ? this.fromGraphQL(response) : this.fromRest(response);
   }
 
-  static #fromGraphQL(response) {
+  fromGraphQL(response) {
     const categories = response.data.data.tourCategories
     return categories.map(category => {
       return {
@@ -14,7 +14,7 @@ class CategoryDataMapper {
     });
   }
 
-  static #fromRest(response) {
+  fromRest(response) {
     const categories = response.data.results;
     return categories.map(category => {
       return {

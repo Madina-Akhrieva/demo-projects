@@ -25,6 +25,10 @@
           <groupId>info.magnolia.templating</groupId>
           <artifactId>magnolia-templating-kit</artifactId>
         </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.editor</groupId>
+          <artifactId>magnolia-content-editor-widgetset</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -35,6 +39,10 @@
         <exclusion>
           <groupId>info.magnolia.templating</groupId>
           <artifactId>magnolia-templating-kit</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>info.magnolia.editor</groupId>
+          <artifactId>magnolia-content-editor-widgetset</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -148,6 +156,38 @@
       <groupId>info.magnolia.graphql</groupId>
       <artifactId>magnolia-graphql-assets</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-link-unfurl</artifactId>
+      <version>${contentEditor2Version}</version>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.block</groupId>
+      <artifactId>magnolia-block-api</artifactId>
+      <version>${contentEditor2Version}</version>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.block</groupId>
+      <artifactId>magnolia-block-templating</artifactId>
+      <version>${contentEditor2Version}</version>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.editor</groupId>
+      <artifactId>magnolia-content-editor</artifactId>
+      <version>${contentEditor2Version}</version>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.editor</groupId>
+      <artifactId>stories-app</artifactId>
+      <version>${contentEditor2Version}</version>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.editor</groupId>
+      <artifactId>magnolia-content-editor-widgetset-v2</artifactId>
+      <version>${contentEditor2Version}</version>
+    </dependency>
+
   </dependencies>
 
   <build>

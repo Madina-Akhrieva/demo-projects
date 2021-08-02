@@ -8,6 +8,8 @@ permissions:
 subApps:
   browser:
     actions:
+     addItem:
+       appName: tours
      editItem:
        appName: tours
   detail:

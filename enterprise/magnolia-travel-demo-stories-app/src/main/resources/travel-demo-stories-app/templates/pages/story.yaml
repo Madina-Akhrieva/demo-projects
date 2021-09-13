@@ -6,6 +6,7 @@ areas:
     enabled: false # no navigation for the story page
   main:
     type: noComponent
+    renderType: content-editor-freemarker
     createAreaNode: false
     templateScript: /travel-demo-stories-app/templates/pages/areas/storyDisplayArea.ftl
   footer:

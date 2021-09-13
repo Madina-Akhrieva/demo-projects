@@ -1,3 +1,3 @@
-renderType: freemarker
+renderType: content-editor-freemarker
 templateScript: /travel-demo-stories-app/templates/components/storiesImageUniverse.ftl
 modelClass: info.magnolia.module.jsmodels.rendering.JavascriptRenderingModel

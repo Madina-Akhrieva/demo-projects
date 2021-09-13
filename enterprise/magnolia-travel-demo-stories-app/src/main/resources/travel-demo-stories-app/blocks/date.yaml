@@ -1,10 +1,8 @@
 templateId: travel-demo-stories-app:blocks/date
 icon: datepicker
-label: Date
 block:
   properties:
     date:
-      label: Date
       $type: dateField
       required: true
       time: true

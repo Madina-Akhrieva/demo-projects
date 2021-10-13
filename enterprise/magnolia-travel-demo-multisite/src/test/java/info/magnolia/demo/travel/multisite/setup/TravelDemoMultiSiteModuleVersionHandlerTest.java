@@ -16,8 +16,9 @@ package info.magnolia.demo.travel.multisite.setup;
 
 import static info.magnolia.test.hamcrest.NodeMatchers.*;
 import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import info.magnolia.context.MgnlContext;
 import info.magnolia.module.InstallContext;
@@ -150,25 +151,6 @@ public class TravelDemoMultiSiteModuleVersionHandlerTest extends ModuleVersionHa
     }
 
     @Test
-    public void updateChangesVirtualUriMappings() throws Exception {
-        //GIVEN
-        String travelToursMappingPath = "/modules/tours/virtualUriMappings/travelToursMapping";
-        String sportstationToursMapping = "/modules/tours/virtualUriMappings/sportstationToursMapping";
-
-        setupConfigNode(sportstationToursMapping);
-        setupConfigProperty(travelToursMappingPath, "toUri", "forward:/travel/tour?tour=$1");
-        setupConfigNode(sportstationToursMapping);
-        setupConfigProperty(sportstationToursMapping, "toUri", "forward:/sportstation/tour?tour=$1");
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.2"));
-
-        //THEN
-        assertThat(session.getNode(travelToursMappingPath), hasProperty("toUri", "forward:/tour?tour=$1"));
-        assertThat(session.getNode(sportstationToursMapping), hasProperty("toUri", "forward:/tour?tour=$1"));
-    }
-
-    @Test
     public void updateTo151_MigrateCorsToTravelSite() throws Exception {
         // GIVEN
         setupConfigNode("/modules/multisite/config/sites/travel");
@@ -208,5 +190,17 @@ public class TravelDemoMultiSiteModuleVersionHandlerTest extends ModuleVersionHa
                 hasProperty("spa", "spa"),
                 not(hasProperty("jsp", "jsp"))
         ));
+    }
+
+    @Test
+    public void updateFrom163RemovesVirtualUriMappings() throws Exception {
+        //GIVEN
+        setupConfigNode("/modules/tours/virtualUriMappings");
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.6.3"));
+
+        //THEN
+        assertThat(session.getNode("/modules/tours"), not(hasNode("virtualUriMappings")));
     }
 }

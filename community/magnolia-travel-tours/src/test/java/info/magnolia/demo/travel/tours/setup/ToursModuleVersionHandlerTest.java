@@ -47,7 +47,6 @@ import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
 import info.magnolia.repository.RepositoryConstants;
-import info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping;
 
 import java.util.Arrays;
 import java.util.List;
@@ -129,7 +128,7 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void cleanInstallSetsPagesAsPublished() throws Exception {
+    public void cleanInstall() throws Exception {
         // GIVEN
         setupBootstrapPages();
         PropertyUtil.setProperty(websiteSession.getNode("/travel/tour-type"), Activatable.ACTIVATION_STATUS, Long.valueOf(Activatable.ACTIVATION_STATUS_MODIFIED));
@@ -222,7 +221,7 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void updateFrom114ReinstallsUriMappings() throws Exception {
+    public void updateFrom114RemovesDeprecatedUriMappings() throws Exception {
         // GIVEN
         Node toursModule = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours", NodeTypes.Content.NAME, true);
         toursModule.addNode("virtualURIMapping", NodeTypes.Content.NAME);
@@ -232,12 +231,6 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
 
         //THEN
         assertThat(toursModule, not(hasNode("virtualURIMapping")));
-        assertThat(toursModule, hasNode("virtualUriMappings"));
-        Node mappings = toursModule.getNode("virtualUriMappings");
-        assertThat(mappings, hasNode(allOf(
-                hasProperty("class", RegexpVirtualUriMapping.class.getName()),
-                hasProperty("fromUri", "^/tours(.*).html"),
-                hasProperty("toUri", "forward:/travel/tour?tour=$1"))));
     }
 
     @Test
@@ -305,6 +298,19 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
                 not(hasNode("modules/ui-admincentral/config/appLauncherLayout/groups/edit/apps/")),
                 not(hasNode("modules/tours/apps"))
         ));
+    }
+
+    @Test
+    public void updateFrom163RemovesUriMappingsAndReorderFilters() throws Exception {
+        // GIVEN
+        Node toursModule = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours", NodeTypes.Content.NAME, true);
+        toursModule.addNode("virtualUriMappings", NodeTypes.Content.NAME);
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.6.3"));
+
+        //THEN
+        assertThat(toursModule, not(hasNode("virtualUriMappings")));
     }
 
     private void setupBootstrapPages() throws RepositoryException {

@@ -4,3 +4,4 @@ nodeTypes:
 fullTextSearch: true
 titleProperty: name
 class: info.magnolia.periscope.search.jcr.JcrSearchResultSupplierDefinition
+appName: tours

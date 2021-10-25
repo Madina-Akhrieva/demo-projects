@@ -53,6 +53,7 @@ import info.magnolia.module.delta.DeltaBuilder;
 import info.magnolia.module.delta.IsInstallSamplesTask;
 import info.magnolia.module.delta.IsModuleInstalledOrRegistered;
 import info.magnolia.module.delta.NodeExistsDelegateTask;
+import info.magnolia.module.delta.OrderFilterBeforeTask;
 import info.magnolia.module.delta.OrderNodeBeforeTask;
 import info.magnolia.module.delta.RemoveNodeTask;
 import info.magnolia.module.delta.RemoveNodesTask;
@@ -82,6 +83,8 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
             new OrderNodeBeforeTask("", "", WEBSITE, "/travel/tour-type", "about"),
             new OrderNodeBeforeTask("", "", WEBSITE, "/travel/destination", "about"),
             new OrderNodeBeforeTask("", "", WEBSITE, "/travel/tour", "about"));
+
+    private final Task reorderVirtualUriAndI18nFilters = new OrderFilterBeforeTask("virtualURI", new String[] { "i18n" });
 
     public ToursModuleVersionHandler() {
         register(DeltaBuilder.update("1.2", "")
@@ -150,6 +153,7 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
 
         register(DeltaBuilder.update("1.6.4", "")
                 .addTask(new RemoveNodeTask("Remove virtualUriMappings from JCR configuration", "/modules/tours/virtualUriMappings"))
+                .addTask(new NodeExistsDelegateTask("Reorder virtualURI filter before i18n filter", "/server/filters/virtualURI", reorderVirtualUriAndI18nFilters))
         );
     }
 
@@ -179,6 +183,7 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                         new CopyNodeTask("Copy categoryOverview template",
                                 "/modules/travel-demo/config/travel/templates/availability/templates/destinationCatOverview", "/modules/multisite/config/sites/travel/templates/availability/templates/destinationCatOverview", false))));
         tasks.add(new SetPageAsPublishedTask("/travel", true));
+        tasks.add(reorderVirtualUriAndI18nFilters);
         return tasks;
     }
 

@@ -55,6 +55,7 @@ import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
+import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -134,6 +135,8 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
         PropertyUtil.setProperty(websiteSession.getNode("/travel/tour-type"), Activatable.ACTIVATION_STATUS, Long.valueOf(Activatable.ACTIVATION_STATUS_MODIFIED));
         PropertyUtil.setProperty(websiteSession.getNode("/travel/destination"), Activatable.ACTIVATION_STATUS, Long.valueOf(Activatable.ACTIVATION_STATUS_MODIFIED));
         PropertyUtil.setProperty(websiteSession.getNode("/travel/tour"), Activatable.ACTIVATION_STATUS, Long.valueOf(Activatable.ACTIVATION_STATUS_MODIFIED));
+        setupConfigNode("/server/filters/i18n");
+        setupConfigNode("/server/filters/virtualURI");
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
@@ -147,6 +150,12 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
 
         activationStatus = Activatable.getActivationStatus(websiteSession.getNode("/travel/tour"));
         assertThat("We expect that /travel/tour node is activated", activationStatus, equalTo(Activatable.ACTIVATION_STATUS_ACTIVATED));
+
+        Iterable<Node> filterOrder = NodeUtil.getNodes(configSession.getNode("/server/filters"));
+        assertThat(filterOrder, contains(
+                Matchers.hasProperty("name", is("virtualURI")),
+                Matchers.hasProperty("name", is("i18n"))
+        ));
     }
 
     @Test
@@ -187,6 +196,7 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
         // GIVEN
         setupBootstrapPages();
         Node careersMain = NodeUtil.createPath(websiteSession.getRootNode(), "/travel/about/careers/main", NodeTypes.Component.NAME, true);
+        setupConfigNode("server/filters/virtualURI");
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
@@ -305,12 +315,18 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
         // GIVEN
         Node toursModule = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours", NodeTypes.Content.NAME, true);
         toursModule.addNode("virtualUriMappings", NodeTypes.Content.NAME);
+        setupConfigNode("/server/filters/i18n");
+        setupConfigNode("/server/filters/virtualURI");
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.6.3"));
 
         //THEN
         assertThat(toursModule, not(hasNode("virtualUriMappings")));
+        Iterable<Node> filterOrder = NodeUtil.getNodes(configSession.getNode("/server/filters"));
+        assertThat(filterOrder, contains(
+                Matchers.hasProperty("name", is("virtualURI")),
+                Matchers.hasProperty("name", is("i18n"))));
     }
 
     private void setupBootstrapPages() throws RepositoryException {

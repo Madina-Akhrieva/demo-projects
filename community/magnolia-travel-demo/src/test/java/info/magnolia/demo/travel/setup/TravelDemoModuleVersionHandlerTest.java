@@ -40,6 +40,7 @@ import static info.magnolia.test.hamcrest.NodeMatchers.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.collection.IsIn.isIn;
@@ -294,6 +295,19 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.4.1"));
 
         // THEN
+    }
+
+    @Test
+    public void upgradeFrom163() throws Exception {
+        // GIVEN
+        setupConfigNode("/server/filters/i18n/bypasses");
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.6.3"));
+
+        // THEN
+        String i18nFilterPath = "/server/filters/i18n";
+        assertThat(session.getNode(i18nFilterPath), not(hasNode("bypasses")));
     }
 
     @Test

@@ -1,0 +1,3 @@
+class: info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping
+fromUri: ^/(.*/)?tours(.*).html
+toUri: forward:/$1travel/tour?tour=$2

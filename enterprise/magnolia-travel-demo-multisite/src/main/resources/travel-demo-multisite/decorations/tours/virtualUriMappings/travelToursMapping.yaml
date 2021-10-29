@@ -1,0 +1,3 @@
+class: info.magnolia.multisite.mapping.MultiSiteRegexpVirtualUriMapping
+toUri: forward:/$1tour?tour=$2
+site: travel

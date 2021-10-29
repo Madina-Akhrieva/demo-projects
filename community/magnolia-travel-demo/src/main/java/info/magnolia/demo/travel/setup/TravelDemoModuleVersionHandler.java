@@ -160,6 +160,9 @@ public class TravelDemoModuleVersionHandler extends DefaultModuleVersionHandler 
         register(DeltaBuilder.update("1.6", "")
                 .addTask(new MigrateTemplatesToMTK2("/travel"))
         );
+        register(DeltaBuilder.update("1.6.4", "")
+                .addTask(new RemoveNodeTask("Remove i18n filter bypass", "/server/filters/i18n/bypasses"))
+        );
     }
 
     @Override

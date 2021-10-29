@@ -47,7 +47,6 @@ import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
 import info.magnolia.repository.RepositoryConstants;
-import info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping;
 
 import java.util.Arrays;
 import java.util.List;
@@ -56,6 +55,7 @@ import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
+import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -129,12 +129,14 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void cleanInstallSetsPagesAsPublished() throws Exception {
+    public void cleanInstall() throws Exception {
         // GIVEN
         setupBootstrapPages();
         PropertyUtil.setProperty(websiteSession.getNode("/travel/tour-type"), Activatable.ACTIVATION_STATUS, Long.valueOf(Activatable.ACTIVATION_STATUS_MODIFIED));
         PropertyUtil.setProperty(websiteSession.getNode("/travel/destination"), Activatable.ACTIVATION_STATUS, Long.valueOf(Activatable.ACTIVATION_STATUS_MODIFIED));
         PropertyUtil.setProperty(websiteSession.getNode("/travel/tour"), Activatable.ACTIVATION_STATUS, Long.valueOf(Activatable.ACTIVATION_STATUS_MODIFIED));
+        setupConfigNode("/server/filters/i18n");
+        setupConfigNode("/server/filters/virtualURI");
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
@@ -148,6 +150,12 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
 
         activationStatus = Activatable.getActivationStatus(websiteSession.getNode("/travel/tour"));
         assertThat("We expect that /travel/tour node is activated", activationStatus, equalTo(Activatable.ACTIVATION_STATUS_ACTIVATED));
+
+        Iterable<Node> filterOrder = NodeUtil.getNodes(configSession.getNode("/server/filters"));
+        assertThat(filterOrder, contains(
+                Matchers.hasProperty("name", is("virtualURI")),
+                Matchers.hasProperty("name", is("i18n"))
+        ));
     }
 
     @Test
@@ -188,6 +196,7 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
         // GIVEN
         setupBootstrapPages();
         Node careersMain = NodeUtil.createPath(websiteSession.getRootNode(), "/travel/about/careers/main", NodeTypes.Component.NAME, true);
+        setupConfigNode("server/filters/virtualURI");
 
         // WHEN
         executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
@@ -222,7 +231,7 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void updateFrom114ReinstallsUriMappings() throws Exception {
+    public void updateFrom114RemovesDeprecatedUriMappings() throws Exception {
         // GIVEN
         Node toursModule = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours", NodeTypes.Content.NAME, true);
         toursModule.addNode("virtualURIMapping", NodeTypes.Content.NAME);
@@ -232,12 +241,6 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
 
         //THEN
         assertThat(toursModule, not(hasNode("virtualURIMapping")));
-        assertThat(toursModule, hasNode("virtualUriMappings"));
-        Node mappings = toursModule.getNode("virtualUriMappings");
-        assertThat(mappings, hasNode(allOf(
-                hasProperty("class", RegexpVirtualUriMapping.class.getName()),
-                hasProperty("fromUri", "^/tours(.*).html"),
-                hasProperty("toUri", "forward:/travel/tour?tour=$1"))));
     }
 
     @Test
@@ -305,6 +308,25 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
                 not(hasNode("modules/ui-admincentral/config/appLauncherLayout/groups/edit/apps/")),
                 not(hasNode("modules/tours/apps"))
         ));
+    }
+
+    @Test
+    public void updateFrom163RemovesUriMappingsAndReorderFilters() throws Exception {
+        // GIVEN
+        Node toursModule = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours", NodeTypes.Content.NAME, true);
+        toursModule.addNode("virtualUriMappings", NodeTypes.Content.NAME);
+        setupConfigNode("/server/filters/i18n");
+        setupConfigNode("/server/filters/virtualURI");
+
+        // WHEN
+        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.6.3"));
+
+        //THEN
+        assertThat(toursModule, not(hasNode("virtualUriMappings")));
+        Iterable<Node> filterOrder = NodeUtil.getNodes(configSession.getNode("/server/filters"));
+        assertThat(filterOrder, contains(
+                Matchers.hasProperty("name", is("virtualURI")),
+                Matchers.hasProperty("name", is("i18n"))));
     }
 
     private void setupBootstrapPages() throws RepositoryException {

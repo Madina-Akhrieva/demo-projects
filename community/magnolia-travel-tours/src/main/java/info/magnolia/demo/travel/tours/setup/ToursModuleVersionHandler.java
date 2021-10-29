@@ -53,13 +53,13 @@ import info.magnolia.module.delta.DeltaBuilder;
 import info.magnolia.module.delta.IsInstallSamplesTask;
 import info.magnolia.module.delta.IsModuleInstalledOrRegistered;
 import info.magnolia.module.delta.NodeExistsDelegateTask;
+import info.magnolia.module.delta.OrderFilterBeforeTask;
 import info.magnolia.module.delta.OrderNodeBeforeTask;
 import info.magnolia.module.delta.RemoveNodeTask;
 import info.magnolia.module.delta.RemoveNodesTask;
 import info.magnolia.module.delta.RemovePropertiesTask;
 import info.magnolia.module.delta.SetPropertyTask;
 import info.magnolia.module.delta.Task;
-import info.magnolia.module.delta.ValueOfPropertyDelegateTask;
 import info.magnolia.rendering.module.setup.InstallRendererContextAttributeTask;
 import info.magnolia.repository.RepositoryConstants;
 import info.magnolia.ui.contentapp.ConfiguredContentAppDescriptor;
@@ -84,6 +84,8 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
             new OrderNodeBeforeTask("", "", WEBSITE, "/travel/destination", "about"),
             new OrderNodeBeforeTask("", "", WEBSITE, "/travel/tour", "about"));
 
+    private final Task reorderVirtualUriAndI18nFilters = new OrderFilterBeforeTask("virtualURI", new String[] { "i18n" });
+
     public ToursModuleVersionHandler() {
         register(DeltaBuilder.update("1.2", "")
                 .addTask(new FolderBootstrapTask("/mgnl-bootstrap/tours/travel-demo/"))
@@ -106,7 +108,6 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                 .addTask(orderPageNodes)
                 .addTask(new SetPageAsPublishedTask("/travel", true))
                 .addTask(new RemoveNodeTask("Cleanup deprecated virtualURIMapping location before re-install", "/modules/tours/virtualURIMapping"))
-                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
 
         register(DeltaBuilder.update("1.2.2", "")
@@ -117,8 +118,6 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
         );
 
         register(DeltaBuilder.update("1.2.3", "")
-                .addTask(new ValueOfPropertyDelegateTask("Re-Bootstrap virtual URI mapping for tours module.", "/modules/tours/virtualUriMappings/toursMapping", "class", "info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping", true,
-                        new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for tours module.", "Re-Bootstrap virtual URI mapping to avoid collision with resource files.", "/mgnl-bootstrap/tours/config.modules.tours.virtualUriMappings.xml", IMPORT_UUID_COLLISION_REPLACE_EXISTING)))
                 .addTask(new BootstrapSingleResource("Re-bootstrap the tours workspace", "Re-bootstrap the tours workspace.", "/mgnl-bootstrap-samples/tours/tours.magnolia-travels.yaml", IMPORT_UUID_COLLISION_REPLACE_EXISTING))
                 .addTask(new ArrayDelegateTask("Bootstrap Tour Finder", "Extract files and modify the travel demo.",
                     new BootstrapSingleResource("", "","/mgnl-bootstrap-samples/tours/website/website.travel.tour-finder.yaml"),
@@ -151,6 +150,11 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                         ), false)
                 )
         );
+
+        register(DeltaBuilder.update("1.6.4", "")
+                .addTask(new RemoveNodeTask("Remove virtualUriMappings from JCR configuration", "/modules/tours/virtualUriMappings"))
+                .addTask(new NodeExistsDelegateTask("Reorder virtualURI filter before i18n filter", "/server/filters/virtualURI", reorderVirtualUriAndI18nFilters))
+        );
     }
 
     @Override
@@ -179,6 +183,7 @@ public class ToursModuleVersionHandler extends DefaultModuleVersionHandler {
                         new CopyNodeTask("Copy categoryOverview template",
                                 "/modules/travel-demo/config/travel/templates/availability/templates/destinationCatOverview", "/modules/multisite/config/sites/travel/templates/availability/templates/destinationCatOverview", false))));
         tasks.add(new SetPageAsPublishedTask("/travel", true));
+        tasks.add(reorderVirtualUriAndI18nFilters);
         return tasks;
     }
 

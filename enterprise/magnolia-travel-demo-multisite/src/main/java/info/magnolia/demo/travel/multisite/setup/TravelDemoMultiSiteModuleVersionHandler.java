@@ -53,11 +53,6 @@ public class TravelDemoMultiSiteModuleVersionHandler extends DefaultModuleVersio
 
                 .addTask(new IsInstallSamplesTask("Re-Bootstrap website content for sportstation pages", "Re-bootstrap website content to account for all changes",
                         new BootstrapSingleResource("", "", "/mgnl-bootstrap-samples/travel-demo-multisite/website.sportstation.yaml")))
-                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for travel-demo multi-site module.", "", "/mgnl-bootstrap/travel-demo-multisite/config.modules.tours.virtualUriMappings.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
-        );
-
-        register(DeltaBuilder.update("1.2.3", "")
-                .addTask(new BootstrapSingleResource("Re-Bootstrap virtual URI mapping for travel-demo multi-site module.", "Re-Bootstrap virtual URI mapping for travel-demo multi-site module.", "/mgnl-bootstrap/travel-demo-multisite/config.modules.tours.virtualUriMappings.xml", ImportUUIDBehavior.IMPORT_UUID_COLLISION_REPLACE_EXISTING))
         );
 
         register(DeltaBuilder.update("1.5.1", "")
@@ -72,6 +67,10 @@ public class TravelDemoMultiSiteModuleVersionHandler extends DefaultModuleVersio
                         new RemovePropertyTask("Remove JSP configuration", "", RepositoryConstants.CONFIG, "/modules/multisite/config/sites/travel/templates/availability/enableAllWithRenderType", "jsp"),
                         new SetPropertyTask("Add SPA configuration", RepositoryConstants.CONFIG, "/modules/multisite/config/sites/travel/templates/availability/enableAllWithRenderType", "spa", "spa")
                 )))
+        );
+
+        register(DeltaBuilder.update("1.6.4", "")
+                .addTask(new RemoveNodeTask("Remove virtualUriMappings from JCR configuration", "/modules/tours/virtualUriMappings"))
         );
     }
 

@@ -22,17 +22,17 @@
     <scmTagPrefix>magnolia-demo-projects</scmTagPrefix>
   </properties>
 
-  <issueManagement>
-    <system>Jira</system>
-    <url>https://jira.magnolia-cms.com/browse/MGNLDEMO</url>
-  </issueManagement>
-
   <scm>
     <connection>scm:git:ssh://git@git.magnolia-cms.com/MODULES/demo-projects</connection>
     <developerConnection>scm:git:ssh://git@git.magnolia-cms.com/MODULES/demo-projects</developerConnection>
     <url>https://git.magnolia-cms.com/projects/MODULES/repos/demo-projects</url>
     <tag>magnolia-demo-projects-1.5.2</tag>
   </scm>
+  
+  <issueManagement>
+    <system>Jira</system>
+    <url>https://jira.magnolia-cms.com/browse/MGNLDEMO</url>
+  </issueManagement>
 
   <modules>
     <module>community/magnolia-travel-demo-parent</module>

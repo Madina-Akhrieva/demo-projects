@@ -58,6 +58,13 @@
       <groupId>info.magnolia.contacts</groupId>
       <artifactId>magnolia-contacts</artifactId>
     </dependency>
+
+    <!-- As of version 2.20.4 Jackrabbit changed the scope of Derby dependency to test, see JCR-4577) -->
+    <!-- Magnolia provides Derby as an embedded database in bundles, see https://docs.magnolia-cms.com/product-docs/6.2/Administration/Certified-stack.html#_databases -->
+    <dependency>
+      <groupId>org.apache.derby</groupId>
+      <artifactId>derby</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

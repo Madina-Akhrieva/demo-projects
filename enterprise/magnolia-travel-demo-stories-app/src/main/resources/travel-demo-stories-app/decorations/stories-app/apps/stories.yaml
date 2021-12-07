@@ -8,17 +8,17 @@ subApps:
         relatedContent:
           properties:
             tours:
-              label: Related Tours
+              label: stories.editor.relatedContent.tours.label
               $type: jcrMultiValueField
-              buttonSelectAddLabel: Add
+              buttonSelectAddLabel: stories.editor.relatedContent.tours.add.label
               field:
                 $type: linkField
                 chooserId: stories-app:chooserTours
                 datasource:
                   $type: jcrDatasource
                   workspace: tours
-                buttonSelectNewLabel: Select new...
-        custom:
+                buttonSelectNewLabel: stories.editor.relatedContent.tours.browse.label
+        blocks:
           blocks:
             - text
             - image

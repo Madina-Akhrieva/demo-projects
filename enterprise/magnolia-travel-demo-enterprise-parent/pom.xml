@@ -127,6 +127,11 @@
       </dependency>
       <dependency>
         <groupId>info.magnolia.personalization</groupId>
+        <artifactId>magnolia-personalization-core</artifactId>
+        <version>${personalizationVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>info.magnolia.personalization</groupId>
         <artifactId>magnolia-personalization-pages</artifactId>
         <version>${personalizationVersion}</version>
       </dependency>

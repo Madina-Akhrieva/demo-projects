@@ -24,6 +24,10 @@
 
     <dependency>
       <groupId>info.magnolia.personalization</groupId>
+      <artifactId>magnolia-personalization-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.personalization</groupId>
       <artifactId>magnolia-personalization-pages</artifactId>
     </dependency>
 

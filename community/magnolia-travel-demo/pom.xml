@@ -39,6 +39,10 @@
       <artifactId>magnolia-dam-templating</artifactId>
     </dependency>
     <dependency>
+      <groupId>info.magnolia.dam</groupId>
+      <artifactId>magnolia-dam-jcr</artifactId>
+    </dependency>
+    <dependency>
       <groupId>info.magnolia.site</groupId>
       <artifactId>magnolia-site</artifactId>
     </dependency>

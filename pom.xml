@@ -4,7 +4,7 @@
   <parent>
     <groupId>info.magnolia.maven.poms</groupId>
     <artifactId>magnolia-parent-pom-community</artifactId>
-    <version>42</version>
+    <version>43</version>
   </parent>
   <groupId>info.magnolia.demo</groupId>
   <artifactId>magnolia-demo-projects-reactor</artifactId>
@@ -28,7 +28,7 @@
     <url>https://git.magnolia-cms.com/projects/MODULES/repos/demo-projects</url>
     <tag>magnolia-demo-projects-1.5.2</tag>
   </scm>
-  
+
   <issueManagement>
     <system>Jira</system>
     <url>https://jira.magnolia-cms.com/browse/MGNLDEMO</url>

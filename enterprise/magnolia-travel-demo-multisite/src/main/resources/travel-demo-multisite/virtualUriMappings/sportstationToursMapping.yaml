@@ -1,4 +1,4 @@
 class: info.magnolia.multisite.mapping.MultiSiteRegexpVirtualUriMapping
-fromUri: ^/(.*/)?tours(.*).html
-toUri: forward:/$1tour?tour=$2
+fromUri: ^/(.*/)?tours/(.*).html
+toUri: forward:/$1tour?tour=/$2
 site: sportstation

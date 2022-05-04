@@ -13,7 +13,7 @@
   <description>Magnolia module showcasing a travel-tours website</description>
 
   <properties>
-    <cloverCoverageThreshold>43</cloverCoverageThreshold>
+    <codeCoverageThreshold>43</codeCoverageThreshold>
   </properties>
 
   <dependencies>

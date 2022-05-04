@@ -4,7 +4,7 @@
   <parent>
     <groupId>info.magnolia.maven.poms</groupId>
     <artifactId>magnolia-parent-pom-community</artifactId>
-    <version>43</version>
+    <version>45</version>
   </parent>
   <groupId>info.magnolia.demo</groupId>
   <artifactId>magnolia-demo-projects-reactor</artifactId>
@@ -12,28 +12,23 @@
   <version>1.6.7-SNAPSHOT</version>
   <name>Magnolia Demo Projects Reactor</name>
   <inceptionYear>2015</inceptionYear>
-
   <description>
     This is a REACTOR project used to build Magnolia demo project artifacts.
     Do NOT use as a PARENT pom.
   </description>
-
   <properties>
     <scmTagPrefix>magnolia-demo-projects</scmTagPrefix>
   </properties>
-
   <scm>
     <connection>scm:git:ssh://git@git.magnolia-cms.com/MODULES/demo-projects</connection>
     <developerConnection>scm:git:ssh://git@git.magnolia-cms.com/MODULES/demo-projects</developerConnection>
     <url>https://git.magnolia-cms.com/projects/MODULES/repos/demo-projects</url>
     <tag>magnolia-demo-projects-1.5.2</tag>
   </scm>
-
   <issueManagement>
     <system>Jira</system>
     <url>https://jira.magnolia-cms.com/browse/MGNLDEMO</url>
   </issueManagement>
-
   <modules>
     <module>community/magnolia-travel-demo-parent</module>
     <module>community/magnolia-travel-demo</module>
@@ -47,5 +42,4 @@
     <module>enterprise/magnolia-travel-demo-content-tags</module>
     <module>enterprise/magnolia-travel-demo-stories-app</module>
   </modules>
-
 </project>

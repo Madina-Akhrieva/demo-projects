@@ -58,17 +58,24 @@ public class SetupDemoRolesAndGroupsTask extends ArrayDelegateTask {
     public SetupDemoRolesAndGroupsTask() {
         super("Set permissions for the travel-demo-editor(s) and travel-demo-publisher(s) roles and groups");
 
-        addTask(new AddDemoTravelPermissionTask(PAGES_PERMISSIONS_ROLES, TRAVEL_DEMO_EDITOR_ROLE));
-        addTask(new AddDemoTravelPermissionTask(PAGES_PERMISSIONS_ROLES, TRAVEL_DEMO_PUBLISHER_ROLE));
+        addTask(
+                new IsModuleInstalledOrRegistered("", "pages", new ArrayDelegateTask("",
+                        new AddDemoTravelPermissionTask(PAGES_PERMISSIONS_ROLES, TRAVEL_DEMO_EDITOR_ROLE),
+                        new AddDemoTravelPermissionTask(PAGES_PERMISSIONS_ROLES, TRAVEL_DEMO_PUBLISHER_ROLE),
+                        new AddDemoTravelPermissionTask(PAGES_ACTIVATE_ACCESS_ROLES, TRAVEL_DEMO_PUBLISHER_ROLE)
+                ))
+        );
 
-        addTask(new AddDemoTravelPermissionTask(DAM_PERMISSIONS_ROLES, TRAVEL_DEMO_EDITOR_ROLE));
-        addTask(new AddDemoTravelPermissionTask(DAM_PERMISSIONS_ROLES, TRAVEL_DEMO_PUBLISHER_ROLE));
+        addTask(
+            new IsModuleInstalledOrRegistered("", "dam-app", new ArrayDelegateTask("",
+                    new AddDemoTravelPermissionTask(DAM_PERMISSIONS_ROLES, TRAVEL_DEMO_EDITOR_ROLE),
+                    new AddDemoTravelPermissionTask(DAM_PERMISSIONS_ROLES, TRAVEL_DEMO_PUBLISHER_ROLE),
+                    new AddDemoTravelPermissionTask(DAM_ACTIVATE_ACCESS_ROLES, TRAVEL_DEMO_PUBLISHER_ROLE),
+                    new AddDemoTravelPermissionTask(DAM_ACTIVATE_ACCESS_ROLES, TRAVEL_DEMO_EDITOR_ROLE)
+            ))
+        );
 
-        addTask(new AddDemoTravelPermissionTask(PAGES_ACTIVATE_ACCESS_ROLES, TRAVEL_DEMO_PUBLISHER_ROLE));
         addTask(new IsModuleInstalledOrRegistered("If on EE, give editors publishing rights on website", ENTERPRISE_MODULE, new AddDemoTravelPermissionTask(PAGES_ACTIVATE_ACCESS_ROLES, TRAVEL_DEMO_EDITOR_ROLE)));
-
-        addTask(new AddDemoTravelPermissionTask(DAM_ACTIVATE_ACCESS_ROLES, TRAVEL_DEMO_PUBLISHER_ROLE));
-        addTask(new AddDemoTravelPermissionTask(DAM_ACTIVATE_ACCESS_ROLES, TRAVEL_DEMO_EDITOR_ROLE));
 
         addTask(new IsModuleInstalledOrRegistered("If workflow-jbpm module is installed, add workflow permissions for " + TRAVEL_DEMO_PUBLISHERS_GROUP, WORKFLOW_JBPM_MODULE, new NewPropertyTask("", WORKFLOW_JBPM_PUBLISH_GROUPS, TRAVEL_DEMO_PUBLISHERS_GROUP, TRAVEL_DEMO_PUBLISHERS_GROUP)));
     }

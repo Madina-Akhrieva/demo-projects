@@ -61,6 +61,9 @@ public class SetupDemoRolesAndGroupsTaskTest {
         session = new MockSession(RepositoryConstants.CONFIG);
         ctx = mock(InstallContext.class);
         when(ctx.getJCRSession(eq(RepositoryConstants.CONFIG))).thenReturn(session);
+
+        NodeUtil.createPath(session.getRootNode(), "modules/pages", NodeTypes.Content.NAME);
+        NodeUtil.createPath(session.getRootNode(), "modules/dam-app", NodeTypes.Content.NAME);
     }
 
     @Test

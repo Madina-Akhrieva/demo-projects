@@ -33,12 +33,9 @@
  */
 package info.magnolia.demo.travel.setup;
 
-import static info.magnolia.demo.travel.setup.SetupDemoRolesAndGroupsTask.*;
-import static info.magnolia.demo.travel.setup.SetupRoleBasedAccessPermissionsTask.*;
 import static info.magnolia.test.hamcrest.NodeMatchers.hasProperty;
 import static info.magnolia.test.hamcrest.NodeMatchers.*;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
@@ -51,19 +48,16 @@ import info.magnolia.cms.security.RoleManager;
 import info.magnolia.cms.security.SecuritySupport;
 import info.magnolia.cms.security.SecuritySupportImpl;
 import info.magnolia.cms.security.UserManager;
-import info.magnolia.cms.security.operations.VoterBasedConfiguredAccessDefinition;
 import info.magnolia.cms.util.QueryUtil;
 import info.magnolia.context.MgnlContext;
 import info.magnolia.dam.jcr.DamConstants;
 import info.magnolia.jcr.util.NodeTypes;
-import info.magnolia.jcr.util.NodeUtil;
 import info.magnolia.module.InstallContext;
 import info.magnolia.module.ModuleVersionHandler;
 import info.magnolia.module.ModuleVersionHandlerTestCase;
 import info.magnolia.module.model.Version;
 import info.magnolia.repository.RepositoryConstants;
 import info.magnolia.test.ComponentsTestUtil;
-import info.magnolia.voting.voters.RoleBaseVoter;
 
 import java.util.Collections;
 import java.util.List;
@@ -79,8 +73,6 @@ import org.junit.Test;
 public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTestCase {
 
     private static final String UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_TARGET_NODE_PATH = "/modules/ui-admincentral/config/appLauncherLayout/groups/target";
-    private static final String PERMISSIONS_VOTERS_DENIED_ROLES_ROLES_NODE_PATH = VOTERS_DENIED_ROLES.concat("/roles");
-    private static final String PERMISSIONS_VOTERS_ALLOWED_ROLES_ROLES_NODE_PATH = VOTERS_ALLOWED_ROLES.concat("/roles");
     private static final String CONTACTS_APPS_CONTACTS_NODE_PATH = "/modules/contacts/apps/contacts";
     private static final String UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_STK_NODE_PATH = "/modules/ui-admincentral/config/appLauncherLayout/groups/stk";
     private static final String UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_MANAGE_NODE_PATH = "/modules/ui-admincentral/config/appLauncherLayout/groups/manage";
@@ -147,156 +139,6 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
         NodeTypes.Activatable.update(session.getNode(path), UserManager.SYSTEM_USER, true);
     }
 
-    /**
-     * When finding the default site in site module (doesn't have any sub nodes nor properties), the demo should add
-     * and set the extends property pointing to the STK site.
-     */
-    @Test
-    public void updateFrom07CreatesExtendsPropertyInSiteNodeWhenNodeIsEmpty() throws Exception {
-        // GIVEN
-        setupConfigNode("/modules/site/config/site");
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.7"));
-
-        // THEN
-        assertTrue(session.propertyExists("/modules/site/config/site/extends"));
-        assertThat(session.getProperty("/modules/site/config/site/extends").getString(), is("/modules/travel-demo/config/travel"));
-    }
-
-    @Test
-    public void updateFrom07AllowsDemoRolesAccessToPagesApp() throws Exception {
-        // GIVEN
-        setupConfigNode("/modules/pages/apps/pages");
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.7"));
-
-        // THEN
-        assertThat(session.getNode(PAGES_PERMISSIONS_ROLES), hasProperty(TRAVEL_DEMO_EDITOR_ROLE, TRAVEL_DEMO_EDITOR_ROLE));
-        assertThat(session.getNode(PAGES_PERMISSIONS_ROLES), hasProperty(TRAVEL_DEMO_PUBLISHER_ROLE, TRAVEL_DEMO_PUBLISHER_ROLE));
-    }
-
-    @Test
-    public void setAccessPermissionsAfterCleanInstall() throws Exception {
-        // GIVEN
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
-
-        // THEN
-        assertThatAccessPermissionsAreConfigured(CONTACTS_APPS_CONTACTS_NODE_PATH, TRAVEL_DEMO_ADMINCENTRAL_ROLE, false);
-        assertThatAccessPermissionsAreConfigured(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_STK_NODE_PATH, TRAVEL_DEMO_ADMINCENTRAL_ROLE, false);
-        assertThatAccessPermissionsAreConfigured(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_MANAGE_NODE_PATH, TRAVEL_DEMO_ADMINCENTRAL_ROLE, false);
-
-        assertThatAccessPermissionsAreConfigured(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_TARGET_NODE_PATH, TRAVEL_DEMO_EDITOR_ROLE, true);
-        assertThatAccessPermissionsAreConfigured(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_TARGET_NODE_PATH, TRAVEL_DEMO_PUBLISHER_ROLE, true);
-
-    }
-
-    @Test
-    public void updateFrom07SetsAccessPermissions() throws Exception {
-        // GIVEN
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.7"));
-
-        // THEN
-        assertThatAccessPermissionsAreConfigured(CONTACTS_APPS_CONTACTS_NODE_PATH, TRAVEL_DEMO_ADMINCENTRAL_ROLE, false);
-        assertThatAccessPermissionsAreConfigured(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_STK_NODE_PATH, TRAVEL_DEMO_ADMINCENTRAL_ROLE, false);
-        assertThatAccessPermissionsAreConfigured(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_MANAGE_NODE_PATH, TRAVEL_DEMO_ADMINCENTRAL_ROLE, false);
-    }
-
-    @Test
-    public void updateFrom08SetsUpAccessToTargetAppGroup() throws Exception {
-        // GIVEN
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.8"));
-
-        // THEN
-        assertThatAccessPermissionsAreConfigured(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_TARGET_NODE_PATH, TRAVEL_DEMO_EDITOR_ROLE, true);
-        assertThatAccessPermissionsAreConfigured(UIADMINCENTRAL_CONFIG_APPLAUNCH_GROUPS_TARGET_NODE_PATH, TRAVEL_DEMO_PUBLISHER_ROLE, true);
-    }
-
-
-    @Test
-    public void testUpgradeFrom081InstallsPurSamples() throws Exception {
-        // GIVEN
-        setupConfigProperty("/server", "admin", "false");
-        setupConfigNode("/modules/public-user-registration");
-        setupConfigNode("/modules/multisite/config/sites/travel/templates/availability/templates");
-
-        // WHEN
-        final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.8.1"));
-
-        // THEN
-        assertThat(session.getRootNode(), hasNode("modules/multisite/config/sites/travel/templates/availability/templates/pur"));
-
-        this.checkPurSamplesAreInstalled(session.getNode("/server/filters/securityCallback/clientCallbacks"));
-        this.checkIfEverythingIsActivated();
-    }
-
-    @Test
-    public void upgradeFrom081PurNotInstalled() throws Exception {
-        // GIVEN
-
-        // WHEN
-        final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.8.1"));
-
-        // THEN
-        assertThat(website.getRootNode(), hasNode("travel/book-tour"));
-        this.checkIfEverythingIsActivated();
-    }
-
-    @Test
-    public void upgradeFrom014RemovesTravelDemoThemeFromJCR() throws Exception {
-        // GIVEN
-        setupConfigNode("/modules/site/config/themes/travel-demo-theme");
-
-        // WHEN
-        final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.14"));
-
-        // THEN
-        assertThat(session.getRootNode(), not(hasNode("modules/site/config/themes/travel-demo-theme")));
-        this.checkIfEverythingIsActivated();
-    }
-
-    @Test
-    public void upgradeFrom115OverwritesMultisitePurTemplateAvailabilityWithNoError() throws Exception {
-        // GIVEN
-        setupConfigNode("/modules/public-user-registration");
-        setupConfigNode("/modules/multisite/config/sites/travel/templates/availability/templates/pur");
-
-        // WHEN
-        final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.5"));
-
-        // THEN
-    }
-
-    @Test
-    public void upgradeFrom123() throws Exception {
-        // GIVEN
-        Node configurations = NodeUtil.createPath(session.getRootNode(), "modules/public-user-registration/config/configurations", NodeTypes.ContentNode.NAME);
-        configurations.addNode("travel", NodeTypes.ContentNode.NAME);
-
-        // WHEN
-        final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2.3"));
-
-        // THEN
-        assertThat(configurations, not(hasNode("travel")));
-    }
-
-    @Test
-    public void upgradeFrom141() throws Exception {
-        // GIVEN
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.4.1"));
-
-        // THEN
-    }
-
     @Test
     public void upgradeFrom163() throws Exception {
         // GIVEN
@@ -314,60 +156,16 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
     public void cleanInstall() throws Exception {
         // GIVEN
         setupConfigNode("/modules/public-user-registration");
-        setupConfigNode("/modules/multisite/config/sites/fallback");
         setupConfigProperty("/server", "admin", "false");
 
         // WHEN
         final InstallContext ctx = executeUpdatesAsIfTheCurrentlyInstalledVersionWas(null);
 
         // THEN
-        assertThat(session.getRootNode(), hasNode("modules/multisite/config/sites/travel/templates/availability/templates/pur"));
         assertThat("Default URI to home page has been set", session.getNode("/modules/ui-admincentral/virtualUriMappings/default"), hasProperty("toUri", "redirect:/travel.html"));
 
         this.checkPurSamplesAreInstalled(session.getNode("/server/filters/securityCallback/clientCallbacks"));
         this.checkIfEverythingIsActivated();
-    }
-
-    @Test
-    public void updateTo151_MigrateCorsToTravelSite() throws Exception {
-        // GIVEN
-        setupConfigNode("/modules/travel-demo/config/travel");
-        setupConfigNode("/server/filters/addCORSHeaders/headers");
-        setupConfigProperty("/server/filters/addCORSHeaders", "enabled", "true");
-        setupConfigProperty("/server/filters/addCORSHeaders/headers", "Access-Control-Allow-Headers", "X-PINGOTHER, Origin, X-Requested-With, Content-Type, Accept");
-        setupConfigProperty("/server/filters/addCORSHeaders/headers", "Access-Control-Allow-Methods", "GET");
-        setupConfigProperty("/server/filters/addCORSHeaders/headers", "Access-Control-Allow-Origin", "*");
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.5.0"));
-
-        // THEN
-        assertThat(session.nodeExists("/modules/travel-demo/config/travel/cors/travel"), is(true));
-        final Node node = session.getNode("/modules/travel-demo/config/travel/cors/travel");
-        assertThat(node.getNode("uris").getNode("rest"), hasProperty("patternString", "/.rest/*"));
-        assertThat(node.getNode("allowedOrigins"), hasProperty("0", "*"));
-        assertThat(node.getNode("allowedMethods"), hasProperty("0", "GET"));
-        assertThat(node.getNode("allowedHeaders"), allOf(
-                hasProperty("0", "X-PINGOTHER"),
-                hasProperty("1", "Origin"),
-                hasProperty("2", "X-Requested-With"),
-                hasProperty("3", "Content-Type"),
-                hasProperty("4", "Accept")
-        ));
-    }
-
-    @Test
-    public void updateTo152_removeJSPAndAddSPAAvailability() throws Exception {
-        setupConfigNode("/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType");
-        setupConfigProperty("/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType", "jsp", "jsp");
-
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.5.1"));
-
-        final Node node = session.getNode("/modules/travel-demo/config/travel/templates/availability/enableAllWithRenderType");
-        assertThat(node, allOf(
-                hasProperty("spa", "spa"),
-                not(hasProperty("jsp", "jsp"))
-        ));
     }
 
     private void checkPurSamplesAreInstalled(Node clientCallbacks) throws RepositoryException {
@@ -390,8 +188,6 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
                 containsString(InstallPurSamplesTask.PROTECTED_PAGES_NAMES.get(0)),
                 containsString(InstallPurSamplesTask.PROTECTED_PAGES_NAMES.get(1))
         ));
-
-        assertThat(session.getRootNode(), hasNode("modules/travel-demo/config/travel/templates/availability/templates/pur"));
 
         assertThat(MgnlContext.getJCRSession(RepositoryConstants.USER_ROLES).getRootNode(), hasNode(UserManager.ANONYMOUS_USER + "/acl_uri"));
         NodeIterator permissions = MgnlContext.getJCRSession(RepositoryConstants.USER_ROLES).getNode("/" + UserManager.ANONYMOUS_USER + "/acl_uri").getNodes();
@@ -425,19 +221,4 @@ public class TravelDemoModuleVersionHandlerTest extends ModuleVersionHandlerTest
             }
         }
     }
-
-    private void assertThatAccessPermissionsAreConfigured(String path, String role, boolean allow) throws RepositoryException {
-
-        assertThat(session.getNode(path.concat(PERMISSIONS_NODE_PATH)), hasProperty("class", VoterBasedConfiguredAccessDefinition.class.getName()));
-
-        if (allow) {
-            assertThat(session.getNode(path.concat(VOTERS_ALLOWED_ROLES)), hasProperty("class", RoleBaseVoter.class.getName()));
-            assertThat(session.getNode(path.concat(PERMISSIONS_VOTERS_ALLOWED_ROLES_ROLES_NODE_PATH)), hasProperty(role, role));
-        } else {
-            assertThat(session.getNode(path.concat(VOTERS_DENIED_ROLES)), hasProperty("class", RoleBaseVoter.class.getName()));
-            assertThat(session.getNode(path.concat(VOTERS_DENIED_ROLES)), hasProperty("not", "true"));
-            assertThat(session.getNode(path.concat(PERMISSIONS_VOTERS_DENIED_ROLES_ROLES_NODE_PATH)), hasProperty(role, role));
-        }
-    }
-
 }

@@ -1,0 +1,44 @@
+templates:
+  class: info.magnolia.module.site.templates.ReferencingPrototypeTemplateSettings
+  prototypeId: travel-demo:pages/prototype
+  availability:
+    templates:
+      home:
+        id: travel-demo:pages/home
+      standard:
+        id: travel-demo:pages/standard
+      searchResultPage:
+        id: travel-demo:pages/searchResultPage
+      pur:
+        id: travel-demo:pages/pur
+    enableAllWithRenderType:
+      freemarker: freemarker
+      spa: spa
+theme:
+  name: travel-demo-theme
+i18n:
+  class: info.magnolia.cms.i18n.DefaultI18nContentSupport
+  enabled: true
+  fallbackLocale: en
+  locales:
+    en:
+      enabled: true
+      language: en
+    de:
+      enabled: true
+      language: de
+cors:
+  travel:
+    uris:
+      rest:
+        patternString: '/.rest/*'
+    allowedOrigins:
+      all: '*'
+    allowedMethods:
+      get: GET
+    allowedHeaders:
+      accept: Accept
+      content-type: Content-Type
+      origin: Origin
+      x-pingother: X-PINGOTHER
+      x-requested-with: X-Requested-With

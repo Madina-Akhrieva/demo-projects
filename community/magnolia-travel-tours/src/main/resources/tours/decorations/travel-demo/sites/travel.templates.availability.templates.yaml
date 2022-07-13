@@ -1,0 +1,6 @@
+tour:
+  id: tours:pages/tour
+categoryOverview:
+  id: tours:pages/categoryOverview
+destinationCatOverview:
+  id: tours:pages/destinationCatOverview

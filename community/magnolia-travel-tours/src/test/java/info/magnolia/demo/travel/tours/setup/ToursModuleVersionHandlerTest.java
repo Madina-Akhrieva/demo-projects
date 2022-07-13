@@ -114,21 +114,6 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void updateTo08SetsPagesAsPublished() throws Exception {
-        // GIVEN
-        setupBootstrapPages();
-        websiteSession.getRootNode().addNode("travel/foo", NodeTypes.Page.NAME);
-        PropertyUtil.setProperty(websiteSession.getNode("/travel/foo"), Activatable.ACTIVATION_STATUS, Long.valueOf(Activatable.ACTIVATION_STATUS_MODIFIED));
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.7"));
-
-        // THEN
-        int activationStatus = Activatable.getActivationStatus(websiteSession.getNode("/travel/foo"));
-        assertThat("We expect that /travel/foo is activated", activationStatus, equalTo(Activatable.ACTIVATION_STATUS_ACTIVATED));
-    }
-
-    @Test
     public void cleanInstall() throws Exception {
         // GIVEN
         setupBootstrapPages();
@@ -159,39 +144,6 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
     }
 
     @Test
-    public void demoRoleCanAccessDamApp() throws Exception {
-        // GIVEN
-        setupBootstrapPages();
-        setupConfigNode(ToursModuleVersionHandler.DAM_PERMISSIONS_ROLES);
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.7"));
-
-        // THEN
-        assertThat(configSession.getNode(ToursModuleVersionHandler.DAM_PERMISSIONS_ROLES), hasProperty(ToursModuleVersionHandler.TRAVEL_DEMO_TOUR_EDITOR_ROLE, ToursModuleVersionHandler.TRAVEL_DEMO_TOUR_EDITOR_ROLE));
-    }
-
-    @Test
-    public void updateFrom08AlsoReordersPages() throws Exception {
-        // GIVEN
-        setupBootstrapPages();
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.8"));
-
-        // THEN
-        final Node travelPages = websiteSession.getNode("/travel");
-        final List<Node> pageNames = Lists.newArrayList(NodeUtil.getNodes(travelPages, NodeTypes.Page.NAME));
-        assertThat(Collections2.transform(pageNames, new ToNodeName()), contains(
-                "tour-type",
-                "destination",
-                "tour",
-                "about",
-                "tour-finder"
-        ));
-    }
-
-    @Test
     public void explicitlyBootstrappedCareersMain05NodeOrderedFreshInstall() throws Exception {
         // GIVEN
         setupBootstrapPages();
@@ -208,105 +160,6 @@ public class ToursModuleVersionHandlerTest extends ModuleVersionHandlerTestCase 
                 "01",
                 "05",
                 "06"
-        ));
-    }
-
-    @Test
-    public void explicitlyBootstrappedCareersMain05NodeOrdered() throws Exception {
-        // GIVEN
-        setupBootstrapPages();
-        Node careersMain = NodeUtil.createPath(websiteSession.getRootNode(), "/travel/about/careers/main", NodeTypes.Component.NAME, true);
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("0.10"));
-
-        // THEN
-        assertThat(careersMain, hasNode("05"));
-        List<Node> careerNodeList = Lists.newArrayList(careersMain.getNodes());
-        assertThat(Collections2.transform(careerNodeList, new ToNodeName()), contains(
-                "01",
-                "05",
-                "06"
-        ));
-    }
-
-    @Test
-    public void updateFrom114RemovesDeprecatedUriMappings() throws Exception {
-        // GIVEN
-        Node toursModule = NodeUtil.createPath(configSession.getRootNode(), "/modules/tours", NodeTypes.Content.NAME, true);
-        toursModule.addNode("virtualURIMapping", NodeTypes.Content.NAME);
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.1.4"));
-
-        //THEN
-        assertThat(toursModule, not(hasNode("virtualURIMapping")));
-    }
-
-    @Test
-    public void updateFrom122InstallsTourFinder() throws Exception {
-        // GIVEN
-        Node travel = NodeUtil.createPath(websiteSession.getRootNode(), "travel", NodeTypes.Content.NAME);
-        Node main = NodeUtil.createPath(travel, "main", NodeTypes.Content.NAME);
-        NodeUtil.createPath(main, "0", NodeTypes.ContentNode.NAME);
-        NodeUtil.createPath(main, "00", NodeTypes.ContentNode.NAME);
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.2.2"));
-
-        //THEN
-        assertThat(travel, hasNode("tour-finder"));
-        List<Node> components = Lists.newArrayList(main.getNodes());
-        assertThat(Collections2.transform(components, new ToNodeName()), contains(
-                "0",
-                "01",
-                "00"
-        ));
-    }
-
-    @Test
-    public void updateFrom13Installs60DemoImages() throws Exception {
-        // GIVEN
-        NodeUtil.createPath(damSession.getRootNode(), "tours", NodeTypes.Folder.NAME);
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.3"));
-
-        // THEN
-        List<Node> toursNodeList = Lists.newArrayList(damSession.getRootNode().getNode("tours").getNodes());
-        assertThat(Collections2.transform(toursNodeList, new ToNodeName()), hasItems(
-                "ash-edmonds-441220-unsplash",
-                "ruben-mishchuk-571314-unsplash",
-                "simon-mumenthaler-199501-unsplash"
-        ));
-    }
-
-    @Test
-    public void updateFrom14InstallsNewImageMetadata() throws Exception {
-        // GIVEN
-        NodeUtil.createPath(damSession.getRootNode(), "tours", NodeTypes.Folder.NAME);
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.4"));
-
-        // THEN
-        Node ashEdmonds = damSession.getRootNode().getNode("tours/ash-edmonds-441220-unsplash");
-        assertThat(ashEdmonds, hasProperty("coverage"));
-    }
-
-    @Test
-    public void updateFrom154() throws Exception {
-        // GIVEN
-        NodeUtil.createPath(configSession.getRootNode(), "modules/tours/apps", NodeTypes.Folder.NAME);
-
-        // WHEN
-        executeUpdatesAsIfTheCurrentlyInstalledVersionWas(Version.parseVersion("1.5.4"));
-
-        // THEN
-        assertThat(configSession.getRootNode(), allOf(
-                not(hasNode("modules/tours/apps")),
-                not(hasNode("modules/ui-admincentral/config/appLauncherLayout/groups/edit/apps/")),
-                not(hasNode("modules/tours/apps"))
         ));
     }
 

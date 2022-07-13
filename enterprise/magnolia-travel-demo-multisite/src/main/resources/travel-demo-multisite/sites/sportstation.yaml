@@ -1,0 +1,28 @@
+!inherit:travel
+mappings: !override
+  website:
+    URIPrefix: ''
+    handlePrefix: /sportstation
+    repository: website
+theme:
+  name: sportstation-theme
+templates:
+  prototypeId: travel-demo-multisite:pages/prototype
+  availability:
+    templates:
+      tour:
+        id: travel-demo-multisite:pages/tourSportstation
+domains: !override
+  sportstation:
+    name: sportstation.magnolia-cms.com
+i18n:
+  class: info.magnolia.cms.i18n.DefaultI18nContentSupport
+  enabled: false
+  fallbackLocale: en
+  locales:
+    en:
+      enabled: true
+      language: en
+    de:
+      enabled: true
+      language: de

@@ -9,6 +9,10 @@
 
   <dependencies>
     <dependency>
+      <name>travel-demo</name>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
       <name>tours</name>
       <version>${project.version}</version>
     </dependency>

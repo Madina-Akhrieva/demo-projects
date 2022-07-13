@@ -1,0 +1,8 @@
+domains:
+  travel-demo:
+    name: travel-demo.magnolia-cms.com
+mappings:
+  website:
+    URIPrefix: ''
+    handlePrefix: /travel
+    repository: website

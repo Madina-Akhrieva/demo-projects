@@ -88,11 +88,6 @@
     </dependency>
 
     <dependency>
-      <groupId>info.magnolia.privacy</groupId>
-      <artifactId>magnolia-privacy-sample</artifactId>
-    </dependency>
-    
-    <dependency>
       <groupId>info.magnolia.contacts</groupId>
       <artifactId>magnolia-contacts</artifactId>
     </dependency>

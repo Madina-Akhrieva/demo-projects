@@ -139,10 +139,6 @@
       <groupId>info.magnolia.ai.text</groupId>
       <artifactId>magnolia-pages-content-tags-integration</artifactId>
     </dependency>
-    <dependency>
-      <groupId>info.magnolia.ai.text</groupId>
-      <artifactId>magnolia-pages-content-tags-integration-compatibility</artifactId>
-    </dependency>
 
     <dependency>
       <groupId>info.magnolia.graphql</groupId>

@@ -41,11 +41,6 @@
       <groupId>info.magnolia.demo</groupId>
       <artifactId>magnolia-travel-tours</artifactId>
     </dependency>
-
-    <dependency>
-      <groupId>info.magnolia.contacts</groupId>
-      <artifactId>magnolia-contacts</artifactId>
-    </dependency>
   </dependencies>
 
   <build>

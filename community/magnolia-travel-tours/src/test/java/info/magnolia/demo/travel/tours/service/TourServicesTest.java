@@ -35,7 +35,6 @@ package info.magnolia.demo.travel.tours.service;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
 
 import info.magnolia.cms.beans.config.URI2RepositoryManager;

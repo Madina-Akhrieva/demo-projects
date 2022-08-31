@@ -37,7 +37,6 @@ import static info.magnolia.demo.travel.setup.SetupDemoRolesAndGroupsTask.*;
 import static info.magnolia.test.hamcrest.NodeMatchers.hasProperty;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 
 import info.magnolia.jcr.util.NodeTypes;

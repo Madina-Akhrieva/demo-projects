@@ -32,6 +32,7 @@
     <magnoliaDamVersion>3.0</magnoliaDamVersion>
     <magnoliaVersion>6.2.8</magnoliaVersion>
     <magnoliaUiVersion>6.2.8</magnoliaUiVersion>
+    <mteVersion>3.0-MTE-141-SNAPSHOT</mteVersion>
   </properties>
 
   <scm>
@@ -168,7 +169,7 @@
         <artifactId>magnolia-templating-kit-2</artifactId>
         <type>test-jar</type>
         <scope>test</scope>
-        <version>2.0</version>
+        <version>${mteVersion}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

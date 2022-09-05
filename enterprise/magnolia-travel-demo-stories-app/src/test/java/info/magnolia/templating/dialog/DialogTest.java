@@ -17,11 +17,14 @@ package info.magnolia.templating.dialog;
 import static info.magnolia.test.hamcrest.NodeMatchers.hasProperty;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import info.magnolia.context.MgnlContext;
+import info.magnolia.test.mock.MockContext;
 import info.magnolia.ui.VaadinLookup;
 import info.magnolia.ui.field.LinkField;
 
 import javax.jcr.Node;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import com.vaadin.ui.Component;
@@ -31,6 +34,13 @@ public class DialogTest extends AbstractDialogTest {
     @Override
     public String getModuleName() {
         return "travel-demo-stories-app";
+    }
+
+    @Before
+    public void setup() throws Exception {
+        super.setUp();
+        MockContext ctx = (MockContext) MgnlContext.getInstance();
+        ctx.addSession("stories", this.session);
     }
 
     @Test

@@ -36,12 +36,15 @@ package info.magnolia.templating.dialog;
 import static info.magnolia.test.hamcrest.NodeMatchers.hasProperty;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import info.magnolia.context.MgnlContext;
+import info.magnolia.test.mock.MockContext;
 import info.magnolia.ui.MultiValueField;
 import info.magnolia.ui.VaadinLookup;
 import info.magnolia.ui.field.LinkField;
 
 import javax.jcr.Node;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import com.vaadin.ui.TextField;
@@ -51,6 +54,14 @@ public class DialogTest extends AbstractDialogTest {
     @Override
     String getModuleName() {
         return "tours";
+    }
+
+    @Before
+    public void setup() throws Exception {
+        super.setUp();
+        MockContext ctx = (MockContext) MgnlContext.getInstance();
+        ctx.addSession("tours", this.session);
+        ctx.addSession("category", this.session);
     }
 
     @Test

@@ -15,7 +15,7 @@
   <description>Magnolia Travel is a demo project showing best practices when working with Magnolia.</description>
 
   <properties>
-    <javaVersion>1.8</javaVersion>
+    <javaVersion>11</javaVersion>
     <magnoliaVersion>6.2.4</magnoliaVersion>
     <magnoliaUiVersion>6.2.4</magnoliaUiVersion>
     <magnoliaDamVersion>3.0</magnoliaDamVersion>

@@ -45,7 +45,7 @@
     </dependency>
     <dependency>
       <name>ui-admincentral</name>
-      <version>${magnoliaUiVersion}/*</version>
+      <version>${admincentralLegacyVersion}/*</version>
     </dependency>
     <dependency>
       <name>ui-framework</name>

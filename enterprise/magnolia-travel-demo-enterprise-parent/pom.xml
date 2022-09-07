@@ -29,7 +29,7 @@
     <multisiteVersion>3.0-SNAPSHOT</multisiteVersion>
     <storiesAppVersion>2.2.0-SNAPSHOT</storiesAppVersion>
     <javascriptModelsVersion>3.0-SNAPSHOT</javascriptModelsVersion>
-    <magnoliaDamVersion>3.0</magnoliaDamVersion>
+    <magnoliaDamVersion>3.1-SNAPSHOT</magnoliaDamVersion>
     <magnoliaVersion>6.3-SNAPSHOT</magnoliaVersion>
     <magnoliaUiVersion>6.3-SNAPSHOT</magnoliaUiVersion>
     <mteVersion>3.0-MTE-141-SNAPSHOT</mteVersion>

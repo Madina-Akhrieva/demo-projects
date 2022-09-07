@@ -19,7 +19,7 @@
     <magnoliaVersion>6.3-SNAPSHOT</magnoliaVersion>
     <magnoliaUiVersion>6.3-SNAPSHOT</magnoliaUiVersion>
     <admincentralLegacyVersion>6.2.20-SNAPSHOT</admincentralLegacyVersion>
-    <magnoliaDamVersion>3.0</magnoliaDamVersion>
+    <magnoliaDamVersion>3.1-SNAPSHOT</magnoliaDamVersion>
     <magnoliaPagesVersion>6.2</magnoliaPagesVersion>
     <siteVersion>2.0-MGNLSITE-131-SNAPSHOT</siteVersion>
     <resourcesVersion>4.0-SNAPSHOT</resourcesVersion>

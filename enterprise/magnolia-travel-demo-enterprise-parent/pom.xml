@@ -23,12 +23,12 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- These properties are also referenced in the module descriptors -->
-    <personalizationVersion>2.0</personalizationVersion>
+    <personalizationVersion>3.0-SNAPSHOT</personalizationVersion>
     <marketingTagsVersion>1.3</marketingTagsVersion>
     <contentTagsVersion>1.0</contentTagsVersion>
     <multisiteVersion>3.0-SNAPSHOT</multisiteVersion>
     <storiesAppVersion>2.2.0-SNAPSHOT</storiesAppVersion>
-    <javascriptModelsVersion>1.0</javascriptModelsVersion>
+    <javascriptModelsVersion>3.0-SNAPSHOT</javascriptModelsVersion>
     <magnoliaDamVersion>3.0</magnoliaDamVersion>
     <magnoliaVersion>6.3-SNAPSHOT</magnoliaVersion>
     <magnoliaUiVersion>6.3-SNAPSHOT</magnoliaUiVersion>

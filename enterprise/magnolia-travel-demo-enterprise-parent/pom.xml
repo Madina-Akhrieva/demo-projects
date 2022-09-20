@@ -24,7 +24,7 @@
 
     <!-- These properties are also referenced in the module descriptors -->
     <personalizationVersion>3.0-SNAPSHOT</personalizationVersion>
-    <marketingTagsVersion>1.3</marketingTagsVersion>
+    <marketingTagsVersion>3.0-SNAPSHOT</marketingTagsVersion>
     <contentTagsVersion>3.0-SNAPSHOT</contentTagsVersion>
     <multisiteVersion>3.0-SNAPSHOT</multisiteVersion>
     <storiesAppVersion>2.2.0-SNAPSHOT</storiesAppVersion>

@@ -18,9 +18,8 @@
     <javaVersion>11</javaVersion>
     <magnoliaVersion>6.3-SNAPSHOT</magnoliaVersion>
     <magnoliaUiVersion>6.3-SNAPSHOT</magnoliaUiVersion>
-    <admincentralLegacyVersion>6.2.20-SNAPSHOT</admincentralLegacyVersion>
     <magnoliaDamVersion>3.1-SNAPSHOT</magnoliaDamVersion>
-    <magnoliaPagesVersion>6.2</magnoliaPagesVersion>
+    <magnoliaPagesVersion>6.3-SNAPSHOT</magnoliaPagesVersion>
     <siteVersion>2.0-MGNLSITE-131-SNAPSHOT</siteVersion>
     <resourcesVersion>4.0-SNAPSHOT</resourcesVersion>
     <mteVersion>3.0-MTE-141-SNAPSHOT</mteVersion>
@@ -63,12 +62,6 @@
         <version>${magnoliaUiVersion}</version>
         <scope>import</scope>
         <type>pom</type>
-      </dependency>
-
-      <dependency>
-        <groupId>info.magnolia.ui</groupId>
-        <artifactId>magnolia-ui-admincentral</artifactId>
-        <version>${admincentralLegacyVersion}</version>
       </dependency>
 
       <!-- Dependencies to travel-demo -->

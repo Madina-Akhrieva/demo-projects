@@ -20,9 +20,9 @@
     <magnoliaUiVersion>6.3-SNAPSHOT</magnoliaUiVersion>
     <magnoliaDamVersion>3.1-SNAPSHOT</magnoliaDamVersion>
     <magnoliaPagesVersion>6.3-SNAPSHOT</magnoliaPagesVersion>
-    <siteVersion>2.0-MGNLSITE-131-SNAPSHOT</siteVersion>
+    <siteVersion>2.0-SNAPSHOT</siteVersion>
     <resourcesVersion>4.0-SNAPSHOT</resourcesVersion>
-    <mteVersion>3.0-MTE-141-SNAPSHOT</mteVersion>
+    <mteVersion>3.0-SNAPSHOT</mteVersion>
     <magnolia.pur.version>3.0-SNAPSHOT</magnolia.pur.version>
     <mockito.core.version>4.6.1</mockito.core.version>
     <magnolia.categorization.version>3.0-SNAPSHOT</magnolia.categorization.version>

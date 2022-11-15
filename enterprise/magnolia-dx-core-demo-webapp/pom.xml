@@ -75,6 +75,19 @@
       <artifactId>magnolia-travel-tours-enterprise</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>info.magnolia.webhooks</groupId>
+      <artifactId>magnolia-webhooks-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.webhooks</groupId>
+      <artifactId>magnolia-webhooks-events-jcr</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.webhooks</groupId>
+      <artifactId>magnolia-webhooks-events-ui-api</artifactId>
+    </dependency>
+
     <!-- Addon modules -->
     <dependency>
       <groupId>info.magnolia.ai.image</groupId>

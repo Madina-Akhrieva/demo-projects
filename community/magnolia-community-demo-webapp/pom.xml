@@ -47,7 +47,7 @@
     <plugins>
       <plugin>
         <groupId>org.codehaus.gmaven</groupId>
-        <artifactId>gmaven-plugin</artifactId>
+        <artifactId>groovy-maven-plugin</artifactId>
         <executions>
           <execution>
             <id>check-for-duplicates</id>
@@ -56,7 +56,6 @@
               <goal>execute</goal>
             </goals>
             <configuration>
-              <providerSelection>1.5</providerSelection>
               <properties>
                 <libdir>${project.build.directory}/${project.build.finalName}/WEB-INF/lib</libdir>
               </properties>

@@ -5,6 +5,7 @@
     <groupId>info.magnolia.maven.poms</groupId>
     <artifactId>magnolia-parent-pom-community</artifactId>
     <version>54-SNAPSHOT</version>
+    <!-- do not forget to also update it in community/magnolia-travel-demo-parent/pom.xml & enterprise/magnolia-travel-demo-enterprise-parent/pom.xml -->
   </parent>
   <groupId>info.magnolia.demo</groupId>
   <artifactId>magnolia-demo-projects-reactor</artifactId>

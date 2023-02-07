@@ -177,60 +177,6 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.basepom.maven</groupId>
-        <artifactId>duplicate-finder-maven-plugin</artifactId>
-        <configuration>
-          <ignoredClassPatterns combine.self="override" /> <!-- Don't inherit ignored patterns from parent: we want to scan all classes -->
-          <exceptions>
-            <exception>
-              <!-- DEV-2119 magnolia-ui-vaadin-common-widgets contains duplicates from vaadin-server and ckeditor -->
-              <conflictingDependencies>
-                <dependency>
-                  <groupId>info.magnolia.ui</groupId>
-                  <artifactId>magnolia-ui-vaadin-common-widgets</artifactId>
-                </dependency>
-                <dependency>
-                  <groupId>org.vaadin.alump</groupId>
-                  <artifactId>ckeditor</artifactId>
-                </dependency>
-                <dependency>
-                  <groupId>com.vaadin</groupId>
-                  <artifactId>vaadin-server</artifactId>
-                </dependency>
-              </conflictingDependencies>
-            </exception>
-            <exception>
-              <!-- DEV-2120 These come through the ui-framework and the magnolia-ui-framework-compatibility. -->
-              <!-- There are duplicate but different classes, which potentially causes problems. -->
-              <conflictingDependencies>
-                <dependency>
-                  <groupId>info.magnolia.vaadin.addons</groupId>
-                  <artifactId>vaadin-compatibility-aceeditor</artifactId>
-                </dependency>
-                <dependency>
-                  <groupId>org.vaadin.addons</groupId>
-                  <artifactId>aceeditor</artifactId>
-                </dependency>
-              </conflictingDependencies>
-            </exception>
-            <exception>
-              <conflictingDependencies>
-                <!-- DEV-2134 These come through the magnolia-module-workflow-jbpm and the magnolia-webhooks-events-ui-api. -->
-                <!-- There are duplicate but different classes, which potentially causes problems. -->
-                <dependency>
-                  <groupId>com.zaxxer</groupId>
-                  <artifactId>HikariCP-java7</artifactId>
-                </dependency>
-                <dependency>
-                  <groupId>com.zaxxer</groupId>
-                  <artifactId>HikariCP</artifactId>
-                </dependency>
-              </conflictingDependencies>
-            </exception>
-          </exceptions>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
 </project>

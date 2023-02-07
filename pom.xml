@@ -10,7 +10,7 @@
   <groupId>info.magnolia.demo</groupId>
   <artifactId>magnolia-demo-projects-reactor</artifactId>
   <packaging>pom</packaging>
-  <version>6.3-SNAPSHOT</version>
+  <version>2.0-SNAPSHOT</version>
   <name>Magnolia Demo Projects Reactor</name>
   <inceptionYear>2015</inceptionYear>
   <description>
@@ -34,7 +34,6 @@
     <module>community/magnolia-travel-demo-parent</module>
     <module>community/magnolia-travel-demo</module>
     <module>community/magnolia-travel-tours</module>
-    <module>community/magnolia-community-demo-webapp</module>
     <module>enterprise/magnolia-travel-tours-enterprise</module>
     <module>enterprise/magnolia-travel-demo-enterprise-parent</module>
     <module>enterprise/magnolia-travel-demo-marketing-tags</module>
@@ -43,6 +42,5 @@
     <module>enterprise/magnolia-travel-demo-component-personalization</module>
     <module>enterprise/magnolia-travel-demo-content-tags</module>
     <module>enterprise/magnolia-travel-demo-stories-app</module>
-    <module>enterprise/magnolia-dx-core-demo-webapp</module>
   </modules>
 </project>

@@ -3,13 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>info.magnolia.eedemo</groupId>
-    <artifactId>magnolia-travel-demo-enterprise-parent</artifactId>
+    <groupId>info.magnolia.dx</groupId>
+    <artifactId>magnolia-dx-core-parent</artifactId>
     <version>6.3-SNAPSHOT</version>
-    <relativePath>../magnolia-travel-demo-enterprise-parent/pom.xml</relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <groupId>info.magnolia.dx</groupId>
   <artifactId>magnolia-dx-core-demo-webapp</artifactId>
   <packaging>war</packaging>
 

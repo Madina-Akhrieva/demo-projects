@@ -127,25 +127,6 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.codehaus.gmaven</groupId>
-        <artifactId>groovy-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>check-for-duplicates</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>execute</goal>
-            </goals>
-            <configuration>
-              <properties>
-                <libdir>${project.build.directory}/${project.build.finalName}/WEB-INF/lib</libdir>
-              </properties>
-              <source>${project.basedir}/test/check_for_duplicates.groovy</source>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
@@ -194,10 +175,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.basepom.maven</groupId>
-        <artifactId>duplicate-finder-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

@@ -9,7 +9,7 @@
   <groupId>info.magnolia.demo</groupId>
   <artifactId>magnolia-travel-demo-parent</artifactId>
   <packaging>pom</packaging>
-  <version>2.0-SNAPSHOT</version>
+  <version>6.3-SNAPSHOT</version>
   <name>Magnolia Travel Demo (parent pom)</name>
   <inceptionYear>2015</inceptionYear>
   <description>Magnolia Travel is a demo project showing best practices when working with Magnolia.</description>
@@ -26,6 +26,8 @@
     <magnolia.pur.version>3.0-SNAPSHOT</magnolia.pur.version>
     <magnolia.categorization.version>3.0-SNAPSHOT</magnolia.categorization.version>
     <magnolia.form.version>3.0-SNAPSHOT</magnolia.form.version>
+    <tomcatBareboneVersion>1.2.15</tomcatBareboneVersion>
+    <tomcatVersion>9.0.71</tomcatVersion> <!-- This has to be kept in sync with tomcat version used in magnolia tomcat barebone -->
   </properties>
 
   <scm>
@@ -44,7 +46,6 @@
 
   <dependencyManagement>
     <dependencies>
-
       <!-- Import dependency management from main project -->
       <dependency>
         <groupId>info.magnolia</groupId>
@@ -60,6 +61,20 @@
         <artifactId>magnolia-ui-project</artifactId>
         <version>${magnoliaUiVersion}</version>
         <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+
+      <!-- Dependencies to community webapps -->
+      <dependency>
+        <groupId>info.magnolia.bundle</groupId>
+        <artifactId>magnolia-community-webapp</artifactId>
+        <version>${magnoliaVersion}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>info.magnolia.bundle</groupId>
+        <artifactId>magnolia-community-webapp</artifactId>
+        <version>${magnoliaVersion}</version>
         <type>pom</type>
       </dependency>
 
@@ -137,7 +152,6 @@
       <dependency>
         <groupId>info.magnolia.dam</groupId>
         <artifactId>magnolia-dam-app</artifactId>
-        <scope>test</scope>
         <version>${magnoliaDamVersion}</version>
       </dependency>
 
@@ -146,6 +160,13 @@
         <groupId>info.magnolia.pur</groupId>
         <artifactId>magnolia-module-public-user-registration</artifactId>
         <version>${magnolia.pur.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.tomcat.barebone</groupId>
+        <artifactId>magnolia-tomcat-barebone</artifactId>
+        <version>${tomcatBareboneVersion}</version>
+        <type>tar.gz</type>
       </dependency>
     </dependencies>
   </dependencyManagement>

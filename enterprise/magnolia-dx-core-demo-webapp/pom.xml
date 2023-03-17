@@ -214,20 +214,6 @@
                 </dependency>
               </conflictingDependencies>
             </exception>
-            <exception>
-              <conflictingDependencies>
-                <!-- DEV-2134 These come through the magnolia-module-workflow-jbpm and the magnolia-webhooks-events-ui-api. -->
-                <!-- There are duplicate but different classes, which potentially causes problems. -->
-                <dependency>
-                  <groupId>com.zaxxer</groupId>
-                  <artifactId>HikariCP-java7</artifactId>
-                </dependency>
-                <dependency>
-                  <groupId>com.zaxxer</groupId>
-                  <artifactId>HikariCP</artifactId>
-                </dependency>
-              </conflictingDependencies>
-            </exception>
           </exceptions>
         </configuration>
       </plugin>

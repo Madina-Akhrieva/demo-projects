@@ -36,8 +36,8 @@
     <webhooksVersion>2.0-SNAPSHOT</webhooksVersion>
     <imageRecognitionVersion>2.0-SNAPSHOT</imageRecognitionVersion>
     <textClassificationVersion>2.0-SNAPSHOT</textClassificationVersion>
-    <tomcatBareboneVersion>1.2.15</tomcatBareboneVersion>
-    <tomcatVersion>9.0.71</tomcatVersion> <!-- This has to be kept in sync with tomcat version used in magnolia tomcat barebone -->
+    <tomcatBareboneVersion>1.2.16</tomcatBareboneVersion>
+    <tomcatVersion>9.0.73</tomcatVersion> <!-- This has to be kept in sync with tomcat version used in magnolia tomcat barebone -->
   </properties>
 
   <scm>

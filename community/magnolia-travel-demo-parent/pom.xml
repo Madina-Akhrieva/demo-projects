@@ -26,8 +26,8 @@
     <magnolia.pur.version>3.0-SNAPSHOT</magnolia.pur.version>
     <magnolia.categorization.version>3.0-SNAPSHOT</magnolia.categorization.version>
     <magnolia.form.version>3.0-SNAPSHOT</magnolia.form.version>
-    <tomcatBareboneVersion>1.2.15</tomcatBareboneVersion>
-    <tomcatVersion>9.0.71</tomcatVersion> <!-- This has to be kept in sync with tomcat version used in magnolia tomcat barebone -->
+    <tomcatBareboneVersion>1.2.16</tomcatBareboneVersion>
+    <tomcatVersion>9.0.73</tomcatVersion> <!-- This has to be kept in sync with tomcat version used in magnolia tomcat barebone -->
   </properties>
 
   <scm>

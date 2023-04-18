@@ -56,6 +56,12 @@
 
   <dependencyManagement>
     <dependencies>
+      <!-- Workaround unresolvable property in Jakarta platform BOM. See BUILD-1058 -->
+      <dependency>
+        <groupId>jakarta.persistence</groupId>
+        <artifactId>jakarta.persistence-api</artifactId>
+      </dependency>
+
       <!-- Importing dependency management section from travel demo -->
       <dependency>
         <groupId>info.magnolia.demo</groupId>
